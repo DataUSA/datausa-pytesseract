@@ -1,0 +1,65 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="Data_USA_President_election" subset_table="true">
+        <Annotation name="source_name">MIT Data Electionlab</Annotation>
+        <Annotation name="source_link">https://electionlab.mit.edu/data</Annotation>
+        <Annotation name="dataset_name">U.S President 1976-2020</Annotation>
+        <Annotation name="dataset_link">https://dataverse.harvard.edu/api/access/datafile/:persistentId?persistentId=doi:10.7910/DVN/42MVDX/MFU99O</Annotation>
+        <Annotation name="dataset_name">County Presidential Election Returns 2000-2020</Annotation>
+        <Annotation name="dataset_link">https://dataverse.harvard.edu/api/access/datafile/:persistentId?persistentId=doi:10.7910/DVN/VOQCHQ/FQ9NBF</Annotation>
+        <Annotation name="source_name">Federal Election Commision</Annotation>
+        <Annotation name="source_link">https://www.fec.gov/</Annotation>
+        <Annotation name="available_dimensions">Candidate, Geography, Party, Year</Annotation>
+        <Annotation name="hidden_dimensions">Version</Annotation>
+    
+        <Table name="election_president" primary_key="candidate_id"/>
+  
+        <Dimension name="Geography" foreign_key="geo_id">
+            <Hierarchy name="Nation" default_member="Nation.US">
+              <Table name="us_nation" />
+              <Level name="Nation" key_column="geoid" name_column="name" key_type="str"/>
+            </Hierarchy>
+            <Hierarchy name="State">
+                <Table name="states_shapes2017" />
+                <Level name="State" key_column="geoid" name_column="name" key_type="str"/>
+            </Hierarchy>
+            <Hierarchy name="County">
+                <Table name="counties_shapes2017" />
+                <Level name="State County" key_column="state_id" name_column="state_name" key_type="str"/>
+                <Level name="County" key_column="geoid" name_column="name" key_type="str"/>
+            </Hierarchy>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Dimension>
+  
+        <Dimension foreign_key="candidate_id" name="Candidate">
+            <Hierarchy name="Candidate" primary_key="candidate_id">
+              <Level name="Candidate" key_column="candidate_id" name_column="candidate" key_type="str">
+                <Property name="Office" key_column="office"/>
+              </Level>
+            </Hierarchy>
+            <Annotation name="dim_type">CANDIDATE</Annotation>
+        </Dimension>
+  
+        <Dimension foreign_key="party" name="Party">
+            <Hierarchy name="Party" primary_key="party">
+                <Level key_column="party" name="Party" key_type="str"/>
+            </Hierarchy>
+            <Annotation name="dim_type">PARTY</Annotation>
+        </Dimension>
+  
+        <Dimension type="time" foreign_key="year" name="Year">
+            <Hierarchy name="Year" primary_key="year">
+              <Level key_column="year" name="Year" key_type="u16"/>
+            </Hierarchy>
+            <Annotation name="dim_type">YEAR</Annotation>
+        </Dimension>
+  
+        <Measure name="Candidate Votes" key_column="candidatevotes" aggregator="sum">
+          <Annotation name="units_of_measurement">VOTES</Annotation>
+        </Measure>
+  
+        <Measure name="Total Votes" key_column="totalvotes" aggregator="max">
+          <Annotation name="units_of_measurement">VOTES</Annotation>
+        </Measure>
+  
+    </Cube>
+</Schema>

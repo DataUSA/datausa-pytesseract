@@ -1,0 +1,69 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="Data_USA_House_Compact_election">
+        <Annotation name="source_name">MIT Data Electionlab</Annotation>
+        <Annotation name="source_link">https://electionlab.mit.edu/data</Annotation>
+        <Annotation name="dataset_name">U.S House 1976-2020</Annotation>
+        <Annotation name="dataset_link">https://dataverse.harvard.edu/api/access/datafile/:persistentId?persistentId=doi:10.7910/DVN/IG0UN2/8KAB8V</Annotation>
+        <Annotation name="source_name">Federal Election Commision</Annotation>
+        <Annotation name="source_link">https://www.fec.gov/</Annotation>
+        <Annotation name="hidden_dimensions">Version</Annotation>
+        <Annotation name="source_description">By applying scientific principles to how elections are studied and administered, the MIT Election Lab aims to improve the democratic experience for all U.S. voters. The lab supports advances in election science by collecting, analyzing, and sharing core data and findings. They also aim to build relationships with election officials and others to help apply new scientific research to the practice of democracy in the United States.</Annotation>
+    
+        <Table name="election_house_compact" primary_key="winning_candidate"/>
+  
+        <Dimension foreign_key="district" name="Geography">
+            <Hierarchy name="Geography">
+                <Table name="dim_election_geo" />
+                <Level name="State" key_column="state_id" name_column="state_name" key_type="str"/>
+                <Level name="Congressional District" key_column="congressional_id" name_column="congressional_name" key_type="str"/>
+            </Hierarchy>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Dimension>
+      
+        <Dimension  type="time" foreign_key="year" name="Year">
+            <Hierarchy name="Year" primary_key="year">
+              <Level name="Year" key_column="year" key_type="u16"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="winning_candidate" name="Candidate">
+            <Hierarchy name="Candidate" primary_key="winning_candidate">
+                <Level name="Candidate" key_column="winning_candidate" key_type="str"/>
+            </Hierarchy>
+            <Annotation name="dim_type">CANDIDATE</Annotation>
+        </Dimension>
+
+        <Dimension foreign_key="special" name="Special">
+            <Hierarchy name="Special" primary_key="special">
+                <Level key_column="special" name="Special" key_type="u8"/>
+            </Hierarchy>
+            <Annotation name="dim_type">SPECIAL</Annotation>
+        </Dimension>
+
+        <Dimension foreign_key="party" name="Party">
+            <Hierarchy name="Party" primary_key="party">
+                <Level key_column="party" name="Party" key_type="str"/>
+            </Hierarchy>
+            <Annotation name="dim_type">PARTY</Annotation>
+        </Dimension>
+
+        <Dimension foreign_key="runoff" name="Runoff">
+            <Hierarchy name="Runoff" primary_key="runoff">
+                <Level key_column="runoff" name="Runoff" key_type="str"/>
+            </Hierarchy>
+            <Annotation name="dim_type">RUNOFF</Annotation>
+        </Dimension>
+
+        <Measure name="Winner Votes" key_column="winner_votes" aggregator="sum">
+            <Annotation name="units_ofmeasurement">VOTES</Annotation>
+        </Measure>
+      
+        <Measure name="Other Votes" key_column="other_votes" aggregator="sum">
+            <Annotation name="units_ofmeasurement">VOTES</Annotation>
+        </Measure>
+
+        <Measure name="Total Votes" key_column="total_votes" aggregator="max">
+            <Annotation name="units_ofmeasurement">VOTES</Annotation>
+        </Measure>
+    </Cube>
+</Schema>

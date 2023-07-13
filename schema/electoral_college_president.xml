@@ -1,0 +1,33 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="Data_USA_Electoral_College_president">
+
+        <Annotation name="source_name">Federal Election Commision</Annotation>
+        <Annotation name="source_link">https://www.fec.gov/</Annotation>
+        <Annotation name="dataset_name">Federal Elections 2016: Election Results for the U.S. President, the U.S. Senate, and the U.S. House of Representatives</Annotation>
+        <Annotation name="dataset_link">https://transition.fec.gov/pubrec/fe2016/federalelections2016.xlsx</Annotation>
+        <Annotation name="dataset_name">Federal Elections 2004: Election Results for the U.S. President, the U.S. Senate, and the U.S. House of Representatives</Annotation>
+        <Annotation name="dataset_link">https://transition.fec.gov/pubrec/fe2004/federalelections2004.xls</Annotation>
+        <Annotation name="available_dimensions">Geography, Party, Year</Annotation>
+      
+        <Table name="election_electoralcollege" primary_key="geoid"/>
+    
+        <DimensionUsage name="State" source="State Election" foreign_key="geoid" />
+    
+        <Dimension type="time" foreign_key="year" name="Year">
+            <Hierarchy name="Year" primary_key="year">
+              <Level key_column="year" name="Year" key_type="u16"/>
+            </Hierarchy>
+        </Dimension>
+    
+        <Dimension foreign_key="party" name="Party">
+            <Hierarchy name="Party" primary_key="party">
+                <Level key_column="party" name="Party" key_type="str"/>
+            </Hierarchy>
+            <Annotation name="dim_type">PARTY</Annotation>
+        </Dimension>
+    
+        <Measure name="Electoral College Votes" key_column="electoralvote" aggregator="sum">
+            <Annotation name="units_ofmeasurement">VOTES</Annotation>
+        </Measure>
+    </Cube>
+</Schema>

@@ -1,0 +1,10 @@
+<Schema name="datausa" default_locale="en">
+    <SharedDimension name="State Election">
+        <Hierarchy name="State">
+            <Table name="states_shapes2017"/>
+            <Level name="State" key_column="geoid" name_column="name" key_type="text">
+                <Annotation name="dim_type">GEOGRAPHY</Annotation>
+            </Level>
+        </Hierarchy>
+    </SharedDimension>
+</Schema>

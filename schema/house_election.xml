@@ -1,0 +1,83 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="Data_USA_House_election">
+
+        <Annotation name="source_name">MIT Data Electionlab</Annotation>
+        <Annotation name="source_link">https://electionlab.mit.edu/data</Annotation>
+        <Annotation name="dataset_name">U.S House 1976-2020</Annotation>
+        <Annotation name="dataset_link">https://dataverse.harvard.edu/api/access/datafile/:persistentId?persistentId=doi:10.7910/DVN/IG0UN2/8KAB8V</Annotation>
+        <Annotation name="source_name">Federal Election Commision</Annotation>
+        <Annotation name="source_link">https://www.fec.gov/</Annotation>
+        <Annotation name="available_dimensions">Candidate, Geography, Party, Year, Candidate Other, Special</Annotation>
+        <Annotation name="hidden_dimensions">Unofficial, Version</Annotation>
+        <Annotation name="hide_in_ui">Unofficial, Version</Annotation>
+    
+        <Table name="election_house" primary_key="candidate_id"/>
+  
+        <Dimension foreign_key="geo_id" name="Geography">
+            <Hierarchy name="Geography">
+                <Table name="dim_election_geo" />
+                <Level name="State" key_column="state_id" name_column="state_name" key_type="str"/>
+                <Level name="Congressional District" key_column="congressional_id" name_column="congressional_name" key_type="str"/>
+            </Hierarchy>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Dimension>
+  
+        <Dimension foreign_key="candidate_id" name="Candidate">
+            <Hierarchy name="Candidate" primary_key="candidate_id">
+              <Level name="Candidate" key_column="candidate_id" name_column="candidate" key_type="str">
+                <Property name="Office" key_column="office"/>
+              </Level>
+            </Hierarchy>
+            <Annotation name="dim_type">CANDIDATE</Annotation>
+        </Dimension>
+  
+        <Dimension foreign_key="candidate_other" name="Candidate Other">
+            <Hierarchy name="Candidate Other" primary_key="candidate_other">
+              <Level key_column="candidate_other" name="Candidate Other" key_type="str"/>
+            </Hierarchy>
+            <Annotation name="dim_type">CANDIDATE OTHER</Annotation>
+        </Dimension>
+  
+        <Dimension foreign_key="party" name="Party">
+            <Hierarchy name="Party" primary_key="party">
+                <Level key_column="party" name="Party" key_type="str"/>
+            </Hierarchy>
+            <Annotation name="dim_type">PARTY</Annotation>
+        </Dimension>
+  
+        <Dimension foreign_key="special" name="Special">
+            <Hierarchy name="Special" primary_key="special">
+                <Level key_column="special" name="Special" key_tye="u8"/>
+            </Hierarchy>
+            <Annotation name="dim_type">SPECIAL</Annotation>
+        </Dimension>
+  
+        <Dimension foreign_key="runoff" name="Runoff">
+            <Hierarchy name="Runoff" primary_key="runoff">
+                <Level key_column="runoff" name="Runoff" key_type="u8"/>
+            </Hierarchy>
+            <Annotation name="dim_type">RUNOFF</Annotation>
+        </Dimension>
+  
+        <Dimension foreign_key="unofficial" name="Unofficial">
+            <Hierarchy name="Unofficial" primary_key="unofficial">
+                <Level key_column="unofficial" name="Unofficial" key_type="u8"/>
+            </Hierarchy>
+        </Dimension>
+  
+        <Dimension  type="time" foreign_key="year" name="Year">
+            <Hierarchy name="Year" primary_key="year">
+                <Level key_column="year" name="Year" key_type="u16"/>
+            </Hierarchy>
+        </Dimension>
+  
+        <Measure name="Candidate Votes" key_column="candidatevotes" aggregator="sum">
+            <Annotation name="units_ofmeasurement">VOTES</Annotation>
+        </Measure>
+  
+        <Measure measure_type="units_ofmeasurement" name="Total Votes" key_column="totalvotes" aggregator="max">
+            <Annotation name="units_ofmeasurement">VOTES</Annotation>
+        </Measure>
+  
+    </Cube>
+</Schema>
