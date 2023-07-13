@@ -2,9 +2,16 @@
     <SharedDimension name="State Election">
         <Hierarchy name="State">
             <Table name="states_shapes2017"/>
-            <Level name="State" key_column="geoid" name_column="name" key_type="text">
+            <Level name="State" key_column="geoid" name_column="name" key_type="str">
                 <Annotation name="dim_type">GEOGRAPHY</Annotation>
             </Level>
         </Hierarchy>
     </SharedDimension>
+
+    <SharedDimension name="State">
+      <Hierarchy name="State">
+        <Table name="dim_shared_state"/>
+        <Level name="State" key_column="state_id" name_column="state" key_type="str"/>
+      </Hierarchy>
+  </SharedDimension>
 </Schema>

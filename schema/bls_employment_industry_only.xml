@@ -1,0 +1,39 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="BLS Employment - Industry Only" >
+      
+        <Annotation name="source_name">Bureau of Labor Statistics</Annotation>
+        <Annotation name="source_description">The Bureau of Labor Statistics (BLS) of the U.S. Department of Labor is the principal federal agency responsible for measuring labor market activity, working conditions, and price changes in the economy.</Annotation>
+        <Annotation name="dataset_name">Current Employment Statistics (CES)</Annotation>
+        <Annotation name="dataset_link">https://www.bls.gov/data/#employment</Annotation>
+        <Annotation name="topic">Economy</Annotation>
+        <Annotation name="subtopic">Employment</Annotation>
+      
+        <Table name="bls_industry_fact" primary_key="industry_id"/>
+
+        <Dimension name="Time" foreign_key="time_id" >
+          <Hierarchy name="Time" primary_key="time_id" >
+            <Table name="dim_time"/>
+            <Level name="Month of Year" key_column="time_id" name_column="month_name" key_type="str"/>
+          </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Employment State" foreign_key="state_id" >
+          <Hierarchy name="Employment State" primary_key="state_id">
+            <Table name="dim_state" />
+            <Level name="Employment State" key_column="state_id" name_column="state_name" key_type="str"/>
+          </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Industry" foreign_key="industry_id" >
+          <Hierarchy name="Industry" primary_key="industry_id">
+            <Table name="dim_industry" />
+            <Level name="Industry" key_column="industry_id" name_column="industry_name" key_type="str" />
+          </Hierarchy>
+        </Dimension>
+      
+        <Measure name="NSA Employees" key_column="NSA_employees" aggregator="sum"/>
+        <Measure name="NSA Average Employees" key_column="NSA_employees" aggregator="avg"/>
+        <Measure name="SA Employees" key_column="SA_employees" aggregator="sum"/>
+        <Measure name="SA Average Employees" key_column="SA_employees" aggregator="avg"/>
+    </Cube>
+</Schema>
