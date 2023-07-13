@@ -14,10 +14,9 @@ If you are using node directly to develop, please recall your typical `.env` fil
 
 1. [Install Docker](https://docs.docker.com/engine/install/) on your machine
 2. Build your container with:
-  - NO ENV VARS AT BUILDTIME: `docker build -t <PROJECT_NAME>-tesseract-api .`
-  - WITH ENV VARS AT BUILDTIME: `docker build --build-arg <ENV_NAME>=<ENV_VALUE> -t <PROJECT_NAME>-tesseract-api .`
+  - NO ENV VARS AT BUILDTIME: `docker build -t datausa-tesseract-api .`
 3. Run your container with:
-  - `docker run --rm --env-file=./.env.local -p 7777:7777 <PROJECT_NAME>-tesseract-api`
+  - `docker run --rm --env-file=./.env.local -p 7777:7777 datausa-tesseract-api`
 
 ---
 ### References
