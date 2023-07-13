@@ -1,0 +1,38 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="bea_use">
+        <Annotation name="source_name">Bureau of Economic Analysis</Annotation>
+        <Annotation name="source_link">https://bea.gov/</Annotation>
+        <Annotation name="topic">Economy</Annotation>
+        <Annotation name="subtopic">Industry Flows</Annotation>
+        <Annotation name="dataset_name">Use Tables</Annotation>
+        <Annotation name="dataset_link">https://www.bea.gov/industry/input-output-accounts-data</Annotation>
+        <Annotation name="source_description">The Bureau of Economic Analysis (BEA) publishes data on Input-Output, also called Make-Use, for industries in the United States. This Dataset is provided by the US Department of Commerce. Use of commodities by industry are valued at producers prices.</Annotation>
+
+        <Table name="bea_use" primary_key="commodity_iocode"/>
+
+        <Dimension name="Year" foreign_key="year" type="time">  
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="Year">
+                <Level name="Year" key_column="year" key_type="u16" />
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Industry IO Code" foreign_key="industry_iocode">
+            <Hierarchy  name="Industry IO Code" primary_key="industry_iocode">
+              <Level key_column="industry_iocode_parent" name_column="industry_iocode_parent_name" name="Industry L0" key_type="str" />
+              <Level key_column="industry_iocode" name_column="industry_iocode_description" name="Industry L1" key_type="str" />
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Commodity IO Code" foreign_key="commodity_iocode">
+            <Hierarchy name="Commodity IO Code" primary_key="commodity_iocode">
+                <Level key_column="commodity_iocode_parent" name_column="commodity_iocode_parent_name" name="Commodity L0" key_type="str"/>
+                <Level key_column="commodity_iocode" name_column="commodity_iocode_description" name="Commodity L1" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Measure aggregator="sum" key_column="value_millions" name="Value Millions">
+            <Annotation name="units_of_measurement">USD</Annotation>
+        </Measure>
+    </Cube>
+</Schema>

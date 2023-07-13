@@ -1,0 +1,52 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="ed_defaults">
+        <Annotation name="source_name">Department of Education</Annotation>
+        <Annotation name="source_link">https://www.ed.gov/</Annotation>
+        <Annotation name="source_description">The Department of Education's 'mission is to promote student achievement and preparation for global competitiveness by fostering educational excellence and ensuring equal access.'</Annotation>
+        <Annotation name="dataset_name">Cohort Default Rate Database</Annotation>
+        <Annotation name="dataset_link">https://www2.ed.gov/offices/OSFAP/defaultmanagement/cdr.html</Annotation>
+        <Annotation name="dataset_description">According to the Department of Education: 'A cohort default rate is the percentage of a school's borrowers who enter repayment on certain Federal Family Education Loan (FFEL) Program or William D. Ford Federal Direct Loan (Direct Loan) Program loans during a particular federal fiscal year (FY), October 1 to September 30, and default or meet other specified conditions prior to the end of the second following fiscal year.'</Annotation>
+        <Annotation name="topic">Education</Annotation>
+        <Annotation name="subtopic">Default Rate</Annotation>
+
+        <Table name="ed_defaults" primary_key="opeid"/>
+
+        <Dimension name="Year" foreign_key="year" type="time">  
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="Year">
+                <Level name="Year" key_column="year" key_type="u16" />
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="county" name="Geography">
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+
+            <Hierarchy name="Geography" primary_key="geoid">
+              <Table name="counties_shapes2017" />
+
+              <Level key_column="state_id" name="State" name_column="state_name" key_type="str" />
+              <Level key_column="geoid" name="County" name_column="name" key_type="str" />
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="OPEID" foreign_key="opeid">
+            <Annotation name="dim_type">OPEID</Annotation>
+
+            <Hierarchy name="OPEID" primary_key="opeid">
+                <Level name="OPEID" key_column="opeid" name_column="opeid_name" key_type="str" />
+            </Hierarchy>
+        </Dimension>
+
+        <Measure aggregator="sum" key_column="num" name="Borrowers In Default">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure aggregator="sum" key_column="denom" name="Borrowers Entered Repayment">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure aggregator="avg" key_column="default_rate" name="Default Rate">
+            <Annotation name="units_of_measurement">Rate</Annotation>
+        </Measure>
+    </Cube>
+</Schema>

@@ -1,0 +1,82 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="dot_faf">
+        <Annotation name="source_name">Department of Transportation Federal Highway Administration</Annotation>
+        <Annotation name="source_description">The Freight Analysis Framework (FAF), produced through a partnership between Bureau of Transportation Statistics (BTS) and Federal Highway Administration (FHWA), integrates data from a variety of sources to create a comprehensive picture of freight movement among states and major metropolitan areas by all modes of transportation. Starting with data from the 2012 Commodity Flow Survey (CFS) and international trade data from the Census Bureau, FAF incorporates data from agriculture, extraction, utility, construction, service, and other sectors. The FAF data give a picture of which goods are shipped from one region of the US to another region, according to type of commodity, mode of shipment, value, and weight.</Annotation>
+        <Annotation name="dataset_name">Freight Analysis Framework Domestic Flows</Annotation>
+        <Annotation name="dataset_link">https://ops.fhwa.dot.gov/freight/freight_analysis/faf/</Annotation>
+        <Annotation name="subtopic">Freight</Annotation>
+        <Annotation name="topic">Economy</Annotation>
+        <Annotation name="source_link">https://www.fhwa.dot.gov/</Annotation>
+    
+        <Table name="dot_faf" primary_key="region_id"/>
+
+        <Dimension name="Year" foreign_key="year" type="time">  
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="Year">
+                <Level name="Year" key_column="year" key_type="u16">
+                    <Property name="Year Base" key_column="year_base"/>
+                </Level>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="origin_region" name="Origin">
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+          
+            <Hierarchy name="Origin" primary_key="region_id">
+                <Table name="faf_regions" />
+
+                <Level key_column="state_id" name_column="state_name" name="Origin State" key_type="str"/>
+                <Level key_column="region_id" name_column="region_name" name="Origin Region" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="destination_region" name="Destination">
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+
+            <Hierarchy primary_key="region_id" name="Destination">
+                <Table name="faf_regions"/>
+
+                <Level key_column="state_id" name_column="state_name" name="Destination State" key_type="str"/>
+                <Level key_column="region_id" name_column="region_name" name="Destination Region" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="sctg" name="SCTG">
+            <Annotation name="dim_type">PRODUCT</Annotation>
+            <Hierarchy name="SCTG" primary_key="sctg_code">
+                <Table name="sctg" />
+                <Level key_column="sctg_code" name_column="sctg_name" name="SCTG2" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="mode" name="Transportation Mode">
+            <Annotation name="dim_type">GENERIC</Annotation>
+
+            <Hierarchy name="Transportation Mode">
+                <InlineTable name="transportation_mode" format="tuples">
+                    <Row>("id", "name", "description")</Row>
+                    <Row>(1, "Truck", "Includes private and for-hire truck. Does not include truck that is part of Multiple Modes and Mail or truck moves in conjunction with domestic air cargo.")</Row>
+                    <Row>(2, "Rail", "Includes any common carrier or private railroad. Does not include rail that is part of Multiple Modes and Mail.")</Row>
+                    <Row>(3, "Water", "Includes shallow draft, deep draft, Great Lakes and intra-port shipments. Does not include water that is part of Multiple Modes and Mail.")</Row>
+                    <Row>(4, "Air (includes truck-air)", "Includes shipments move by air or a combination of truck and air in commercial or private aircraft. Includes air freight and air express. In the case of imports and exports by air, domestic moves by ground to and from the port of entry or exit are categorized with Truck.")</Row>
+                    <Row>(5, "Multiple Modes and Mail", "Includes shipments by multiple modes and by parcel delivery services, U.S. Postal Service, or couriers (capped at 150 pounds). This category is not limited to containerized or trailer-on-flatcar shipments.")</Row>
+                    <Row>(6, "Pipeline", "Includes crude petroleum, natural gas, and product pipelines. Note: Does include flows from offshore wells to land which are counted as Water moves by the U.S. Army Corps of Engineers. Does not include pipeline that is part of Multiple Modes and Mail.")</Row>
+                    <Row>(7, "Other and Unknown", "Includes movements not elsewhere classified such as flyaway aircraft, and shipments for which the mode cannot be determined.")</Row>
+                </InlineTable>
+                <Level key_column="id" name="Transportation Mode" name_column="name" key_type="u8">
+                    <Property name="Description" key_column="description"/>
+                </Level>
+            </Hierarchy>
+        </Dimension>
+
+        <Measure aggregator="sum" key_column="value_millions" name="Millions Of Dollars">
+            <Annotation name="details">Value in millions of 2012 US Dollars.</Annotation>
+            <Annotation name="units_of_measurement">USD</Annotation>
+        </Measure>
+
+        <Measure aggregator="sum" key_column="thousand_tons" name="Thousands Of Tons">
+            <Annotation name="details">Weight in thousands of tons.</Annotation>
+            <Annotation name="units_of_measurement">Thousands of Tons</Annotation>
+        </Measure>
+    </Cube>
+</Schema>
