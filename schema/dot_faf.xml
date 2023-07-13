@@ -62,6 +62,7 @@
                     <Row>(5, "Multiple Modes and Mail", "Includes shipments by multiple modes and by parcel delivery services, U.S. Postal Service, or couriers (capped at 150 pounds). This category is not limited to containerized or trailer-on-flatcar shipments.")</Row>
                     <Row>(6, "Pipeline", "Includes crude petroleum, natural gas, and product pipelines. Note: Does include flows from offshore wells to land which are counted as Water moves by the U.S. Army Corps of Engineers. Does not include pipeline that is part of Multiple Modes and Mail.")</Row>
                     <Row>(7, "Other and Unknown", "Includes movements not elsewhere classified such as flyaway aircraft, and shipments for which the mode cannot be determined.")</Row>
+                    <Row>(8, "No domestic mode", "Includes movements not elsewhere classified such as flyaway aircraft, and shipments for which the mode cannot be determined.")</Row>
                 </InlineTable>
                 <Level key_column="id" name="Transportation Mode" name_column="name" key_type="u8">
                     <Property name="Description" key_column="description"/>

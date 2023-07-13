@@ -8,8 +8,8 @@
         <Annotation name="source_name">Federal Election Commision</Annotation>
         <Annotation name="source_link">https://www.fec.gov/</Annotation>
         <Annotation name="available_dimensions">Candidate, Geography, Party, Year, Candidate Other, Special</Annotation>
-        <Annotation name="hidden_dimensions">Unofficial, Version</Annotation>
-        <Annotation name="hide_in_ui">Unofficial, Version</Annotation>
+        <Annotation name="topic">Election</Annotation>
+        <Annotation name="subtopic">Senate</Annotation>
     
         <Table name="election_senate" primary_key="candidate_id"/>
 

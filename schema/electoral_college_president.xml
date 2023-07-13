@@ -8,6 +8,8 @@
         <Annotation name="dataset_name">Federal Elections 2004: Election Results for the U.S. President, the U.S. Senate, and the U.S. House of Representatives</Annotation>
         <Annotation name="dataset_link">https://transition.fec.gov/pubrec/fe2004/federalelections2004.xls</Annotation>
         <Annotation name="available_dimensions">Geography, Party, Year</Annotation>
+        <Annotation name="topic">Election</Annotation>
+        <Annotation name="subtopic">Electoral College</Annotation>
       
         <Table name="election_electoralcollege" primary_key="geoid"/>
     

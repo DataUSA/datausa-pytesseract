@@ -3,6 +3,8 @@
     
         <Annotation name="source_name">U.S Department of Labor</Annotation>
         <Annotation name="source_link">https://www.dol.gov/</Annotation>
+        <Annotation name="topic">Economy</Annotation>
+        <Annotation name="subtopic">Employment</Annotation>
       
         <Table name="bls_insurance_most_recent" primary_key="week_ended" />
   

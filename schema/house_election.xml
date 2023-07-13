@@ -10,6 +10,8 @@
         <Annotation name="available_dimensions">Candidate, Geography, Party, Year, Candidate Other, Special</Annotation>
         <Annotation name="hidden_dimensions">Unofficial, Version</Annotation>
         <Annotation name="hide_in_ui">Unofficial, Version</Annotation>
+        <Annotation name="topic">Election</Annotation>
+        <Annotation name="subtopic">House</Annotation>
     
         <Table name="election_house" primary_key="candidate_id"/>
   
