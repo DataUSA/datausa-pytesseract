@@ -17,13 +17,13 @@
   
         <Dimension foreign_key="geo_id" name="Geography">
             <Hierarchy name="Geography">
-                <Table name="dim_election_geo" />
+                <Table name="congressional_district" />
                 <Level name="State" key_column="state_id" name_column="state_name" key_type="str"/>
-                <Level name="Congressional District" key_column="congressional_id" name_column="congressional_name" key_type="str"/>
+                <Level name="Congressional District" key_column="geoid" name_column="name" key_type="str"/>
             </Hierarchy>
             <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Dimension>
-  
+
         <Dimension foreign_key="candidate_id" name="Candidate">
             <Hierarchy name="Candidate" primary_key="candidate_id">
               <Level name="Candidate" key_column="candidate_id" name_column="candidate" key_type="str">
