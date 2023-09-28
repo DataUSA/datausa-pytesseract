@@ -88,7 +88,7 @@
 
       <Dimension name="Year" foreign_key="year" type="time">
         <Hierarchy name="Year" primary_key="year">
-          <Level name="Year" key_column="year" key_type="UInt16"/>
+          <Level name="Year" key_column="year" key_type="u16"/>
         </Hierarchy>
       </Dimension>
   

@@ -1,0 +1,84 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="Consumer Price Index - CPI" subset_table="true">
+        <Annotation name="source_name">Bureau of Labor Statistics</Annotation>
+        <Annotation name="source_description">The Bureau of Labor Statistics (BLS) of the U.S. Department of Labor is the principal federal agency responsible for measuring labor market activity, working conditions, and price changes in the economy.</Annotation>
+        <Annotation name="dataset_name">Consumer Price Index (CPI)</Annotation>
+        <Annotation name="dataset_link">https://www.bls.gov/cpi/tables/supplemental-files/home.htm</Annotation>
+        <Annotation name="topic">Economy</Annotation>
+        <Annotation name="subtopic">Consumer Price</Annotation>
+
+        <Table name="cpi_data" />
+
+        <Dimension name="Time" foreign_key="time_id" type="time">
+          <Hierarchy name="Time" primary_key="time_id" >
+            <Table name="dim_months_cpi"/>
+            <Level name="Year" key_column="year" key_type="u16"/>
+            <Level name="Month and Year" key_column="time_id" name_column="month_name" key_type="u32"/>
+          </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Product or Service" foreign_key="product_id" default_hierarchy="Product Level 7">
+            <Annotation name="dim_type">Product or Service</Annotation>
+
+            <Hierarchy name="Product Level 1">
+                <Table name="dim_cpi_level1" />
+                <Level key_column="product_id" name="Level 1.1" name_column="product_name" key_type="u64"/>
+            </Hierarchy>
+
+            <Hierarchy name="Product Level 2">
+                <Table name="dim_cpi_level2" />
+                <Level key_column="level1_id" name="Level 2.1" name_column="level1_name" key_type="u64"/>
+                <Level key_column="product_id" name="Level 2.2" name_column="product_name" key_type="u64"/>   
+            </Hierarchy>
+
+            <Hierarchy name="Product Level 3">
+                <Table name="dim_cpi_level3" />
+                <Level key_column="level1_id" name="Level 3.1" name_column="level1_name" key_type="u64"/>
+                <Level key_column="level2_id" name="Level 3.2" name_column="level2_name" key_type="u64"/>
+                <Level key_column="product_id" name="Level 3.3" name_column="product_name" key_type="u64"/>
+            </Hierarchy>
+
+            <Hierarchy name="Product Level 4">
+                <Table name="dim_cpi_level4" />
+                <Level key_column="level1_id" name="Level 4.1" name_column="level1_name" key_type="u64"/>
+                <Level key_column="level2_id" name="Level 4.2" name_column="level2_name" key_type="u64"/>
+                <Level key_column="level3_id" name="Level 4.3" name_column="level3_name" key_type="u64"/>
+                <Level key_column="product_id" name="Level 4.4" name_column="product_name" key_type="u64"/>
+            </Hierarchy>
+
+            <Hierarchy name="Product Level 5">
+                <Table name="dim_cpi_level5" />
+                <Level key_column="level1_id" name="Level 5.1" name_column="level1_name" key_type="u64"/>
+                <Level key_column="level2_id" name="Level 5.2" name_column="level2_name" key_type="u64"/>
+                <Level key_column="level3_id" name="Level 5.3" name_column="level3_name" key_type="u64"/>
+                <Level key_column="level4_id" name="Level 5.4" name_column="level4_name" key_type="u64"/>
+                <Level key_column="product_id" name="Level 5.5" name_column="product_name" key_type="u64"/>
+            </Hierarchy>
+
+            <Hierarchy name="Product Level 6">
+                <Table name="dim_cpi_level6" />
+                <Level key_column="level1_id" name="Level 6.1" name_column="level1_name" key_type="u64"/>
+                <Level key_column="level2_id" name="Level 6.2" name_column="level2_name" key_type="u64"/>
+                <Level key_column="level3_id" name="Level 6.3" name_column="level3_name" key_type="u64"/>
+                <Level key_column="level4_id" name="Level 6.4" name_column="level4_name" key_type="u64"/>
+                <Level key_column="level5_id" name="Level 6.5" name_column="level5_name" key_type="u64"/>
+                <Level key_column="product_id" name="Level 6.6" name_column="product_name" key_type="u64"/>
+            </Hierarchy>
+
+            <Hierarchy name="Product Level 7">
+                <Table name="dim_cpi_level7" />
+                <Level key_column="level1_id" name="Level 7.1" name_column="level1_name" key_type="u64"/>
+                <Level key_column="level2_id" name="Level 7.2" name_column="level2_name" key_type="u64"/>
+                <Level key_column="level3_id" name="Level 7.3" name_column="level3_name" key_type="u64"/>
+                <Level key_column="level4_id" name="Level 7.4" name_column="level4_name" key_type="u64"/>
+                <Level key_column="level5_id" name="Level 7.5" name_column="level5_name" key_type="u64"/>
+                <Level key_column="level6_id" name="Level 7.6" name_column="level6_name" key_type="u64"/>
+                <Level key_column="product_id" name="Level 7.7" name_column="product_name" key_type="u64"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Measure name="Consumer Price Index" key_column="unadjusted_percent_change" aggregator="avg"/>
+        <Measure name="Standard Error" key_column="standard_error" aggregator="avg"/>
+        <Measure name="Percent Change" key_column="percent_change" aggregator="avg"/>
+    </Cube>
+</Schema>
