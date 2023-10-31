@@ -1,0 +1,9 @@
+<Schema name="tesseract-api" default_locale="en">
+    <SharedDimension name="Skill Element">
+        <Hierarchy name="Skill Element">
+            <Table name="dim_skill" />
+            <Level name="Skill Element Group" key_column="element_group_id" name_column="element_group_name" key_type="str"/>
+            <Level name="Skill Element" key_column="element_id" name_column="element_name" key_type="str"/>
+        </Hierarchy>
+    </SharedDimension>
+</Schema>
