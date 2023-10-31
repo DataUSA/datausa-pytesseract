@@ -15,7 +15,7 @@ COPY requirements.txt ./
 
 # install python requirements on environment
 RUN useradd -m -r tesseract &&\
-    chown tesseract $APP_HOME &&\
+    chown -R tesseract $APP_HOME &&\
     pip install --no-cache-dir -r requirements.txt
 
 # transfer app files
