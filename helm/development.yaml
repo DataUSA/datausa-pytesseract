@@ -7,19 +7,19 @@ imagePullSecrets:
 replicaCount: 1
 
 autoscaling:
-  enabled: false
-  # minReplicas: 1
-  # maxReplicas: 10
-  # targetCPUUtilizationPercentage: 80
-  # targetMemoryUtilizationPercentage: 120
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 4
+  targetCPUUtilizationPercentage: 80
+  targetMemoryUtilizationPercentage: 120
 
 resources:
   requests:
-    cpu: 0.5
-    memory: 1Gi
+    cpu: 500m
+    memory: 2Gi
   limits:
-    cpu: 1
-    memory: 1Gi
+    cpu: 1000m
+    memory: 8Gi
 
 livenessProbe:
   failureThreshold: 3
@@ -27,9 +27,9 @@ livenessProbe:
     path: /
     port: 7777
     scheme: HTTP
-  initialDelaySeconds: 15
-  periodSeconds: 10
-  timeoutSeconds: 10
+  initialDelaySeconds: 30
+  periodSeconds: 30
+  timeoutSeconds: 30
   successThreshold: 1
 
 readinessProbe:
@@ -38,9 +38,9 @@ readinessProbe:
     path: /
     port: 7777
     scheme: HTTP
-  initialDelaySeconds: 15
-  periodSeconds: 10
-  timeoutSeconds: 10
+  initialDelaySeconds: 30
+  periodSeconds: 30
+  timeoutSeconds: 30
   successThreshold: 2
 
 service:
@@ -60,8 +60,8 @@ configMap:
   TESSERACT_DEBUG: "true"
   TESSERACT_SCHEMA: "schema"
 
-secrets:
-  TESSERACT_BACKEND: Y2xpY2tob3VzZTovL2RlZmF1bHQ6NFpnRk1KWk5hNHM5SzdRb1VKc1VBUU16dHBkOUJnQGRiLWRldi5kYXRhdXNhLmlvOjkwMDAvYmxzX2Ri
+# secrets:
+#   TESSERACT_BACKEND: <BASE64_VALUE>
 
 ingress:
   enabled: true

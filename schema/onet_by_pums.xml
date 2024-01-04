@@ -1,0 +1,48 @@
+<Schema name="tesseract-api" default_locale="en">
+<Cube name="onet_by_pums">
+        <Annotation name="source_name">O*NET Online</Annotation>
+        <Annotation name="source_description">The O*Net Skills is a dataset containing detailed descriptions of the required and used skills for specific occupations. The O*Net dataset is sponsored by the United States Department of Labor.</Annotation>
+        <Annotation name="dataset_name">O*NET by PUMS Occupation</Annotation>
+        <Annotation name="dataset_link">http://www.onetonline.org/</Annotation>
+        <Annotation name="topic">Economy</Annotation>
+        <Annotation name="subtopic">Skills</Annotation>
+
+        <Table name="onet_by_pums"/>
+
+        <DimensionUsage foreign_key="pums_code" name="PUMS Occupation" source="PUMS Occupation" />
+        <DimensionUsage name="Skill Element" foreign_key="element_id" source="Skill Element" />
+
+        <Dimension name="Year" foreign_key="year" type="time">  
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="Year">
+                <Level name="Year" key_column="year" key_type="u16"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Measure aggregator="avg" key_column="im" name="IM Value">
+            <Annotations>
+                <Annotation name="aggregation_method">NONE</Annotation>
+                <Annotation name="units_of_measurement">NONE</Annotation>
+                <Annotation name="details">Not used for presentation</Annotation>
+                <Annotation name="hide_in_ui">true</Annotation>
+            </Annotations>
+        </Measure>
+
+        <Measure aggregator="avg" key_column="lv" name="LV Value">
+            <Annotations>
+                <Annotation name="aggregation_method">NONE</Annotation>
+                <Annotation name="units_of_measurement">NONE</Annotation>
+                <Annotation name="details">Not used for presentation</Annotation>
+                <Annotation name="hide_in_ui">true</Annotation>
+            </Annotations>
+        </Measure>
+
+        <Measure aggregator="avg" key_column="total_score" name="Total Score">
+            <Annotations>
+                <Annotation name="aggregation_method">NONE</Annotation>
+                <Annotation name="units_of_measurement">NONE</Annotation>
+                <Annotation name="details">Calculated by IM Value * LV Value</Annotation>
+            </Annotations>
+        </Measure>
+    </Cube>
+</Schema>
