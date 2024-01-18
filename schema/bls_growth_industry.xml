@@ -1,0 +1,54 @@
+<Schema name="tesseract-api" default_locale="en">
+    <Cube name="bls_growth_industry">
+        <Annotation name="source_name">Bureau of Labor Statistics</Annotation>
+        <Annotation name="source_description">The Bureau of Labor Statistics (BLS) of the U.S. Department of Labor is the principal federal agency responsible for measuring labor market activity, working conditions, and price changes in the economy.</Annotation>
+        <Annotation name="dataset_name">BLS Statistics by Industry, Growth</Annotation>
+        <Annotation name="dataset_link">https://www.bls.gov/bls/industry.htm</Annotation>
+        <Annotation name="topic">Economy</Annotation>
+        <Annotation name="subtopic">Industry</Annotation>
+
+        <Table name="bls_growth_industry" />
+
+        <Dimension name="Year" foreign_key="year" type="time">  
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="Year">
+                <Level name="Year" key_column="year" key_type="u16"/>
+            </Hierarchy>
+        </Dimension>
+
+        <DimensionUsage name="BLS Industry Flat" source="BLS Industry Flat" foreign_key="naics_code" />
+      
+        <Measure aggregator="avg" key_column="emp" name="Industry Jobs">
+            <Annotation name="aggregation_method">NONE</Annotation>
+            <Annotation name="pre_aggregation_method">SUM</Annotation>
+            <Annotation name="units_of_measurement">Jobs</Annotation>
+        </Measure>
+
+        <Measure aggregator="avg" key_column="emp_change" name="Industry Jobs Change">
+            <Annotation name="aggregation_method">NONE</Annotation>
+            <Annotation name="pre_aggregation_method">SUM</Annotation>
+            <Annotation name="units_of_measurement">Jobs</Annotation>
+        </Measure>
+
+        <Measure aggregator="avg" key_column="emp_carc" name="Industry Jobs CARC">
+            <Annotation name="aggregation_method">NONE</Annotation>
+            <Annotation name="pre_aggregation_method">CARC</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
+            <Annotation name="details">Compound Annual Rate of Change</Annotation>
+        </Measure>
+
+        <Measure aggregator="avg" key_column="output_billions" name="Industry Output">
+            <Annotation name="aggregation_method">NONE</Annotation>
+            <Annotation name="pre_aggregation_method">SUM</Annotation>
+            <Annotation name="units_of_measurement">USD</Annotation>
+            <Annotation name="details">Billions of Chained 2009 Dollars</Annotation>
+        </Measure>
+        
+        <Measure aggregator="avg" key_column="output_carc" name="Industry Output CARC">
+            <Annotation name="aggregation_method">NONE</Annotation>
+            <Annotation name="pre_aggregation_method">CARC</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
+            <Annotation name="details">Compound Annual Rate of Change</Annotation>
+        </Measure>
+    </Cube>
+</Schema>
