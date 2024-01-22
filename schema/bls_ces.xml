@@ -1,0 +1,37 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="bls_ces">
+        <Annotation name="source_name">Bureau of Labor Statistics</Annotation>
+        <Annotation name="source_description">The Bureau of Labor Statistics (BLS) of the U.S. Department of Labor is the principal federal agency responsible for measuring labor market activity, working conditions, and price changes in the economy.</Annotation>
+        <Annotation name="dataset_name">Current Employment Statistics</Annotation>
+        <Annotation name="dataset_link">https://www.bls.gov/ces/</Annotation>
+        <Annotation name="topic">Economy</Annotation>
+        <Annotation name="subtopic">Industry</Annotation>
+
+        <Table name="bls_ces"/>
+
+        <Dimension name="Year" foreign_key="year" type="time">  
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="Year">
+                <Level name="Year" key_column="year" key_type="u16"/>
+            </Hierarchy>
+        </Dimension>
+
+        <DimensionUsage name="BLS Industry Flat" source="BLS Industry Flat" foreign_key="naics_code" />
+
+        <Measure aggregator="avg" key_column="avg_hrly_earnings" name="Industry Average Hourly Earnings" visible="true">
+            <Annotation name="aggregation_method">NONE</Annotation>
+            <Annotation name="pre_aggregation_method">AVG</Annotation>
+            <Annotation name="units_of_measurement">USD</Annotation>
+        </Measure>
+        <Measure aggregator="avg" key_column="avg_weekly_hours" name="Industry Average Weekly Hours" visible="true">
+            <Annotation name="aggregation_method">NONE</Annotation>
+            <Annotation name="pre_aggregation_method">AVG</Annotation>
+            <Annotation name="units_of_measurement">Hours</Annotation>
+        </Measure>
+        <Measure aggregator="sum" key_column="employees_thousands" name="Industry Employees Thousands" visible="true">
+            <Annotation name="aggregation_method">NONE</Annotation>
+            <Annotation name="pre_aggregation_method">SUM</Annotation>
+            <Annotation name="units_of_measurement">Employees</Annotation>
+        </Measure>
+    </Cube>
+</Schema>
