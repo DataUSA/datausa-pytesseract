@@ -6,10 +6,10 @@ authors = ["Francisco Abarzua <git.id@frabarz.cl>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.8"
 logiclayer = "^0.2.1"
 logiclayer-complexity = "^0.2.1"
-tesseract-olap = {extras = ["clickhouse"], version = "^0.7.0"}
+tesseract-olap = {extras = ["clickhouse"], version = "^0.8.2"}
 uvicorn = {extras = ["standard"], version = "^0.18.0"}
 
 [tool.poetry.dev-dependencies]

@@ -1,0 +1,42 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="health_opioid_overdose_deathrate" subset_table="true">
+        <Annotation name="source_name">Kaiser Family Foundation</Annotation>
+        <Annotation name="source_description">State Health Facts provides free, up-to-date, health data for all 50 states, the District of Columbia, the United States, counties, territories, and other geographies.</Annotation>
+        <Annotation name="source_link">https://www.kff.org/</Annotation>
+        <Annotation name="dataset_name">State Health Facts</Annotation>
+        <Annotation name="dataset_link">https://www.kff.org/other/state-indicator/opioid-overdose-death-rates/?currentTimeframe=0&amp;sortModel=%7B%22colId%22:%22Location%22,%22sort%22:%22asc%22%7D</Annotation>
+        <Annotation name="subtopic">Behavioral Health Conditions</Annotation>
+        <Annotation name="topic">Health</Annotation>
+
+        <Table name="health_opioid_overdose_deathrate"/>
+
+        <Dimension name="Year" foreign_key="year" type="time">  
+            <Hierarchy name="Year">
+                <Level name="Year" key_column="year" key_type="u16"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Geography" foreign_key="geo" default_hierarchy="Nation">
+            <Hierarchy name="Nation">
+                <Table name="us_nation"/>
+                <Level key_column="geoid"  name="Nation" name_column="name"/>
+            </Hierarchy>
+
+            <Hierarchy name="State">
+                <Table name="states_shapes2017"/>
+                <Level key_column="geoid"  name="State" name_column="name"/>
+            </Hierarchy>
+
+            <Hierarchy name="County">
+                <Table name="counties_shapes2017"/>
+                <Level key_column="state_id"  name="State County" name_column="state_name"/>
+                <Level key_column="geoid"  name="County" name_column="name"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Measure aggregator="median" name="Opioid overdose death rate" key_column="opioid_overdose_deathrate">
+            <Annotation name="details">Among the deaths with drug overdose as the underlying cause, the type of opioid involved is indicated by ICD-10 multiple cause-of-death codes. Age-adjusted death rates were calculated by applying age-specific death rates to the 2000 U.S. standard population age distribution.</Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+    </Cube>
+</Schema>
