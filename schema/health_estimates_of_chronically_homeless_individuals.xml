@@ -1,0 +1,33 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="health_estimates_of_chronically_homeless_individuals">
+        <Annotation name="source_name">Department of Housing and Urban Development (HUD)</Annotation>
+        <Annotation name="source_description">Part 1 of the Annual Homeless Assessment Report to Congress (AHAR) provides Point-inTime (PIT) estimates, offering a snapshot of homelessness—both sheltered and unsheltered— on a single night. The PIT counts also provide an estimate of the number of people experiencing homelessness within particular homeless populations, such as people with chronic patterns of homelessness and veterans experiencing homelessness.</Annotation>
+        <Annotation name="source_link">http://hud.gov/</Annotation>
+        <Annotation name="dataset_name">The 2017 Annual Homeless Assessment Report (AHAR) to Congress, Part 1</Annotation>
+        <Annotation name="dataset_link">https://www.hudexchange.info/resources/documents/2017-AHAR-Part-1.pdf</Annotation>
+        <Annotation name="subtopic">Drivers of Health</Annotation>
+        <Annotation name="topic">Health</Annotation>
+
+        <Table name="health_estimates_of_chronically_homeless_individuals"/>
+
+        <Dimension name="Year" foreign_key="year" type="time">  
+            <Hierarchy name="Year" primary_key="year">
+                <Level name="Year" key_column="year" key_type="u16"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Geography" foreign_key="geo">
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+
+            <Hierarchy name="State">
+                <Table name="states_shapes2017"/>
+                <Level key_column="geoid"  name="State" name_column="name"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Measure aggregator="median" name="Estimates of Chronically Homeless Individuals" key_column="state_chronically_homeless_individuals">
+            <Annotation name="details">A chronically homeless individual refers to an individual with a disability who has been continuously homeless for one year or more or has experienced at least four episodes of homelessness in the last three years where the combined length of time homeless in those occasions is at least 12 months.</Annotation>
+            <Annotation name="units_of_measurement">Number</Annotation>
+        </Measure>
+    </Cube>
+</Schema>
