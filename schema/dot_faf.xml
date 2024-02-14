@@ -34,7 +34,7 @@
             <Annotation name="dim_type">GEOGRAPHY</Annotation>
 
             <Hierarchy primary_key="region_id" name="Destination">
-                <Table name="faf_regions"/>
+                <Table name="faf_regions_copy"/>
 
                 <Level key_column="state_id" name_column="state_name" name="Destination State" key_type="str"/>
                 <Level key_column="region_id" name_column="region_name" name="Destination Region" key_type="str"/>
