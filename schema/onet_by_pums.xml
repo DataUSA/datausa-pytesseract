@@ -20,29 +20,23 @@
         </Dimension>
 
         <Measure aggregator="avg" key_column="im" name="IM Value">
-            <Annotations>
-                <Annotation name="aggregation_method">NONE</Annotation>
-                <Annotation name="units_of_measurement">NONE</Annotation>
-                <Annotation name="details">Not used for presentation</Annotation>
-                <Annotation name="hide_in_ui">true</Annotation>
-            </Annotations>
+            <Annotation name="aggregation_method">NONE</Annotation>
+            <Annotation name="units_of_measurement">NONE</Annotation>
+            <Annotation name="details">Not used for presentation</Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
         </Measure>
 
         <Measure aggregator="avg" key_column="lv" name="LV Value">
-            <Annotations>
-                <Annotation name="aggregation_method">NONE</Annotation>
-                <Annotation name="units_of_measurement">NONE</Annotation>
-                <Annotation name="details">Not used for presentation</Annotation>
-                <Annotation name="hide_in_ui">true</Annotation>
-            </Annotations>
+            <Annotation name="aggregation_method">NONE</Annotation>
+            <Annotation name="units_of_measurement">NONE</Annotation>
+            <Annotation name="details">Not used for presentation</Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
         </Measure>
 
         <Measure aggregator="avg" key_column="total_score" name="Total Score">
-            <Annotations>
-                <Annotation name="aggregation_method">NONE</Annotation>
-                <Annotation name="units_of_measurement">NONE</Annotation>
-                <Annotation name="details">Calculated by IM Value * LV Value</Annotation>
-            </Annotations>
+            <Annotation name="aggregation_method">NONE</Annotation>
+            <Annotation name="units_of_measurement">NONE</Annotation>
+            <Annotation name="details">Calculated by IM Value * LV Value</Annotation>
         </Measure>
     </Cube>
 </Schema>
