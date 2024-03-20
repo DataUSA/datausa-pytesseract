@@ -16,8 +16,8 @@
           </Hierarchy>
         </Dimension>
 
-        <Dimension name="Employment State" foreign_key="state_id" >
-          <Hierarchy name="Employment State" primary_key="state_id">
+        <Dimension name="State" foreign_key="state_id" >
+          <Hierarchy name="State" primary_key="state_id">
             <Table name="dim_state" />
             <Level name="State" key_column="state_id" name_column="state_name" key_type="str"/>
           </Hierarchy>
