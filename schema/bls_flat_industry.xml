@@ -2,7 +2,7 @@
     <SharedDimension name="BLS Industry Flat">
         <Hierarchy name="BLS Industry Flat">
             <Table name="dim_flat_bls_industry" />
-            <Level key_column="bls_code" name_column="name" name="Industry" />
+            <Level key_column="bls_code" name_column="name" name="Industry" key_type="str"/>
         </Hierarchy>
     </SharedDimension>
 </Schema>
