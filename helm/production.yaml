@@ -76,11 +76,13 @@ ingress:
     nginx.org/proxy-busy-buffers-size: "64k"
     nginx.org/location-snippets: |
       add_header Access-Control-Allow-Origin *;
-  hosts:
-    - host: api-prod.datausa.io
+  customHosts:
+    - host: api-varnish.datausa.io
       paths:
-        - /
+        - path: /
+          service: varnish-tesseract-api
+          port: 8080
   tls:
     - secretName: tesseract-api-ingress-tls
       hosts: 
-        - api-prod.datausa.io
+        - api-varnish.datausa.io
