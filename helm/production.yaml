@@ -80,9 +80,9 @@ ingress:
     - host: api-varnish.datausa.io
       paths:
         - path: /
-          service: varnish-tesseract-api
-          port: 8080
+          service: cache-api-service
+          port: 80
   tls:
-    - secretName: tesseract-api-ingress-tls
+    - secretName: tesseract-api-varnish-ingress-tls
       hosts: 
         - api-varnish.datausa.io
