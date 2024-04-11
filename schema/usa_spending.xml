@@ -1,0 +1,103 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="usa_spending" subset_table="true">
+        <Annotation name="source_name">USAspending.gov</Annotation>
+        <Annotation name="source_link">https://www.usaspending.gov/</Annotation>
+        <Annotation name="dataset_name">Award Data Archive</Annotation>
+        <Annotation name="dataset_link">https://www.usaspending.gov/</Annotation>
+        <Annotation name="topic">Economy</Annotation>
+        <Annotation name="subtopic">Government Spending</Annotation>
+        <Annotation name="source_description">USA Spending provides a big-picture view of the federal spending landscape.</Annotation>
+
+        <Table name="usa_spending"  />
+        
+        <Dimension name="Geography" foreign_key="fips_county" default_hierarchy="Nation">
+            <Hierarchy name="Nation" >
+                <Table name="us_nation"/>
+                <Level key_column="geoid"  name="Nation" name_column="name"/>
+            </Hierarchy>
+        
+            <Hierarchy name="County" >
+              <Table name="counties_shapes2017" />
+              <Level name="State" key_column="state_id" name_column="state_name" />
+              <Level name="County" key_column="geoid" name_column="name" />
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Action Date" type="time" foreign_key="action_date">
+          <Annotation name="dim_type">TIME</Annotation>
+    
+          <Hierarchy name="Action Date" >
+            <Table name="dim_date"/>
+            <Level name="Year" key_column="year"   />
+            <Level name="Quarter" key_column="quarter" />
+            <Level name="Month" key_column="month"  />
+            <Level name="Day" key_column="date_id" name_column="day"/>
+          </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Fiscal Year" foreign_key="fiscal_year" type="time">  
+            <Hierarchy name="Fiscal Year">
+                <Level name="Fiscal Year" key_column="fiscal_year" key_type="u16"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="transaction_type_id" name="Transaction Type">
+      
+          <Hierarchy name="Transaction Type">
+            <InlineTable name="dim_type" format="tuples">
+              <Row>("transaction_type_id", "transaction_type", "transaction_type_parent")</Row>
+              <Row>(0, "Contract", "Contract")</Row>
+              <Row>(2, "Block grant", "Grant")</Row>
+              <Row>(3, "Formula grant", "Grant")</Row>
+              <Row>(4, "Project grant", "Grant")</Row>
+              <Row>(5, "Cooperative agreement", "Grant")</Row>
+              <Row>(6, "Direct payment for specified use, as a subsidy or other non-reimbursable direct financial aid", "Direct payments")</Row>
+              <Row>(7, "Direct loan", "Loans")</Row>
+              <Row>(8, "Guaranteed/insured loan", "Loans")</Row>
+              <Row>(9, "Insurance", "Other")</Row>
+              <Row>(10, "Direct payment with unrestricted use (retirement, pension, veterans benefits, etc.)", "Direct payments")</Row>
+              <Row>(11, "Other reimbursable, contingent, intangible, or indirect financial assistance", "Other")</Row>
+            </InlineTable>
+
+            <Level name="Transaction Type Parent" key_column="transaction_type_parent"  />
+            <Level name="Transaction Type" key_column="transaction_type_id" name_column="transaction_type"  />
+          </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Agency" foreign_key="award_subagency_id">
+            <Hierarchy name="Agency">
+                <Table name="dim_agency"/>
+                <Level name="Department" key_column="agency_code" name_column="agency" />
+                <Level name="Agency" key_column="sub_agency_code" name_column="sub_agency" />
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Product Service Code" foreign_key="psc">
+            <Annotation name="dim_type">PSC</Annotation>
+
+            <Hierarchy name="Product Service Code">
+                <Table name="dim_psc" />
+                <Level name="PSC Group" key_column="psc_code" name_column="psc"/>
+                <Level name="PSC Sub Group" key_column="sub_psc_code" name_column="sub_psc" />
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="NAPCS" foreign_key="napcs_code">
+            <Annotation name="dim_type">NAPCS</Annotation>
+            <Hierarchy name="NAPCS" >
+                <Table name="dim_napcs" />
+                <Level name="NAPCS Section" key_column="napcs2" name_column="napcs2_title" />
+                <Level name="NAPCS Group" key_column="napcs3" name_column="napcs3_title" />
+                <Level name="NAPCS Class" key_column="napcs5" name_column="napcs5_title" />
+            </Hierarchy>
+        </Dimension>
+
+        <Measure aggregator="sum" key_column="obligation_amt" name="Obligation Amount">
+            <Annotation name="units_of_measurement">USD</Annotation>
+        </Measure>
+        <Measure aggregator="sum" key_column="total_loan_value" name="Total Loan Value">
+            <Annotation name="units_of_measurement">USD</Annotation>
+        </Measure>
+  </Cube>  
+  
+</Schema>
