@@ -82,6 +82,9 @@ ingress:
         - path: /
           service: cache-api-service
           port: 80
+        - path: /signaller
+          service: cache-api-service
+          port: 8090
   tls:
     - secretName: tesseract-api-varnish-ingress-tls
       hosts: 
