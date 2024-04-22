@@ -132,4 +132,4 @@ jobs:
               --set nameOverride=${{ env.GKE_APP_NAME }} \
               --set fullnameOverride=${{ env.GKE_APP_NAME }} \
               --set secrets.TESSERACT_BACKEND=$ENCODED_TESSERACT_BACKEND \
-              ${{ env.GKE_APP_NAME }} --values=./helm/production.yaml ./helm
+              ${{ env.GKE_APP_NAME }} --values=./helm/staging.yaml ./helm

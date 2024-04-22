@@ -77,7 +77,7 @@ ingress:
     nginx.org/location-snippets: |
       add_header Access-Control-Allow-Origin *;
   customHosts:
-    - host: api-prod.datausa.io
+    - host: api-staging.datausa.io
       paths:
         - path: /
           service: cache-api-service
@@ -88,4 +88,4 @@ ingress:
   tls:
     - secretName: tesseract-api-varnish-ingress-tls
       hosts: 
-        - api-prod.datausa.io
+        - api-staging.datausa.io
