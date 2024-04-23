@@ -77,15 +77,15 @@ ingress:
     nginx.org/location-snippets: |
       add_header Access-Control-Allow-Origin *;
   customHosts:
-    - host: api-staging.datausa.io
+    - host: api-ts-arkansas.datausa.io
       paths:
         - path: /
-          service: cache-api-service
+          service: tesseract-api-arkansas-cache
           port: 80
         - path: /signaller
-          service: cache-api-service
+          service: tesseract-api-arkansas-cache
           port: 8090
   tls:
     - secretName: tesseract-api-varnish-ingress-tls
       hosts: 
-        - api-staging.datausa.io
+        - api-ts-arkansas.datausa.io
