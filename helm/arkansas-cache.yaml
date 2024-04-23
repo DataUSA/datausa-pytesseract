@@ -58,7 +58,7 @@ serviceAccount:
   name: "kube-httpcache"
 
 rbac:
-  enabled: true
+  enabled: false
 
 # create a prometheus operator ServiceMonitor
 serviceMonitor:
