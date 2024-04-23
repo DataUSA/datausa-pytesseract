@@ -5,13 +5,9 @@
 replicaCount: 3
 
 image:
-  repository: quay.io/mittwald/kube-httpcache
   pullPolicy: IfNotPresent
-  tag: "stable"
 
 imagePullSecrets: []
-nameOverride: ""
-fullnameOverride: ""
 
 # Enable StatefulSet (Deployment is default)
 useStatefulset:
@@ -59,7 +55,7 @@ serviceAccount:
   annotations: {}
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name: ""
+  name: "kube-httpcache"
 
 rbac:
   enabled: true
