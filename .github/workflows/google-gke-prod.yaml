@@ -157,5 +157,4 @@ jobs:
               --set image.tag=stable  \
               --set nameOverride=${{ env.GKE_APP_NAME }}-${{ inputs.release }}-cache \
               --set fullnameOverride=${{ env.GKE_APP_NAME }}-${{ inputs.release }}-cache \
-              --set secrets.TESSERACT_BACKEND=$ENCODED_TESSERACT_BACKEND \
               ${{ env.GKE_APP_NAME }}-${{ inputs.release }}-cache --values=./helm/${{ inputs.release }}-cache.yaml mittwald/kube-httpcache
