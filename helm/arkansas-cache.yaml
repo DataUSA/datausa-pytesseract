@@ -368,6 +368,9 @@ vclTemplate: |
     # set X-Backend header
     set beresp.http.X-Backend = beresp.backend.name;
 
+    # Set cache control headers for a one-year cache lifetime
+    set beresp.ttl = 365d; # Cache for 365 days (1 year)
+
     # delete cookies on api server response
     if (bereq.url ~ "^/tesseract/") {
       unset beresp.http.Set-Cookie;
