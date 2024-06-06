@@ -1,4 +1,5 @@
 <Schema name="datausa" default_locale="en">
+
     <Cube name="usa_spending" subset_table="true">
         <Annotation name="source_name">USAspending.gov</Annotation>
         <Annotation name="source_link">https://www.usaspending.gov/</Annotation>
