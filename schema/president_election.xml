@@ -4,11 +4,6 @@
         <Annotation name="source_link">https://electionlab.mit.edu/data</Annotation>
         <Annotation name="dataset_name">U.S President 1976-2020</Annotation>
         <Annotation name="dataset_link">https://dataverse.harvard.edu/api/access/datafile/:persistentId?persistentId=doi:10.7910/DVN/42MVDX/MFU99O</Annotation>
-        <Annotation name="dataset_name">County Presidential Election Returns 2000-2020</Annotation>
-        <Annotation name="dataset_link">https://dataverse.harvard.edu/api/access/datafile/:persistentId?persistentId=doi:10.7910/DVN/VOQCHQ/FQ9NBF</Annotation>
-        <Annotation name="source_name">Federal Election Commision</Annotation>
-        <Annotation name="source_link">https://www.fec.gov/</Annotation>
-        <Annotation name="available_dimensions">Candidate, Geography, Party, Year</Annotation>
         <Annotation name="hidden_dimensions">Version</Annotation>
         <Annotation name="topic">Election</Annotation>
         <Annotation name="subtopic">President</Annotation>
