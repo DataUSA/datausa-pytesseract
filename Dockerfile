@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM python:3.12
 
 # Install api pre requirements
 RUN pip install -U pip setuptools wheel
@@ -30,13 +30,8 @@ ENV GIT_HASH=${GIT_HASH:-dev}
 USER tesseract
 
 # Expose api port
-ENV PORT 7777
 EXPOSE 7777
 
-# Setup host and port
-# Uncomment this line for a cloudrun instance
-#ENV HOST 0.0.0.0
-
 # Define startup commands
-CMD ["app.py"]
-ENTRYPOINT ["python"]
+CMD ["--interface", "asgi", "--host", "127.0.0.1", "--port", "7777", "--respawn-failed-workers", "app:layer"]
+ENTRYPOINT ["granian"]
