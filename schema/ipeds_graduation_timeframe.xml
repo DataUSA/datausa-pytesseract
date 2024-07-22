@@ -1,0 +1,49 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="ipeds_graduation_timeframe">
+        <Annotation name="source_name">Integrated Postsecondary Education Data System (IPEDS)</Annotation>
+        <Annotation name="source_link">https://nces.ed.gov/ipeds/use-the-data</Annotation>
+        <Annotation name="topic">Education</Annotation>
+        <Annotation name="subtopic">Graduation</Annotation>
+        <Annotation name="source_description">IPEDS is the Integrated Postsecondary Education Data System. It is a system of interrelated surveys conducted annually by the U.S. Department of Education’s National Center for Education Statistics (NCES). IPEDS gathers information from every college, university, and technical and vocational institution that participates in the federal student financial aid programs.</Annotation>
+        <Annotation name="dataset_name"><![CDATA[Graduation Rates]]></Annotation>
+        <Annotation name="dataset_link">https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx</Annotation>
+
+        <Table name="ipeds_graduation_timeframe"/>
+
+        <DimensionUsage foreign_key="university" name="University" source="University"  /> 
+
+        <Dimension name="Year" foreign_key="year" type="time">  
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="year">
+                <Level name="Year" key_column="year" key_type="u16"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Timeframe" foreign_key="timeframe">  
+            <Hierarchy name="Timeframe">
+                <InlineTable name="dim_inline_timeframe" format="tuples">
+                    <Row>("id", "description")</Row>
+                    <Row>("100", "100%")</Row>
+                    <Row>("150", "150%")</Row>
+                    <Row>("200", "200%")</Row>
+                </InlineTable>
+                <Level name="Timeframe" key_column="id" name_column="description" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Program Type" foreign_key="program_type">  
+            <Hierarchy name="Program Type" primary_key="program_type">
+                <Level name="Program Type" key_column="program_type" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Measure name="Number Completers BA" key_column="num_completed" aggregator="sum">
+            <Annotation name="units_of_measurement">Degrees</Annotation>
+        </Measure>
+
+        <Measure name="Median Percent Completed BA" aggregator="median" key_column="pct_completed">
+            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="aggregation_method">MEDIAN</Annotation>
+        </Measure>
+    </Cube>
+</Schema>
