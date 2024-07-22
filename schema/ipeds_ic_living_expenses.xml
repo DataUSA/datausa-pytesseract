@@ -1,0 +1,48 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="ipeds_ic_living_expenses">
+      <Annotation name="source_name">Integrated Postsecondary Education Data System (IPEDS)</Annotation>
+      <Annotation name="source_link">https://nces.ed.gov/ipeds/use-the-data</Annotation>
+      <Annotation name="topic">Education</Annotation>
+      <Annotation name="subtopic">Living Expenses</Annotation>
+      <Annotation name="source_description">IPEDS is the Integrated Postsecondary Education Data System. It is a system of interrelated surveys conducted annually by the U.S. Department of Education’s National Center for Education Statistics (NCES). IPEDS gathers information from every college, university, and technical and vocational institution that participates in the federal student financial aid programs.</Annotation>
+      <Annotation name="dataset_name"><![CDATA[Institutional Characteristics]]></Annotation>
+      <Annotation name="dataset_link">https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx</Annotation>
+
+        <Table name="ipeds_ic_living_expenses" />
+
+        <DimensionUsage foreign_key="university" name="University" source="University"  /> 
+
+        <Dimension name="Year" foreign_key="year" type="time">  
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="year">
+                <Level name="Year" key_column="year" key_type="u16"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Living Arrangement" foreign_key="living_arrangement">
+            <Hierarchy name="Living Arrangement" primary_key="living_arrangement">
+                <Level key_column="living_arrangement_parent" name="Living Arrangement Parent" key_type="str" />
+                <Level key_column="living_arrangement" name="Living Arrangement" key_type="str" />
+            </Hierarchy>
+        </Dimension>
+
+        <Measure name="Total Other Student Expenses" key_column="other_expenses" aggregator="sum">
+            <Annotation name="units_of_measurement">USD</Annotation>
+        </Measure>
+
+        <Measure name="Total Room And Board" key_column="room_and_board" aggregator="sum">
+            <Annotation name="units_of_measurement">USD</Annotation>
+        </Measure>
+
+        <Measure name="Median Room And Board" aggregator="median" key_column="room_and_board">
+            <Annotation name="aggregation_method">MEDIAN</Annotation>
+            <Annotation name="units_of_measurement">USD</Annotation>
+            <Annotation name="details">Excluding people not paying room and board</Annotation>
+        </Measure>
+
+        <Measure name="Median Other Student Expenses" aggregator="median" key_column="other_expenses">
+            <Annotation name="units_of_measurement">USD</Annotation>
+            <Annotation name="aggregation_method">MEDIAN</Annotation>
+        </Measure>
+    </Cube>
+</Schema>
