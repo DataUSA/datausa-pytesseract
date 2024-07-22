@@ -1,0 +1,41 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="ipeds_sfa_living">
+        <Annotation name="source_name">Integrated Postsecondary Education Data System (IPEDS)</Annotation>
+        <Annotation name="source_link">https://nces.ed.gov/ipeds/use-the-data</Annotation>
+        <Annotation name="topic">Education</Annotation>
+        <Annotation name="subtopic">Financial Aid</Annotation>
+        <Annotation name="source_description">IPEDS is the Integrated Postsecondary Education Data System. It is a system of interrelated surveys conducted annually by the U.S. Department of Education’s National Center for Education Statistics (NCES). IPEDS gathers information from every college, university, and technical and vocational institution that participates in the federal student financial aid programs.</Annotation>
+        <Annotation name="dataset_name">Student Financial Aid and Net Price</Annotation>
+        <Annotation name="dataset_link">https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx</Annotation>
+
+        <Table name="ipeds_sfa_living" />
+
+        <DimensionUsage foreign_key="university" name="University" source="University"  />  
+        <DimensionUsage foreign_key="university" name="Geography" source="IPEDS Geography" />
+
+        <Dimension name="Year" foreign_key="year" type="time">  
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="year">
+                <Level name="Year" key_column="year" key_type="u16"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Living Arrangement" foreign_key="living_arrangement">  
+            <Hierarchy name="Year" primary_key="living_arrangement">
+                <Level name="Living Arrangement Parent" key_column="living_arrangement_parent" key_type="str"/>
+                <Level name="Living Arrangement" key_column="living_arrangement" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Measure name="Total Number in Living Arrangement" key_column="num_in_living_arrangement" aggregator="sum">
+            <Annotation name="units_of_measurement">Count</Annotation>
+            <Annotation name="details">Number of full-time, first-time degree/certificate-seeking undergraduates LIVING ON-CAMPUS, paying the in-state or in-district tuition rate who were awarded grant or scholarship aid from federal, state or local governments, or the institution.  Students awarded only other sources of grant aid are excluded. Applicable to public institutions with standard calendar systems (semester, quarter, trimester, 4-1-4) that report financial aid data for students enrolled for the FALL and awarded aid anytime during the full aid year. Full-time, first-time degree/certificate-seeking undergraduates - A student enrolled in a 4- or 5-year bachelor's degree program, an associate's degree program, or a vocational or technical program below the baccalaureate level, who has no prior postsecondary experience, and is enrolled for 12 or more semester credits, or 12 or more quarter credits, or 24 or more contact hours a week each term. In-state tuition is the tuition charged by institutions to those students who meet the state's or institution's residency requirements. In-district tuition is the tuition charged by the institution to those students residing in the locality in which they attend school and may be a lower rate than in-state tuition if offered by the institution.</Annotation>
+        </Measure>
+
+        <Measure name="Average Number in Living Arrangement" key_column="num_in_living_arrangement" aggregator="avg">
+            <Annotation name="units_of_measurement">Count</Annotation>
+            <Annotation name="aggregation_method">AVERAGE</Annotation>
+            <Annotation name="details">Average number of full-time, first-time degree/certificate-seeking undergraduates LIVING ON-CAMPUS, paying the in-state or in-district tuition rate who were awarded grant or scholarship aid from federal, state or local governments, or the institution.  Students awarded only other sources of grant aid are excluded. Applicable to public institutions with standard calendar systems (semester, quarter, trimester, 4-1-4) that report financial aid data for students enrolled for the FALL and awarded aid anytime during the full aid year. Full-time, first-time degree/certificate-seeking undergraduates - A student enrolled in a 4- or 5-year bachelor's degree program, an associate's degree program, or a vocational or technical program below the baccalaureate level, who has no prior postsecondary experience, and is enrolled for 12 or more semester credits, or 12 or more quarter credits, or 24 or more contact hours a week each term. In-state tuition is the tuition charged by institutions to those students who meet the state's or institution's residency requirements. In-district tuition is the tuition charged by the institution to those students residing in the locality in which they attend school and may be a lower rate than in-state tuition if offered by the institution.</Annotation>
+        </Measure>
+    </Cube>
+</Schema>

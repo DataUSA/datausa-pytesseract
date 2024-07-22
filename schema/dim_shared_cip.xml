@@ -2,15 +2,15 @@
   <SharedDimension name="CIP">
     <Hierarchy  name="CIP">
       <Table name="ipeds_dims_cip"/>
-      <Level key_column="cip2" name_column="cip2_name" name="CIP2">
+      <Level key_column="cip2" name_column="cip2_name" name="CIP2" key_type="u32">
         <Property key_column="cip2_name_long" name="CIP2 Full Name"/>
         <Property key_column="cip2_description" name="CIP2 Description"/>
       </Level>
-      <Level key_column="cip4" name_column="cip4_name" name="CIP4">
+      <Level key_column="cip4" name_column="cip4_name" name="CIP4" key_type="u32">
         <Property key_column="cip4_name_long" name="CIP4 Full Name"/>
         <Property key_column="cip4_description" name="CIP4 Description"/>
       </Level>
-      <Level key_column="cip" name_column="cip_name" name="CIP6">
+      <Level key_column="cip" name_column="cip_name" name="CIP6" key_type="u32">
         <Property key_column="cip_name_long" name="CIP6 Full Name"/>
         <Property key_column="cip_description" name="CIP6 Description"/>
       </Level>
