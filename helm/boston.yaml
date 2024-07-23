@@ -77,12 +77,12 @@ ingress:
     nginx.org/location-snippets: |
       add_header Access-Control-Allow-Origin *;
   customHosts:
-    - host: boston-api-ts.datausa.io
+    - host: test-api.datausa.io
       paths:
         - path: /
-          service: tesseract-api-boston
+          service: tesseract-api-test
           port: 7777
   tls:
-    - secretName: tesseract-api-boston-ingress-tls
+    - secretName: tesseract-api-test-ingress-tls
       hosts: 
-        - boston-api-ts.datausa.io
+        - test-api.datausa.io
