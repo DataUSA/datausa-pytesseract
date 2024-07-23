@@ -133,10 +133,10 @@ jobs:
               --set app.release=${{ env.GKE_APP_NAMESPACE }} \
               --set image.repository=${{ env.GCP_ARTIFACT_REGISTRY_LOCATION }}-docker.pkg.dev/${{ env.GCP_PROJECT_ID }}/${{ env.GCP_ARTIFACT_REGISTRY_NAME }}/${{ env.GCP_IMAGE_NAME }} \
               --set image.tag=${{ inputs.release }}-${{ inputs.release_tag }}  \
-              --set nameOverride=${{ env.GKE_APP_NAME }}-test \
-              --set fullnameOverride=${{ env.GKE_APP_NAME }}-test \
+              --set nameOverride=${{ env.GKE_APP_NAME }}-${{ inputs.release }} \
+              --set fullnameOverride=${{ env.GKE_APP_NAME }}-${{ inputs.release }} \
               --set secrets.TESSERACT_BACKEND=$ENCODED_TESSERACT_BACKEND \
-              ${{ env.GKE_APP_NAME }}-test --values=./helm/${{ inputs.release }}.yaml ./helm
+              ${{ env.GKE_APP_NAME }}-${{ inputs.release }} --values=./helm/${{ inputs.release }}.yaml ./helm
 
       # Install Cache Helm chart
       # - name: Add Helm cache repo
