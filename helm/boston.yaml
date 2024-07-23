@@ -81,7 +81,7 @@ ingress:
       paths:
         - path: /
           service: tesseract-api-boston
-          port: 80
+          port: 7777
   tls:
     - secretName: tesseract-api-ingress-tls
       hosts: 
