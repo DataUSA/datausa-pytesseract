@@ -1,0 +1,53 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="ipeds_graduation_demographics_v3">
+        <Annotation name="source_name">Integrated Postsecondary Education Data System (IPEDS)</Annotation>
+        <Annotation name="source_link">https://nces.ed.gov/ipeds/use-the-data</Annotation>
+        <Annotation name="topic">Education</Annotation>
+        <Annotation name="subtopic">Graduation</Annotation>
+        <Annotation name="source_description">IPEDS is the Integrated Postsecondary Education Data System. It is a system of interrelated surveys conducted annually by the U.S. Department of Education’s National Center for Education Statistics (NCES). IPEDS gathers information from every college, university, and technical and vocational institution that participates in the federal student financial aid programs.</Annotation>
+        <Annotation name="dataset_name"><![CDATA[Graduation Demographics]]></Annotation>
+        <Annotation name="dataset_link">https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx</Annotation>
+
+        <Table name="ipeds_graduation_demographics_v3"/>
+
+        <DimensionUsage foreign_key="university" name="University" source="University"  />  
+        <DimensionUsage foreign_key="ipeds_race" name="IPEDS Race" source="IPEDS Race"/>
+        <DimensionUsage foreign_key="university" name="Geography" source="IPEDS Geography" />
+
+        <Dimension name="Year" foreign_key="year" type="time">  
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="year">
+                <Level name="Year" key_column="year" key_type="u16"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="sex" name="Gender">
+          <Hierarchy name="Gender">
+            <InlineTable name="dim_inline_gender" format="tuples">
+                <Row>("id", "description")</Row>
+                <Row>(1, "Men")</Row>
+                <Row>(2, "Women")</Row>
+            </InlineTable>
+            <Level key_column="id" name="Gender" name_column="description" key_type="u8" />
+          </Hierarchy>
+        </Dimension>
+
+        <Measure name="Cohort Size" key_column="cohort_size" aggregator="sum">
+            <Annotation name="units_of_measurement">Count</Annotation>
+        </Measure>
+
+        <Measure name="Number Of Finishers" key_column="num_finishers" aggregator="sum">
+            <Annotation name="units_of_measurement">Count</Annotation>
+        </Measure>
+
+        <!--<CalculatedMeasure name="Graduation Rate" formula="CASE WHEN [Cohort Size] == 0 OR [Cohort Size] == NULL OR [Number Of Finishers] == 0 OR [Number Of Finishers] == NULL THEN NULL ELSE [Number Of Finishers] / [Cohort Size] END">
+            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="details">Percentage of Full-time, First-time Students Who Received a Degree or Award Within 150% of "Normal Time" to Completion for Their Program</Annotation>
+        </CalculatedMeasure>-->
+
+        <CalculatedMeasure name="Graduation Rate" formula="CASE WHEN [Cohort Size] == 0 THEN 0 ELSE [Number Of Finishers] / [Cohort Size] END">
+            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="details">Percentage of Full-time, First-time Students Who Received a Degree or Award Within 150% of "Normal Time" to Completion for Their Program</Annotation>
+        </CalculatedMeasure>
+    </Cube>
+</Schema>

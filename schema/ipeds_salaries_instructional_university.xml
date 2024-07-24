@@ -1,0 +1,58 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="ipeds_salaries_instructional_university">
+        <Annotation name="source_name">Integrated Postsecondary Education Data System (IPEDS)</Annotation>
+        <Annotation name="source_link">https://nces.ed.gov/ipeds/use-the-data</Annotation>
+        <Annotation name="topic">Education</Annotation>
+        <Annotation name="subtopic">Finance</Annotation>
+        <Annotation name="source_description">IPEDS is the Integrated Postsecondary Education Data System. It is a system of interrelated surveys conducted annually by the U.S. Department of Education’s National Center for Education Statistics (NCES). IPEDS gathers information from every college, university, and technical and vocational institution that participates in the federal student financial aid programs.</Annotation>
+        <Annotation name="dataset_name"><![CDATA[Instructional Staff/Salaries]]></Annotation>
+        <Annotation name="dataset_link">https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx</Annotation>
+
+        <Table name="ipeds_salaries_instructional_university" />
+
+        <DimensionUsage foreign_key="university" name="University" source="University"  />  
+
+        <Dimension name="Year" foreign_key="year" type="time">  
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="year">
+                <Level name="Year" key_column="year" key_type="u16"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Measure name="Total Instructional Employees" key_column="num_instructional_staff" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+            <Annotation name="details">Covers full-time nonmedical instructional staff</Annotation>
+        </Measure>
+
+        <Measure name="Total Months Of Employment For Instructional Employees" key_column="months_covered_instructional_staff" aggregator="sum">
+            <Annotation name="units_of_measurement">Months</Annotation>
+            <Annotation name="details">Covers full-time nonmedical instructional staff</Annotation>
+        </Measure>
+
+        <Measure name="Total Outlays Instructional Employees" key_column="outlays_instructional_staff" aggregator="sum">
+            <Annotation name="units_of_measurement">USD</Annotation>
+            <Annotation name="details">Covers full-time nonmedical instructional staff</Annotation>
+        </Measure>
+
+        <Measure name="Median Total Instructional Employees" key_column="num_instructional_staff">
+            <Annotation name="units_of_measurement">People</Annotation>
+            <Annotation name="aggregation_method">MEDIAN</Annotation>
+            <Annotation name="details">Covers full-time nonmedical instructional staff</Annotation>
+            <Aggregation type="quantile" quantile-level="0.5" />
+        </Measure>
+
+        <Measure name="Median Months Of Employment For Instructional Employees" key_column="months_covered_instructional_staff">
+            <Annotation name="units_of_measurement">Months</Annotation>
+            <Annotation name="aggregation_method">MEDIAN</Annotation>
+            <Annotation name="details">Covers full-time nonmedical instructional staff</Annotation>
+            <Aggregation type="quantile" quantile-level="0.5" />
+        </Measure>
+
+        <Measure name="Median Outlays Instructional Employees" key_column="outlays_instructional_staff">
+            <Annotation name="units_of_measurement">USD</Annotation>
+            <Annotation name="aggregation_method">MEDIAN</Annotation>
+            <Annotation name="details">Covers full-time nonmedical instructional staff</Annotation>
+            <Aggregation type="quantile" quantile-level="0.5" />
+        </Measure>
+    </Cube>
+</Schema>

@@ -70,8 +70,8 @@
                 <Row>("multiracial", "Two or More Races")</Row>
                 <Row>("native", "American Indian or Alaska Native")</Row>
                 <Row>("nonresident", "Non-resident Alien")</Row>
-                <Row>("unknown", "Unknown)</Row>
-                <Row>("white", "White)</Row>
+                <Row>("unknown", "Unknown")</Row>
+                <Row>("white", "White")</Row>
             </InlineTable>
       
             <Level key_column="id" name="IPEDS Race" name_column="description" key_type="str"/>
