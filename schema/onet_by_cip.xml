@@ -33,11 +33,11 @@
             <Annotation name="hide_in_ui">true</Annotation>
         </Measure>
 
-        <Measure aggregator="avg" key_column="total_score" name="Total Score 2">
+        <!--<Measure aggregator="avg" key_column="total_score" name="Total Score 2">
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">NONE</Annotation>
             <Annotation name="details">Calculated by IM Value * LV Value</Annotation>
-        </Measure>
+        </Measure>-->
 
         <CalculatedMeasure name="Total Score" formula="[IM Value] * [LV Value]">
             <Annotation name="aggregation_method">NONE</Annotation>
