@@ -33,7 +33,7 @@
             <Annotation name="hide_in_ui">true</Annotation>
         </Measure>
 
-        <CalculatedMeasure name="Total Score" formula="[IM Value] / [LV Value]">
+        <CalculatedMeasure name="Total Score" formula="[IM Value] * [LV Value]">
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">NONE</Annotation>
             <Annotation name="details">Calculated by IM Value * LV Value</Annotation>
