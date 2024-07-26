@@ -2,10 +2,10 @@
     <SharedDimension name="PUMS Occupation">
         <Hierarchy name="PUMS Occupation">
             <Table name="pums_dims_soc"/>
-            <Level key_column="great_grandparent" name_column="great_grandparent_name" name="Major Occupation Group"/>
-            <Level key_column="grandparent" name_column="grandparent_name" name="Minor Occupation Group"/>
-            <Level key_column="parent" name_column="parent_name" name="Broad Occupation"/>
-            <Level key_column="id" name_column="name" name="Detailed Occupation"/>
+            <Level key_column="great_grandparent" name_column="great_grandparent_name" name="Major Occupation Group" key_type="str"/>
+            <Level key_column="grandparent" name_column="grandparent_name" name="Minor Occupation Group" key_type="str"/>
+            <Level key_column="parent" name_column="parent_name" name="Broad Occupation" key_type="str"/>
+            <Level key_column="id" name_column="name" name="Detailed Occupation" key_type="str"/>
         </Hierarchy>
     </SharedDimension>
 </Schema>
