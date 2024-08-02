@@ -59,60 +59,10 @@
             <Annotation name="details">Number of awards or degrees conferred</Annotation>
         </Measure>
 
-        <!--<Measure name="Number Of Universities" key_column="university" aggregator="distinct-count">
+        <Measure name="Number Of Universities" key_column="university" aggregator="count"><!--distinct-count-->
             <Annotation name="details">Number of distinct universities aggregated</Annotation>
             <Annotation name="aggregation_method">distinct-count</Annotation>
             <Annotation name="units_of_measurement">Universities</Annotation>
         </Measure>
-
-            <CalculatedMember dimension="Measures" name="All Completions At University" visible="false">
-              <Formula>
-                <![CDATA[
-                    (Measures.[Completions],
-                    [CIP].[CIP].[All CIPs])
-                ]]>
-              </Formula>
-            </CalculatedMember>
-
-            <CalculatedMember dimension="Measures" name="Completions Share Of University" visible="true">
-              <Annotations>
-                <Annotation name="units_of_measurement">Percentage</Annotation>
-                <Annotation name="details">The completions in a particular course at a university divided by the total completions in the university across all courses.</Annotation>
-                <Annotation name="hide_in_ui">true</Annotation>
-                <Annotation name="hide_in_map">true</Annotation>
-              </Annotations>
-              <Formula>
-                <![CDATA[
-                IIF([Measures].[All Completions At University] > 0,
-                    [Measures].[Completions] / [Measures].[All Completions At University], NULL)
-                ]]>
-              </Formula>
-            </CalculatedMember>
-
-            <CalculatedMember dimension="Measures" name="Completions Previous" visible="false">
-              <Annotations>
-                <Annotation name="details">Completions from 1 year ago.</Annotation>
-              </Annotations>
-              <Formula>
-                <![CDATA[
-                (ParallelPeriod([Year].[Year].[Year], 1, [Year].[Year].CurrentMember), [Measures].[Completions])
-                ]]>
-              </Formula>
-              </CalculatedMember>
-
-            <CalculatedMember dimension="Measures" name="Completions Growth" visible="true">
-              <Annotations>
-                <Annotation name="units_of_measurement">Growth</Annotation>
-                <Annotation name="details">1-year growth rate in degrees completed.</Annotation>
-              </Annotations>
-              <Formula>
-                <![CDATA[
-                  IIF([Measures].[Completions Previous] > 0 AND [Measures].[Completions] >= 0,
-                    ([Measures].[Completions] - [Measures].[Completions Previous]) / [Measures].[Completions Previous],
-                    NULL
-                  )
-                ]]>
-              </Formula>
-            </CalculatedMember>-->
     </Cube>
 </Schema>

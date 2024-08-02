@@ -21,7 +21,7 @@ const config = {
   },
   clearScreen: false,
   define: {
-    'process.env.__SERVER_LOCALE__': JSON.stringify(`en,es,fr`),
+    'process.env.__SERVER_LOCALE__': JSON.stringify(`en`),
     'process.env.__SERVER_URL__': JSON.stringify(serverUrl),
     'process.env.__UI_LOCALE__': JSON.stringify(`en`),
   },
