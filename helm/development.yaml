@@ -78,10 +78,10 @@ ingress:
     nginx.org/location-snippets: |
       add_header Access-Control-Allow-Origin *;
   hosts:
-    - host: api-dev.datausa.io
+    - host: api-ts-dev.datausa.io
       paths:
         - /
   tls:
     - secretName: tesseract-api-ingress-tls
       hosts: 
-        - api-dev.datausa.io
+        - api-ts-dev.datausa.io

@@ -1,0 +1,39 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="ipeds_salaries_noninstructional">
+        <Annotation name="source_name">Integrated Postsecondary Education Data System (IPEDS)</Annotation>
+        <Annotation name="source_link">https://nces.ed.gov/ipeds/use-the-data</Annotation>
+        <Annotation name="topic">Education</Annotation>
+        <Annotation name="subtopic">Finance</Annotation>
+        <Annotation name="source_description">IPEDS is the Integrated Postsecondary Education Data System. It is a system of interrelated surveys conducted annually by the U.S. Department of Education’s National Center for Education Statistics (NCES). IPEDS gathers information from every college, university, and technical and vocational institution that participates in the federal student financial aid programs.</Annotation>
+        <Annotation name="dataset_name"><![CDATA[Instructional Staff/Salaries]]></Annotation>
+        <Annotation name="dataset_link">https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx</Annotation>
+
+        <Table name="ipeds_salaries_noninstructional" />
+        
+        <DimensionUsage foreign_key="university" name="University" source="University"  />  
+
+        <Dimension name="Year" foreign_key="year" type="time">  
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="year">
+                <Level name="Year" key_column="year" key_type="u16"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="IPEDS Occupation" foreign_key="ipeds_occ">
+            <Hierarchy name="IPEDS Occupation" primary_key="ipeds_occ">
+                <Level name="IPEDS Occupation Parent" key_column="ipeds_occ_group_name" key_type="str"/>
+                <Level name="IPEDS Occupation" key_column="ipeds_occ" name_column="ipeds_occ_name" key_type="u16"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Measure name="Total Noninstructional Employees" key_column="num_noninstructional_staff" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+            <Annotation name="details">Covers full-time nonmedical noninstructional staff</Annotation>
+        </Measure>
+
+        <Measure name="Total Outlays Noninstructional Employees" key_column="outlays_noninstructional_staff" aggregator="sum">
+            <Annotation name="units_of_measurement">USD</Annotation>
+            <Annotation name="details">Covers full-time nonmedical noninstructional staff</Annotation>
+        </Measure>
+    </Cube>
+</Schema>

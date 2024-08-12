@@ -4,8 +4,6 @@
         <Annotation name="source_link">https://electionlab.mit.edu/data</Annotation>
         <Annotation name="dataset_name">U.S House 1976-2020</Annotation>
         <Annotation name="dataset_link">https://dataverse.harvard.edu/api/access/datafile/:persistentId?persistentId=doi:10.7910/DVN/IG0UN2/8KAB8V</Annotation>
-        <Annotation name="source_name">Federal Election Commision</Annotation>
-        <Annotation name="source_link">https://www.fec.gov/</Annotation>
         <Annotation name="hidden_dimensions">Version</Annotation>
         <Annotation name="source_description">By applying scientific principles to how elections are studied and administered, the MIT Election Lab aims to improve the democratic experience for all U.S. voters. The lab supports advances in election science by collecting, analyzing, and sharing core data and findings. They also aim to build relationships with election officials and others to help apply new scientific research to the practice of democracy in the United States.</Annotation>
         <Annotation name="topic">Election</Annotation>

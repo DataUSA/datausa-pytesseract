@@ -1,0 +1,54 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="ipeds_sfa_aid">
+        <Annotation name="source_name">Integrated Postsecondary Education Data System (IPEDS)</Annotation>
+        <Annotation name="source_link">https://nces.ed.gov/ipeds/use-the-data</Annotation>
+        <Annotation name="topic">Education</Annotation>
+        <Annotation name="subtopic">Financial Aid</Annotation>
+        <Annotation name="source_description">IPEDS is the Integrated Postsecondary Education Data System. It is a system of interrelated surveys conducted annually by the U.S. Department of Education’s National Center for Education Statistics (NCES). IPEDS gathers information from every college, university, and technical and vocational institution that participates in the federal student financial aid programs.</Annotation>
+        <Annotation name="dataset_name"><![CDATA[Student Financial Aid and Net Price]]></Annotation>
+        <Annotation name="dataset_link">https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx</Annotation>
+
+        <Table name="ipeds_sfa_aid" />
+
+        <DimensionUsage foreign_key="university" name="University" source="University"  /> 
+
+        <Dimension name="Year" foreign_key="year" type="time">  
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="year">
+                <Level name="Year" key_column="year" key_type="u16"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Income Range" foreign_key="income_range" >  
+            <Hierarchy name="Income Range" >
+                <InlineTable name="dim_inline_income" format="tuples">
+                    <Row>("id", "description")</Row>
+                    <Row>(1, "$0 - $30,000")</Row>
+                    <Row>(2, "$30,001 - $48,000")</Row>
+                    <Row>(3, "$48,001 - $75,000")</Row>
+                    <Row>(4, "$75,001 - $110,000")</Row>
+                    <Row>(5, "$110,000+")</Row>
+                </InlineTable>
+                <Level key_column="id" name="Income Range" name_column="description" key_type="u8" />
+            </Hierarchy>
+        </Dimension>
+
+        <Measure name="Total Number In Income Bracket" key_column="num_income" aggregator="sum">
+            <Annotation name="units_of_measurement">Count</Annotation>
+        </Measure>
+
+        <Measure name="Total Number Awarded Grant Or Scholarship" key_column="num_gos_award" aggregator="sum">
+            <Annotation name="units_of_measurement">Count</Annotation>
+        </Measure>
+
+        <Measure name="Median Grant Or Scholarship Award" aggregator="median" key_column="avg_gos_award">
+            <Annotation name="aggregation_method">MEDIAN</Annotation>
+            <Annotation name="units_of_measurement">USD</Annotation>
+        </Measure>
+
+        <Measure name="Median Averge Net Price Federal Aid" aggregator="median" key_column="avg_netprice_fedaid">
+            <Annotation name="aggregation_method">MEDIAN</Annotation>
+            <Annotation name="units_of_measurement">USD</Annotation>
+        </Measure>
+    </Cube>
+</Schema>

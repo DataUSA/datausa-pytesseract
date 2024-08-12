@@ -1,0 +1,179 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="ipeds_admissions">
+        <Annotation name="source_name">Integrated Postsecondary Education Data System (IPEDS)</Annotation>
+        <Annotation name="dataset_name"><![CDATA[Admissions & Test Scores]]></Annotation>
+        <Annotation name="dataset_link">https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx</Annotation>
+        <Annotation name="source_link">https://nces.ed.gov/ipeds/use-the-data</Annotation>
+        <Annotation name="topic">Education</Annotation>
+        <Annotation name="subtopic">Admissions</Annotation>
+        <Annotation name="source_description">IPEDS is the Integrated Postsecondary Education Data System. It is a system of interrelated surveys conducted annually by the U.S. Department of Education’s National Center for Education Statistics (NCES). IPEDS gathers information from every college, university, and technical and vocational institution that participates in the federal student financial aid programs.</Annotation>
+
+        <Table name="ipeds_admissions" />
+
+        <DimensionUsage foreign_key="university" name="University" source="University"  />  
+        <DimensionUsage foreign_key="university" name="Geography" source="IPEDS Geography" />
+
+        <Dimension name="Year" foreign_key="year" type="time">  
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="year">
+                <Level name="Year" key_column="year" key_type="u16"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Measure name="Applicants Total" key_column="applicants_total" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Applicants Men" key_column="applicants_men" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Applicants Women" key_column="applicants_women" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Applicants Another Gender" key_column="applicants_other_gender" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Applicants Gender Unknown" key_column="applicants_unknown" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Admissions Total" key_column="admissions_total" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Admissions Men" key_column="admissions_men" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Admissions Women" key_column="admissions_women" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Admissions Another Gender" key_column="admissions_other_gender" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Admissions Gender Unknown" key_column="admissions_unknown" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Admissions Enrolled Total" key_column="admissions_enrolled_total" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Admissions Enrolled Men" key_column="admissions_enrolled_men" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Admissions Enrolled Women" key_column="admissions_enrolled_women" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Admissions Enrolled Another Gender" key_column="admissions_enrolled_other_gender" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Admissions Enrolled Gender Unknown" key_column="admissions_enrolled_unknown" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Admissions Enrolled FT Total" key_column="admissions_enrolled_ft_total" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Admissions Enrolled FT Men" key_column="admissions_enrolled_ft_men" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Admissions Enrolled FT Women" key_column="admissions_enrolled_ft_women" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Admissions Enrolled FT Another Gender" key_column="admissions_enrolled_ft_other_gender" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Admissions Enrolled FT Gender Unknown" key_column="admissions_enrolled_ft_unknown" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Admissions Enrolled PT Total" key_column="admissions_enrolled_pt_total" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Admissions Enrolled PT Men" key_column="admissions_enrolled_pt_men" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Admissions Enrolled PT Women" key_column="admissions_enrolled_pt_women" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Admissions Enrolled PT Another Gender" key_column="admissions_enrolled_pt_other_gender" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+        
+        <Measure name="Admissions Enrolled PT Gender Unknown" key_column="admissions_enrolled_pt_unknown" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Number of Applicants Submitting SAT Scores" key_column="sub_sat_scores_num" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Percent of Applicants Submitting SAT Scores" key_column="sub_sat_scores_pct" aggregator="avg">
+            <Annotation name="units_of_measurement">Percentage</Annotation>
+        </Measure>
+
+        <Measure name="SAT Math 25th Percentile" key_column="sat_math_25" aggregator="avg">
+            <Annotation name="units_of_measurement">SAT Score</Annotation>
+        </Measure>
+
+        <Measure name="SAT Math 50th Percentile" key_column="sat_math_50" aggregator="avg">
+            <Annotation name="units_of_measurement">SAT Score</Annotation>
+        </Measure>
+
+        <Measure name="SAT Math 75th Percentile" key_column="sat_math_75" aggregator="avg">
+            <Annotation name="units_of_measurement">SAT Score</Annotation>
+        </Measure>
+
+        <Measure name="SAT Writing 25th Percentile" key_column="sat_writing_25" aggregator="avg">
+            <Annotation name="units_of_measurement">SAT Score</Annotation>
+        </Measure>
+
+        <Measure name="SAT Writing 75th Percentile" key_column="sat_writing_75" aggregator="avg">
+            <Annotation name="units_of_measurement">SAT Score</Annotation>
+        </Measure>
+
+        <Measure name="SAT Critical Reading 25th Percentile" key_column="sat_cr_25" aggregator="avg">
+            <Annotation name="units_of_measurement">SAT Score</Annotation>
+        </Measure>
+
+        <Measure name="SAT Critical Reading 50th Percentile" key_column="sat_cr_50" aggregator="avg">
+            <Annotation name="units_of_measurement">SAT Score</Annotation>
+        </Measure>
+
+        <Measure name="SAT Critical Reading 75th Percentile" key_column="sat_cr_75" aggregator="avg">
+            <Annotation name="units_of_measurement">SAT Score</Annotation>
+        </Measure>
+
+        <CalculatedMeasure name="Yield Total" formula="[Admissions Enrolled Total] / [Admissions Total]">
+            <Annotation name="units_of_measurement">Rate</Annotation>
+            <Annotation name="details">Percentage of students who enrolled divided by number of students admitted.</Annotation>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Yield Men" formula="[Admissions Enrolled Men] / [Admissions Men]">
+            <Annotation name="units_of_measurement">Rate</Annotation>
+            <Annotation name="details">Percentage of students who enrolled divided by number of students admitted, among men.</Annotation>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Yield Women" formula="[Admissions Enrolled Women] / [Admissions Women]">
+            <Annotation name="units_of_measurement">Rate</Annotation>
+            <Annotation name="details">Percentage of students who enrolled divided by number of students admitted, among women.</Annotation>
+        </CalculatedMeasure>
+        
+    </Cube>
+</Schema>

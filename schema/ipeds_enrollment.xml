@@ -1,0 +1,83 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="ipeds_enrollment">
+        <Annotation name="source_name">Integrated Postsecondary Education Data System (IPEDS)</Annotation>
+        <Annotation name="source_link">https://nces.ed.gov/ipeds/use-the-data</Annotation>
+        <Annotation name="topic">Education</Annotation>
+        <Annotation name="subtopic">Enrollment</Annotation>
+        <Annotation name="dataset_name">Fall Enrollment</Annotation>
+        <Annotation name="dataset_link">https://nces.ed.gov/ipeds/datacenter/DataFiles.aspx</Annotation>
+        <Annotation name="source_description">IPEDS is the Integrated Postsecondary Education Data System. It is a system of interrelated surveys conducted annually by the U.S. Department of Education’s National Center for Education Statistics (NCES). IPEDS gathers information from every college, university, and technical and vocational institution that participates in the federal student financial aid programs.</Annotation>
+
+        <Table name="ipeds_enrollment"/>
+
+        <DimensionUsage foreign_key="university" name="University" source="University"  />  
+        <DimensionUsage foreign_key="university" name="Geography" source="IPEDS Geography" />
+
+        <Dimension name="Year" foreign_key="year" type="time">  
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="year">
+                <Level name="Year" key_column="year" key_type="u16"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="sex" name="Gender">
+            <Hierarchy name="Gender">
+                <InlineTable name="dim_inline_gender" format="tuples">
+                    <Row>("id", "description")</Row>
+                    <Row>(1, "Men")</Row>
+                    <Row>(2, "Women")</Row>
+                </InlineTable>
+                <Level key_column="id" name="Gender" name_column="description" key_type="u8" />
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="enrollment_status" name="Enrollment Status">
+          <Hierarchy name="Enrollment Status">
+            <InlineTable name="dim_inline_estatus" format="tuples">
+                <Row>("id", "description")</Row>
+                <Row>(1, "Full time")</Row>
+                <Row>(2, "Part time")</Row>
+            </InlineTable>
+            <Level key_column="id" name="Enrollment Status" name_column="description" key_type="u8" />
+          </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="lstudy" name="Level Of Study">
+          <Hierarchy name="Level Of Study">
+            <InlineTable name="dim_inline_study" format="tuples">
+                <Row>("id", "description")</Row>
+                <Row>(1, "Undergraduate")</Row>
+                <Row>(3, "Graduate")</Row>
+            </InlineTable>
+            <Level key_column="id" name="Level Of Study" name_column="description" key_type="u8" />
+          </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="ipeds_race" name="IPEDS Race">
+          <Hierarchy name="IPEDS Race">
+            <InlineTable name="dim_inline_race" format="tuples">
+                <Row>("id", "description")</Row>
+                <Row>("asian", "Asian")</Row>
+                <Row>("black", "Black or African American")</Row>
+                <Row>("hawaiian", "Native Hawaiian or Other Pacific Islanders")</Row>
+                <Row>("hispanic", "Hispanic or Latino")</Row>
+                <Row>("multiracial", "Two or More Races")</Row>
+                <Row>("native", "American Indian or Alaska Native")</Row>
+                <Row>("nonresident", "Non-resident Alien")</Row>
+                <Row>("unknown", "Unknown")</Row>
+                <Row>("white", "White")</Row>
+            </InlineTable>
+            <Level key_column="id" name="IPEDS Race" name_column="description" key_type="str" />
+          </Hierarchy>
+        </Dimension>
+
+
+        <Measure name="Enrollment" key_column="num_enrolled" aggregator="sum">
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Number Of Institutions" key_column="num_enrolled" aggregator="count"> <!--distinct-count-->
+            <Annotation name="units_of_measurement">Universities</Annotation>
+        </Measure>
+    </Cube>
+</Schema>

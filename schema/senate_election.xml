@@ -5,8 +5,6 @@
         <Annotation name="source_link">https://electionlab.mit.edu/data</Annotation>
         <Annotation name="dataset_name">U.S Senate 1976-2020</Annotation>
         <Annotation name="dataset_link">https://dataverse.harvard.edu/api/access/datafile/:persistentId?persistentId=doi:10.7910/DVN/PEJ5QU/XXQCIK</Annotation>
-        <Annotation name="source_name">Federal Election Commision</Annotation>
-        <Annotation name="source_link">https://www.fec.gov/</Annotation>
         <Annotation name="available_dimensions">Candidate, Geography, Party, Year, Candidate Other, Special</Annotation>
         <Annotation name="topic">Election</Annotation>
         <Annotation name="subtopic">Senate</Annotation>
