@@ -7,19 +7,20 @@ imagePullSecrets:
 replicaCount: 1
 
 autoscaling:
-  enabled: true
+  enabled: false
   minReplicas: 1
   maxReplicas: 4
   targetCPUUtilizationPercentage: 80
   targetMemoryUtilizationPercentage: 120
 
-resources:
-  requests:
-    cpu: 10m
-    memory: 256Mi
-  limits:
-    cpu: 200m
-    memory: 1Gi
+resources: {}
+# resources:
+#   requests:
+#     cpu: 10m
+#     memory: 256Mi
+#   limits:
+#     cpu: 200m
+#     memory: 1Gi
 
 livenessProbe:
   failureThreshold: 3
