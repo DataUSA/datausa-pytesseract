@@ -21,117 +21,140 @@
             </Hierarchy>
         </Dimension>
 
-        <Measure name="District Tuition" key_column="district_tuition" aggregator="median" >
+        <Measure name="District Tuition" key_column="district_tuition">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="District Graduate Students Tuition" aggregator="median" key_column="district_tuition_grads">
+        <Measure name="District Graduate Students Tuition" key_column="district_tuition_grads">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="District Fee" key_column="district_fee" aggregator="median">
+        <Measure name="District Fee" key_column="district_fee">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="District Graduate Students Fee" aggregator="median" key_column="district_fee_grads">
+        <Measure name="District Graduate Students Fee" key_column="district_fee_grads">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="Published District Tuition" aggregator="median" key_column="published_district_tuition">
+        <Measure name="Published District Tuition" key_column="published_district_tuition">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="Published District Fee" aggregator="median" key_column="published_district_fee">
+        <Measure name="Published District Fee" key_column="published_district_fee">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="Published District Tuition and Fee" aggregator="median" key_column="published_district_tuition_and_fee">
+        <Measure name="Published District Tuition and Fee" key_column="published_district_tuition_and_fee">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="State Tuition" aggregator="median" key_column="state_tuition">
+        <Measure name="State Tuition" key_column="state_tuition">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="State Graduate Students Tuition" aggregator="median" key_column="state_tuition_grads">
+        <Measure name="State Graduate Students Tuition" key_column="state_tuition_grads">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="State Fee" aggregator="median" key_column="state_fee">
+        <Measure name="State Fee" key_column="state_fee">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="State Graduate Students Fee" aggregator="median" key_column="state_fee_grads">
+        <Measure name="State Graduate Students Fee" key_column="state_fee_grads">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="Published State Tuition" aggregator="median" key_column="published_state_tuition">
+        <Measure name="Published State Tuition" key_column="published_state_tuition">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="Published State Fee" aggregator="median" key_column="published_state_fee">
+        <Measure name="Published State Fee" key_column="published_state_fee">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="Published State Tuition and Fee" aggregator="median" key_column="published_state_tuition_and_fee">
+        <Measure name="Published State Tuition and Fee" key_column="published_state_tuition_and_fee">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="Out Of State Tuition" aggregator="median" key_column="oos_tuition">
+        <Measure name="Out Of State Tuition" key_column="oos_tuition">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="Out Of State Graduate Students Tuition" aggregator="median" key_column="oos_tuition_grads">
+        <Measure name="Out Of State Graduate Students Tuition" key_column="oos_tuition_grads">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="Out Of State Fee" aggregator="median" key_column="oos_fee">
+        <Measure name="Out Of State Fee" key_column="oos_fee">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="Out Of State Graduate Students Fee" aggregator="median" key_column="oos_fee_grads">
+        <Measure name="Out Of State Graduate Students Fee" key_column="oos_fee_grads">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="Published Out Of State Tuition" aggregator="median" key_column="published_oos_tuition">
+        <Measure name="Published Out Of State Tuition" key_column="published_oos_tuition">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="Published Out Of State Fee" aggregator="median" key_column="published_oos_fee">
+        <Measure name="Published Out Of State Fee" key_column="published_oos_fee">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="Published Out Of State Tuition and Fee" aggregator="median" key_column="published_oos_tuition_and_fee">
+        <Measure name="Published Out Of State Tuition and Fee" key_column="published_oos_tuition_and_fee">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="Books And Supplies" aggregator="median" key_column="books_and_supplies">
+        <Measure name="Books And Supplies" key_column="books_and_supplies">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="Median Total Graduates" aggregator="median" key_column="grads_total">
+        <Measure name="Median Total Graduates" key_column="grads_total">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="units_of_measurement">Count</Annotation>
         </Measure>

@@ -41,12 +41,14 @@
             <Annotation name="units_of_measurement">Count</Annotation>
         </Measure>
 
-        <Measure name="Median Grant Or Scholarship Award" aggregator="median" key_column="avg_gos_award">
+        <Measure name="Median Grant Or Scholarship Award" key_column="avg_gos_award">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="Median Averge Net Price Federal Aid" aggregator="median" key_column="avg_netprice_fedaid">
+        <Measure name="Median Averge Net Price Federal Aid" key_column="avg_netprice_fedaid">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>

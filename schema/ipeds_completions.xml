@@ -61,7 +61,7 @@
             <Annotation name="details">Number of awards or degrees conferred</Annotation>
         </Measure>
 
-        <Measure name="Number Of Universities" key_column="university" aggregator="count"><!--distinct-count-->
+        <Measure name="Number Of Universities" key_column="university" aggregator="distinct_count">
             <Annotation name="details">Number of distinct universities aggregated</Annotation>
             <Annotation name="aggregation_method">distinct-count</Annotation>
             <Annotation name="units_of_measurement">Universities</Annotation>

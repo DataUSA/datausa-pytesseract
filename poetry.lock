@@ -1440,14 +1440,14 @@ full = ["httpx (>=0.22.0)", "itsdangerous", "jinja2", "python-multipart (>=0.0.7
 
 [[package]]
 name = "tesseract-olap"
-version = "0.10.1"
+version = "0.10.3"
 description = "A simple OLAP library."
 category = "main"
 optional = false
 python-versions = "<4.0,>=3.8"
 files = [
-    {file = "tesseract_olap-0.10.1-py3-none-any.whl", hash = "sha256:1c2c30109bceed3b6fa851cd38f8036cb2bf9a6514fa6e6b17877a67237de042"},
-    {file = "tesseract_olap-0.10.1.tar.gz", hash = "sha256:984ff38765a592355b1ff2a96ffb9248e47fc3b59ec6fb5947ec0a41363141db"},
+    {file = "tesseract_olap-0.10.3-py3-none-any.whl", hash = "sha256:40747477ef86c0eacfd940ae4d47e63a81832a03c18ccbb6964e37011f97322b"},
+    {file = "tesseract_olap-0.10.3.tar.gz", hash = "sha256:a6f0034ed56c802c0376c7ca3e265b5d99f55e13705bf24499717076c19b120a"},
 ]
 
 [package.dependencies]
@@ -1681,4 +1681,4 @@ docs = ["Sphinx", "elementpath (>=4.4.0,<5.0.0)", "jinja2", "sphinx-rtd-theme"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "f5338278cb6cef2979b61158c9275e5a1ff661da85b965a0e07dd1f73d8f5755"
+content-hash = "285e9edbb4ad87e9c5d3338d38e6d39f5a6ad971b387cd1a9d20570354a07fe1"

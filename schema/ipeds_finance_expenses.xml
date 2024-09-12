@@ -30,7 +30,8 @@
         <Annotation name="units_of_measurement">USD</Annotation>
     </Measure>
 
-    <Measure name="Median Salary Expenses" aggregator="median" key_column="salaries_expense">
+    <Measure name="Median Salary Expenses" key_column="salaries_expense">
+      <Aggregation type="quantile" quantile-level="0.5" />
       <Annotation name="units_of_measurement">USD</Annotation>
       <Annotation name="aggregation_method">MEDIAN</Annotation>
       <Annotation name="details">Covers Public and Private Not For Profit Institutions</Annotation>
@@ -41,7 +42,8 @@
       <Annotation name="details">Covers Public and Private Not For Profit Institutions</Annotation>
     </Measure>
 
-    <Measure name="Median Other Expenses" aggregator="median" key_column="other_expense">
+    <Measure name="Median Other Expenses" key_column="other_expense">
+      <Aggregation type="quantile" quantile-level="0.5" />
       <Annotation name="units_of_measurement">USD</Annotation>
       <Annotation name="aggregation_method">MEDIAN</Annotation>
       <Annotation name="details">Covers Public and Private Not For Profit Institutions</Annotation>
@@ -52,7 +54,8 @@
       <Annotation name="details">Covers Public and Private Not For Profit Institutions</Annotation>
     </Measure>
 
-    <Measure name="Median Operation Expenses" aggregator="median" key_column="ops_expense">
+    <Measure name="Median Operation Expenses" key_column="ops_expense">
+      <Aggregation type="quantile" quantile-level="0.5" />
       <Annotation name="units_of_measurement">USD</Annotation>
       <Annotation name="aggregation_method">MEDIAN</Annotation>
       <Annotation name="details">Covers Public and Private Not For Profit Institutions</Annotation>
@@ -63,7 +66,8 @@
         <Annotation name="details">Covers Public and Private Not For Profit Institutions</Annotation>
     </Measure>
 
-    <Measure name="Median Interest Expenses" aggregator="median" key_column="interest_expense">
+    <Measure name="Median Interest Expenses" key_column="interest_expense">
+      <Aggregation type="quantile" quantile-level="0.5" />
       <Annotation name="units_of_measurement">USD</Annotation>
       <Annotation name="aggregation_method">MEDIAN</Annotation>
       <Annotation name="details">Covers Public and Private Not For Profit Institutions</Annotation>
@@ -74,7 +78,8 @@
       <Annotation name="details">Covers Public and Private Not For Profit Institutions</Annotation>
     </Measure>
 
-    <Measure name="Median Depreciation Expenses" aggregator="median" key_column="dep_expense">
+    <Measure name="Median Depreciation Expenses" key_column="dep_expense">
+      <Aggregation type="quantile" quantile-level="0.5" />
       <Annotation name="units_of_measurement">USD</Annotation>
       <Annotation name="aggregation_method">MEDIAN</Annotation>
       <Annotation name="details">Covers Public and Private Not For Profit Institutions</Annotation>
@@ -85,7 +90,8 @@
       <Annotation name="details">Covers Public and Private Not For Profit Institutions</Annotation>
     </Measure>
 
-    <Measure name="Median Benefits Expenses" aggregator="median" key_column="benefits_expense">
+    <Measure name="Median Benefits Expenses" key_column="benefits_expense">
+      <Aggregation type="quantile" quantile-level="0.5" />
       <Annotation name="units_of_measurement">USD</Annotation>
       <Annotation name="aggregation_method">MEDIAN</Annotation>
       <Annotation name="details">Covers Public and Private Not For Profit Institutions</Annotation>

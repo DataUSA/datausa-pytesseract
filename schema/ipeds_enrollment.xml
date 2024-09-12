@@ -76,7 +76,10 @@
             <Annotation name="units_of_measurement">People</Annotation>
         </Measure>
 
-        <Measure name="Number Of Institutions" key_column="num_enrolled" aggregator="count"> <!--distinct-count-->
+        <!--<Measure name="Number Of Institutions" key_column="num_enrolled" aggregator="distinct_count">
+            <Annotation name="units_of_measurement">Universities</Annotation>
+        </Measure>-->
+        <Measure name="Number Of Institutions" key_column="university" aggregator="distinct_count">
             <Annotation name="units_of_measurement">Universities</Annotation>
         </Measure>
     </Cube>

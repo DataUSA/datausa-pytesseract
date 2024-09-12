@@ -24,7 +24,8 @@
             <Annotation name="details">Endowment value at fiscal year end</Annotation>
         </Measure>
 
-        <Measure name="Median Endowment Value" aggregator="median" key_column="endowment_value_fiscal_year_end">
+        <Measure name="Median Endowment Value" key_column="endowment_value_fiscal_year_end">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="units_of_measurement">USD</Annotation>
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="details">Endowment value at fiscal year end</Annotation>
@@ -35,7 +36,8 @@
             <Annotation name="details">Federal operating grants and contracts are revenues from federal government agencies that are for specific research projects or other types of programs and that are classified as operating revenues.  Examples are research projects and similar activities for which amounts are received or expenditures are reimbursable under the terms of a grant or contract.</Annotation>
         </Measure>
 
-        <Measure name="Median Federal Grants And Contracts" aggregator="median" key_column="federal_grants_and_contracts">
+        <Measure name="Median Federal Grants And Contracts" key_column="federal_grants_and_contracts">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="units_of_measurement">USD</Annotation>
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="details">Federal operating grants and contracts are revenues from federal government agencies that are for specific research projects or other types of programs and that are classified as operating revenues.  Examples are research projects and similar activities for which amounts are received or expenditures are reimbursable under the terms of a grant or contract.</Annotation>
@@ -46,7 +48,8 @@
             <Annotation name="details">Revenues derived from the institution's investments, including investments of endowment funds. Such income may take the form of interest income, dividend income, rental income or royalty income and includes both realized and unrealized gains and losses.</Annotation>
         </Measure>
 
-        <Measure name="Median Investment Income" aggregator="median" key_column="investment_income">
+        <Measure name="Median Investment Income" key_column="investment_income">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="details">Revenues derived from the institution's investments, including investments of endowment funds. Such income may take the form of interest income, dividend income, rental income or royalty income and includes both realized and unrealized gains and losses.</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
@@ -57,7 +60,8 @@
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="Median Local Grants" aggregator="median" key_column="local_grants">
+        <Measure name="Median Local Grants" key_column="local_grants">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="details">Grants by local government are for scholarships and fellowships that were funded by local government.</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
@@ -68,7 +72,8 @@
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="Median Local Grants And Contracts" aggregator="median" key_column="local_grants_and_contracts">
+        <Measure name="Median Local Grants And Contracts" key_column="local_grants_and_contracts">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="details">Local operating grants and contracts are revenues from local governmental agencies that are for specific research projects or other types of programs and that are classified as operating revenues. Examples are research projects and similar activities for which amounts are received or expenditures are reimbursable under the terms of a grant or contract.</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
@@ -79,7 +84,8 @@
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="Median Other Federal Grants" aggregator="median" key_column="other_federal_grants">
+        <Measure name="Median Other Federal Grants" key_column="other_federal_grants">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="details">Other federal awards are expenditures for scholarships and fellowships, excluding Pell grants, that were funded from federal government agencies. This includes Supplemental Educational Opportunity Grants (SEOG), and the Leveraging Educational Assistance Partnership (LEAP) Program, but not loans or College Work Study Program.</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
@@ -90,7 +96,8 @@
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="Median Pell Grants" aggregator="median" key_column="pell_grants">
+        <Measure name="Median Pell Grants" key_column="pell_grants">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="details">Pell grants represents the gross amount of Pell grants disbursed or otherwise made available to recipients by the institution.</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
             <Annotation name="aggregation_method">MEDIAN</Annotation>
@@ -101,7 +108,8 @@
             <Annotation name="details">Private operating grants and contracts are revenues from nongovernmental agencies and organizations that are for specific research projects or other types of programs and that are classified as operating revenues. Examples are research projects and similar activities for which amounts are received or expenditures are reimbursable under the terms of a grant or contract.</Annotation>
         </Measure>
 
-        <Measure name="Median Private Grants" aggregator="median" key_column="private_grants">
+        <Measure name="Median Private Grants" key_column="private_grants">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="units_of_measurement">USD</Annotation>
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="details">Private operating grants and contracts are revenues from nongovernmental agencies and organizations that are for specific research projects or other types of programs and that are classified as operating revenues. Examples are research projects and similar activities for which amounts are received or expenditures are reimbursable under the terms of a grant or contract.</Annotation>
@@ -112,7 +120,8 @@
             <Annotation name="details">Research total expenses is the sum of all operating expenses associated with activities specifically organized to produce research outcomes and commissioned by an agency either external to the institution or separately budgeted by an organizational unit within the institution. The category includes institutes and research centers and individual and project research. This function does not include nonresearch sponsored programs (e.g., training programs).</Annotation>
         </Measure>
 
-        <Measure name="Median Research Total" aggregator="median" key_column="research_total">
+        <Measure name="Median Research Total" key_column="research_total">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="units_of_measurement">USD</Annotation>
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="details">Research total expenses is the sum of all operating expenses associated with activities specifically organized to produce research outcomes and commissioned by an agency either external to the institution or separately budgeted by an organizational unit within the institution. The category includes institutes and research centers and individual and project research. This function does not include nonresearch sponsored programs (e.g., training programs).</Annotation>
@@ -122,7 +131,8 @@
             <Annotation name="units_of_measurement">USD</Annotation>
         </Measure>
 
-        <Measure name="Median State Grants" aggregator="median" key_column="state_grants">
+        <Measure name="Median State Grants" key_column="state_grants">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="units_of_measurement">USD</Annotation>
             <Annotation name="aggregation_method">MEDIAN</Annotation>
         </Measure>
@@ -132,7 +142,8 @@
             <Annotation name="details">Grants by state government includes expenditures for scholarships and fellowships that were funded by the state such as the state share of SSIG.</Annotation>
         </Measure>
 
-        <Measure name="Median State Grants And Contracts" aggregator="median" key_column="state_grants_and_contracts">
+        <Measure name="Median State Grants And Contracts" key_column="state_grants_and_contracts">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="units_of_measurement">USD</Annotation>
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="details">Grants by state government includes expenditures for scholarships and fellowships that were funded by the state such as the state share of SSIG.</Annotation>
@@ -143,7 +154,8 @@
             <Annotation name="details">Total assets is the sum of current and noncurrent assets</Annotation>
         </Measure>
 
-        <Measure name="Median Total Assets" aggregator="median" key_column="total_assets">
+        <Measure name="Median Total Assets" key_column="total_assets">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="units_of_measurement">USD</Annotation>
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="details">Total assets is the sum of current and noncurrent assets</Annotation>
@@ -154,7 +166,8 @@
             <Annotation name="details">Total expenses and other deductions represents the sum of operating and non-operating expenses and deductions.</Annotation>
         </Measure>
 
-        <Measure name="Median Total Expenses" aggregator="median" key_column="total_expenses">
+        <Measure name="Median Total Expenses" key_column="total_expenses">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="units_of_measurement">USD</Annotation>
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="details">Total expenses and other deductions represents the sum of operating and non-operating expenses and deductions.</Annotation>
@@ -165,7 +178,8 @@
             <Annotation name="details">Total liabilities is the sum of current and noncurrent liabilities</Annotation>
         </Measure>
 
-        <Measure name="Median Total Liabilities" aggregator="median" key_column="total_liabilities">
+        <Measure name="Median Total Liabilities" key_column="total_liabilities">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="units_of_measurement">USD</Annotation>
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="details">Total liabilities is the sum of current and noncurrent liabilities</Annotation>
@@ -176,7 +190,8 @@
             <Annotation name="details">"Total revenues and other additions represents the sum of all revenues and other additions to net assets, including operating and nonoperating revenues and other revenues and additions.</Annotation>
         </Measure>
 
-        <Measure name="Median Total Revenue" aggregator="median" key_column="total_revenue">
+        <Measure name="Median Total Revenue" key_column="total_revenue">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="units_of_measurement">USD</Annotation>
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="details">"Total revenues and other additions represents the sum of all revenues and other additions to net assets, including operating and nonoperating revenues and other revenues and additions.</Annotation>
@@ -187,7 +202,8 @@
             <Annotation name="details">"Total expenses for salaries and wages.</Annotation>
         </Measure>
 
-        <Measure name="Median Total Salaries" aggregator="median" key_column="total_salaries">
+        <Measure name="Median Total Salaries" key_column="total_salaries">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="units_of_measurement">USD</Annotation>
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="details">Median total expenses for salaries and wages.</Annotation>
@@ -198,7 +214,8 @@
             <Annotation name="details">Tuition and fees are revenues from all tuition and fees assessed against students (net of refunds and discounts and allowances) for educational purposes.</Annotation>
         </Measure>
 
-        <Measure name="Median Tuition And Fees" aggregator="median" key_column="tuition_and_fees">
+        <Measure name="Median Tuition And Fees" key_column="tuition_and_fees">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="units_of_measurement">USD</Annotation>
             <Annotation name="aggregation_method">MEDIAN</Annotation>
             <Annotation name="details">Tuition and fees are revenues from all tuition and fees assessed against students (net of refunds and discounts and allowances) for educational purposes.</Annotation>

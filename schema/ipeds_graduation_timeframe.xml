@@ -41,7 +41,8 @@
             <Annotation name="units_of_measurement">Degrees</Annotation>
         </Measure>
 
-        <Measure name="Median Percent Completed BA" aggregator="median" key_column="pct_completed">
+        <Measure name="Median Percent Completed BA" key_column="pct_completed">
+            <Aggregation type="quantile" quantile-level="0.5" />
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="aggregation_method">MEDIAN</Annotation>
         </Measure>
