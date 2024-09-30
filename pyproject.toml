@@ -13,8 +13,8 @@ packages = [{include = "app"}]
 python = "^3.8"
 granian = "^1.4.0"
 logiclayer = "^0.4.0"
-logiclayer-complexity = "^0.5.4"
-tesseract-olap = {extras = ["clickhouse", "redis"], version = "^0.10.3"}
+logiclayer-complexity = "^0.6.2"
+tesseract-olap = {extras = ["clickhouse", "redis"], version = "^0.11.0"}
 
 [tool.poetry.group.dev.dependencies]
 granian = {extras = ["reload"], version = "^1.4.0"}

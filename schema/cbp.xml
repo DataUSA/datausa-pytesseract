@@ -60,7 +60,7 @@
                     <Row>(6, "100-249 Employee Size Class")</Row>
                     <Row>(7, "250-499 Employee Size Class")</Row>
                     <Row>(8, "500-999 Employee Size Class")</Row>
-                    <Row>(9, "10000 or More Employee Size Class")</Row>
+                    <Row>(9, "1000 or More Employee Size Class")</Row>
                 </InlineTable>
                 <Level key_column="id" name="Size" name_column="description" key_type="u8" />
             </Hierarchy>
