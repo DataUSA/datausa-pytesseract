@@ -1,0 +1,235 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="pums_5">
+        <Annotation name="source_name">Census Bureau</Annotation>
+        <Annotation name="source_description">The American Community Survey (ACS) Public Use Microdata Sample (PUMS) files are a set of untabulated records about individual people or housing units. The Census Bureau produces the PUMS files so that data users can create custom tables that are not available through pretabulated (or summary) ACS data products.</Annotation>
+        <Annotation name="dataset_name">ACS PUMS 1-Year Estimate</Annotation>
+        <Annotation name="dataset_link">https://www.census.gov/programs-surveys/acs/microdata.html</Annotation>
+        <Annotation name="topic">Diversity</Annotation>
+        <Annotation name="subtopic">Demographics</Annotation>
+        <Annotation name="table">PUMS 5</Annotation>
+        <Annotation name="hidden_measures">ygbpop RCA,ygopop RCA,ygipop RCA,yocpop RCA,yiopop RCA,ycbpop RCA</Annotation>
+
+        <Table name="pums_inline_condensed_5" />
+
+        <DimensionUsage foreign_key="pobp" source="Birthplace" name="Birthplace" />
+        <DimensionUsage foreign_key="hisp" source="PUMS Ethnicity" name="PUMS Ethnicity" />
+
+        <Dimension name="Geography" foreign_key="puma_puma_id">
+            <Hierarchy name="Geography" primary_key="puma_puma_id">
+                <Level key_column="puma_nation_id" name_column="puma_nation_name" name="Nation" key_type="str" />
+                <Level key_column="puma_state_id" name_column="puma_state_name" name="State" key_type="str" />
+                <Level key_column="puma_puma_id" name_column="puma_puma_name" name="PUMA" key_type="str"/> 
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Year" foreign_key="year" type="time">  
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="Year">
+                <Level name="Year" key_column="year" key_type="u16" />
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Workforce Status" foreign_key="in_workforce">
+            <Hierarchy name="Workforce Status" primary_key="in_workforce">
+                <Level key_column="in_workforce" name="Workforce Status" key_type="bool"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Age" foreign_key="agep">  
+            <Hierarchy name="Age" primary_key="agep">
+                <Level name="Age" key_column="agep" key_type="u16" />
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="PUMS Occupation" foreign_key="pums_soc_id">
+            <Hierarchy name="PUMS Occupation" primary_key="pums_soc_id">
+                <Level key_column="pums_soc_great_grandparent" name_column="pums_soc_great_grandparent_name" name="Major Occupation Group" key_type="str"/>
+                <Level key_column="pums_soc_grandparent" name_column="pums_soc_grandparent_name" name="Minor Occupation Group" key_type="str"/>
+                <Level key_column="pums_soc_parent" name_column="pums_soc_parent_name" name="Broad Occupation" key_type="str" />
+                <Level key_column="pums_soc_id" name_column="pums_soc_name" name="Detailed Occupation" key_type="str" />
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="PUMS Industry" foreign_key="pums_naics_id">
+            <Hierarchy name="PUMS Industry" primary_key="pums_naics_id">
+                <Level key_column="pums_naics_grandparent" name_column="pums_naics_grandparent_name" name="Industry Sector" key_type="str"/>
+                <Level key_column="pums_naics_parent" name_column="pums_naics_parent_name" name="Industry Sub-Sector" key_type="str"/>
+                <Level key_column="pums_naics_id" name_column="pums_naics_name" name="Industry Group" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="schl" name="PUMS Degree">
+            <Hierarchy name="PUMS Degree" primary_key="schl">
+                <Table name="pums_dims_schl" />
+                <Level key_column="schl_group" name_column="schl_group" name="Group" />
+                <Level key_column="schl" name_column="schl_name" name="Degree" />
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="fod1p" name="PUMS Degree Field">
+            <Hierarchy name="PUMS Degree Field" primary_key="fod1p">
+              <Table name="pums_dims_fod1p" />
+                <Level key_column="cip2" name_column="cip2_name" name="CIP2" caption="2 Digit Course" key_type="str"/>
+                <Level key_column="fod1p" name_column="fod1p_name" name="FOD1P" caption="Field of Degree"  key_type="u16"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="wkw" name="Weeks Worked">
+            <Hierarchy name="Weeks Worked">
+                <InlineTable name="dim_inline_wkw" format="tuples">
+                    <Row>("id_wkw", "description_wkw")</Row>
+                    <Row>(1, "50-52 Weeks")</Row>
+                    <Row>(2, "48-49 Weeks")</Row>
+                    <Row>(3, "40-47 Weeks")</Row>
+                    <Row>(4, "27-39 Weeks")</Row>
+                    <Row>(5, "14-26 Weeks")</Row>
+                    <Row>(6, "Less than 14 Weeks")</Row>
+                </InlineTable>
+                <Level key_column="id_wkw" name="Weeks Worked" name_column="description_wkw" key_type="u8" />
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="time_status" name="Employment Time Status">
+            <Hierarchy name="Employment Time Status">
+                <InlineTable name="dim_inline_time" format="tuples">
+                    <Row>("id", "description")</Row>
+                    <Row>(1, "Full-time")</Row>
+                    <Row>(2, "Part-time")</Row>
+                </InlineTable>
+                <Level key_column="id" name="Employment Time Status" name_column="description" key_type="u8" />
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="sex" name="Gender">
+            <Hierarchy name="Gender">
+                <InlineTable name="dim_inline_sex" format="tuples">
+                    <Row>("id_sex", "description_sex")</Row>
+                    <Row>(1, "Male")</Row>
+                    <Row>(2, "Female")</Row>
+                </InlineTable>
+                <Level key_column="id_sex" name="Gender" name_column="description_sex" key_type="u8" />
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="rac1p" name="Race">
+            <Hierarchy name="Race">
+                <InlineTable name="dim_inline_race" format="tuples">
+                    <Row>("id_race", "description_race")</Row>
+                    <Row>(1, "White")</Row>
+                    <Row>(2, "Black")</Row>
+                    <Row>(3, "American Indian")</Row>
+                    <Row>(4, "Alaska Native")</Row>
+                    <Row>(5, "American Indian and Alaska Native tribes specified; or American Indian or Alaska Native, not specified and no other races")</Row>
+                    <Row>(6, "Asian")</Row>
+                    <Row>(7, "Native Hawaiian and Other Pacific Islander")</Row>
+                    <Row>(8, "Other")</Row>
+                    <Row>(9, "Two or More Races")</Row>
+                </InlineTable>
+                <Level key_column="id_race" name="Race" name_column="description_race" key_type="u8"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="esr" name="Employment Status">
+            <Hierarchy name="Employment Status">
+              <InlineTable name="dim_inline_esr" format="tuples">
+                <Row>("id_esr", "description_esr", "parent_esr")</Row>
+                <Row>(1, "Civilian employed, at work", "Employed")</Row>
+                <Row>(2, "Civilian employed, with a job but not at work", "Employed")</Row>
+                <Row>(3, "Unemployed", "Not Employed")</Row>
+                <Row>(4, "Armed forces, at work", "Employed")</Row>
+                <Row>(5, "Armed forces, with a job but not at work", "Employed")</Row>
+                <Row>(6, "Not in labor force", "Not Employed")</Row>
+              </InlineTable>
+              <Level key_column="parent_esr" name="Employment Status Parent" key_type="str"/>
+              <Level key_column="id_esr" name="Employment Status" name_column="description_esr" key_type="u8"/>
+          </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="cit" name="Citizenship Status">
+          <Hierarchy name="Citizenship Status">
+            <InlineTable name="cit" format="tuples">
+                <Row>("cit", "description_cit", "parent_cit")</Row>
+                <Row>(1, "Born in the U.S.", "U.S. Citizen")</Row>
+                <Row>(2, "Born in Puerto Rico, Guam, the U.S. Virgin Islands, or the Northern Marianas", "U.S. Citizen")</Row>
+                <Row>(3, "Born abroad of American parent(s)", "U.S. Citizen")</Row>
+                <Row>(4, "U.S. citizen by naturalization", "U.S. Citizen")</Row>
+                <Row>(5, "Not a citizen of the U.S.", "Not a citizen of the U.S.")</Row>
+            </InlineTable>
+            <Level key_column="parent_cit" name="Citizenship Status Parent" key_type="str"/>
+            <Level key_column="cit" name="Citizenship Status" name_column="description_cit" key_type="u8"/>
+          </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="nativity" name="Nativity">
+          <Hierarchy name="Nativity">
+              <InlineTable name="nativity" format="tuples">
+                  <Row>("id_nat", "description_nat")</Row>
+                  <Row>(1, "Native")</Row>
+                  <Row>(2, "Foreign born")</Row>
+              </InlineTable>
+              <Level key_column="id_nat" name="Nativity" name_column="description_nat" key_type="u8"/>
+          </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="vps" name="Veteran Status">
+          <Hierarchy name="Veteran Status">
+            <InlineTable name="veteran_status" format="tuples">
+                <Row>("id_vps", "description_vps", "parent_description_vps")</Row>
+                <Row>(1, "Gulf War: 9/2001 or later", "Gulf War")</Row>
+                <Row>(2, "Gulf War: 9/2001 or later and Gulf War: 8/1990 - 8/2001", "Gulf War")</Row>
+                <Row>(3, "Gulf War: 9/2001 or later and Gulf War: 8/1990 - 8/2001 and Vietnam Era", "Gulf War")</Row>
+                <Row>(4, "Gulf War: 8/1990 - 8/2001", "Gulf War")</Row>
+                <Row>(5, "Gulf War: 8/1990 - 8/2001 and Vietnam Era", "Gulf War")</Row>
+                <Row>(6, "Vietnam Era", "Vietnam Era")</Row>
+                <Row>(7, "Vietnam Era and Korean War", "Vietnam Era")</Row>
+                <Row>(8, "Vietnam Era, Korean War, and WWII", "Vietnam Era War")</Row>
+                <Row>(9, "Korean War", "Korean War")</Row>
+                <Row>(10, "Korean War and WWII", "Korean War")</Row>
+                <Row>(11, "WWII", "WWII")</Row>
+                <Row>(12, "Between Gulf War and Vietnam Era only", "Between Gulf War and Vietnam Era only")</Row>
+                <Row>(13, "Between Vietnam Era and Korean War only", "Between Vietnam Era and Korean War only")</Row>
+                <Row>(14, "Between Korean War and World War II only", "Between Korean War and World War II only")</Row>
+                <Row>(15, "Pre-WWII only", "Pre-WWII only")</Row>
+            </InlineTable>
+            <Level key_column="id_vps" name="Veteran Status" name_column="description_vps" key_type="i16"/>
+          </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="wage_bin" name="Wage Bin">
+          <Hierarchy primary_key="wage_bin" name="Wage Bin">
+            <Level key_column="wage_bin_id" name_column="wage_bin" name="Wage Bin" key_type="u8"/>
+          </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Age Five Plus" foreign_key="fiveplus">
+          <Hierarchy name="Age Five Plus" primary_key="fiveplus">
+            <Level key_column="fiveplus" name="Age Five Plus" key_type="bool" />
+          </Hierarchy>
+        </Dimension>
+
+        <Measure aggregator="sum" key_column="record_count" name="Record Count" visible="true">
+            <Annotation name="units_of_measurement">Sample Records</Annotation>
+        </Measure>
+
+        <Measure name="Total Population" key_column="pwgtp" aggregator="sum" visible="true">
+          <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Weighted Wage" key_column="wagp_wt" aggregator="sum" visible="false"/>
+        <Measure name="Weighted Wage SQ" key_column="wagp_sq_wt" aggregator="sum" visible="false"/>
+
+        <Measure name="Weighted Income" key_column="pincp_wt" aggregator="sum" visible="false"/>
+        <Measure name="Weighted Income SQ" key_column="pincp_sq_wt" aggregator="sum" visible="false"/>
+
+        <Measure name="Weighted Age" key_column="agep_wt" aggregator="sum" visible="false"/>
+        <Measure name="Weighted Age SQ" key_column="agep_sq_wt" aggregator="sum" visible="false"/>
+
+        <Measure name="Weighted Usual Hours Worked Per Week" key_column="wkhp_wt" aggregator="sum" visible="false"/>
+        <Measure name="Weighted Usual Hours Worked Per Week SQ" key_column="wkhp_sq_wt" aggregator="sum" visible="false"/>
+
+        <CalculatedMeasure name="Average Wage" formula="[Weighted Wage] / [Total Population]" visible="true">
+          <Annotation name="units_of_measurement">USD</Annotation>
+          <Annotation name="aggregation_method">AVERAGE</Annotation>
+        </CalculatedMeasure>
+  </Cube>
+</Schema>
