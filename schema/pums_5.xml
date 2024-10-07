@@ -231,5 +231,20 @@
           <Annotation name="units_of_measurement">USD</Annotation>
           <Annotation name="aggregation_method">AVERAGE</Annotation>
         </CalculatedMeasure>
+
+        <CalculatedMeasure name="Average Income" formula="[Weighted Income] / [Total Population]" visible="true">
+          <Annotation name="units_of_measurement">USD</Annotation>
+          <Annotation name="aggregation_method">AVERAGE</Annotation>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Average Age" formula="[Weighted Age] / [Total Population]" visible="true">
+          <Annotation name="units_of_measurement">Years</Annotation>
+          <Annotation name="aggregation_method">AVERAGE</Annotation>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Average Usual Hours Worked Per Week" formula="[Weighted Usual Hours Worked Per Week] / [Total Population]" visible="true">
+          <Annotation name="units_of_measurement">Hours</Annotation>
+          <Annotation name="aggregation_method">AVERAGE</Annotation>
+        </CalculatedMeasure>
   </Cube>
 </Schema>
