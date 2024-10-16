@@ -11,6 +11,27 @@
 
         <DimensionUsage name="NAICS" source="BLS Industry Flat" foreign_key="naics" />
 
+        <Dimension foreign_key="classification" name="Classification NAICS">
+            <Hierarchy name="Classification NAICS">
+                <InlineTable name="dim_naics_flat" format="tuples">
+                    <Row>("id_naics", "description_naics")</Row>
+                    <Row>(0, "Unknown levels")</Row>
+                    <Row>(1, "Sector")</Row>
+                    <Row>(2, "Subsector")</Row>
+                    <Row>(3, "Industry Group")</Row>
+                    <Row>(4, "Industry")</Row>
+                    <Row>(5, "National Industry")</Row>
+                </InlineTable>
+                <Level key_column="id_naics" name="Classification NAICS" name_column="description_naics" key_type="u8" />
+            </Hierarchy>
+        </Dimension>
+
+        IF(num_digits = 2, 'Sector',
+       	IF(num_digits = 3, 'Subsector',
+       	IF(num_digits = 4, 'Industry Group',
+      	IF(num_digits = 5, 'Industry',
+       	IF(num_digits = 6, 'National Industry', ''))))) AS classification
+
         <Dimension name="Year" foreign_key="year" type="time">  
             <Annotation name="dim_type">TIME</Annotation>
             <Hierarchy name="Year" primary_key="Year">
