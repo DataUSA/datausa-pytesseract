@@ -1,0 +1,12 @@
+<Schema name="datausa" default_locale="en">
+    <SharedDimension name="Birthplace">
+        <Hierarchy name="Birthplace" primary_key="pobp">
+            <Table name="pums_dims_pobp" />
+
+            <Level key_column="pobp" name_column="pobp_description" name="Birthplace" key_type="u16">
+              <Property key_column="adm0_a3" name="Country Code"/>
+              <Property key_column="geo_id" name="US State Code"/>
+            </Level>
+        </Hierarchy>
+    </SharedDimension>
+</Schema>

@@ -16,11 +16,11 @@ autoscaling:
 resources: {}
 # resources:
 #   requests:
-#     cpu: 10m
-#     memory: 256Mi
+#     cpu: 500m
+#     memory: 2Gi
 #   limits:
-#     cpu: 200m
-#     memory: 1Gi
+#     cpu: 1000m
+#     memory: 8Gi
 
 livenessProbe:
   failureThreshold: 3
@@ -72,17 +72,19 @@ ingress:
     ingress.kubernetes.io/ssl-redirect: "true"
     nginx.org/proxy-connect-timeout: "480s"
     nginx.org/proxy-read-timeout: "480s"
-    nginx.org/proxy-send-timeout: "480s"
     nginx.org/proxy-buffers: "8 16k"
     nginx.org/proxy-buffer-size: "16k"
     nginx.org/proxy-busy-buffers-size: "64k"
     nginx.org/location-snippets: |
       add_header Access-Control-Allow-Origin *;
-  hosts:
-    - host: api-ts-dev.datausa.io
+  className: nginx
+  customHosts:
+    - host: delaware-api-ts.datausa.io
       paths:
-        - /
+        - path: /
+          service: tesseract-api-delaware
+          port: 7777
   tls:
-    - secretName: tesseract-api-ingress-tls
+    - secretName: tesseract-api-delaware-ingress-tls
       hosts: 
-        - api-ts-dev.datausa.io
+        - delaware-api-ts.datausa.io

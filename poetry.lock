@@ -674,14 +674,14 @@ pydantic = ">=2.5.0,<3.0.0"
 
 [[package]]
 name = "logiclayer-complexity"
-version = "0.5.4"
+version = "0.6.2"
 description = "LogicLayer module to enable Economic Complexity calculations, using data from a tesseract-olap server."
 category = "main"
 optional = false
 python-versions = "<4.0,>=3.8"
 files = [
-    {file = "logiclayer_complexity-0.5.4-py3-none-any.whl", hash = "sha256:61569f56e0c0220127c2416bbb1209781472970861c0a44ed15378bb70eb72ac"},
-    {file = "logiclayer_complexity-0.5.4.tar.gz", hash = "sha256:14ca5eded408d970074fed5b55eabcf7fe42c7153687c50da84f811f2da9c28c"},
+    {file = "logiclayer_complexity-0.6.2-py3-none-any.whl", hash = "sha256:09b1676b4d59d7c679111a94ccaf93dce3c36a80ac5f4e86ab50e8c5c4f6ee6a"},
+    {file = "logiclayer_complexity-0.6.2.tar.gz", hash = "sha256:534ab6a05a7035047883cfcecdc1be5ed2cd31373ea28657a837c83cd59a1136"},
 ]
 
 [package.dependencies]
@@ -689,9 +689,9 @@ economic-complexity = ">=0.2.4,<0.3.0"
 logiclayer = ">=0.4.0,<0.5.0"
 orjson = ">=3.8.0,<4.0.0"
 pandas = ">=1.5.0"
-polars = ">=0.20.0,<0.21.0"
+polars = ">=1.7.0,<2.0.0"
 pyarrow = ">=15.0.0,<16.0.0"
-tesseract-olap = ">=0.9.6"
+tesseract-olap = ">=0.11.0"
 
 [[package]]
 name = "lxml"
@@ -1066,40 +1066,42 @@ xml = ["lxml (>=4.6.3)"]
 
 [[package]]
 name = "polars"
-version = "0.20.31"
+version = "1.8.2"
 description = "Blazingly fast DataFrame library"
 category = "main"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "polars-0.20.31-cp38-abi3-macosx_10_12_x86_64.whl", hash = "sha256:86454ade5ed302bbf87f145cfcb1b14f7a5765a9440e448659e1f3dba6ac4e79"},
-    {file = "polars-0.20.31-cp38-abi3-macosx_11_0_arm64.whl", hash = "sha256:67f2fe842262b7e1b9371edad21b760f6734d28b74c78dda88dff1bf031b9499"},
-    {file = "polars-0.20.31-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:24b82441f93409e0e8abd6f427b029db102f02b8de328cee9a680f84b84e3736"},
-    {file = "polars-0.20.31-cp38-abi3-manylinux_2_24_aarch64.whl", hash = "sha256:87f43bce4d41abf8c8c5658d881e4b8378e5c61010a696bfea8b4106b908e916"},
-    {file = "polars-0.20.31-cp38-abi3-win_amd64.whl", hash = "sha256:2d7567c9fd9d3b9aa93387ca9880d9e8f7acea3c0a0555c03d8c0c2f0715d43c"},
-    {file = "polars-0.20.31.tar.gz", hash = "sha256:00f62dec6bf43a4e2a5db58b99bf0e79699fe761c80ae665868eaea5168f3bbb"},
+    {file = "polars-1.8.2-cp38-abi3-macosx_10_12_x86_64.whl", hash = "sha256:114be1ebfb051b794fb9e1f15999430c79cc0824595e237d3f45632be3e56d73"},
+    {file = "polars-1.8.2-cp38-abi3-macosx_11_0_arm64.whl", hash = "sha256:e4fc36cfe48972d4c5be21a7cb119d6378fb7af0bb3eeb61456b66a1f43228e3"},
+    {file = "polars-1.8.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:67c1e448d6e38697650b22dd359f13c40b567c0b66686c8602e4367400e87801"},
+    {file = "polars-1.8.2-cp38-abi3-manylinux_2_24_aarch64.whl", hash = "sha256:570ee86b033dc5a6dbe2cb0df48522301642f304dda3da48f53d7488899a2206"},
+    {file = "polars-1.8.2-cp38-abi3-win_amd64.whl", hash = "sha256:ce1a1c1e2150ffcc44a5f1c461d738e1dcd95abbd0f210af0271c7ac0c9f7ef9"},
+    {file = "polars-1.8.2.tar.gz", hash = "sha256:42f69277d5be2833b0b826af5e75dcf430222d65c9633872856e176a0bed27a0"},
 ]
 
 [package.extras]
-adbc = ["adbc-driver-manager", "adbc-driver-sqlite"]
-all = ["polars[adbc,async,cloudpickle,connectorx,deltalake,fastexcel,fsspec,gevent,iceberg,numpy,pandas,plot,pyarrow,pydantic,sqlalchemy,timezone,xlsx2csv,xlsxwriter]"]
-async = ["nest-asyncio"]
+adbc = ["adbc-driver-manager[dbapi]", "adbc-driver-sqlite[dbapi]"]
+all = ["polars[async,cloudpickle,database,deltalake,excel,fsspec,graph,iceberg,numpy,pandas,plot,pyarrow,pydantic,style,timezone]"]
+async = ["gevent"]
+calamine = ["fastexcel (>=0.9)"]
 cloudpickle = ["cloudpickle"]
 connectorx = ["connectorx (>=0.3.2)"]
+database = ["nest-asyncio", "polars[adbc,connectorx,sqlalchemy]"]
 deltalake = ["deltalake (>=0.15.0)"]
-fastexcel = ["fastexcel (>=0.9)"]
+excel = ["polars[calamine,openpyxl,xlsx2csv,xlsxwriter]"]
 fsspec = ["fsspec"]
-gevent = ["gevent"]
+gpu = ["cudf-polars-cu12"]
+graph = ["matplotlib"]
 iceberg = ["pyiceberg (>=0.5.0)"]
-matplotlib = ["matplotlib"]
 numpy = ["numpy (>=1.16.0)"]
 openpyxl = ["openpyxl (>=3.0.0)"]
-pandas = ["pandas", "pyarrow (>=7.0.0)"]
-plot = ["hvplot (>=0.9.1)"]
+pandas = ["pandas", "polars[pyarrow]"]
+plot = ["altair (>=5.4.0)"]
 pyarrow = ["pyarrow (>=7.0.0)"]
 pydantic = ["pydantic"]
-pyxlsb = ["pyxlsb (>=1.0)"]
-sqlalchemy = ["pandas", "sqlalchemy"]
+sqlalchemy = ["polars[pandas]", "sqlalchemy"]
+style = ["great-tables (>=0.8.0)"]
 timezone = ["backports-zoneinfo", "tzdata"]
 xlsx2csv = ["xlsx2csv (>=0.8.0)"]
 xlsxwriter = ["xlsxwriter"]
@@ -1440,14 +1442,14 @@ full = ["httpx (>=0.22.0)", "itsdangerous", "jinja2", "python-multipart (>=0.0.7
 
 [[package]]
 name = "tesseract-olap"
-version = "0.9.9"
+version = "0.11.0"
 description = "A simple OLAP library."
 category = "main"
 optional = false
 python-versions = "<4.0,>=3.8"
 files = [
-    {file = "tesseract_olap-0.9.9-py3-none-any.whl", hash = "sha256:1fe11ec85c08803ce0161dc45654c57476882290db50cbc368c54470437e07f9"},
-    {file = "tesseract_olap-0.9.9.tar.gz", hash = "sha256:398187a7daa1e2517acb029bc0fe5b4e381f49b4d3872b38a178bf24946f48bc"},
+    {file = "tesseract_olap-0.11.0-py3-none-any.whl", hash = "sha256:014b06560e5c93f1a515b284150b56ea0ca244bddff626807b27ef06b7dbf7bb"},
+    {file = "tesseract_olap-0.11.0.tar.gz", hash = "sha256:8e4c2ee1a6e262d0bb4077c3b1321712e62b381947dc2d440f622edf42ae6419"},
 ]
 
 [package.dependencies]
@@ -1458,7 +1460,7 @@ immutables = ">=0.16,<1.0"
 lfudacache = ">=0.0.2,<0.0.3"
 lxml = ">=4.6.0,<5.0.0"
 orjson = ">=3.9.15,<4.0.0"
-polars = ">=0.20.0,<0.21.0"
+polars = ">=1.0,<2.0"
 pyparsing = ">=3.1.2,<4.0.0"
 PyPika = ">=0.48.0,<1.0"
 redis = {version = ">=5.0.0,<6.0.0", optional = true, markers = "extra == \"redis\""}
@@ -1681,4 +1683,4 @@ docs = ["Sphinx", "elementpath (>=4.4.0,<5.0.0)", "jinja2", "sphinx-rtd-theme"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8"
-content-hash = "7b4d24ef2ba2fa4c8244ffa9dea7e07c406696334ad8dc5c4555c83687b2a6a3"
+content-hash = "36f5a6babbccce56725e6e91d0c82bbfaf09ddf97d8303650ade99d08d15d467"

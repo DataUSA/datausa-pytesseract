@@ -1,0 +1,126 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="county_business_patterns" subset_table="true">
+        <Annotation name="source_name">Census Bureau</Annotation>
+        <Annotation name="source_description">County Business Patterns (CBP) is an annual series that provides subnational economic data by industry. This series includes the number of establishments, employment during the week of March 12, first quarter payroll, and annual payroll. This data is useful for studying the economic activity of small areas; analyzing economic changes over time; and as a benchmark for other statistical series, surveys, and databases between economic censuses. Businesses use the data for analyzing market potential, measuring the effectiveness of sales and advertising programs, setting sales quotas, and developing budgets. Government agencies use the data for administration and planning.</Annotation>
+        <Annotation name="dataset_name">County Business Patterns</Annotation>
+        <Annotation name="dataset_link">https://www.census.gov/programs-surveys/cbp.html</Annotation>
+        <Annotation name="topic">Economy</Annotation>
+        <Annotation name="subtopic">Business Patterns</Annotation>
+
+        <Table name="county_business_patterns" />
+
+        <DimensionUsage name="NAICS" source="BLS Industry Flat" foreign_key="naics" />
+
+        <Dimension foreign_key="classification" name="Classification NAICS">
+            <Hierarchy name="Classification NAICS">
+                <InlineTable name="dim_naics_flat" format="tuples">
+                    <Row>("id_naics", "description_naics")</Row>
+                    <Row>(0, "Unknown levels")</Row>
+                    <Row>(1, "Sector")</Row>
+                    <Row>(2, "Subsector")</Row>
+                    <Row>(3, "Industry Group")</Row>
+                    <Row>(4, "Industry")</Row>
+                    <Row>(5, "National Industry")</Row>
+                </InlineTable>
+                <Level key_column="id_naics" name="Classification NAICS" name_column="description_naics" key_type="u8" />
+            </Hierarchy>
+        </Dimension>
+
+        IF(num_digits = 2, 'Sector',
+       	IF(num_digits = 3, 'Subsector',
+       	IF(num_digits = 4, 'Industry Group',
+      	IF(num_digits = 5, 'Industry',
+       	IF(num_digits = 6, 'National Industry', ''))))) AS classification
+
+        <Dimension name="Year" foreign_key="year" type="time">  
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="Year">
+                <Level name="Year" key_column="year" key_type="u16" />
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="geoid" name="Geography">
+            <Hierarchy name="Nation" primary_key="geoid" default_member="Nation.01000US">
+                <Table name="us_nation" />
+                <Level key_column="geoid" name="Nation" name_column="name" key_type="str" />
+            </Hierarchy>
+
+            <Hierarchy name="State" primary_key="geoid">
+                <Table name="states_shapes2017" />
+                <Level key_column="geoid" name="State" name_column="name" key_type="str" />
+            </Hierarchy>   
+
+            <Hierarchy name="County" primary_key="geoid">
+                <Table name="shapes2017_counties" />
+                <Level key_column="state_id" name="County State" name_column="state_name" key_type="str"/>
+                <Level key_column="geoid" name="County" name_column="name" key_type="str" />
+            </Hierarchy>   
+
+            <Hierarchy name="MSA" primary_key="geoid">
+                <Table name="shapes2017_msas" />
+                <Level key_column="geoid" name="MSA" name_column="name" key_type="str" />
+            </Hierarchy>    
+        </Dimension>
+
+        <Dimension foreign_key="size" name="Size">
+            <Hierarchy name="Total Size" default_member="Total Size.0">
+                <InlineTable name="dim_inline_size_all" format="tuples">
+                    <Row>("all_id", "all_description")</Row>
+                    <Row>(0, "Total")</Row>
+                </InlineTable>
+                <Level key_column="all_id" name="Total Size" name_column="all_description" key_type="u8" />
+            </Hierarchy>
+            <Hierarchy name="Size">
+                <InlineTable name="dim_inline_size" format="tuples">
+                    <Row>("id", "description")</Row>
+                    <Row>(1, "1-4 Employee Size Class")</Row>
+                    <Row>(2, "5-9 Employee Size Class")</Row>
+                    <Row>(3, "10-19 Employee Size Class")</Row>
+                    <Row>(4, "20-49 Employee Size Class")</Row>
+                    <Row>(5, "50-99 Employee Size Class")</Row>
+                    <Row>(6, "100-249 Employee Size Class")</Row>
+                    <Row>(7, "250-499 Employee Size Class")</Row>
+                    <Row>(8, "500-999 Employee Size Class")</Row>
+                    <Row>(9, "1000 or More Employee Size Class")</Row>
+                </InlineTable>
+                <Level key_column="id" name="Size" name_column="description" key_type="u8" />
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="lfo" name="Legal form of the organization">
+            <Hierarchy name="Total LFO" default_member="Total LFO.A">
+                <InlineTable name="dim_inline_lfo_all" format="tuples">
+                    <Row>("lfo_a_id", "lfo_a_description")</Row>
+                    <Row>("A", "All Establishments")</Row>
+                </InlineTable>
+                <Level key_column="lfo_a_id" name="Total LFO" name_column="lfo_a_description" key_type="str" />
+            </Hierarchy>
+
+            <Hierarchy name="Legal form of the organization">
+                <InlineTable name="dim_inline_lfo" format="tuples">
+                    <Row>("lfo_id", "lfo_description")</Row>
+                    <Row>("C", "Corporations")</Row>
+                    <Row>("Z", "S-Corporations")</Row>
+                    <Row>("S", "Sole Proprietorships")</Row>
+                    <Row>("P", "Partnerships")</Row>
+                    <Row>("N", "Non-Profits")</Row>
+                    <Row>("G", "Government")</Row>
+                    <Row>("O", "Other")</Row>
+                </InlineTable>
+                <Level key_column="lfo_id" name="Legal form of the organization" name_column="lfo_description" key_type="str" />
+            </Hierarchy>
+        </Dimension>
+
+        <Measure aggregator="sum" key_column="emp" name="Employees" >
+            <Annotation name="units_of_measurement">Unit</Annotation>
+        </Measure>
+
+        <Measure aggregator="sum" key_column="ap" name="Annual Payroll">
+            <Annotation name="units_of_measurement">USD</Annotation>
+        </Measure>
+
+        <Measure aggregator="sum" key_column="est" name="Number of Establishments">
+            <Annotation name="units_of_measurement">Unit</Annotation>
+        </Measure>
+    </Cube>
+</Schema>

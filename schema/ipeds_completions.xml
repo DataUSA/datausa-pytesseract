@@ -28,9 +28,6 @@
             <InlineTable name="dim_inline_degree" format="tuples">
                 <Row>("id", "description")</Row>
                 <Row>(1, "Less than 1 Year Postsecondary Certificate")</Row>
-                <Row>(17, "Research Doctorate")</Row>
-                <Row>(18, "Professional Doctorate")</Row>
-                <Row>(19, "Other Doctorate")</Row>
                 <Row>(2, "1 to 2 Year Postsecondary Certificate")</Row>
                 <Row>(3, "Associates Degree")</Row>
                 <Row>(4, "2 to 4 Year Postsecondary Certificate")</Row>
@@ -38,6 +35,11 @@
                 <Row>(6, "Postbaccalaureate Certificate")</Row>
                 <Row>(7, "Masters Degree")</Row>
                 <Row>(8, "Post-Masters Certificate")</Row>
+                <Row>(17, "Research Doctorate")</Row>
+                <Row>(18, "Professional Doctorate")</Row>
+                <Row>(19, "Other Doctorate")</Row>
+                <Row>(20, "Certificate of less than 1 academic year")</Row>
+                <Row>(21, "Certificate of at least 1 but less than 2 academic years")</Row>
             </InlineTable>
             <Level key_column="id" name="Degree" name_column="description" key_type="u8" />
           </Hierarchy>
@@ -59,7 +61,7 @@
             <Annotation name="details">Number of awards or degrees conferred</Annotation>
         </Measure>
 
-        <Measure name="Number Of Universities" key_column="university" aggregator="count"><!--distinct-count-->
+        <Measure name="Number Of Universities" key_column="university" aggregator="distinct_count">
             <Annotation name="details">Number of distinct universities aggregated</Annotation>
             <Annotation name="aggregation_method">distinct-count</Annotation>
             <Annotation name="units_of_measurement">Universities</Annotation>

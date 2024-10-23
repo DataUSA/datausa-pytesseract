@@ -7,8 +7,8 @@
             <Level key_column="carnegie_parent" name_column="carnegie_parent_name" name="Carnegie Parent" key_type="str" />
             <Level key_column="carnegie_id" name_column="carnegie_name" name="Carnegie" key_type="i8"/>
             <Level key_column="id" name_column="name" name="University" key_type="i64">
-                <Property key_column="county_name" name="County Name"/>
-                <Property key_column="county" name="County ID"/>
+                <Property key_column="county_name" name="County Name University"/>
+                <Property key_column="county" name="County ID University"/>
                 <Property key_column="msa_name" name="MSA Name"/>
                 <Property key_column="msa" name="MSA ID"/>
                 <Property key_column="sector_name" name="Sector Name"/>
