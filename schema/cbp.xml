@@ -26,12 +26,6 @@
             </Hierarchy>
         </Dimension>
 
-        IF(num_digits = 2, 'Sector',
-       	IF(num_digits = 3, 'Subsector',
-       	IF(num_digits = 4, 'Industry Group',
-      	IF(num_digits = 5, 'Industry',
-       	IF(num_digits = 6, 'National Industry', ''))))) AS classification
-
         <Dimension name="Year" foreign_key="year" type="time">  
             <Annotation name="dim_type">TIME</Annotation>
             <Hierarchy name="Year" primary_key="Year">
