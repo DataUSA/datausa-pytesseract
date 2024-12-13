@@ -63,6 +63,7 @@ on:
     branches: [ "main" ]
     paths:
       - schema/**
+      - helm/**
 
 env:
   GCP_PROJECT_ID: ${{ vars.GCP_PROJECT_ID }}
