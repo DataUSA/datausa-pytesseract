@@ -1,10 +1,10 @@
 <Schema name="datausa" default_locale="en">
     <Cube name="Data_USA_House_election">
 
-        <Annotation name="source_name">MIT Data Electionlab</Annotation>
-        <Annotation name="source_link">https://electionlab.mit.edu/data</Annotation>
-        <Annotation name="dataset_name">U.S House 1976-2020</Annotation>
-        <Annotation name="dataset_link">https://dataverse.harvard.edu/api/access/datafile/:persistentId?persistentId=doi:10.7910/DVN/IG0UN2/8KAB8V</Annotation>
+        <Annotation name="source_name">The New York Times; MIT Data Electionlab</Annotation>
+        <Annotation name="source_link">https://www.nytimes.com; https://electionlab.mit.edu/data</Annotation>
+        <Annotation name="dataset_name">U.S House Election Results 2024 (Provisional); U.S House 1976-2020</Annotation>
+        <Annotation name="dataset_link">https://static01.nyt.com/elections-assets/pages/data/2024-11-05/results-house.json; https://dataverse.harvard.edu/api/access/datafile/:persistentId?persistentId=doi:10.7910/DVN/IG0UN2/8KAB8V</Annotation>
         <Annotation name="available_dimensions">Candidate, Geography, Party, Year, Candidate Other, Special</Annotation>
         <Annotation name="hidden_dimensions">Unofficial, Version</Annotation>
         <Annotation name="hide_in_ui">Unofficial, Version</Annotation>
