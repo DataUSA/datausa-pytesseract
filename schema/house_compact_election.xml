@@ -19,6 +19,14 @@
             </Hierarchy>
             <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Dimension>
+
+        <Dimension foreign_key="district" name="New districts">
+            <Hierarchy name="Geography">
+                <Table name="congressional_district" />
+                <Level name="District Version" key_column="first_cdsessn" key_type="u8"/>
+                <Level name="CD" key_column="geoid" name_column="name" key_type="str" visible="false"/>
+            </Hierarchy>
+        </Dimension>
       
         <Dimension  type="time" foreign_key="year" name="Year">
             <Hierarchy name="Year" primary_key="year">
