@@ -1,10 +1,10 @@
 <Schema name="datausa" default_locale="en">
     <Cube name="Data_USA_Senate_election">
 
-        <Annotation name="source_name">MIT Data Electionlab</Annotation>
-        <Annotation name="source_link">https://electionlab.mit.edu/data</Annotation>
-        <Annotation name="dataset_name">U.S Senate 1976-2020</Annotation>
-        <Annotation name="dataset_link">https://dataverse.harvard.edu/api/access/datafile/:persistentId?persistentId=doi:10.7910/DVN/PEJ5QU/XXQCIK</Annotation>
+        <Annotation name="source_name">The New York Times; MIT Data Electionlab</Annotation>
+        <Annotation name="source_link">https://www.nytimes.com; https://electionlab.mit.edu/data</Annotation>
+        <Annotation name="dataset_name">U.S Senate Elections Results 2024 (Provisional); U.S Senate 1976-2020</Annotation>
+        <Annotation name="dataset_link">https://static01.nyt.com/elections-assets/pages/data/2024-11-05/results-senate.json; https://dataverse.harvard.edu/api/access/datafile/:persistentId?persistentId=doi:10.7910/DVN/PEJ5QU/XXQCIK</Annotation>
         <Annotation name="available_dimensions">Candidate, Geography, Party, Year, Candidate Other, Special</Annotation>
         <Annotation name="topic">Election</Annotation>
         <Annotation name="subtopic">Senate</Annotation>
