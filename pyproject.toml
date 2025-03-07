@@ -10,11 +10,11 @@ license = "MIT"
 packages = [{include = "app"}]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.10"
 granian = "^1.4.0"
 logiclayer = "^0.4.0"
-logiclayer-complexity = "^0.6.2"
-tesseract-olap = {extras = ["clickhouse", "redis"], version = "^0.11.0"}
+logiclayer-complexity = "^0.6.4"
+tesseract-olap = {extras = ["clickhouse", "redis"], version = "^0.15.2"}
 
 [tool.poetry.group.dev.dependencies]
 granian = {extras = ["reload"], version = "^1.4.0"}
