@@ -21,74 +21,19 @@
     <Dimension foreign_key="dim_2" name="Transportation">
       <Hierarchy name="Transportation">
         <InlineTable name="dim_2_transportation" format="tuples">
-            <Row>
-              <Value column="member_0_code">0</Value>
-              <Value column="member_0">Car, Truck, or Van</Value>
-              <Value column="member_1_code">0</Value>
-              <Value column="member_1">Car, Truck, or Van</Value>
-              <Value column="member_2_code">0</Value>
-              <Value column="member_2">Drove Alone</Value>
-            </Row>
-            <Row>
-              <Value column="member_0_code">0</Value>
-              <Value column="member_0">Car, Truck, or Van</Value>
-              <Value column="member_1_code">1</Value>
-              <Value column="member_1">Carpooled</Value>
-              <Value column="member_2_code">1</Value>
-              <Value column="member_2">In 2-Person Carpool</Value>
-            </Row>
-            <Row>
-              <Value column="member_0_code">0</Value>
-              <Value column="member_0">Car, Truck, or Van</Value>
-              <Value column="member_1_code">1</Value>
-              <Value column="member_1">Carpooled</Value>
-              <Value column="member_2_code">2</Value>
-              <Value column="member_2">In 3-Or-More-Person Carpool</Value>
-            </Row>
-            <Row>
-              <Value column="member_0_code">1</Value>
-              <Value column="member_0">Public Transportation (Excluding Taxicab)</Value>
-              <Value column="member_1_code">2</Value>
-              <Value column="member_1">Public Transportation (Excluding Taxicab)</Value>
-              <Value column="member_2_code">3</Value>
-              <Value column="member_2">Bus or Trolley Bus</Value>
-            </Row>
-            <Row>
-              <Value column="member_0_code">1</Value>
-              <Value column="member_0">Public Transportation (Excluding Taxicab)</Value>
-              <Value column="member_1_code">2</Value>
-              <Value column="member_1">Public Transportation (Excluding Taxicab)</Value>
-              <Value column="member_2_code">4</Value>
-              <Value column="member_2">Streetcar or Trolley Car (Carro Publico In Puerto Rico), Subway or Elevated</Value>
-            </Row>
-            <Row>
-              <Value column="member_0_code">1</Value>
-              <Value column="member_0">Public Transportation (Excluding Taxicab)</Value>
-              <Value column="member_1_code">2</Value>
-              <Value column="member_1">Public Transportation (Excluding Taxicab)</Value>
-              <Value column="member_2_code">5</Value>
-              <Value column="member_2">Railroad or Ferryboat</Value>
-            </Row>
-            <Row>
-              <Value column="member_0_code">2</Value>
-              <Value column="member_0">Walked</Value>
-              <Value column="member_1_code">3</Value>
-              <Value column="member_1">Walked</Value>
-              <Value column="member_2_code">6</Value>
-              <Value column="member_2">Walked</Value>
-            </Row>
-            <Row>
-              <Value column="member_0_code">3</Value>
-              <Value column="member_0">Taxicab, Motorcycle, Bicycle, or Other Means</Value>
-              <Value column="member_1_code">4</Value>
-              <Value column="member_1">Taxicab, Motorcycle, Bicycle, or Other Means</Value>
-              <Value column="member_2_code">7</Value>
-              <Value column="member_2">Taxicab, Motorcycle, Bicycle, or Other Means</Value>
-            </Row>
+            <Row>("group_id", "group", "subgroup_id", "subgroup", "transportation_id", "transportation")</Row>
+            <Row>(0, "Car, Truck, or Van", 0, "Car, Truck, or Van", 0, "Drove Alone")</Row>
+            <Row>(0, "Car, Truck, or Van", 1, "Carpooled", 1, "In 2-Person Carpool")</Row>
+            <Row>(0, "Car, Truck, or Van", 1, "Carpooled", 2, "In 3-Or-More-Person Carpool")</Row>
+            <Row>(1, "Public Transportation (Excluding Taxicab)", 2, "Public Transportation (Excluding Taxicab)", 3, "Bus or Trolley Bus")</Row>
+            <Row>(1, "Public Transportation (Excluding Taxicab)", 2, "Public Transportation (Excluding Taxicab)", 4, "Streetcar or Trolley Car (Carro Publico In Puerto Rico), Subway or Elevated")</Row>
+            <Row>(1, "Public Transportation (Excluding Taxicab)", 2, "Public Transportation (Excluding Taxicab)", 5, "Railroad or Ferryboat")</Row>
+            <Row>(2, "Walked", 3, "Walked", 6, "Walked")</Row>
+            <Row>(3, "Taxicab, Motorcycle, Bicycle, or Other Means", 4, "Taxicab, Motorcycle, Bicycle, or Other Means", 7, "Taxicab, Motorcycle, Bicycle, or Other Means")</Row>
         </InlineTable>
-      <Level column="member_0_code" hideMemberIf="IfParentsName" name="Group" nameColumn="member_0" uniqueMembers="true"/>
-      <Level column="member_1_code" hideMemberIf="IfParentsName" name="Subgroup" nameColumn="member_1" uniqueMembers="true"/>
-      <Level column="member_2_code" hideMemberIf="IfParentsName" name="Transportation Means" nameColumn="member_2" uniqueMembers="true"/>
+      <Level key_column="group_id" name="Group" name_column="group" key_type="u8"/>
+      <Level key_column="subgroup_id" name="Subgroup" name_column="subgroup" key_type="u8"/>
+      <Level key_column="transportation_id" name="Transportation Means" name_column="transportation" key_type="u8"/>
       </Hierarchy>
     </Dimension>
 
