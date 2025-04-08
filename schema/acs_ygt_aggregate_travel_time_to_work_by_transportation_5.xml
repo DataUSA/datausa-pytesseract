@@ -9,7 +9,7 @@
         <Annotation name="subtopic">Transportation</Annotation>
         <Table name="acs_ygt_aggregate_travel_time_to_work_by_transportation_5" schema="acs"/>
 
-        <!--<DimensionUsage foreign_key="geoid" name="Geography" source="Geography"/>-->
+        <DimensionUsage foreign_key="geoid" name="Geography" source="Geography"/>
 
         <Dimension name="Year" foreign_key='year' type='time'>
             <Annotation name="dim_type">TIME</Annotation>
@@ -18,36 +18,36 @@
             </Hierarchy>
         </Dimension>
 
-    <Dimension foreign_key="dim_2" name="Transportation">
-      <Hierarchy name="Transportation">
-        <InlineTable name="dim_2_transportation" format="tuples">
-            <Row>("group_id", "group", "subgroup_id", "subgroup", "transportation_id", "transportation")</Row>
-            <Row>(0, "Car, Truck, or Van", 0, "Car, Truck, or Van", 0, "Drove Alone")</Row>
-            <Row>(0, "Car, Truck, or Van", 1, "Carpooled", 1, "In 2-Person Carpool")</Row>
-            <Row>(0, "Car, Truck, or Van", 1, "Carpooled", 2, "In 3-Or-More-Person Carpool")</Row>
-            <Row>(1, "Public Transportation (Excluding Taxicab)", 2, "Public Transportation (Excluding Taxicab)", 3, "Bus or Trolley Bus")</Row>
-            <Row>(1, "Public Transportation (Excluding Taxicab)", 2, "Public Transportation (Excluding Taxicab)", 4, "Streetcar or Trolley Car (Carro Publico In Puerto Rico), Subway or Elevated")</Row>
-            <Row>(1, "Public Transportation (Excluding Taxicab)", 2, "Public Transportation (Excluding Taxicab)", 5, "Railroad or Ferryboat")</Row>
-            <Row>(2, "Walked", 3, "Walked", 6, "Walked")</Row>
-            <Row>(3, "Taxicab, Motorcycle, Bicycle, or Other Means", 4, "Taxicab, Motorcycle, Bicycle, or Other Means", 7, "Taxicab, Motorcycle, Bicycle, or Other Means")</Row>
-        </InlineTable>
-      <Level key_column="group_id" name="Group" name_column="group" key_type="u8"/>
-      <Level key_column="subgroup_id" name="Subgroup" name_column="subgroup" key_type="u8"/>
-      <Level key_column="transportation_id" name="Transportation Means" name_column="transportation" key_type="u8"/>
-      </Hierarchy>
-    </Dimension>
+        <Dimension foreign_key="dim_2" name="Transportation">
+        <Hierarchy name="Transportation">
+            <InlineTable name="dim_2_transportation" format="tuples">
+                <Row>("group_id", "group", "subgroup_id", "subgroup", "transportation_id", "transportation")</Row>
+                <Row>(0, "Car, Truck, or Van", 0, "Car, Truck, or Van", 0, "Drove Alone")</Row>
+                <Row>(0, "Car, Truck, or Van", 1, "Carpooled", 1, "In 2-Person Carpool")</Row>
+                <Row>(0, "Car, Truck, or Van", 1, "Carpooled", 2, "In 3-Or-More-Person Carpool")</Row>
+                <Row>(1, "Public Transportation (Excluding Taxicab)", 2, "Public Transportation (Excluding Taxicab)", 3, "Bus or Trolley Bus")</Row>
+                <Row>(1, "Public Transportation (Excluding Taxicab)", 2, "Public Transportation (Excluding Taxicab)", 4, "Streetcar or Trolley Car (Carro Publico In Puerto Rico), Subway or Elevated")</Row>
+                <Row>(1, "Public Transportation (Excluding Taxicab)", 2, "Public Transportation (Excluding Taxicab)", 5, "Railroad or Ferryboat")</Row>
+                <Row>(2, "Walked", 3, "Walked", 6, "Walked")</Row>
+                <Row>(3, "Taxicab, Motorcycle, Bicycle, or Other Means", 4, "Taxicab, Motorcycle, Bicycle, or Other Means", 7, "Taxicab, Motorcycle, Bicycle, or Other Means")</Row>
+            </InlineTable>
+        <Level key_column="group_id" name="Group" name_column="group" key_type="u8"/>
+        <Level key_column="subgroup_id" name="Subgroup" name_column="subgroup" key_type="u8"/>
+        <Level key_column="transportation_id" name="Transportation Means" name_column="transportation" key_type="u8"/>
+        </Hierarchy>
+        </Dimension>
 
-    <Measure aggregator="sum" key_column="mea" name="Total Commute Time" visible="true">
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">Minutes</Annotation>
-        <Annotation name="hide_in_map">true</Annotation>
-    </Measure>
+        <Measure aggregator="sum" key_column="mea" name="Total Commute Time" visible="true">
+            <Annotation name="aggregation_method">SUM</Annotation>
+            <Annotation name="units_of_measurement">Minutes</Annotation>
+            <Annotation name="hide_in_map">true</Annotation>
+        </Measure>
 
-    <Measure aggregator="None" key_column="moe" name="Total Commute Time Moe" visible="true">
-        <Annotation name="error_for_measure">Total Commute Time</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Aggregation type="moe" critical_value="1.645"/>
-    </Measure>
+        <Measure aggregator="None" key_column="moe" name="Total Commute Time Moe" visible="true">
+            <Annotation name="error_for_measure">Total Commute Time</Annotation>
+            <Annotation name="error_type">MOE</Annotation>
+            <Aggregation type="moe" critical_value="1.645"/>
+        </Measure>
     <!--
     <CalculatedMember name="Area sq miles" dimension="Measures" visible="false">
       <Formula> CASE

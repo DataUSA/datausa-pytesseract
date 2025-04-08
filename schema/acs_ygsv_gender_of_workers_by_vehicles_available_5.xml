@@ -11,7 +11,7 @@
 
     <Table name="acs_ygsv_gender_of_workers_by_vehicles_available_5" schema="acs"/>
 
-    <!--<DimensionUsage foreign_key="geoid" name="Geography" source="Geography"/>-->
+    <DimensionUsage foreign_key="geoid" name="Geography" source="Geography"/>
 
     <Dimension name="Year" foreign_key='year' type='time'>
         <Annotation name="dim_type">TIME</Annotation>
@@ -41,7 +41,6 @@
             <Row>(3, "3 Vehicles Available")</Row>
             <Row>(4, "4 Vehicles Available")</Row>
             <Row>(5, "5 or More Vehicles Available")</Row>
-          </Rows>
         </InlineTable>
         <Level key_column="id" name="Vehicles Available" name_column="description" key_type="u8"/>
       </Hierarchy>

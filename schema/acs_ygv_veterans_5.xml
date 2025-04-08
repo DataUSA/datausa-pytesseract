@@ -9,7 +9,7 @@
     <Annotation name="subtopic">Military</Annotation>
     <Table name="acs_ygv_veterans_5" schema="acs"/>
 
-    <!--<DimensionUsage foreign_key="geoid" name="Geography" source="Geography"/>-->
+    <DimensionUsage foreign_key="geoid" name="Geography" source="Geography"/>
 
     <Dimension name="Year" foreign_key='year' type='time'>
         <Annotation name="dim_type">TIME</Annotation>
@@ -53,7 +53,7 @@
             <Row>(13, "Between Korean War &amp; World War II Only")</Row>
             <Row>(14, "Pre-World War II Only")</Row>
         </InlineTable>
-      <Level key_column="id" name="Period of Service Granular" name_column="description" key_type="u8"/>
+        <Level key_column="id" name="Period of Service Granular" name_column="description" key_type="u8"/>
       </Hierarchy>
     </Dimension>
 
