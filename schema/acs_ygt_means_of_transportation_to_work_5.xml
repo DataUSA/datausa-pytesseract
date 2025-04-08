@@ -21,150 +21,32 @@
     <Dimension foreign_key="dim_2" name="Transportation">
       <Hierarchy name="Transportation">
         <InlineTable alias="dim_2_transportation" format="tuples">
-            <Row>
-              <Value column="member_0_code">0</Value>
-              <Value column="member_0">Drove Alone</Value>
-              <Value column="member_1_code">0</Value>
-              <Value column="member_1">Drove Alone (Subgroup)</Value>
-              <Value column="member_2_code">0</Value>
-              <Value column="member_2">Drove Alone</Value>
-            </Row>
-            <Row>
-              <Value column="member_0_code">1</Value>
-              <Value column="member_0">Carpooled</Value>
-              <Value column="member_1_code">1</Value>
-              <Value column="member_1">Carpooled</Value>
-              <Value column="member_2_code">1</Value>
-              <Value column="member_2">In 2-Person Carpool</Value>
-            </Row>
-            <Row>
-              <Value column="member_0_code">1</Value>
-              <Value column="member_0">Carpooled</Value>
-              <Value column="member_1_code">1</Value>
-              <Value column="member_1">Carpooled</Value>
-              <Value column="member_2_code">2</Value>
-              <Value column="member_2">In 3-Person Carpool</Value>
-            </Row>
-            <Row>
-              <Value column="member_0_code">1</Value>
-              <Value column="member_0">Carpooled</Value>
-              <Value column="member_1_code">1</Value>
-              <Value column="member_1">Carpooled</Value>
-              <Value column="member_2_code">3</Value>
-              <Value column="member_2">In 4-Person Carpool</Value>
-            </Row>
-            <Row>
-              <Value column="member_0_code">1</Value>
-              <Value column="member_0">Carpooled</Value>
-              <Value column="member_1_code">1</Value>
-              <Value column="member_1">Carpooled</Value>
-              <Value column="member_2_code">4</Value>
-              <Value column="member_2">In 5-Or 6-Person Carpool</Value>
-            </Row>
-            <Row>
-              <Value column="member_0_code">1</Value>
-              <Value column="member_0">Carpooled</Value>
-              <Value column="member_1_code">1</Value>
-              <Value column="member_1">Carpooled</Value>
-              <Value column="member_2_code">5</Value>
-              <Value column="member_2">In 7-Or-More-Person Carpool</Value>
-            </Row>
-            <Row>
-              <Value column="member_0_code">2</Value>
-              <Value column="member_0">Public Transit</Value>
-              <Value column="member_1_code">2</Value>
-              <Value column="member_1">Public Transit</Value>
-              <Value column="member_2_code">6</Value>
-              <Value column="member_2">Bus or Trolley Bus</Value>
-            </Row>
-            <Row>
-              <Value column="member_0_code">2</Value>
-              <Value column="member_0">Public Transit</Value>
-              <Value column="member_1_code">2</Value>
-              <Value column="member_1">Public Transit</Value>
-              <Value column="member_2_code">7</Value>
-              <Value column="member_2">Streetcar or Trolley Car</Value>
-            </Row>
-            <Row>
-              <Value column="member_0_code">2</Value>
-              <Value column="member_0">Public Transit</Value>
-              <Value column="member_1_code">2</Value>
-              <Value column="member_1">Public Transit</Value>
-              <Value column="member_2_code">8</Value>
-              <Value column="member_2">Subway or Elevated</Value>
-            </Row>
-            <Row>
-              <Value column="member_0_code">2</Value>
-              <Value column="member_0">Public Transit</Value>
-              <Value column="member_1_code">2</Value>
-              <Value column="member_1">Public Transit</Value>
-              <Value column="member_2_code">9</Value>
-              <Value column="member_2">Railroad</Value>
-            </Row>
-            <Row>
-              <Value column="member_0_code">2</Value>
-              <Value column="member_0">Public Transit</Value>
-              <Value column="member_1_code">2</Value>
-              <Value column="member_1">Public Transit</Value>
-              <Value column="member_2_code">10</Value>
-              <Value column="member_2">Ferryboat</Value>
-            </Row>
-            <Row>
-              <Value column="member_0_code">3</Value>
-              <Value column="member_0">Taxi</Value>
-              <Value column="member_1_code">3</Value>
-              <Value column="member_1">Taxi Subgroup</Value>
-              <Value column="member_2_code">11</Value>
-              <Value column="member_2">Taxi</Value>
-            </Row>
-            <Row>
-              <Value column="member_0_code">4</Value>
-              <Value column="member_0">Motorcycle</Value>
-              <Value column="member_1_code">4</Value>
-              <Value column="member_1">Motorcycle (Subgroup)</Value>
-              <Value column="member_2_code">12</Value>
-              <Value column="member_2">Motorcycle</Value>
-            </Row>
-            <Row>
-              <Value column="member_0_code">5</Value>
-              <Value column="member_0">Bicycle</Value>
-              <Value column="member_1_code">5</Value>
-              <Value column="member_1">Bicycle (Subgroup)</Value>
-              <Value column="member_2_code">13</Value>
-              <Value column="member_2">Bicycle</Value>
-            </Row>
-            <Row>
-              <Value column="member_0_code">6</Value>
-              <Value column="member_0">Walked</Value>
-              <Value column="member_1_code">6</Value>
-              <Value column="member_1">Walked (Subgroup)</Value>
-              <Value column="member_2_code">14</Value>
-              <Value column="member_2">Walked</Value>
-            </Row>
-            <Row>
-              <Value column="member_0_code">7</Value>
-              <Value column="member_0">Other</Value>
-              <Value column="member_1_code">7</Value>
-              <Value column="member_1">Other</Value>
-              <Value column="member_2_code">15</Value>
-              <Value column="member_2">Other Means</Value>
-            </Row>
-            <Row>
-              <Value column="member_0_code">8</Value>
-              <Value column="member_0">Worked At Home</Value>
-              <Value column="member_1_code">8</Value>
-              <Value column="member_1">Worked At Home</Value>
-              <Value column="member_2_code">16</Value>
-              <Value column="member_2">Worked At Home</Value>
-            </Row>
+            <Row>("group_id", "group", "subgroup_id", "subgroup", "transportation_id", "transportation")</Row>
+            <Row>(0, "Drove Alone", 0, "Drove Alone (Subgroup)", 0, "Drove Alone")</Row>
+            <Row>(1, "Carpooled", 1, "Carpooled", 1, "In 2-Person Carpool")</Row>
+            <Row>(1, "Carpooled", 1, "Carpooled", 2, "In 3-Person Carpool")</Row>
+            <Row>(1, "Carpooled", 1, "Carpooled", 3, "In 4-Person Carpool")</Row>
+            <Row>(1, "Carpooled", 1, "Carpooled", 4, "In 5-Or 6-Person Carpool")</Row>
+            <Row>(1, "Carpooled", 1, "Carpooled", 5, "In 7-Or-More-Person Carpool")</Row>
+            <Row>(2, "Public Transit", 2, "Public Transit", 6, "Bus or Trolley Bus")</Row>
+            <Row>(2, "Public Transit", 2, "Public Transit", 7, "Streetcar or Trolley Car")</Row>
+            <Row>(2, "Public Transit", 2, "Public Transit", 8, "Subway or Elevated")</Row>
+            <Row>(2, "Public Transit", 2, "Public Transit", 9, "Railroad")</Row>
+            <Row>(2, "Public Transit", 2, "Public Transit", 10, "Ferryboat")</Row>
+            <Row>(3, "Taxi", 3, "Taxi Subgroup", 11, "Taxi")</Row>
+            <Row>(4, "Motorcycle", 4, "Motorcycle (Subgroup)", 12, "Motorcycle")</Row>
+            <Row>(5, "Bicycle", 5, "Bicycle (Subgroup)", 13, "Bicycle")</Row>
+            <Row>(6, "Walked", 6, "Walked (Subgroup)", 14, "Walked")</Row>
+            <Row>(7, "Other", 7, "Other", 15, "Other Means")</Row>
+            <Row>(8, "Worked At Home", 8, "Worked At Home", 16, "Worked At Home")</Row>
         </InlineTable>
-      <Level key_column="member_0_code" name="Group" name_column="member_0" key_type="u8"/>
-      <Level key_column="member_1_code" name="Subgroup" name_column="member_1" key_type="u8"/>
-      <Level key_column="member_2_code" name="Transportation Means" name_column="member_2" key_type="u8"/>
+      <Level key_column="group_id" name="Group" name_column="group" key_type="u8"/>
+      <Level key_column="subgroup_id" name="Subgroup" name_column="subgroup" key_type="u8"/>
+      <Level key_column="transportation_id" name="Transportation Means" name_column="transportation" key_type="u8"/>
       </Hierarchy>
     </Dimension>
 
-    <Measure aggregator="sum" column="mea" name="Commute Means" visible="true">
+    <Measure aggregator="sum" key_column="mea" name="Commute Means" visible="true">
         <Annotation name="aggregation_method">SUM</Annotation>
         <Annotation name="units_of_measurement">People</Annotation>
         <Annotation name="hide_in_map">true</Annotation>
