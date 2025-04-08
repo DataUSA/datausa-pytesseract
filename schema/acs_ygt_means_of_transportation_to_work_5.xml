@@ -1,0 +1,205 @@
+<Schema name="datausa" default_locale="en">
+  <Cube name="acs_ygt_means_of_transportation_to_work_5" subset_table="true">
+    <Annotation name="source_name">Census Bureau</Annotation>
+    <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+    <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
+    <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+    <Annotation name="table_id">B08301</Annotation>
+    <Annotation name="topic">Housing &amp; Living</Annotation>
+    <Annotation name="subtopic">Transportation</Annotation>
+    <Table name="acs_ygt_means_of_transportation_to_work_5" schema="acs"/>
+
+    <!--<DimensionUsage foreign_key="geoid" name="Geography" source="Geography"/>-->
+
+    <Dimension name="Year" foreign_key='year' type='time'>
+        <Annotation name="dim_type">TIME</Annotation>
+        <Hierarchy name="Year" primary_key='year'>
+            <Level name="Year" key_column="year" key_type="u16" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreign_key="dim_2" name="Transportation">
+      <Hierarchy name="Transportation">
+        <InlineTable alias="dim_2_transportation" format="tuples">
+            <Row>
+              <Value column="member_0_code">0</Value>
+              <Value column="member_0">Drove Alone</Value>
+              <Value column="member_1_code">0</Value>
+              <Value column="member_1">Drove Alone (Subgroup)</Value>
+              <Value column="member_2_code">0</Value>
+              <Value column="member_2">Drove Alone</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">1</Value>
+              <Value column="member_0">Carpooled</Value>
+              <Value column="member_1_code">1</Value>
+              <Value column="member_1">Carpooled</Value>
+              <Value column="member_2_code">1</Value>
+              <Value column="member_2">In 2-Person Carpool</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">1</Value>
+              <Value column="member_0">Carpooled</Value>
+              <Value column="member_1_code">1</Value>
+              <Value column="member_1">Carpooled</Value>
+              <Value column="member_2_code">2</Value>
+              <Value column="member_2">In 3-Person Carpool</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">1</Value>
+              <Value column="member_0">Carpooled</Value>
+              <Value column="member_1_code">1</Value>
+              <Value column="member_1">Carpooled</Value>
+              <Value column="member_2_code">3</Value>
+              <Value column="member_2">In 4-Person Carpool</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">1</Value>
+              <Value column="member_0">Carpooled</Value>
+              <Value column="member_1_code">1</Value>
+              <Value column="member_1">Carpooled</Value>
+              <Value column="member_2_code">4</Value>
+              <Value column="member_2">In 5-Or 6-Person Carpool</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">1</Value>
+              <Value column="member_0">Carpooled</Value>
+              <Value column="member_1_code">1</Value>
+              <Value column="member_1">Carpooled</Value>
+              <Value column="member_2_code">5</Value>
+              <Value column="member_2">In 7-Or-More-Person Carpool</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">2</Value>
+              <Value column="member_0">Public Transit</Value>
+              <Value column="member_1_code">2</Value>
+              <Value column="member_1">Public Transit</Value>
+              <Value column="member_2_code">6</Value>
+              <Value column="member_2">Bus or Trolley Bus</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">2</Value>
+              <Value column="member_0">Public Transit</Value>
+              <Value column="member_1_code">2</Value>
+              <Value column="member_1">Public Transit</Value>
+              <Value column="member_2_code">7</Value>
+              <Value column="member_2">Streetcar or Trolley Car</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">2</Value>
+              <Value column="member_0">Public Transit</Value>
+              <Value column="member_1_code">2</Value>
+              <Value column="member_1">Public Transit</Value>
+              <Value column="member_2_code">8</Value>
+              <Value column="member_2">Subway or Elevated</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">2</Value>
+              <Value column="member_0">Public Transit</Value>
+              <Value column="member_1_code">2</Value>
+              <Value column="member_1">Public Transit</Value>
+              <Value column="member_2_code">9</Value>
+              <Value column="member_2">Railroad</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">2</Value>
+              <Value column="member_0">Public Transit</Value>
+              <Value column="member_1_code">2</Value>
+              <Value column="member_1">Public Transit</Value>
+              <Value column="member_2_code">10</Value>
+              <Value column="member_2">Ferryboat</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">3</Value>
+              <Value column="member_0">Taxi</Value>
+              <Value column="member_1_code">3</Value>
+              <Value column="member_1">Taxi Subgroup</Value>
+              <Value column="member_2_code">11</Value>
+              <Value column="member_2">Taxi</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">4</Value>
+              <Value column="member_0">Motorcycle</Value>
+              <Value column="member_1_code">4</Value>
+              <Value column="member_1">Motorcycle (Subgroup)</Value>
+              <Value column="member_2_code">12</Value>
+              <Value column="member_2">Motorcycle</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">5</Value>
+              <Value column="member_0">Bicycle</Value>
+              <Value column="member_1_code">5</Value>
+              <Value column="member_1">Bicycle (Subgroup)</Value>
+              <Value column="member_2_code">13</Value>
+              <Value column="member_2">Bicycle</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">6</Value>
+              <Value column="member_0">Walked</Value>
+              <Value column="member_1_code">6</Value>
+              <Value column="member_1">Walked (Subgroup)</Value>
+              <Value column="member_2_code">14</Value>
+              <Value column="member_2">Walked</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">7</Value>
+              <Value column="member_0">Other</Value>
+              <Value column="member_1_code">7</Value>
+              <Value column="member_1">Other</Value>
+              <Value column="member_2_code">15</Value>
+              <Value column="member_2">Other Means</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">8</Value>
+              <Value column="member_0">Worked At Home</Value>
+              <Value column="member_1_code">8</Value>
+              <Value column="member_1">Worked At Home</Value>
+              <Value column="member_2_code">16</Value>
+              <Value column="member_2">Worked At Home</Value>
+            </Row>
+        </InlineTable>
+      <Level key_column="member_0_code" name="Group" name_column="member_0" key_type="u8"/>
+      <Level key_column="member_1_code" name="Subgroup" name_column="member_1" key_type="u8"/>
+      <Level key_column="member_2_code" name="Transportation Means" name_column="member_2" key_type="u8"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Measure aggregator="sum" column="mea" name="Commute Means" visible="true">
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="hide_in_map">true</Annotation>
+    </Measure>
+
+    <Measure aggregator="None" key_column="moe" name="Commute Means Moe" visible="true">
+        <Annotation name="error_for_measure">Commute Means</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Aggregation type="moe" critical_value="1.645"/>
+    </Measure>
+
+    <!--<CalculatedMember name="Area sq miles" dimension="Measures" visible="false">
+      <Formula> CASE
+            WHEN [Geography].[Tract].Level is [Geography].[Tract].[Tract] THEN (cast([Geography].[Tract].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Place].Level is [Geography].[Place].[Place] THEN (cast([Geography].[Place].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Zip].Level is [Geography].[Zip].[Zip] THEN (cast([Geography].[Zip].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[County].Level is [Geography].[County].[County] THEN (cast([Geography].[County].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[State].Level is [Geography].[State].[State] THEN (cast([Geography].[State].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Nation].Level is [Geography].[Nation].[Nation] THEN (cast([Geography].[Nation].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Puma].Level is [Geography].[Puma].[Puma] THEN (cast([Geography].[PUMA].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Msa].Level is [Geography].[Msa].[Msa] THEN (cast([Geography].[MSA].CurrentMember.Properties("Area") as integer) / 2589988)
+
+            WHEN 1 = 1 THEN 0
+            END
+      </Formula>
+    </CalculatedMember>
+
+    <CalculatedMember name="Commute Means Density" dimension="Measures" visible="false">
+      <Formula>
+          [Measures].[Commute Means].CurrentMember / [Measures].[Area sq miles]
+      </Formula>
+    </CalculatedMember>-->
+
+
+
+
+  </Cube>
+</Schema>
