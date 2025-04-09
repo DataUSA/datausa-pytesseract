@@ -1,0 +1,45 @@
+<Schema name="datausa" default_locale="en">
+  <Cube name="acs_ygh_households_with_no_internet_2016_5" subset_table="true">
+        <Annotation name="source_name">Census Bureau</Annotation>
+        <Annotation name="source_description">Census Bureau conducts surveys of the United States Population, including the American Community Survey</Annotation>
+        <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
+        <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+        <Annotation name="table_id">B28002</Annotation>
+        <Annotation name="topic">Housing &amp; Living</Annotation>
+        <Annotation name="subtopic">Housing</Annotation>
+
+        <Table name="acs_ygh_households_with_no_internet_2016_5" />
+
+        <DimensionUsage foreign_key="geoid" name="Geography" source="Geography" />
+        
+        <Dimension name="Year" foreign_key="year" type="time">  
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="year">
+                <Level name="Year" key_column="year" key_type="u16"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="dim_0" name="Internet Access">
+            <Hierarchy name="Internet Access">
+                <InlineTable name="dim_inline_internet_access" format="tuples">
+                    <Row>("id", "description")</Row>
+                    <Row>(0, "With an Internet Subscription")</Row>
+                    <Row>(1, "Internet Access without a Subscription")</Row>
+                    <Row>(2, "No Internet Access")</Row>
+                </InlineTable>
+                <Level key_column="id" name="Access Group" name_column="description" key_type="u8"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Measure aggregator="sum" key_column="mea" name="Households by Internet Access" visible="true">
+            <Annotation name="aggregation_method">SUM</Annotation>
+            <Annotation name="units_of_measurement">Households</Annotation>
+        </Measure>
+
+        <Measure aggregator="None" key_column="moe" name="Households by Internet Access Moe" visible="true">
+            <Annotation name="error_for_measure">Households by Internet Access</Annotation>
+            <Annotation name="error_type">MOE</Annotation>
+            <Aggregation type="moe" critical_value="1.645"/>
+        </Measure>
+  </Cube>
+</Schema>
