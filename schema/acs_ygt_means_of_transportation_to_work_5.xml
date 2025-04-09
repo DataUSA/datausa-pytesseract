@@ -7,14 +7,14 @@
     <Annotation name="table_id">B08301</Annotation>
     <Annotation name="topic">Housing &amp; Living</Annotation>
     <Annotation name="subtopic">Transportation</Annotation>
-    <Table name="acs_ygt_means_of_transportation_to_work_5" schema="acs"/>
+    <Table name="acs_ygt_means_of_transportation_to_work_5" />
 
-    <DimensionUsage foreign_key="geoid" name="Geography" source="Geography"/>
-
-    <Dimension name="Year" foreign_key='year' type='time'>
+    <DimensionUsage foreign_key="geoid" name="Geography" source="Geography" />
+    
+    <Dimension name="Year" foreign_key="year" type="time">  
         <Annotation name="dim_type">TIME</Annotation>
-        <Hierarchy name="Year" primary_key='year'>
-            <Level name="Year" key_column="year" key_type="u16" />
+        <Hierarchy name="Year" primary_key="year">
+            <Level name="Year" key_column="year" key_type="u16"/>
         </Hierarchy>
     </Dimension>
 

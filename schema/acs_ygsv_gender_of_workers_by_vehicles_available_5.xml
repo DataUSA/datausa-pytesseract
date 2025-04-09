@@ -9,14 +9,14 @@
     <Annotation name="topic">Housing &amp; Living</Annotation>
     <Annotation name="subtopic">Transportation</Annotation>
 
-    <Table name="acs_ygsv_gender_of_workers_by_vehicles_available_5" schema="acs"/>
+    <Table name="acs_ygsv_gender_of_workers_by_vehicles_available_5" />
 
-    <DimensionUsage foreign_key="geoid" name="Geography" source="Geography"/>
-
-    <Dimension name="Year" foreign_key='year' type='time'>
+    <DimensionUsage foreign_key="geoid" name="Geography" source="Geography" />
+    
+    <Dimension name="Year" foreign_key="year" type="time">  
         <Annotation name="dim_type">TIME</Annotation>
-        <Hierarchy name="Year" primary_key='year'>
-            <Level name="Year" key_column="year" key_type="u16" />
+        <Hierarchy name="Year" primary_key="year">
+            <Level name="Year" key_column="year" key_type="u16"/>
         </Hierarchy>
     </Dimension>
 
@@ -35,7 +35,7 @@
       <Hierarchy name="Vehicles Available">
         <InlineTable name="dim_1_vehicles_available" format="tuples">
             <Row>("id", "description")</Row>
-            <Row>(0 "No Vehicle Available")</Row>
+            <Row>(0, "No Vehicle Available")</Row>
             <Row>(1, "1 Vehicle Available")</Row>
             <Row>(2, "2 Vehicles Available")</Row>
             <Row>(3, "3 Vehicles Available")</Row>
