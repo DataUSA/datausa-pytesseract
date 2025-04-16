@@ -1,0 +1,72 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="acs_ygo_housing_value_bucket_5" subset_table="true">
+        <Annotation name="source_name">Census Bureau</Annotation>
+        <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+        <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
+        <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+        <Annotation name="table_id">B25075</Annotation>
+        <Annotation name="topic">Housing &amp; Living</Annotation>
+        <Annotation name="subtopic">Housing</Annotation>
+
+        <Table name="acs_ygo_housing_value_bucket_5" />
+    
+        <DimensionUsage foreign_key="geoid" name="Geography" source="Geography" />
+        
+        <Dimension name="Year" foreign_key="year" type="time">  
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="year">
+                <Level name="Year" key_column="year" key_type="u16"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="dim_0" name="Value Bucket">
+            <Annotation name="dim_type">BUCKET</Annotation>
+            <Hierarchy name="Value Bucket">
+                <InlineTable name="dim_0_table" format="tuples">
+                    <Row>("member_0_code", "member_0")</Row>
+                    <Row>(0, "Less Than $10,000")</Row>
+                    <Row>(1, "$10,000 to $14,999")</Row>
+                    <Row>(2, "$15,000 to $19,999")</Row>
+                    <Row>(3, "$20,000 to $24,999")</Row>
+                    <Row>(4, "$25,000 to $29,999")</Row>
+                    <Row>(5, "$30,000 to $34,999")</Row>
+                    <Row>(6, "$35,000 to $39,999")</Row>
+                    <Row>(7, "$40,000 to $49,999")</Row>
+                    <Row>(8, "$50,000 to $59,999")</Row>
+                    <Row>(9, "$60,000 to $69,999")</Row>
+                    <Row>(10, "$70,000 to $79,999")</Row>
+                    <Row>(11, "$80,000 to $89,999")</Row>
+                    <Row>(12, "$90,000 to $99,999")</Row>
+                    <Row>(13, "$100,000 to $124,999")</Row>
+                    <Row>(14, "$125,000 to $149,999")</Row>
+                    <Row>(15, "$150,000 to $174,999")</Row>
+                    <Row>(16, "$175,000 to $199,999")</Row>
+                    <Row>(17, "$200,000 to $249,999")</Row>
+                    <Row>(18, "$250,000 to $299,999")</Row>
+                    <Row>(19, "$300,000 to $399,999")</Row>
+                    <Row>(20, "$400,000 to $499,999")</Row>
+                    <Row>(21, "$500,000 to $749,999")</Row>
+                    <Row>(22, "$750,000 to $999,999")</Row>
+                    <Row>(23, "$1,000,000 to $1,499,999")</Row>
+                    <Row>(24, "$1,500,000 to $1,999,999")</Row>
+                    <Row>(25, "$2,000,000 or More")</Row>
+                </InlineTable>
+                <Level key_column="member_0_code" name="Value Bucket" name_column="member_0" key_type="u8"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Measure aggregator="sum" key_column="mea" name="Property Value by Bucket" visible="true">
+            <Annotation name="aggregation_method">SUM</Annotation>
+            <Annotation name="units_of_measurement">Housing Units</Annotation>
+            <Annotation name="hide_in_map">true</Annotation>
+            <Annotation name="ui_default_drilldown">Value Bucket</Annotation>
+        </Measure>
+    
+        <Measure aggregator="moe" name="Property Value by Bucket Moe" key_column="moe" visible="true">
+            <Annotation name="error_for_measure">Property Value by Bucket</Annotation>
+            <Annotation name="error_type">MOE</Annotation>
+
+            <Aggregation type="moe" critical_value="1.645" />
+        </Measure>
+    </Cube>
+</Schema>

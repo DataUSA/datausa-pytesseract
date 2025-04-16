@@ -1,0 +1,72 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="acs_ygcs_median_age_by_citizenship_status_by_gender_1" subset_table="true">
+        <Annotation name="source_name">Census Bureau</Annotation>
+        <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+        <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
+        <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+        <Annotation name="table_id">B05004</Annotation>
+        <Annotation name="topic">Diversity</Annotation>
+        <Annotation name="subtopic">Heritage</Annotation>
+
+        <Table name="acs_ygcs_median_age_by_citizenship_status_by_gender_1" />
+    
+        <DimensionUsage foreign_key="geoid" name="Geography" source="Geography" />
+        
+        <Dimension name="Year" foreign_key="year" type="time">  
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="year">
+                <Level name="Year" key_column="year" key_type="u16"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="dim_0" name="Nativity Status">
+            <Hierarchy name="Nativity Status" default_member="Nativity Status.0">
+                <InlineTable name="dim_0_table" format="tuples">
+                    <Row>("member_0_code", "member_0")</Row>
+                    <Row>(0, "Total")</Row>
+                    <Row>(1, "Native")</Row>
+                    <Row>(2, "Foreign Born")</Row>
+                </InlineTable>
+                <Level key_column="member_0_code" name="Nativity Status" name_column="member_0" key_type="u8"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="dim_1" name="Naturalized Status">
+            <Hierarchy name="Naturalized Status" default_member="Naturalized Status.0">
+                <InlineTable name="dim_1_table" format="tuples">
+                    <Row>("member_1_code", "member_1")</Row>
+                    <Row>(0, "Total")</Row>
+                    <Row>(1, "Naturalized U.S. Citizen")</Row>
+                    <Row>(2, "Not a U.S. Citizen")</Row>
+                </InlineTable>
+                <Level key_column="member_1_code" name="Naturalized Status" name_column="member_1" key_type="u8"/>
+            </Hierarchy>
+        </Dimension>
+    
+        <Dimension foreign_key="dim_2" name="Gender">
+            <Hierarchy name="Gender" default_member="Gender.0">
+                <InlineTable name="dim_2_table" format="tuples">
+                    <Row>("member_2_code", "member_2")</Row>
+                    <Row>(0, "Total")</Row>
+                    <Row>(1, "Male")</Row>
+                    <Row>(2, "Female")</Row>
+                </InlineTable>
+                <Level key_column="member_2_code" name="Gender" name_column="member_2" key_type="u8"/>
+            </Hierarchy>
+        </Dimension>
+    
+        <Measure aggregator="sum" key_column="mea" name="Median Age by Citizenship" visible="true">
+            <Annotation name="aggregation_method">NONE</Annotation>
+            <Annotation name="pre_aggregation_method">MEDIAN</Annotation>
+            <Annotation name="units_of_measurement">Years</Annotation>
+            <Annotation name="hide_in_map">true</Annotation>
+        </Measure>
+    
+        <Measure aggregator="moe" name="Median Age by Citizenship Moe" key_column="moe" visible="true">
+            <Annotation name="error_for_measure">Median Age by Citizenship</Annotation>
+            <Annotation name="error_type">MOE</Annotation>
+            
+            <Aggregation type="moe" critical_value="1.645" />
+        </Measure>
+    </Cube>
+</Schema>
