@@ -1,0 +1,61 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="acs_yg_household_income_5">
+        <Annotation name="source_name">Census Bureau</Annotation>
+        <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+        <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
+        <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+        <Annotation name="table_id">B19001</Annotation>
+        <Annotation name="topic">Housing &amp; Living</Annotation>
+        <Annotation name="subtopic">Income</Annotation>
+
+        <Table name="acs_yg_household_income_5"/>
+    
+        <DimensionUsage foreign_key="geoid" name="Geography" source="Geography" />
+        
+        <Dimension name="Year" foreign_key="year" type="time">  
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="year">
+                <Level name="Year" key_column="year" key_type="u16"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="dim_0" name="Household Income Bucket">
+            <Hierarchy name="Household Income Bucket">
+                <InlineTable name="dim_0_table" format="tuples">
+                    <Row>("member_0_code", "member_0")</Row>
+                    <Row>(0, "&lt; $10,000")</Row>
+                    <Row>(1, "$10,000-$14,999")</Row>
+                    <Row>(2, "$15,000-$19,999")</Row>
+                    <Row>(3, "$20,000-$24,999")</Row>
+                    <Row>(4, "$25,000-$29,999")</Row>
+                    <Row>(5, "$30,000-$34,999")</Row>
+                    <Row>(6, "$35,000-$39,999")</Row>
+                    <Row>(7, "$40,000-$44,999")</Row>
+                    <Row>(8, "$45,000-$49,999")</Row>
+                    <Row>(9, "$50,000-$59,999")</Row>
+                    <Row>(10, "$60,000-$74,999")</Row>
+                    <Row>(11, "$75,000-$99,999")</Row>
+                    <Row>(12, "$100,000-$124,999")</Row>
+                    <Row>(13, "$125,000-$149,999")</Row>
+                    <Row>(14, "$150,000-$199,999")</Row>
+                    <Row>(15, "$200,000+")</Row>
+                </InlineTable>
+                <Level key_column="member_0_code" name="Household Income Bucket" name_column="member_0" key_type="u8"/>
+            </Hierarchy>
+        </Dimension>
+    
+        <Measure aggregator="sum" key_column="mea" name="Household Income" visible="true">
+            <Annotation name="aggregation_method">SUM</Annotation>
+            <Annotation name="units_of_measurement">Households</Annotation>
+            <Annotation name="hide_in_map">true</Annotation>
+            <Annotation name="ui_default_drilldown">Household Income Bucket</Annotation>
+        </Measure>
+    
+        <Measure aggregator="moe" name="Household Income Moe" key_column="moe" visible="true">
+            <Annotation name="error_for_measure">Household Income</Annotation>
+            <Annotation name="error_type">MOE</Annotation>
+
+            <Aggregation type="moe" critical_value="1.645" />
+        </Measure>    
+    </Cube>
+</Schema>
