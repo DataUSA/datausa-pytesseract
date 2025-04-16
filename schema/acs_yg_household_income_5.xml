@@ -1,5 +1,5 @@
 <Schema name="datausa" default_locale="en">
-    <Cube name="acs_yg_household_income_5">
+    <Cube name="acs_yg_household_income_5" subset_table="true">
         <Annotation name="source_name">Census Bureau</Annotation>
         <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
         <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>

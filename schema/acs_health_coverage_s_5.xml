@@ -1,5 +1,5 @@
 <Schema name="datausa" default_locale="en">
-    <Cube name="acs_health_coverage_s_5">
+    <Cube name="acs_health_coverage_s_5" subset_table="true">
         <Annotation name="source_name">Census Bureau</Annotation>
         <Annotation name="source_description">Census Bureau conducts surveys of the United States Population, including the American Community Survey</Annotation>
         <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
