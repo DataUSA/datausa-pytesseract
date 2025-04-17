@@ -1,0 +1,89 @@
+<Schema name="datausa" default_locale="en">
+
+    <Cube name="acs_ygh_renters_by_income_percentage_1">
+        <Annotation name="source_name">Census Bureau</Annotation>
+        <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+        <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
+        <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+        <Annotation name="table_id">B25074</Annotation>
+        <Annotation name="topic">Housing &amp; Living</Annotation>
+        <Annotation name="subtopic">Housing</Annotation>
+        
+          <Table name="acs_ygh_renters_by_income_percentage_1"/>
+    
+          <DimensionUsage foreign_key="geoid" name="Geography" source="Geography" />
+    
+          <Dimension name="Year" foreign_key="year" type="time">
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="year">
+              <Level name="Year" key_column="year" key_type="u16" />
+            </Hierarchy>
+          </Dimension>
+    
+        <Dimension foreign_key="dim_0" name="Household Income">
+          <Hierarchy name="Household Income">
+            <InlineTable name="dim_inline_household_income" format="tuples">
+                <Row>("id", "description")</Row>
+                <Row>(0, "Less Than $10,000")</Row>
+                <Row>(1, "$10,000 to $19,999")</Row>
+                <Row>(2, "$20,000 to $34,999")</Row>
+                <Row>(3, "$35,000 to $49,999")</Row>
+                <Row>(4, "$50,000 to $74,999")</Row>
+                <Row>(5, "$75,000 to $99,999")</Row>
+                <Row>(6, "$100,000 or More")</Row>
+            </InlineTable>
+          <Level key_column="id" name="Household Income" name_column="description" key_type="u8"/>
+          </Hierarchy>
+        </Dimension>
+    
+        <Dimension foreign_key="dim_1" name="Gross Rent Percent of Income">
+          <Hierarchy name="Gross Rent Percent of Income">
+            <InlineTable name="dim_inline_gross_rent_percent_income" format="tuples">
+                <Row>("id", "description")</Row>
+                <Row>(0, "Less Than 20.0 Percent")</Row>
+                <Row>(1, "20.0 to 24.9 Percent")</Row>
+                <Row>(2, "25.0 to 29.9 Percent")</Row>
+                <Row>(3, "30.0 to 34.9 Percent")</Row>
+                <Row>(4, "35.0 to 39.9 Percent")</Row>
+                <Row>(5, "40.0 to 49.9 Percent")</Row>
+                <Row>(6, "50.0 Percent or More")</Row>
+                <Row>(7, "Not Computed")</Row>
+            </InlineTable>
+          <Level key_column="id" name="Gross Rent Percent of Income" name_column="description" key_type="u8"/>
+          </Hierarchy>
+        </Dimension>
+       
+        <Measure aggregator="sum" key_column="mea" name="Renters by Income Percentage" visible="true">
+            <Annotation name="aggregation_method">SUM</Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+    
+        <Measure aggregator="None" key_column="moe" name="Renters by Income Percentage Moe" visible="true">
+            <Annotation name="error_for_measure">Renters by Income Percentage</Annotation>
+            <Annotation name="error_type">MOE</Annotation>
+            <Aggregation type="moe" critical_value="1.645" />
+        </Measure>
+    
+        <!-- <CalculatedMember name="Area sq miles" dimension="Measures" visible="false">
+          <Formula> CASE
+                WHEN [Geography].[Tract].Level is [Geography].[Tract].[Tract] THEN (cast([Geography].[Tract].CurrentMember.Properties("Area") as integer) / 2589988)
+                WHEN [Geography].[Place].Level is [Geography].[Place].[Place] THEN (cast([Geography].[Place].CurrentMember.Properties("Area") as integer) / 2589988)
+                WHEN [Geography].[Zip].Level is [Geography].[Zip].[Zip] THEN (cast([Geography].[Zip].CurrentMember.Properties("Area") as integer) / 2589988)
+                WHEN [Geography].[County].Level is [Geography].[County].[County] THEN (cast([Geography].[County].CurrentMember.Properties("Area") as integer) / 2589988)
+                WHEN [Geography].[State].Level is [Geography].[State].[State] THEN (cast([Geography].[State].CurrentMember.Properties("Area") as integer) / 2589988)
+                WHEN [Geography].[Nation].Level is [Geography].[Nation].[Nation] THEN (cast([Geography].[Nation].CurrentMember.Properties("Area") as integer) / 2589988)
+                WHEN [Geography].[Puma].Level is [Geography].[Puma].[Puma] THEN (cast([Geography].[PUMA].CurrentMember.Properties("Area") as integer) / 2589988)
+                WHEN [Geography].[Msa].Level is [Geography].[Msa].[Msa] THEN (cast([Geography].[MSA].CurrentMember.Properties("Area") as integer) / 2589988)
+                WHEN 1 = 1 THEN 0
+                END
+          </Formula>
+        </CalculatedMember> -->
+    
+        <!-- <CalculatedMember name="Renters by Income Percentage Density" dimension="Measures" visible="false">
+          <Formula>
+              [Measures].[Renters by Income Percentage].CurrentMember / [Measures].[Area sq miles]
+          </Formula>
+        </CalculatedMember> -->
+    
+      </Cube>
+    </Schema>
