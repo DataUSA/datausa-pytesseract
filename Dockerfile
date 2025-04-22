@@ -32,4 +32,4 @@ COPY --chown=tesseract . /app
 # change user to tesseract user
 USER tesseract
 
-CMD exec granian --interface asgi --host 0.0.0.0 --port 7777 --respawn-failed-workers app:layer
+CMD exec granian --interface asgi --host 0.0.0.0 --port 7777 --respawn-failed-workers --log-config logging.json app:layer

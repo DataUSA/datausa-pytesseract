@@ -32,13 +32,13 @@ app_debug = bool(app_debug)
 # - https://www.datadoghq.com/blog/python-logging-best-practices/
 # - https://guicommits.com/how-to-log-in-python-like-a-pro/
 
-logging.config.fileConfig(log_filepath, disable_existing_loggers=False)
+#logging.config.fileConfig(log_filepath, disable_existing_loggers=False)
 
 
 # ASGI app =====================================================================
 olap = OlapServer(backend=olap_backend, schema=olap_schema)
 
-mod_tsrc = TesseractModule(olap)
+mod_tsrc = TesseractModule(olap, debug=app_debug)
 
 mod_cmplx = EconomicComplexityModule(olap)
 

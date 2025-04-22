@@ -24,7 +24,7 @@
 
         <Dimension name="Year" foreign_key="year" type="time">  
             <Annotation name="dim_type">TIME</Annotation>
-            <Hierarchy name="Year" primary_key="Year">
+            <Hierarchy name="Year" primary_key="year">
                 <Level name="Year" key_column="year" key_type="u16" />
             </Hierarchy>
         </Dimension>
@@ -247,11 +247,18 @@
           <Annotation name="aggregation_method">AVERAGE</Annotation>
         </CalculatedMeasure>
 
-        <CalculatedMeasure name="SSquared EST Wage" formula="([Weighted Wage SQ] - (POW([Weighted Wage], 2) / [Total Population])) / ([Total Population] - 1)"  visible="false"/> 
+        <CalculatedMeasure name="SSquared EST Wage" visible="false">
+          <Formula>([Weighted Wage SQ] - (POW([Weighted Wage], 2) / [Total Population])) / ([Total Population] - 1)</Formula>
+        </CalculatedMeasure>
 
         <CalculatedMeasure name="Average Wage Appx MOE Prev" formula="([SSquared EST Wage] * (99 / [Total Population]))"  visible="false"/> 
      
-        <CalculatedMeasure name="Average Wage Appx MOE" formula= "CASE WHEN [Total Population] &gt; 1 AND [SSquared EST Wage] &gt; 0  THEN (1.645 * 1.5 * POW([Average Wage Appx MOE Prev], 0.5)) ELSE NULL END">
+        <CalculatedMeasure name="Average Wage Appx MOE">
+          <Formula>
+            CASE WHEN [Total Population] &gt; 1 AND [SSquared EST Wage] &gt; 0  
+            THEN (1.645 * 1.5 * POW([Average Wage Appx MOE Prev], 0.5)) 
+            ELSE NULL END
+          </Formula>
           <Annotation name="units_of_measurement">MOE</Annotation>
           <Annotation name="aggregation_method">MOE</Annotation>
           <Annotation name="error_type">MOE</Annotation>
@@ -260,7 +267,7 @@
 
         <CalculatedMeausre name="SSquared EST Income" formula="(([Weighted Income SQ] - (POW([Weighted Income], 2) / [Total Population])) / ([Total Population] - 1))" visible="false" />
 
-        <CalculatedMeasure name="Average Income Appx MOE Prev" formula="([SSquared EST Income] * (99 / [Total Population]))"  visible="false"/> 
+        <CalculatedMeasure name="Average Income Appx MOE Prev" formula="([SSquared EST Income] * (99 / [Total Population]))" visible="false"/> 
         
         <CalculatedMeasure name="Average Income Appx MOE" formula="CASE WHEN [Total Population] &gt; 1 AND [SSquared EST Income] &gt; 0  THEN (1.645 * 1.5 * POW([Average Income Appx MOE Prev], 0.5)) ELSE NULL END">
           <Annotation name="units_of_measurement">MOE</Annotation>
@@ -269,7 +276,7 @@
           <Annotation name="error_for_measure">Average Income</Annotation>
         </CalculatedMeasure>
 
-        <CalculatedMeasure name="SSquared EST Age" formula="(([Weighted Age] - (POW([Weighted Age], 2) / [Total Population])) / ([Total Population] - 1))" visible="false" />
+       <CalculatedMeasure name="SSquared EST Age" formula="(([Weighted Age] - (POW([Weighted Age], 2) / [Total Population])) / ([Total Population] - 1))" visible="false" />
         
         <CalculatedMeasure name="Average Age Appx MOE Prev" formula="([SSquared EST Age] * (99 / [Total Population]))"  visible="false"/> 
         
@@ -290,11 +297,6 @@
           <Annotation name="error_type">MOE</Annotation>
           <Annotation name="error_for_measure">Average Income</Annotation>
         </CalculatedMeasure>
-
-        <!-- Missing Geography Population <CalculatedMeasure name="Total Population MOE Appx" formula="1.645 * 1.5 * Power(99 * [Total Population] * (1 - [Total Population] / [Geography Population]), 0.5)" visible="true">
-          <Annotation name="units_of_measurement">MOE</Annotation>
-          <Annotation name="aggregation_method">MOE</Annotation>
-        </CalculatedMeasure>-->
         
     </Cube>
 </Schema>
