@@ -9,6 +9,8 @@ from tesseract_olap.logiclayer import TesseractModule
 
 from .debug import DebugModule
 
+from calcs.pums import PumsModule
+
 
 # PARAMETERS ===================================================================
 
@@ -42,6 +44,8 @@ mod_tsrc = TesseractModule(olap, debug=app_debug)
 
 mod_cmplx = EconomicComplexityModule(olap)
 
+mod_pums= PumsModule(olap)
+
 mod_debug = DebugModule()
 
 layer = LogicLayer(debug=app_debug)
@@ -51,6 +55,7 @@ if app_debug:
 
 layer.add_module("/tesseract", mod_tsrc)
 layer.add_module("/complexity", mod_cmplx)
+layer.add_module("/calcs", mod_pums)
 layer.add_static("/ui", "./explorer/", html=True)
 
 @layer.route("/", response_class=RedirectResponse, status_code=302)
