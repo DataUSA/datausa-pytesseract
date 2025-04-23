@@ -96,7 +96,6 @@ class PumsParameters:
         if self.locale is not None:
             params["locale"] = self.locale
 
-        print(params)
         return DataRequest.new(self.cube, params)
 
     def calculate(
