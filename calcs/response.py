@@ -39,7 +39,7 @@ def data_response(
         "X-Tesseract-QueryRows": str(len(df.index)),
     }
 
-    with tmp.NamedTemporaryFile(delete=False, suffix=f".{extension}") as tmp_file:
+    with tmp.NamedTemporaryFile(delete=False, suffix=f".{extension}", dir="/app/tmp") as tmp_file:
         if extension is ResponseFormat.csv:
             df.to_csv(tmp_file.name, sep=",", index=False)
 

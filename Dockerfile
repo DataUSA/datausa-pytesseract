@@ -25,6 +25,9 @@ WORKDIR /app
 RUN useradd --system --uid 1001 tesseract &&\
     chown -R tesseract:tesseract /app
 
+RUN mkdir -p /app/tmp && chown -R tesseract:tesseract /app/tmp
+ENV TMPDIR=/app/tmp
+
 COPY --chown=tesseract --from=builder ${VIRTUAL_ENV} ${VIRTUAL_ENV}
 
 COPY --chown=tesseract . /app
