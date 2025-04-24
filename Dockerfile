@@ -45,7 +45,7 @@ EOT
 
 # ============================================================================ #
 
-FROM ubuntu:jammy as runtime
+FROM ubuntu:noble as runtime
 
 # Include virtual environment in PATH
 ENV PATH=/app/bin:$PATH
@@ -94,8 +94,6 @@ WORKDIR /app
 # Tests to ensure correct configuration and permissions
 RUN <<EOT
 set -ex
-# Create folder for temporary data
-mkdir /app/tmp
 # Print python version
 python -V
 # Print sys.path, https://docs.python.org/3/library/site.html#command-line-interface
@@ -103,7 +101,6 @@ python -Im site
 # Ensure folders have correct permissions
 python -Ic 'import os; assert os.access("/docker-entrypoint.sh", os.X_OK)'
 python -Ic 'import os; assert os.access("/app", os.W_OK)'
-python -Ic 'import os; assert os.access("/app/tmp", os.W_OK)'
 python -Ic 'import os; assert os.access("/app/lib", os.R_OK)'
 python -Ic 'import os; assert os.access("/app/etc", os.R_OK)'
 python -Ic 'import datausa'

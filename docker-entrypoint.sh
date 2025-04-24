@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -ex
+
 WORKERS=${UVICORN_WORKERS:-1}  # Default to 1 if not set, for the cluster.
 MAX_CONCURRENCY=${MAX_CONCURRENCY:-300}
 
