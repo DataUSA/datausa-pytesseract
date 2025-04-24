@@ -1,0 +1,152 @@
+<Schema name="datausa" default_locale="en">
+  <Cube name="acs_ygso_gender_by_occupation_for_median_earnings_5" subset_table="true">
+
+    <Annotation name="source_name">Census Bureau</Annotation>
+    <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+    <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
+    <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+    <Annotation name="table_id">B24012</Annotation>
+    <Annotation name="topic">Economy</Annotation>
+    <Annotation name="subtopic">Occupation</Annotation>
+    <!--Cube is hidden-->
+    <!--
+    <Annotation name="hide_in_ui">true</Annotation>
+    <Annotation name="hide_in_map">true</Annotation>
+    -->
+
+    <Table name="acs_ygso_gender_by_occupation_for_median_earnings_5"/>
+
+    <DimensionUsage foreign_key="geoid" name="Geography" source="Geography"/>
+
+    <Dimension name="Year" foreign_key="year" type="time">
+      <Annotation name="dim_type">TIME</Annotation>
+      <Hierarchy name="Year" primary_key="year">
+        <Level name="Year" key_column="year" key_type="u16"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Dimension foreign_key="dim_0" name="Gender">
+      <Hierarchy name="Gender">
+        <InlineTable name="dim_0_table" format="tuples">
+          <Row>("member_0_code", "member_0")</Row>
+          <Row>(0, "Total")</Row>
+          <Row>(1, "Male")</Row>
+          <Row>(2, "Female")</Row>
+        </InlineTable>
+        <Level key_column="member_0_code" name="Gender" name_column="member_0" key_type="u8"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Dimension foreign_key="dim_3" name="ACS Occupation">
+      <Hierarchy name="ACS Occupation" default_member="ACS Occupation.0">
+        <InlineTable name="dim_3_table" format="tuples">
+          <Row>("member_0_code", "member_0", "member_1_code", "member_1", "member_2_code", "member_2")</Row>
+          <Row>(0, "Total", 0, "Total", 0, "Total")</Row>
+          <Row>(0, "Total", 0, "Total", 0, "Total")</Row>
+          <Row>(1, "Management, Business, Science, &amp; Arts Occupations", 1, "Management, Business, Science, &amp; Arts Occupations", 1, "Management, Business, Science, &amp; Arts Occupations")</Row>
+          <Row>(1, "Management, Business, Science, &amp; Arts Occupations", 2, "Management, Business, &amp; Financial Occupations", 2, "Management, Business, &amp; Financial Occupations")</Row>
+          <Row>(1, "Management, Business, Science, &amp; Arts Occupations", 2, "Management, Business, &amp; Financial Occupations", 3, "Management Occupations")</Row>
+          <Row>(1, "Management, Business, Science, &amp; Arts Occupations", 2, "Management, Business, &amp; Financial Occupations", 4, "Business &amp; Financial Operations Occupations")</Row>
+          <Row>(1, "Management, Business, Science, &amp; Arts Occupations", 3, "Computer, Engineering, &amp; Science Occupations", 5, "Computer, Engineering, &amp; Science Occupations")</Row>
+          <Row>(1, "Management, Business, Science, &amp; Arts Occupations", 3, "Computer, Engineering, &amp; Science Occupations", 6, "Computer &amp; Mathematical Occupations")</Row>
+          <Row>(1, "Management, Business, Science, &amp; Arts Occupations", 3, "Computer, Engineering, &amp; Science Occupations", 7, "Architecture &amp; Engineering Occupations")</Row>
+          <Row>(1, "Management, Business, Science, &amp; Arts Occupations", 3, "Computer, Engineering, &amp; Science Occupations", 8, "Life, Physical, &amp; Social Science Occupations")</Row>
+          <Row>(1, "Management, Business, Science, &amp; Arts Occupations", 4, "Education, Legal, Community Service, Arts, &amp; Media Occupations", 9, "Education, Legal, Community Service, Arts, &amp; Media Occupations")</Row>
+          <Row>(1, "Management, Business, Science, &amp; Arts Occupations", 4, "Education, Legal, Community Service, Arts, &amp; Media Occupations", 10, "Community &amp; Social Service Occupations")</Row>
+          <Row>(1, "Management, Business, Science, &amp; Arts Occupations", 4, "Education, Legal, Community Service, Arts, &amp; Media Occupations", 11, "Legal Occupations")</Row>
+          <Row>(1, "Management, Business, Science, &amp; Arts Occupations", 4, "Education, Legal, Community Service, Arts, &amp; Media Occupations", 12, "Education Instruction, &amp; Library Occupations")</Row>
+          <Row>(1, "Management, Business, Science, &amp; Arts Occupations", 4, "Education, Legal, Community Service, Arts, &amp; Media Occupations", 13, "Arts, Design, Entertainment, Sports, &amp; Media Occupations")</Row>
+          <Row>(1, "Management, Business, Science, &amp; Arts Occupations", 5, "Healthcare Practitioners &amp; Technical Occupations", 14, "Healthcare Practitioners &amp; Technical Occupations")</Row>
+          <Row>(1, "Management, Business, Science, &amp; Arts Occupations", 5, "Healthcare Practitioners &amp; Technical Occupations", 15, "Health Diagnosing &amp; Treating Practitioners &amp; Other Technical Occupations")</Row>
+          <Row>(1, "Management, Business, Science, &amp; Arts Occupations", 5, "Healthcare Practitioners &amp; Technical Occupations", 16, "Health Technologists &amp; Technicians")</Row>
+          <Row>(2, "Service Occupations", 6, "Service Occupations", 17, "Service Occupations")</Row>
+          <Row>(2, "Service Occupations", 6, "Service Occupations", 18, "Healthcare Support Occupations")</Row>
+          <Row>(2, "Service Occupations", 7, "Protective Service Occupations", 19, "Protective Service Occupations")</Row>
+          <Row>(2, "Service Occupations", 7, "Protective Service Occupations", 20, "Fire Fighting &amp; Prevention, &amp; Other Protective Service Workers Including Supervisors")</Row>
+          <Row>(2, "Service Occupations", 7, "Protective Service Occupations", 21, "Law Enforcement Workers Including Supervisors")</Row>
+          <Row>(2, "Service Occupations", 6, "Service Occupations", 22, "Food Preparation &amp; Serving Related Occupations")</Row>
+          <Row>(2, "Service Occupations", 6, "Service Occupations", 23, "Building &amp; Grounds Cleaning &amp; Maintenance Occupations")</Row>
+          <Row>(2, "Service Occupations", 6, "Service Occupations", 24, "Personal Care &amp; Service Occupations")</Row>
+          <Row>(3, "Sales &amp; Office Occupations", 8, "Sales &amp; Office Occupations", 25, "Sales &amp; Office Occupations")</Row>
+          <Row>(3, "Sales &amp; Office Occupations", 8, "Sales &amp; Office Occupations", 26, "Sales &amp; Related Occupations")</Row>
+          <Row>(3, "Sales &amp; Office Occupations", 8, "Sales &amp; Office Occupations", 27, "Office &amp; Administrative Support Occupations")</Row>
+          <Row>(4, "Natural Resources, Construction, &amp; Maintenance Occupations", 9, "Natural Resources, Construction, &amp; Maintenance Occupations", 28, "Natural Resources, Construction, &amp; Maintenance Occupations")</Row>
+          <Row>(4, "Natural Resources, Construction, &amp; Maintenance Occupations", 9, "Natural Resources, Construction, &amp; Maintenance Occupations", 29, "Farming, Fishing, &amp; Forestry Occupations")</Row>
+          <Row>(4, "Natural Resources, Construction, &amp; Maintenance Occupations", 9, "Natural Resources, Construction, &amp; Maintenance Occupations", 30, "Construction &amp; Extraction Occupations")</Row>
+          <Row>(4, "Natural Resources, Construction, &amp; Maintenance Occupations", 9, "Natural Resources, Construction, &amp; Maintenance Occupations", 31, "Installation, Maintenance, &amp; Repair Occupations")</Row>
+          <Row>(5, "Production, Transportation, &amp; Material Moving Occupations", 10, "Production, Transportation, &amp; Material Moving Occupations", 32, "Production, Transportation, &amp; Material Moving Occupations")</Row>
+          <Row>(5, "Production, Transportation, &amp; Material Moving Occupations", 10, "Production, Transportation, &amp; Material Moving Occupations", 33, "Production Occupations")</Row>
+          <Row>(5, "Production, Transportation, &amp; Material Moving Occupations", 10, "Production, Transportation, &amp; Material Moving Occupations", 34, "Transportation Occupations")</Row>
+        </InlineTable>
+        <Level key_column="member_0_code" name="Occupation Group" name_column="member_0" key_type="u8"/>
+        <Level key_column="member_1_code" name="Occupation Subgroup" name_column="member_1" key_type="u8">
+          <Annotation name="hide_in_ui">true</Annotation>
+        </Level>
+        <Level key_column="member_2_code" name="Occupation" name_column="member_2" key_type="u8"/>
+      </Hierarchy>
+    </Dimension>
+
+    <!-- Original Measures -->
+    <!--
+    <Measure aggregator="sum" key_column="mea_lvl_0" name="mea_lvl_0" visible="false"/>
+    <Measure aggregator="sum" key_column="moe_lvl_0" name="moe_lvl_0" visible="false"/>
+    <Measure aggregator="sum" key_column="mea_lvl_1" name="mea_lvl_1" visible="false"/>
+    <Measure aggregator="sum" key_column="moe_lvl_1" name="moe_lvl_1" visible="false"/>
+    <Measure aggregator="sum" key_column="mea_lvl_2" name="mea_lvl_2" visible="false"/>
+    <Measure aggregator="sum" key_column="moe_lvl_2" name="moe_lvl_2" visible="false"/>
+    -->
+
+    <Measure aggregator="sum" key_column="mea_lvl_0" name="Median Earnings by Occupation and Gender: Occupation Group"/>
+    <Measure aggregator="sum" key_column="moe_lvl_0" name="Median Earnings by Occupation and Gender Moe: Occupation Group"/>
+    <Measure aggregator="sum" key_column="mea_lvl_1" name="Median Earnings by Occupation and Gender: Occupation Subgroup"/>
+    <Measure aggregator="sum" key_column="moe_lvl_1" name="Median Earnings by Occupation and Gender Moe: Occupation Subgroup"/>
+    <Measure aggregator="sum" key_column="mea_lvl_2" name="Median Earnings by Occupation and Gender: Occupation"/>
+    <Measure aggregator="sum" key_column="moe_lvl_2" name="Median Earnings by Occupation and Gender Moe: Occupation"/>
+
+    <!--
+    <CalculatedMeasure name="Median Earnings by Occupation and Gender" visible="true">
+        <Annotation name="aggregation_method">NONE</Annotation>
+        <Annotation name="pre_aggregation_method">MEDIAN</Annotation>
+        <Annotation name="units_of_measurement">USD</Annotation>
+        <Annotation name="hide_in_map">true</Annotation>
+        <Annotation name="hide_in_ui">false</Annotation>
+      <Formula>CASE
+
+        WHEN [ACS Occupation].Level is [ACS Occupation].[ACS Occupation].[Occupation Group]
+            THEN [Measures].[mea_lvl_0]
+
+        WHEN [ACS Occupation].Level is [ACS Occupation].[ACS Occupation].[Occupation Subgroup]
+            THEN [Measures].[mea_lvl_1]
+
+        WHEN [ACS Occupation].Level is [ACS Occupation].[ACS Occupation].[Occupation]
+            THEN [Measures].[mea_lvl_2]
+
+        WHEN 1 = 1 THEN [Measures].[mea_lvl_2]
+        END
+      </Formula>
+
+    </CalculatedMeasure>
+
+    <CalculatedMeasure name="Median Earnings by Occupation and Gender Moe" visible="true">
+        <Annotation name="error_for_measure">Median Earnings by Occupation and Gender</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+      <Formula>CASE
+
+        WHEN [ACS Occupation].Level is [ACS Occupation].[ACS Occupation].[Occupation Group]
+            THEN [Measures].[moe_lvl_0]
+
+        WHEN [ACS Occupation].Level is [ACS Occupation].[ACS Occupation].[Occupation Subgroup]
+            THEN [Measures].[moe_lvl_1]
+
+        WHEN [ACS Occupation].Level is [ACS Occupation].[ACS Occupation].[Occupation]
+            THEN [Measures].[moe_lvl_2]
+
+        WHEN 1 = 1 THEN [Measures].[moe_lvl_2]
+        END
+      </Formula>
+    </CalculatedMeasure>
+    -->
+
+
+  </Cube>
+</Schema>
