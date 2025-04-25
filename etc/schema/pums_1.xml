@@ -227,6 +227,8 @@
         <Measure name="Weighted Usual Hours Worked Per Week" key_column="wkhp_wt" aggregator="sum" visible="false"/>
         <Measure name="Weighted Usual Hours Worked Per Week SQ" key_column="wkhp_sq_wt" aggregator="sum" visible="false"/>
 
+        <CalculatedMeasure name="Constant" formula="1.645 * 1.5" visible="false"/>
+
         <CalculatedMeasure name="Average Wage" formula="[Weighted Wage] / [Total Population]" visible="true">
           <Annotation name="units_of_measurement">USD</Annotation>
           <Annotation name="aggregation_method">AVERAGE</Annotation>
@@ -256,23 +258,23 @@
         <CalculatedMeasure name="Average Wage Appx MOE">
           <Formula>
             CASE WHEN [Total Population] &gt; 1 AND [SSquared EST Wage] &gt; 0  
-            THEN (1.645 * 1.5 * POW([Average Wage Appx MOE Prev], 0.5)) 
+            THEN ([Constant] * POW([Average Wage Appx MOE Prev], 0.5)) 
             ELSE NULL END
           </Formula>
           <Annotation name="units_of_measurement">MOE</Annotation>
           <Annotation name="aggregation_method">MOE</Annotation>
           <Annotation name="error_type">MOE</Annotation>
           <Annotation name="error_for_measure">Average Wage</Annotation>
-        </CalculatedMeasure><!--don't match-->
+        </CalculatedMeasure>
 
         <CalculatedMeasure name="SSquared EST Income" formula="(([Weighted Income SQ] - (POW([Weighted Income], 2) / [Total Population])) / ([Total Population] - 1))" visible="false" />
 
         <CalculatedMeasure name="Average Income Appx MOE Prev" formula="([SSquared EST Income] * (99 / [Total Population]))" visible="false"/> 
-        
+
         <CalculatedMeasure name="Average Income Appx MOE">
           <Formula>
             CASE WHEN [Total Population] &gt; 1 AND [SSquared EST Income] &gt; 0  
-            THEN (1.645 * 1.5 * POW([Average Income Appx MOE Prev], 0.5)) 
+            THEN ([Constant] * POW([Average Income Appx MOE Prev], 0.5)) 
             ELSE NULL END
           </Formula>
           <Annotation name="units_of_measurement">MOE</Annotation>
@@ -281,11 +283,11 @@
           <Annotation name="error_for_measure">Average Income</Annotation>
         </CalculatedMeasure>
 
-       <CalculatedMeasure name="SSquared EST Age" formula="(([Weighted Age] - (POW([Weighted Age], 2) / [Total Population])) / ([Total Population] - 1))" visible="false" />
+       <CalculatedMeasure name="SSquared EST Age" formula="(([Weighted Age SQ] - (POW([Weighted Age], 2) / [Total Population])) / ([Total Population] - 1))" visible="false" />
         
         <CalculatedMeasure name="Average Age Appx MOE Prev" formula="([SSquared EST Age] * (99 / [Total Population]))"  visible="false"/> 
         
-        <CalculatedMeasure name="Average Age Appx MOE" formula="CASE WHEN [Total Population] &gt; 1 AND [SSquared EST Age] &gt; 0  THEN (1.645 * 1.5 * POW([Average Age Appx MOE Prev], 0.5)) ELSE NULL END">
+        <CalculatedMeasure name="Average Age Appx MOE" formula="CASE WHEN [Total Population] &gt; 1 AND [SSquared EST Age] &gt; 0  THEN ([Constant] * POW([Average Age Appx MOE Prev], 0.5)) ELSE NULL END">
           <Annotation name="units_of_measurement">MOE</Annotation>
           <Annotation name="aggregation_method">MOE</Annotation>
           <Annotation name="error_type">MOE</Annotation>
@@ -296,7 +298,7 @@
         
         <CalculatedMeasure name="Average Usual Hours Worked Per Week Appx MOE Prev" formula="([SSquared EST Usual Hours Worked Per Week] * (99 / [Total Population]))"  visible="false"/> 
         
-        <CalculatedMeasure name="Average Usual Hours Worked Per Week Appx MOE" formula="CASE WHEN [Total Population] &gt; 1 AND [SSquared EST Usual Hours Worked Per Week] &gt; 0  THEN (1.645 * 1.5 * POW([Average Usual Hours Worked Per Week Appx MOE Prev], 0.5)) ELSE NULL END">
+        <CalculatedMeasure name="Average Usual Hours Worked Per Week Appx MOE" formula="CASE WHEN [Total Population] &gt; 1 AND [SSquared EST Usual Hours Worked Per Week] &gt; 0  THEN ([Constant] * POW([Average Usual Hours Worked Per Week Appx MOE Prev], 0.5)) ELSE NULL END">
           <Annotation name="units_of_measurement">MOE</Annotation>
           <Annotation name="aggregation_method">MOE</Annotation>
           <Annotation name="error_type">MOE</Annotation>
