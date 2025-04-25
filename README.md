@@ -38,5 +38,5 @@ docker build --tag datausa-tesseract:latest .
 
 To run the container:
 ```bash
-docker run --rm --env-file=.env -p 7777:7777 datausa-tesseract:latest
+docker run --rm --env-file=.env.local -p 7777:7777 datausa-tesseract:latest
 ```
