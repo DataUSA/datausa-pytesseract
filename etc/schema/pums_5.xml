@@ -265,7 +265,7 @@
           <Annotation name="error_for_measure">Average Wage</Annotation>
         </CalculatedMeasure><!--don't match-->
 
-        <CalculatedMeausre name="SSquared EST Income" formula="(([Weighted Income SQ] - (POW([Weighted Income], 2) / [Total Population])) / ([Total Population] - 1))" visible="false" />
+        <CalculatedMeasure name="SSquared EST Income" formula="(([Weighted Income SQ] - (POW([Weighted Income], 2) / [Total Population])) / ([Total Population] - 1))" visible="false" />
 
         <CalculatedMeasure name="Average Income Appx MOE Prev" formula="([SSquared EST Income] * (99 / [Total Population]))" visible="false"/> 
         

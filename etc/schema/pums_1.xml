@@ -265,13 +265,13 @@
           <Annotation name="error_for_measure">Average Wage</Annotation>
         </CalculatedMeasure><!--don't match-->
 
-        <CalculatedMeausre name="Squared EST Income" formula="(([Weighted Income SQ] - (POW([Weighted Income], 2) / [Total Population])) / ([Total Population] - 1))" visible="false" />
+        <CalculatedMeasure name="SSquared EST Income" formula="(([Weighted Income SQ] - (POW([Weighted Income], 2) / [Total Population])) / ([Total Population] - 1))" visible="false" />
 
-        <CalculatedMeasure name="Average Income Appx MOE Prev" formula="([Squared EST Income] * (99 / [Total Population]))" visible="false"/> 
+        <CalculatedMeasure name="Average Income Appx MOE Prev" formula="([SSquared EST Income] * (99 / [Total Population]))" visible="false"/> 
         
         <CalculatedMeasure name="Average Income Appx MOE">
           <Formula>
-            CASE WHEN [Total Population] &gt; 1 AND [Squared EST Income] &gt; 0  
+            CASE WHEN [Total Population] &gt; 1 AND [SSquared EST Income] &gt; 0  
             THEN (1.645 * 1.5 * POW([Average Income Appx MOE Prev], 0.5)) 
             ELSE NULL END
           </Formula>
