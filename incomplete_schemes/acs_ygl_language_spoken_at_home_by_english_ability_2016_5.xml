@@ -1,0 +1,243 @@
+<Schema name="datausa" default_locale="en">
+  <Cube name="acs_ygl_language_spoken_at_home_by_english_ability_2016_5" subset_table="true">
+    <Annotation name="source_name">Census Bureau</Annotation>
+    <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+    <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
+    <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+    <Annotation name="table_id">B16001</Annotation>
+    <Annotation name="topic">Diversity</Annotation>
+    <Annotation name="subtopic">Heritage</Annotation>
+    <Table name="acs_ygl_language_spoken_at_home_by_english_ability_2016_5"/>
+
+    <DimensionUsage foreign_key="geoid" name="Geography" source="Geography"/>
+
+    <Dimension name="Year" foreign_key="year" type="time">
+      <Annotation name="dim_type">TIME</Annotation>
+      <Hierarchy name="Year" primary_key="year">
+        <Level key_column="year" name="Year" key_type="u16"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Dimension foreign_key="dim_0" name="Language Spoken at Home">
+      <Hierarchy name="Language Spoken at Home">
+        <InlineTable name="dim_0_table" format="tuples">
+          <Row>("member_0_code", "member_0")</Row>
+          <Row>(0, "Speak Only English")</Row>
+          <Row>(1, "Spanish")</Row>
+          <Row>(2, "French (Incl. Cajun)")</Row>
+          <Row>(3, "Haitian")</Row>
+          <Row>(4, "Italian")</Row>
+          <Row>(5, "Portuguese")</Row>
+          <Row>(6, "German")</Row>
+          <Row>(7, "Yiddish, Pennsylvania Dutch or Other West Germanic Languages")</Row>
+          <Row>(8, "Greek")</Row>
+          <Row>(9, "Russian")</Row>
+          <Row>(10, "Polish")</Row>
+          <Row>(11, "Serbo-Croatian")</Row>
+          <Row>(12, "Ukrainian or Other Slavic Languages")</Row>
+          <Row>(13, "Armenian")</Row>
+          <Row>(14, "Persian (Incl. Farsi, Dari)")</Row>
+          <Row>(15, "Gujarati")</Row>
+          <Row>(16, "Hindi")</Row>
+          <Row>(17, "Urdu")</Row>
+          <Row>(18, "Punjabi")</Row>
+          <Row>(19, "Bengali")</Row>
+          <Row>(20, "Nepali, Marathi, or Other Indic Languages")</Row>
+          <Row>(21, "Other Indo-European Languages")</Row>
+          <Row>(22, "Telugu")</Row>
+          <Row>(23, "Tamil")</Row>
+          <Row>(24, "Malayalam, Kannada, or Other Dravidian Languages")</Row>
+          <Row>(25, "Chinese (Incl. Mandarin, Cantonese)")</Row>
+          <Row>(26, "Japanese")</Row>
+          <Row>(27, "Korean")</Row>
+          <Row>(28, "Hmong")</Row>
+          <Row>(29, "Vietnamese")</Row>
+          <Row>(30, "Khmer")</Row>
+          <Row>(31, "Thai, Lao, or Other Tai-Kadai Languages")</Row>
+          <Row>(32, "Other Languages of Asia")</Row>
+          <Row>(33, "Tagalog (Incl. Filipino)")</Row>
+          <Row>(34, "Ilocano, Samoan, Hawaiian, or Other Austronesian Languages")</Row>
+          <Row>(35, "Arabic")</Row>
+          <Row>(36, "Hebrew")</Row>
+          <Row>(37, "Amharic, Somali, or Other Afro-Asiatic Languages")</Row>
+          <Row>(38, "Yoruba, Twi, Igbo, or Other Languages of Western Africa")</Row>
+          <Row>(39, "Swahili or Other Languages of Central, Eastern, &amp; Southern Africa")</Row>
+          <Row>(40, "Navajo")</Row>
+          <Row>(41, "Other Native Languages of North America")</Row>
+          <Row>(42, "Other &amp; Unspecified Languages")</Row>
+        </InlineTable>
+      <Level key_column="member_0_code" name="Language Spoken at Home" name_column="member_0" key_type="u8"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Dimension foreign_key="dim_1" name="English Ability">
+      <Hierarchy name="English Ability">
+        <InlineTable name="dim_1_table" format="tuples">
+          <Row>("member_0_code", "member_0")</Row>
+          <Row>(0, "Speak English&quot;very Well&quot;")</Row>
+          <Row>(1, "Speak English Less Than&quot;very Well&quot;")</Row>
+        </InlineTable>
+      <Level key_column="member_0_code" name="English Ability" name_column="member_0" key_type="u8"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Measure aggregator="sum" key_column="mea" name="Languages Spoken" visible="true">
+      <Annotation name="aggregation_method">SUM</Annotation>
+      <Annotation name="units_of_measurement">People</Annotation>
+      <Annotation name="hide_in_map">true</Annotation>
+      <Annotation name="ui_default_drilldown">Language Spoken at Home</Annotation>
+    </Measure>
+
+    <Measure aggregator="moe" key_column="moe" name="Languages Spoken Moe" visible="true">
+      <Annotation name="error_for_measure">Languages Spoken</Annotation>
+      <Annotation name="error_type">MOE</Annotation>
+      <Aggregation type="moe" critical_value="1.645"/>
+    </Measure>
+
+    <!--
+    <CalculatedMeasure name="Area sq miles" dimension="Measures" visible="false">
+      <Formula> CASE
+            WHEN [Geography].[Tract].Level is [Geography].[Tract].[Tract] THEN (cast([Geography].[Tract].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Place].Level is [Geography].[Place].[Place] THEN (cast([Geography].[Place].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Zip].Level is [Geography].[Zip].[Zip] THEN (cast([Geography].[Zip].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[County].Level is [Geography].[County].[County] THEN (cast([Geography].[County].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[State].Level is [Geography].[State].[State] THEN (cast([Geography].[State].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Nation].Level is [Geography].[Nation].[Nation] THEN (cast([Geography].[Nation].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Puma].Level is [Geography].[Puma].[Puma] THEN (cast([Geography].[PUMA].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Msa].Level is [Geography].[Msa].[Msa] THEN (cast([Geography].[MSA].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN 1 = 1 THEN 0
+            END
+      </Formula>
+    </CalculatedMeasure>
+
+    <CalculatedMeasure name="Languages Spoken Density" dimension="Measures" visible="false">
+      <Formula>
+          [Measures].[Languages Spoken].CurrentMember / [Measures].[Area sq miles]
+      </Formula>
+    </CalculatedMeasure>
+    -->
+
+
+    <!-- b is x dim total and current geography -->
+    <CalculatedMeasure dimension="Measures" name="Language Spoken at Home yg_rca_b" visible="false">
+      <Formula>
+        (
+          Measures.[Languages Spoken],
+          [Year].[Year].CurrentMember,
+          [Language Spoken at Home].[Language Spoken at Home].[All Language Spoken at Homes]
+        )
+      </Formula>
+    </CalculatedMeasure>
+
+    <!-- c is x dim current and total geography (nation) -->
+    <CalculatedMeasure dimension="Measures" name="Language Spoken at Home yg_rca_c" visible="false">
+      <Formula>
+        (
+          Measures.[Languages Spoken],
+          [Year].[Year].CurrentMember,
+          [Language Spoken at Home].[Language Spoken at Home].CurrentMember,
+          [Geography].[Tract].[All Tracts],
+          [Geography].[Place].[All Places],
+          [Geography].[County].[All Countys],
+          [Geography].[State].[All States],
+          [Geography].[Nation].[United States],
+          [Geography].[PUMA].[All PUMAs],
+          [Geography].[MSA].[All MSAs]
+        )
+      </Formula>
+    </CalculatedMeasure>
+
+    <!-- d is x dim total and total geography (nation) -->
+    <CalculatedMeasure dimension="Measures" name="Language Spoken at Home yg_rca_d" visible="false">
+      <Formula>
+        (
+          Measures.[Languages Spoken],
+          [Year].[Year].CurrentMember,
+          [Language Spoken at Home].[Language Spoken at Home].[All Language Spoken at Homes],
+          [Geography].[Tract].[All Tracts],
+          [Geography].[Place].[All Places],
+          [Geography].[County].[All Countys],
+          [Geography].[State].[All States],
+          [Geography].[Nation].[United States],
+          [Geography].[PUMA].[All PUMAs],
+          [Geography].[MSA].[All MSAs]
+        )
+      </Formula>
+    </CalculatedMeasure>
+
+    <!-- RCA is (a/b) / (c/d) -->
+    <CalculatedMeasure dimension="Measures" name="Language Spoken at Home yg RCA" visible="true">
+      <Annotation name="aggregation_method">RCA</Annotation>
+      <Annotation name="rca_dimensions">Year,Geography,Language Spoken at Home</Annotation>
+      <Annotation name="rca_measure">Languages Spoken</Annotation>
+      <Formula>
+        IIF([Measures].[Language Spoken at Home yg_rca_c] > 0 and [Measures].[Language Spoken at Home yg_rca_d] > 0,
+          ([Measures].[Languages Spoken] / [Measures].[Language Spoken at Home yg_rca_b]) /
+          ([Measures].[Language Spoken at Home yg_rca_c] / [Measures].[Language Spoken at Home yg_rca_d])
+        , NULL)
+      </Formula>
+    </CalculatedMeasure>
+
+    <!-- b is x dim total and current geography -->
+    <CalculatedMeasure dimension="Measures" name="English Ability yg_rca_b" visible="false">
+      <Formula>
+        (
+          Measures.[Languages Spoken],
+          [Year].[Year].CurrentMember,
+          [English Ability].[English Ability].[All English Abilitys]
+        )
+      </Formula>
+    </CalculatedMeasure>
+
+    <!-- c is x dim current and total geography (nation) -->
+    <CalculatedMeasure dimension="Measures" name="English Ability yg_rca_c" visible="false">
+      <Formula>
+        (
+          Measures.[Languages Spoken],
+          [Year].[Year].CurrentMember,
+          [English Ability].[English Ability].CurrentMember,
+          [Geography].[Tract].[All Tracts],
+          [Geography].[Place].[All Places],
+          [Geography].[County].[All Countys],
+          [Geography].[State].[All States],
+          [Geography].[Nation].[United States],
+          [Geography].[PUMA].[All PUMAs],
+          [Geography].[MSA].[All MSAs]
+        )
+      </Formula>
+    </CalculatedMeasure>
+
+    <!-- d is x dim total and total geography (nation) -->
+    <CalculatedMeasure dimension="Measures" name="English Ability yg_rca_d" visible="false">
+      <Formula>
+        (
+          Measures.[Languages Spoken],
+          [Year].[Year].CurrentMember,
+          [English Ability].[English Ability].[All English Abilitys],
+          [Geography].[Tract].[All Tracts],
+          [Geography].[Place].[All Places],
+          [Geography].[County].[All Countys],
+          [Geography].[State].[All States],
+          [Geography].[Nation].[United States],
+          [Geography].[PUMA].[All PUMAs],
+          [Geography].[MSA].[All MSAs]
+        )
+      </Formula>
+    </CalculatedMeasure>
+
+    <!-- RCA is (a/b) / (c/d) -->
+    <CalculatedMeasure dimension="Measures" name="English Ability yg RCA" visible="true">
+      <Annotation name="aggregation_method">RCA</Annotation>
+      <Annotation name="rca_dimensions">Year,Geography,English Ability</Annotation>
+      <Annotation name="rca_measure">Languages Spoken</Annotation>
+      <Formula>
+        IIF([Measures].[English Ability yg_rca_c] > 0 and [Measures].[English Ability yg_rca_d] > 0,
+          ([Measures].[Languages Spoken] / [Measures].[English Ability yg_rca_b]) /
+          ([Measures].[English Ability yg_rca_c] / [Measures].[English Ability yg_rca_d])
+        , NULL)
+      </Formula>
+    </CalculatedMeasure>
+
+
+  </Cube>
+</Schema>
