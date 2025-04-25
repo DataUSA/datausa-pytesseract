@@ -269,7 +269,12 @@
 
         <CalculatedMeasure name="Average Income Appx MOE Prev" formula="([SSquared EST Income] * (99 / [Total Population]))" visible="false"/> 
         
-        <CalculatedMeasure name="Average Income Appx MOE" formula="CASE WHEN [Total Population] &gt; 1 AND [SSquared EST Income] &gt; 0  THEN (1.645 * 1.5 * POW([Average Income Appx MOE Prev], 0.5)) ELSE NULL END">
+        <CalculatedMeasure name="Average Income Appx MOE">
+          <Formula>
+            CASE WHEN [Total Population] &gt; 1 AND [SSquared EST Income] &gt; 0  
+            THEN (1.645 * 1.5 * POW([Average Income Appx MOE Prev], 0.5)) 
+            ELSE NULL END
+          </Formula>
           <Annotation name="units_of_measurement">MOE</Annotation>
           <Annotation name="aggregation_method">MOE</Annotation>
           <Annotation name="error_type">MOE</Annotation>
