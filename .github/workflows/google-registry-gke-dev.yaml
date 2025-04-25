@@ -64,7 +64,7 @@ on:
     paths:
       - .github/workflows/google-registry-gke-dev.yaml
       - helm/development.yaml
-      - schema/**
+      - etc/schema/**
 
 env:
   GCP_PROJECT_ID: ${{ vars.GCP_PROJECT_ID }}

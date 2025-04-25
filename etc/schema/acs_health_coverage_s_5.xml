@@ -63,4 +63,5 @@
             <Aggregation type="moe" critical_value="1.645" />
         </Measure>
     </Cube>
+    
 </Schema>
