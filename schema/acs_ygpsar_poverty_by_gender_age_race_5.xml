@@ -67,19 +67,19 @@
       <Annotation name="is_aggregatable">false</Annotation>
       <Hierarchy name="Race" default_member="Race.0">
         <InlineTable name="dm_race" format="tuples">
-            <Row>("race", "race_code")</Row>
-            <Row>("Total", "0")</Row>
-            <Row>("White", "1")</Row>
-            <Row>("Black", "2")</Row>
-            <Row>("Native American", "3")</Row>
-            <Row>("Asian", "4")</Row>
-            <Row>("Pacific Islander", "5")</Row>
-            <Row>("Other", "6")</Row>
-            <Row>("Two Or More", "7")</Row>
-            <Row>("White Non-Hispanic", "8")</Row>
-            <Row>("Hispanic", "9")</Row>
+          <Row>("race_code", "race")</Row>
+          <Row>(0, "Total")</Row>
+          <Row>(1, "White")</Row>
+          <Row>(2, "Black")</Row>
+          <Row>(3, "Native American")</Row>
+          <Row>(4,"Asian")</Row>
+          <Row>(5, "Pacific Islander")</Row>
+          <Row>(6, "Other")</Row>
+          <Row>(7, "Two Or More")</Row>
+          <Row>(8, "White Non-Hispanic")</Row>
+          <Row>(9, "Hispanic")</Row>
         </InlineTable>
-        <Level key_column="race_code" name="Race" name_column="race" key_column="u8"/>
+        <Level key_column="race_code" name="Race" name_column="race" key_type="u8"/>
       </Hierarchy>
     </Dimension>
 

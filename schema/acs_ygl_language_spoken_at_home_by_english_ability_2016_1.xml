@@ -1,13 +1,13 @@
 <Schema name="datausa" default_locale="en">
-  <Cube name="acs_ygl_language_spoken_at_home_by_english_ability_2016_5" subset_table="true">
+  <Cube name="acs_ygl_language_spoken_at_home_by_english_ability_2016_1" subset_table="true">
     <Annotation name="source_name">Census Bureau</Annotation>
     <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
-    <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
+    <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
     <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
     <Annotation name="table_id">B16001</Annotation>
     <Annotation name="topic">Diversity</Annotation>
     <Annotation name="subtopic">Heritage</Annotation>
-    <Table name="acs_ygl_language_spoken_at_home_by_english_ability_2016_5"/>
+    <Table name="acs_ygl_language_spoken_at_home_by_english_ability_2016_1"/>
 
     <DimensionUsage foreign_key="geoid" name="Geography" source="Geography"/>
 
@@ -66,7 +66,7 @@
           <Row>(41, "Other Native Languages of North America")</Row>
           <Row>(42, "Other &amp; Unspecified Languages")</Row>
         </InlineTable>
-      <Level key_column="member_0_code" name="Language Spoken at Home" name_column="member_0" key_type="u8"/>
+        <Level key_column="member_0_code" name="Language Spoken at Home" name_column="member_0" key_type="u8"/>
       </Hierarchy>
     </Dimension>
 
@@ -74,10 +74,10 @@
       <Hierarchy name="English Ability">
         <InlineTable name="dim_1_table" format="tuples">
           <Row>("member_0_code", "member_0")</Row>
-          <Row>(0, "Speak English&quot;very Well&quot;")</Row>
-          <Row>(1, "Speak English Less Than&quot;very Well&quot;")</Row>
+          <Row>(0, 'Speak English &quot;very Well&quot;')</Row>
+          <Row>(1, 'Speak English Less Than &quot;very Well&quot;')</Row>
         </InlineTable>
-      <Level key_column="member_0_code" name="English Ability" name_column="member_0" key_type="u8"/>
+      <Level key_column="member_0_code" name="English Ability" name_column="member_0" ukey_type="u8"/>
       </Hierarchy>
     </Dimension>
 
@@ -93,7 +93,7 @@
       <Annotation name="error_type">MOE</Annotation>
       <Aggregation type="moe" critical_value="1.645"/>
     </Measure>
-
+    
     <!--
     <CalculatedMeasure name="Area sq miles" dimension="Measures" visible="false">
       <Formula> CASE
@@ -109,16 +109,16 @@
             END
       </Formula>
     </CalculatedMeasure>
+    
 
     <CalculatedMeasure name="Languages Spoken Density" dimension="Measures" visible="false">
       <Formula>
           [Measures].[Languages Spoken].CurrentMember / [Measures].[Area sq miles]
       </Formula>
     </CalculatedMeasure>
-    -->
+    
 
 
-    <!-- b is x dim total and current geography -->
     <CalculatedMeasure dimension="Measures" name="Language Spoken at Home yg_rca_b" visible="false">
       <Formula>
         (
@@ -129,7 +129,7 @@
       </Formula>
     </CalculatedMeasure>
 
-    <!-- c is x dim current and total geography (nation) -->
+
     <CalculatedMeasure dimension="Measures" name="Language Spoken at Home yg_rca_c" visible="false">
       <Formula>
         (
@@ -147,7 +147,7 @@
       </Formula>
     </CalculatedMeasure>
 
-    <!-- d is x dim total and total geography (nation) -->
+ 
     <CalculatedMeasure dimension="Measures" name="Language Spoken at Home yg_rca_d" visible="false">
       <Formula>
         (
@@ -165,7 +165,7 @@
       </Formula>
     </CalculatedMeasure>
 
-    <!-- RCA is (a/b) / (c/d) -->
+
     <CalculatedMeasure dimension="Measures" name="Language Spoken at Home yg RCA" visible="true">
       <Annotation name="aggregation_method">RCA</Annotation>
       <Annotation name="rca_dimensions">Year,Geography,Language Spoken at Home</Annotation>
@@ -178,7 +178,7 @@
       </Formula>
     </CalculatedMeasure>
 
-    <!-- b is x dim total and current geography -->
+
     <CalculatedMeasure dimension="Measures" name="English Ability yg_rca_b" visible="false">
       <Formula>
         (
@@ -189,7 +189,7 @@
       </Formula>
     </CalculatedMeasure>
 
-    <!-- c is x dim current and total geography (nation) -->
+   
     <CalculatedMeasure dimension="Measures" name="English Ability yg_rca_c" visible="false">
       <Formula>
         (
@@ -207,7 +207,7 @@
       </Formula>
     </CalculatedMeasure>
 
-    <!-- d is x dim total and total geography (nation) -->
+    
     <CalculatedMeasure dimension="Measures" name="English Ability yg_rca_d" visible="false">
       <Formula>
         (
@@ -225,7 +225,7 @@
       </Formula>
     </CalculatedMeasure>
 
-    <!-- RCA is (a/b) / (c/d) -->
+    
     <CalculatedMeasure dimension="Measures" name="English Ability yg RCA" visible="true">
       <Annotation name="aggregation_method">RCA</Annotation>
       <Annotation name="rca_dimensions">Year,Geography,English Ability</Annotation>
@@ -237,6 +237,9 @@
         , NULL)
       </Formula>
     </CalculatedMeasure>
+    -->
+
+
 
 
   </Cube>
