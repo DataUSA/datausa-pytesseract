@@ -12,6 +12,7 @@
 
         <DimensionUsage foreign_key="university" name="University" source="University"  />
         <DimensionUsage foreign_key="university" name="Sector" source="IPEDS Sector"/> 
+        <DimensionUsage foreign_key="university" name="Geography" source="IPEDS Geography" />
 
         <Dimension name="Year" foreign_key="year" type="time">  
             <Annotation name="dim_type">TIME</Annotation>
