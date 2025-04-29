@@ -46,7 +46,7 @@
         </Hierarchy>
         <Hierarchy name="PUMA">
             <Table name="ipeds_dim_university"/>
-            <Level key_column="puma" nameColumn="puma_name" name="PUMA" key_type="str"/>
+            <Level key_column="puma" name_column="puma_name" name="PUMA" key_type="str"/>
             <Level key_column="id" name="University PUMA" key_type="i64" visible="false"/>
         </Hierarchy>
     </SharedDimension>
