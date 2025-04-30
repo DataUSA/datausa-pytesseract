@@ -99,4 +99,15 @@ class ACSParameters(BaseModel):
             df: pl.DataFrame -- The data for the specific measure.
 
         """
+
+        drill = list(self.drilldowns.intersection(["Industry Group", "Industry", "Occupation Group", "Occupation Subgroup", "Occupation"]))[0]
+        
+        rename_dict = {
+            key: key.replace(f": {drill}", "")
+            for key in self.measures_keys
+            if key.replace(f": {drill}", "") in self.measures
+        }
+
+        df = df.rename(rename_dict) 
+
         return df
