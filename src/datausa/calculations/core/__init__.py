@@ -4,6 +4,7 @@ __description__ = (
 )
 __version__ = "0.1.0"
 
-__all__ = ("PumsParameters",)
+__all__ = ("PumsParameters", "ACSParameters")
 
 from .pums import PumsParameters
+from .acs import ACSParameters

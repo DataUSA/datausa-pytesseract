@@ -55,10 +55,10 @@
       </Hierarchy>
     </Dimension>
 
-    <Measure aggregator="sum" key_column="mea_lvl_0" name="Median Earnings by Industry Industry Group" visible="true"/>
-    <Measure aggregator="sum" key_column="moe_lvl_0" name="Median Earnings by Industry Moe Industry Group" visible="true"/>
-    <Measure aggregator="sum" key_column="mea_lvl_1" name="Median Earnings by Industry Industry" visible="true"/>
-    <Measure aggregator="sum" key_column="moe_lvl_1" name="Median Earnings by Industry Moe Industry" visible="true"/>
+    <Measure aggregator="sum" key_column="mea_lvl_0" name="Median Earnings by Industry: Industry Group" visible="true"/>
+    <Measure aggregator="sum" key_column="moe_lvl_0" name="Median Earnings by Industry Moe: Industry Group" visible="true"/>
+    <Measure aggregator="sum" key_column="mea_lvl_1" name="Median Earnings by Industry: Industry" visible="true"/>
+    <Measure aggregator="sum" key_column="moe_lvl_1" name="Median Earnings by Industry Moe: Industry" visible="true"/>
 
     <!--<Measure aggregator="sum" column="mea_lvl_0" name="mea_lvl_0" visible="false"/>
     <Measure aggregator="sum" column="moe_lvl_0" name="moe_lvl_0" visible="false"/>

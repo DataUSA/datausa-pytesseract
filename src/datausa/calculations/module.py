@@ -13,7 +13,7 @@ from tesseract_olap.logiclayer import ResponseFormat
 
 from datausa import __title__, __version__
 
-from .core import PumsParameters
+from .core import PumsParameters, ACSParameters
 from .response import data_response
 
 
@@ -60,3 +60,21 @@ class CalculationsModule(LogicLayerModule):
 
         df_pums = params.calculate(df_key, df_total)
         return data_response(df_pums, extension)
+
+    @route("GET", "/acs.{extension}")
+    def route_pums(
+        self,
+        extension: ResponseFormat,
+        params: Annotated[ACSParameters, Query()],
+        token: AuthToken = Depends(auth_token),
+    ) -> Response:
+        """ACS calculation endpoint."""
+        roles = self.auth.get_roles(token)
+
+        request = params.build_request(roles)
+
+        with self.olap.session() as session:
+            df = self.fetch_data(session, request)
+
+        df_acs = params.calculate(df)
+        return data_response(df_acs, extension)
