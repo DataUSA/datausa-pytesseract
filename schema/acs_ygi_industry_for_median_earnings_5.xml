@@ -1,0 +1,109 @@
+<Schema name="datausa" default_locale="en">
+  <Cube name="acs_ygi_industry_for_median_earnings_5" subset_table="true">
+    <Annotation name="source_name">Census Bureau</Annotation>
+    <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+    <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
+    <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+    <Annotation name="table_id">B24031</Annotation>
+    <Annotation name="topic">Economy</Annotation>
+    <Annotation name="subtopic">Industries</Annotation>
+    <Table name="acs_ygi_industry_for_median_earnings_5" />
+
+    <DimensionUsage foreign_key="geoid" name="Geography" source="Geography" />
+    
+    <Dimension name="Year" foreign_key="year" type="time">  
+        <Annotation name="dim_type">TIME</Annotation>
+        <Hierarchy name="Year" primary_key="year">
+            <Level name="Year" key_column="year" key_type="u16"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreign_key="dim_1" name="ACS Industry">
+      <Hierarchy name="ACS Industry" defaultMember="[ACS Industry].[Total]">
+        <InlineTable name="dim_1_industry" format="tuples">
+            <Row>("group_id", "group", "industry_id", "industry")</Row>
+            <Row>(0, "Total", 0, "Total")</Row>
+            <Row>(1, "Agriculture, Forestry, Fishing &amp; Hunting, &amp; Mining", 1, "Agriculture, Forestry, Fishing &amp; Hunting, &amp; Mining")</Row>
+            <Row>(1, "Agriculture, Forestry, Fishing &amp; Hunting, &amp; Mining", 2, "Agriculture, Forestry, Fishing &amp; Hunting")</Row>
+            <Row>(1, "Agriculture, Forestry, Fishing &amp; Hunting, &amp; Mining", 3, "Mining, Quarrying, &amp; Oil &amp; Gas Extraction")</Row>
+            <Row>(2, "Construction (Group)", 4, "Construction")</Row>
+            <Row>(3, "Manufacturing (Group)", 5, "Manufacturing")</Row>
+            <Row>(4, "Wholesale Trade (Group)", 6, "Wholesale Trade")</Row>
+            <Row>(5, "Retail Trade (Group)", 7, "Retail Trade")</Row>
+            <Row>(6, "Transportation &amp; Warehousing, &amp; Utilities", 8, "Transportation &amp; Warehousing, &amp; Utilities")</Row>
+            <Row>(6, "Transportation &amp; Warehousing, &amp; Utilities", 9, "Transportation &amp; Warehousing")</Row>
+            <Row>(6, "Transportation &amp; Warehousing, &amp; Utilities", 10, "Utilities")</Row>
+            <Row>(7, "Information (Group)"", 11, "Information")</Row>
+            <Row>(8, "Finance &amp; Insurance, &amp; Real Estate &amp; Rental &amp; Leasing", 12, "Finance &amp; Insurance, &amp; Real Estate &amp; Rental &amp; Leasing")</Row>
+            <Row>(8, "Finance &amp; Insurance, &amp; Real Estate &amp; Rental &amp; Leasing", 13, "Finance &amp; Insurance")</Row>
+            <Row>(8, "Finance &amp; Insurance, &amp; Real Estate &amp; Rental &amp; Leasing", 14, "Real Estate &amp; Rental &amp; Leasing")</Row>
+            <Row>(9, "Professional, Scientific, &amp; Management, &amp; Administrative &amp; Waste Management Services", 15, "Professional, Scientific, &amp; Management, &amp; Administrative &amp; Waste Management Services")</Row>
+            <Row>(9, "Professional, Scientific, &amp; Management, &amp; Administrative &amp; Waste Management Services", 16, "Professional, Scientific, &amp; Technical Services")</Row>
+            <Row>(9, "Professional, Scientific, &amp; Management, &amp; Administrative &amp; Waste Management Services", 17, "Management of Companies &amp; Enterprises")</Row>
+            <Row>(9, "Professional, Scientific, &amp; Management, &amp; Administrative &amp; Waste Management Services", 18, "Administrative &amp; Support &amp; Waste Management Services")</Row>
+            <Row>(10, "Educational Services, &amp; Health Care &amp; Social Assistance", 19, "Educational Services, &amp; Health Care &amp; Social Assistance")</Row>
+            <Row>(10, "Educational Services, &amp; Health Care &amp; Social Assistance", 20, "Educational Services")</Row>
+            <Row>(10, "Educational Services, &amp; Health Care &amp; Social Assistance", 21, "Health Care &amp; Social Assistance")</Row>
+            <Row>(11, "Arts, Entertainment, &amp; Recreation, &amp; Accommodations &amp; Food Services (Group)", 22, "Arts, Entertainment, &amp; Recreation, &amp; Accommodations &amp; Food Services")</Row>
+            <Row>(12, "Arts, Entertainment, &amp; Recreation, &amp; Accommodations &amp; Food Services", 23, "Arts, Entertainment, &amp; Recreation")</Row>
+            <Row>(12, "Arts, Entertainment, &amp; Recreation, &amp; Accommodations &amp; Food Services", 24, "Accommodation &amp; Food Services")</Row>
+            <Row>(13, "Other Services Except Public Administration (Group)", 25, "Other Services Except Public Administration")</Row>
+            <Row>(14, "Public Administration (Group)", 26, "Public Administration")</Row>
+        </InlineTable>
+      <Level key_column="group_id" name="Industry Group" name_column="group" key_type="u8"/>
+      <Level key_column="industry_id" name="Industry" name_column="industry" key_type="u8"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Measure aggregator="sum" key_column="mea_lvl_0" name="Median Earnings by Industry Industry Group" visible="true"/>
+    <Measure aggregator="sum" key_column="moe_lvl_0" name="Median Earnings by Industry Moe Industry Group" visible="true"/>
+    <Measure aggregator="sum" key_column="mea_lvl_1" name="Median Earnings by Industry Industry" visible="true"/>
+    <Measure aggregator="sum" key_column="moe_lvl_1" name="Median Earnings by Industry Moe Industry" visible="true"/>
+
+    <!--<Measure aggregator="sum" column="mea_lvl_0" name="mea_lvl_0" visible="false"/>
+    <Measure aggregator="sum" column="moe_lvl_0" name="moe_lvl_0" visible="false"/>
+    <Measure aggregator="sum" column="mea_lvl_1" name="mea_lvl_1" visible="false"/>
+    <Measure aggregator="sum" column="moe_lvl_1" name="moe_lvl_1" visible="false"/>-->
+
+    <!--
+    <CalculatedMember dimension="Measures" name="Median Earnings by Industry" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">NONE</Annotation>
+        <Annotation name="pre_aggregation_method">MEDIAN</Annotation>
+        <Annotation name="units_of_measurement">USD</Annotation>
+        <Annotation name="hide_in_map">true</Annotation>
+        <Annotation name="hide_in_ui">false</Annotation>
+      </Annotations>
+      <Formula>CASE
+
+        WHEN [ACS Industry].Level is [ACS Industry].[ACS Industry].[Industry Group]
+            THEN [Measures].[mea_lvl_0]
+
+        WHEN [ACS Industry].Level is [ACS Industry].[ACS Industry].[Industry]
+            THEN [Measures].[mea_lvl_1]
+
+        WHEN 1 = 1 THEN [Measures].[mea_lvl_1]
+        END
+      </Formula>
+    </CalculatedMember>
+
+    <CalculatedMember dimension="Measures" name="Median Earnings by Industry Moe" visible="true">
+      <Annotations>
+        <Annotation name="error_for_measure">Median Earnings by Industry</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+      </Annotations>
+      <Formula>CASE
+
+        WHEN [ACS Industry].Level is [ACS Industry].[ACS Industry].[Industry Group]
+            THEN [Measures].[moe_lvl_0]
+
+        WHEN [ACS Industry].Level is [ACS Industry].[ACS Industry].[Industry]
+            THEN [Measures].[moe_lvl_1]
+
+        WHEN 1 = 1 THEN [Measures].[moe_lvl_1]
+        END
+      </Formula>
+    </CalculatedMember>
+    -->
+  </Cube>
+</Schema>
