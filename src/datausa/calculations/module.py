@@ -62,7 +62,7 @@ class CalculationsModule(LogicLayerModule):
         return data_response(df_pums, extension)
 
     @route("GET", "/acs.{extension}")
-    def route_pums(
+    def route_acs(
         self,
         extension: ResponseFormat,
         params: Annotated[ACSParameters, Query()],
