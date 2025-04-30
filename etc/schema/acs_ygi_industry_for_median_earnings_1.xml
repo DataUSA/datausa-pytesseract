@@ -7,6 +7,7 @@
     <Annotation name="table_id">B24031</Annotation>
     <Annotation name="topic">Economy</Annotation>
     <Annotation name="subtopic">Industries</Annotation>
+    
     <Table name="acs_ygi_industry_for_median_earnings_1" />
 
     <DimensionUsage foreign_key="geoid" name="Geography" source="Geography" />
@@ -19,7 +20,7 @@
     </Dimension>
 
     <Dimension foreign_key="dim_1" name="ACS Industry">
-      <Hierarchy name="ACS Industry" defaultMember="[ACS Industry].[Total]">
+      <Hierarchy name="ACS Industry" default_member="Industry.0">
         <InlineTable name="dim_1_industry" format="tuples">
             <Row>("group_id", "group", "industry_id", "industry")</Row>
             <Row>(0, "Total", 0, "Total")</Row>
@@ -33,7 +34,7 @@
             <Row>(6, "Transportation &amp; Warehousing, &amp; Utilities", 8, "Transportation &amp; Warehousing, &amp; Utilities")</Row>
             <Row>(6, "Transportation &amp; Warehousing, &amp; Utilities", 9, "Transportation &amp; Warehousing")</Row>
             <Row>(6, "Transportation &amp; Warehousing, &amp; Utilities", 10, "Utilities")</Row>
-            <Row>(7, "Information (Group)"", 11, "Information")</Row>
+            <Row>(7, "Information (Group)", 11, "Information")</Row>
             <Row>(8, "Finance &amp; Insurance, &amp; Real Estate &amp; Rental &amp; Leasing", 12, "Finance &amp; Insurance, &amp; Real Estate &amp; Rental &amp; Leasing")</Row>
             <Row>(8, "Finance &amp; Insurance, &amp; Real Estate &amp; Rental &amp; Leasing", 13, "Finance &amp; Insurance")</Row>
             <Row>(8, "Finance &amp; Insurance, &amp; Real Estate &amp; Rental &amp; Leasing", 14, "Real Estate &amp; Rental &amp; Leasing")</Row>
@@ -50,8 +51,8 @@
             <Row>(13, "Other Services Except Public Administration (Group)", 25, "Other Services Except Public Administration")</Row>
             <Row>(14, "Public Administration (Group)", 26, "Public Administration")</Row>
         </InlineTable>
-      <Level key_column="group_id" name="Industry Group" name_column="group" key_type="u8"/>
-      <Level key_column="industry_id" name="Industry" name_column="industry" key_type="u8"/>
+        <Level key_column="group_id" name="Industry Group" name_column="group" key_type="u8"/>
+        <Level key_column="industry_id" name="Industry" name_column="industry" key_type="u8"/>
       </Hierarchy>
     </Dimension>
 

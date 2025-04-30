@@ -31,7 +31,7 @@
     </Dimension>
 
     <Dimension foreign_key="dim_2" name="ACS Industry">
-      <Hierarchy name="ACS Industry" defaultMember="ACS Industry.0">
+      <Hierarchy name="ACS Industry" default_member="Industry.0">
         <InlineTable name="dim_2_table" format="tuples">
           <Row>("member_0_code", "member_0", "member_1_code", "member_1")</Row>
           <Row>(0, "Total", 0, "Total")</Row>
