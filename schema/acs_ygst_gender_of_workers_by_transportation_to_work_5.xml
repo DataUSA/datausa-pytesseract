@@ -1,0 +1,93 @@
+<Schema name="datausa" default_locale="en">
+  <Cube name="acs_ygst_gender_of_workers_by_transportation_to_work_5" subset_table="true">
+    <Annotation name="source_name">Census Bureau</Annotation>
+    <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+    <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
+    <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+    <Annotation name="table_id">B08006</Annotation>
+    <Annotation name="topic">Housing &amp; Living</Annotation>
+    <Annotation name="subtopic">Transportation</Annotation>
+    <Table name="acs_ygst_gender_of_workers_by_transportation_to_work_5"/>
+
+    <DimensionUsage foreign_key="geoid" name="Geography" source="Geography"/>
+
+    <Dimension name="Year" foreign_key="year" type="time">
+      <Annotation name="dim_type">TIME</Annotation>
+      <Hierarchy name="Year" primary_key="year">
+        <Level key_column="year" name="Year" key_type="u16"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Dimension foreign_key="dim_0" name="Gender">
+      <Hierarchy name="Gender">
+        <InlineTable name="dim_0_table" format="tuples">
+            <Row>("member_0_code", "member_0")</Row>
+            <Row>(0, "Male")</Row>
+            <Row>(1, "Female")</Row>
+        </InlineTable>
+      <Level key_column="member_0_code" name="Gender" name_column="member_0" key_type="u8"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Dimension foreign_key="dim_3" name="Transportation">
+      <Hierarchy name="Transportation">
+        <InlineTable name="dim_3_table" format="tuples">
+            <Row>("member_0_code", "member_0", "member_1_code", "member_1", "member_2_code", "member_2")</Row>
+            <Row>(0, "Car, Truck, or Van", 0, "Car, Truck, or Van", 0, "Drove Alone")</Row>
+            <Row>(0, "Car, Truck, or Van", 1, "Carpooled", 1, "In 2-Person Carpool")</Row>
+            <Row>(0, "Car, Truck, or Van", 1, "Carpooled", 2, "In 3-Person Carpool")</Row>
+            <Row>(0, "Car, Truck, or Van", 1, "Carpooled", 3, "In 4-Or-More-Person Carpool")</Row>
+            <Row>(1, "Public Transportation (Excluding Taxicab)", 2, "Public Transportation (Excluding Taxicab)", 4, "Bus or Trolley Bus")</Row>
+            <Row>(1, "Public Transportation (Excluding Taxicab)", 2, "Public Transportation (Excluding Taxicab)", 5, "Streetcar or Trolley Car (Carro Publico In Puerto Rico)")</Row>
+            <Row>(1, "Public Transportation (Excluding Taxicab)", 2, "Public Transportation (Excluding Taxicab)", 6, "Subway or Elevated")</Row>
+            <Row>(1, "Public Transportation (Excluding Taxicab)", 2, "Public Transportation (Excluding Taxicab)", 7, "Railroad")</Row>
+            <Row>(1, "Public Transportation (Excluding Taxicab)", 2, "Public Transportation (Excluding Taxicab)", 8, "Ferryboat")</Row>
+            <Row>(2, "Bicycle", 3, "Bicycle", 9, "Bicycle")</Row>
+            <Row>(3, "Walked", 4, "Walked", 10, "Walked")</Row>
+            <Row>(4, "Taxicab, Motorcycle, or Other Means", 5, "Taxicab, Motorcycle, or Other Means", 11, "Taxicab, Motorcycle, or Other Means")</Row>
+            <Row>(5, "Worked At Home", 6, "Worked At Home", 12, "Worked At Home")</Row>
+        </InlineTable>
+        <Level key_column="member_0_code" name="Group" name_column="member_0" key_type="u8"/>
+        <Level key_column="member_1_code" name="Subgroup" name_column="member_1" key_type="u8"/>
+        <Level key_column="member_2_code" name="Transportation Means" name_column="member_2" key_type="u8"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Measure aggregator="sum" key_column="mea" name="Commute Means by Gender" visible="true">
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="hide_in_map">true</Annotation>
+    </Measure>
+
+    <Measure aggregator="moe" key_column="moe" name="Commute Means by Gender Moe" visible="true">
+        <Annotation name="error_for_measure">Commute Means by Gender</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Aggregation type="moe" critical_value="1.645"/>
+    </Measure>
+
+    <!--
+    <CalculatedMeasure name="Area sq miles" dimension="Measures" visible="false">
+      <Formula> CASE
+            WHEN [Geography].[Tract].Level is [Geography].[Tract].[Tract] THEN (cast([Geography].[Tract].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Place].Level is [Geography].[Place].[Place] THEN (cast([Geography].[Place].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Zip].Level is [Geography].[Zip].[Zip] THEN (cast([Geography].[Zip].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[County].Level is [Geography].[County].[County] THEN (cast([Geography].[County].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[State].Level is [Geography].[State].[State] THEN (cast([Geography].[State].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Nation].Level is [Geography].[Nation].[Nation] THEN (cast([Geography].[Nation].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Puma].Level is [Geography].[Puma].[Puma] THEN (cast([Geography].[PUMA].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Msa].Level is [Geography].[Msa].[Msa] THEN (cast([Geography].[MSA].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN 1 = 1 THEN 0
+            END
+      </Formula>
+    </CalculatedMeasure>
+
+    <CalculatedMeasure name="Commute Means by Gender Density" dimension="Measures" visible="false">
+      <Formula>
+          [Measures].[Commute Means by Gender].CurrentMember / [Measures].[Area sq miles]
+      </Formula>
+    </CalculatedMeasure>
+    -->
+
+
+  </Cube>
+</Schema>
