@@ -26,9 +26,9 @@
             </Hierarchy>
         </Dimension>
 
-        <Dimension name="Year" foreign_key="year" type="time">  
+        <Dimension name="Year" foreign_key="year" type="time">
             <Annotation name="dim_type">TIME</Annotation>
-            <Hierarchy name="Year" primary_key="Year">
+            <Hierarchy name="Year">
                 <Level name="Year" key_column="year" key_type="u16" />
             </Hierarchy>
         </Dimension>
@@ -42,18 +42,18 @@
             <Hierarchy name="State" primary_key="geoid">
                 <Table name="states_shapes2017" />
                 <Level key_column="geoid" name="State" name_column="name" key_type="str" />
-            </Hierarchy>   
+            </Hierarchy>
 
             <Hierarchy name="County" primary_key="geoid">
                 <Table name="shapes2017_counties" />
                 <Level key_column="state_id" name="County State" name_column="state_name" key_type="str"/>
                 <Level key_column="geoid" name="County" name_column="name" key_type="str" />
-            </Hierarchy>   
+            </Hierarchy>
 
             <Hierarchy name="MSA" primary_key="geoid">
                 <Table name="shapes2017_msas" />
                 <Level key_column="geoid" name="MSA" name_column="name" key_type="str" />
-            </Hierarchy>    
+            </Hierarchy>
         </Dimension>
 
         <Dimension foreign_key="size" name="Size">
