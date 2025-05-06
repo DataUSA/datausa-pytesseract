@@ -1,8 +1,8 @@
-name: "[DEV] Deploy to GCE"
+name: "[PROD] Deploy to GCE"
 
 on:
   push:
-    branches: [ "develop" ]
+    branches: [ "main" ]
           
 env:
   GCP_PROJECT_ID: ${{ vars.GCP_PROJECT_ID }}
@@ -23,7 +23,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: local-vm
+    environment: prod-vm
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -79,7 +79,7 @@ jobs:
 
   deploy:
     needs: build
-    environment: local-vm
+    environment: prod-vm
     runs-on: ubuntu-latest
 
     steps:
