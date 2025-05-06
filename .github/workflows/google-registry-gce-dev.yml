@@ -49,7 +49,7 @@ jobs:
           gcloud builds submit \
             --quiet \
             --timeout=40m \
-            --config=cloudbuild-vm.yml \
+            --config=cloudbuild.yml \
             --substitutions=_GCP_PROJECT_ID=${{ env.GCP_PROJECT_ID }},_GCP_ARTIFACT_REGISTRY_NAME=${{ env.GCP_ARTIFACT_REGISTRY_NAME }},_GCP_IMAGE_NAME=${{ env.GCP_IMAGE_NAME }},_GCP_ARTIFACT_REGISTRY_LOCATION=${{ env.GCP_ARTIFACT_REGISTRY_LOCATION }},_GCP_IMAGE_TAG=${{ github.sha }},_GITHUB_SHA=${{ github.sha }},_GCP_IMAGE_ENVIRONMENT=${{ env.GCP_IMAGE_NAME }} \
             --suppress-logs
       # Uncomment for adding the latest tag to the latest image created
