@@ -1,0 +1,37 @@
+services:
+  pytesseract-blue: &app
+    container_name: pytesseract-blue
+    image: ${GCP_ARTIFACT_REGISTRY_LOCATION}-docker.pkg.dev/${GCP_PROJECT_ID}/${GCP_ARTIFACT_REGISTRY_NAME}/${GCP_IMAGE_NAME}:${GCP_IMAGE_TAG}
+    restart: always
+    stop_signal: SIGTERM
+    stop_grace_period: 30s
+    env_file:
+      - .env.gcp
+    networks:
+      - pytesseract
+    volumes:
+      - /tmp:/tmp
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  pytesseract-green:
+    <<: *app
+    container_name: pytesseract-green
+    restart: unless-stopped
+    env_file:
+      - .env.gcp
+
+  pytesseract-caddy:
+    container_name: pytesseract-caddy
+    image: ${GCP_ARTIFACT_REGISTRY_LOCATION}-docker.pkg.dev/${GCP_PROJECT_ID}/${GCP_ARTIFACT_REGISTRY_NAME}/caddy:latest
+    restart: always
+    ports:
+      - 8888:80
+      - 9999:443
+      - 2019:2019
+    networks:
+      - pytesseract
+
+networks:
+  pytesseract:
+    driver: bridge
