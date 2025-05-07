@@ -8,14 +8,14 @@
         <Annotation name="dataset_link">https://www.bea.gov/industry/input-output-accounts-data</Annotation>
         <Annotation name="source_description">The Bureau of Economic Analysis (BEA) publishes data on Input-Output, also called Make-Use, for industries in the United States. This Dataset is provided by the US Department of Commerce. Use of commodities by industry are valued at producers prices.</Annotation>
 
-        <Table name="bea_use" primary_key="commodity_iocode"/>
+        <Table name="bea_use"/>
 
-        <Dimension name="Year" foreign_key="year" type="time">  
+        <Dimension name="Year" foreign_key="year" type="time">
             <Annotation name="dim_type">TIME</Annotation>
-            <Hierarchy name="Year" primary_key="Year">
-                <Level name="Year" key_column="year" key_type="u16" />
+            <Hierarchy name="Year" primary_key="year">
+              <Level name="Year" key_column="year" key_type="u16" />
             </Hierarchy>
-        </Dimension>
+          </Dimension>
 
         <Dimension name="Industry IO Code" foreign_key="industry_iocode">
             <Hierarchy  name="Industry IO Code" primary_key="industry_iocode">
