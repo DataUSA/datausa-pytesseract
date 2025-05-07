@@ -99,20 +99,20 @@ jobs:
           mkdir -p $SSH_DIR
           echo "${{ secrets.GCP_SSH_PRIVATE_KEY }}" > $SSH_DIR/id_rsa
           chmod 600 $SSH_DIR/id_rsa
-          ssh-keyscan -H ${{ secrets.GCP_VM_IP }} >> $SSH_DIR/known_hosts
+          ssh-keyscan -H ${{ vars.GCP_VM_IP }} >> $SSH_DIR/known_hosts
 
           # Define remote path
           REMOTE_PATH="/home/${{ secrets.GCP_VM_USER }}/${{ env.GCP_ARTIFACT_REGISTRY_NAME }}"
 
           # Create remote directory and transfer files in one SSH session
           echo "Creating remote path"
-          ssh -i $SSH_DIR/id_rsa ${{ secrets.GCP_VM_USER }}@${{ secrets.GCP_VM_IP }} "mkdir -p $REMOTE_PATH"
+          ssh -i $SSH_DIR/id_rsa ${{ secrets.GCP_VM_USER }}@${{ vars.GCP_VM_IP }} "mkdir -p $REMOTE_PATH"
           echo "Sending files"
-          scp -i $SSH_DIR/id_rsa compose.yaml deploy_to_vm.sh ${{ secrets.GCP_VM_USER }}@${{ secrets.GCP_VM_IP }}:$REMOTE_PATH
+          scp -i $SSH_DIR/id_rsa compose.yaml deploy_to_vm.sh ${{ secrets.GCP_VM_USER }}@${{ vars.GCP_VM_IP }}:$REMOTE_PATH
 
           echo "Deploy"
           # SSH into VM and execute deployment
-          ssh -i $SSH_DIR/id_rsa ${{ secrets.GCP_VM_USER }}@${{ secrets.GCP_VM_IP }} 'bash -s' << 'ENDSSH'
+          ssh -i $SSH_DIR/id_rsa ${{ secrets.GCP_VM_USER }}@${{ vars.GCP_VM_IP }} 'bash -s' << 'ENDSSH'
 
           cd "/home/${{ secrets.GCP_VM_USER }}/${{ env.GCP_ARTIFACT_REGISTRY_NAME }}"
 
