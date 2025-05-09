@@ -1,5 +1,5 @@
 <Schema name="datausa" default_locale="en">
-    <Cube name="bls_growth_occupation">
+    <Cube name="bls_growth_occupation" subset_table="true">
         <Annotation name="source_name">Bureau of Labor Statistics</Annotation>
         <Annotation name="source_description">The Bureau of Labor Statistics (BLS) of the U.S. Department of Labor is the principal federal agency responsible for measuring labor market activity, working conditions, and price changes in the economy.</Annotation>
         <Annotation name="dataset_name">BLS Statistics by Occupation, Growth</Annotation>
