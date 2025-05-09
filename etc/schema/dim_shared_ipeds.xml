@@ -1,0 +1,80 @@
+<Schema name="tesseract-api" default_locale="en">
+    <SharedDimension name="University">
+        <Hierarchy name="University">
+        
+            <Table name="ipeds_dim_university" />
+
+            <Level key_column="carnegie_parent" name_column="carnegie_parent_name" name="Carnegie Parent" key_type="str" />
+            <Level key_column="carnegie_id" name_column="carnegie_name" name="Carnegie" key_type="i8"/>
+            <Level key_column="id" name_column="name" name="University" key_type="i64">
+                <Property key_column="county_name" name="County Name University"/>
+                <Property key_column="county" name="County ID University"/>
+                <Property key_column="msa_name" name="MSA Name"/>
+                <Property key_column="msa" name="MSA ID"/>
+                <Property key_column="sector_name" name="Sector Name"/>
+                <Property key_column="opeid" name="OPEID"/>
+                <Property key_column="opeid6" name="OPEID6"/>
+                <Property key_column="url" name="URL"/>
+                <Property key_column="address" name="Address"/>
+                <Property key_column="address_city" name="Address City"/>
+                <Property key_column="address_city_st_abbr" name="Address ST"/>
+                <Property key_column="hbcu" name="HBCU"/>
+                <Property key_column="medical" name="Medical"/>
+                <Property key_column="tribal" name="Tribal"/>
+                <Property key_column="landgrant" name="Landgrant"/>
+            </Level>
+        </Hierarchy>
+    </SharedDimension>
+
+    <SharedDimension name="IPEDS Geography">
+        <Hierarchy name="Standard">
+            <Table name="ipeds_dim_university"/>
+            <Level key_column="nation" name_column="nation_name" name="Nation" key_type="str"/>
+            <Level key_column="state" name_column="state_name" name="State" key_type="str"/>
+            <Level key_column="county" name_column="county_name" name="County" key_type="str"/>
+            <Level key_column="id" name="University Standard" key_type="i64" visible="false"/>
+        </Hierarchy>
+        <Hierarchy name="Place">
+            <Table name="ipeds_dim_university"/>
+            <Level key_column="place" name_column="place_name" name="Place" key_type="str"/>
+            <Level key_column="id" name="University Place" key_type="i64" visible="false"/>
+        </Hierarchy>
+        <Hierarchy name="MSA">
+            <Table name="ipeds_dim_university"/>
+            <Level key_column="msa" name_column="msa_name" name="MSA" key_type="str"/>
+            <Level key_column="id" name="University MSA" key_type="i64" visible="false"/>
+        </Hierarchy>
+        <Hierarchy name="PUMA">
+            <Table name="ipeds_dim_university"/>
+            <Level key_column="puma" name_column="puma_name" name="PUMA" key_type="str"/>
+            <Level key_column="id" name="University PUMA" key_type="i64" visible="false"/>
+        </Hierarchy>
+    </SharedDimension>
+
+    <SharedDimension name="IPEDS Sector">
+        <Hierarchy name="IPEDS Sector">
+            <Table name="ipeds_dim_university" />
+            <Level key_column="sector" name_column="sector_name" name="Sector" key_type="i8" />
+            <Level key_column="id" name="University Sector" key_type="i64" visible="false"/>
+        </Hierarchy>
+    </SharedDimension>
+
+    <SharedDimension name="IPEDS Race">
+        <Hierarchy name="IPEDS Race">
+            <InlineTable name="dim_inline_race" format="tuples">
+                <Row>("id", "description")</Row>
+                <Row>("asian", "Asian")</Row>
+                <Row>("black", "Black or African American")</Row>
+                <Row>("hawaiian", "Native Hawaiian or Other Pacific Islanders")</Row>
+                <Row>("hispanic", "Hispanic or Latino")</Row>
+                <Row>("multiracial", "Two or More Races")</Row>
+                <Row>("native", "American Indian or Alaska Native")</Row>
+                <Row>("nonresident", "Non-resident Alien")</Row>
+                <Row>("unknown", "Unknown")</Row>
+                <Row>("white", "White")</Row>
+            </InlineTable>
+      
+            <Level key_column="id" name="IPEDS Race" name_column="description" key_type="str"/>
+        </Hierarchy>
+    </SharedDimension>
+</Schema>

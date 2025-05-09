@@ -60,11 +60,11 @@ name: "[GCP][DEV] Build API to Registry and Deploy via Helm"
 
 on:
   push:
-    branches: [ "develop" ]
+    branches: [ "disabled" ]
     paths:
       - .github/workflows/google-registry-gke-dev.yaml
       - helm/development.yaml
-      - schema/**
+      - etc/schema/**
 
 env:
   GCP_PROJECT_ID: ${{ vars.GCP_PROJECT_ID }}

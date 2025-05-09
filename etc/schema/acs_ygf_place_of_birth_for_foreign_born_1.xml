@@ -1,0 +1,181 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="acs_ygf_place_of_birth_for_foreign_born_1" subset_table="true">
+        <Annotation name="source_name">Census Bureau</Annotation>
+        <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+        <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
+        <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+        <Annotation name="table_id">B05006</Annotation>
+        <Annotation name="topic">Diversity</Annotation>
+        <Annotation name="subtopic">Heritage</Annotation>
+
+        <Table name="acs_ygf_place_of_birth_for_foreign_born_1"/>
+    
+        <DimensionUsage foreign_key="geoid" name="Geography" source="Geography" />
+        
+        <Dimension name="Year" foreign_key="year" type="time">  
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="year">
+                <Level name="Year" key_column="year" key_type="u16"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="dim_3" name="Place of Birth">
+            <Hierarchy name="Place of Birth">
+                <InlineTable name="dim_3_table" format="tuples">
+                    <Row>("member_0_code", "member_0", "member_1_code", "member_1", "member_2_code", "member_2", "member_3_code", "member_3")</Row>
+                    <Row>(0, "Europe", 0, "Northern Europe", 0, "United Kingdom (Inc. Crown Dependencies)", 0, "United Kingdom, Excluding England &amp; Scotland" )</Row>
+                    <Row>(0, "Europe", 0, "Northern Europe", 0, "United Kingdom (Inc. Crown Dependencies)", 1, "England")</Row>
+                    <Row>(0, "Europe", 0, "Northern Europe", 0, "United Kingdom (Inc. Crown Dependencies)", 2, "Scotland")</Row>
+                    <Row>(0, "Europe", 0, "Northern Europe", 1, "Northern Europe", 3, "Ireland")</Row>
+                    <Row>(0, "Europe", 0, "Northern Europe", 1, "Northern Europe", 4, "Denmark")</Row>
+                    <Row>(0, "Europe", 0, "Northern Europe", 1, "Northern Europe", 5, "Norway")</Row>
+                    <Row>(0, "Europe", 0, "Northern Europe", 1, "Northern Europe", 6, "Sweden")</Row>
+                    <Row>(0, "Europe", 0, "Northern Europe", 1, "Northern Europe", 7, "Other Northern Europe")</Row>
+                    <Row>(0, "Europe", 1, "Western Europe", 2, "Western Europe", 8, "Austria")</Row>
+                    <Row>(0, "Europe", 1, "Western Europe", 2, "Western Europe", 9, "Belgium")</Row>
+                    <Row>(0, "Europe", 1, "Western Europe", 2, "Western Europe", 10, "France")</Row>
+                    <Row>(0, "Europe", 1, "Western Europe", 2, "Western Europe", 11, "Germany")</Row>
+                    <Row>(0, "Europe", 1, "Western Europe", 2, "Western Europe", 12, "Netherlands")</Row>
+                    <Row>(0, "Europe", 1, "Western Europe", 2, "Western Europe", 13, "Switzerland")</Row>
+                    <Row>(0, "Europe", 1, "Western Europe", 2, "Western Europe", 14, "Other Western Europe")</Row>
+                    <Row>(0, "Europe", 2, "Southern Europe", 3, "Southern Europe", 15, "Greece")</Row>
+                    <Row>(0, "Europe", 2, "Southern Europe", 3, "Southern Europe", 16, "Italy")</Row>
+                    <Row>(0, "Europe", 2, "Southern Europe", 3, "Southern Europe", 17, "Portugal")</Row>
+                    <Row>(0, "Europe", 2, "Southern Europe", 3, "Southern Europe", 18, "Azores Islands")</Row>
+                    <Row>(0, "Europe", 2, "Southern Europe", 3, "Southern Europe", 19, "Spain")</Row>
+                    <Row>(0, "Europe", 2, "Southern Europe", 3, "Southern Europe", 20, "Other Southern Europe")</Row>
+                    <Row>(0, "Europe", 3, "Eastern Europe", 4, "Eastern Europe", 21, "Albania")</Row>
+                    <Row>(0, "Europe", 3, "Eastern Europe", 4, "Eastern Europe", 22, "Belarus")</Row>
+                    <Row>(0, "Europe", 3, "Eastern Europe", 4, "Eastern Europe", 23, "Bulgaria")</Row>
+                    <Row>(0, "Europe", 3, "Eastern Europe", 4, "Eastern Europe", 24, "Croatia")</Row>
+                    <Row>(0, "Europe", 3, "Eastern Europe", 4, "Eastern Europe", 25, "Czechoslovakia (Includes Czech Republic &amp; Slovakia)")</Row>
+                    <Row>(0, "Europe", 3, "Eastern Europe", 4, "Eastern Europe", 26, "Hungary")</Row>
+                    <Row>(0, "Europe", 3, "Eastern Europe", 4, "Eastern Europe", 27, "Latvia")</Row>
+                    <Row>(0, "Europe", 3, "Eastern Europe", 4, "Eastern Europe", 28, "Lithuania")</Row>
+                    <Row>(0, "Europe", 3, "Eastern Europe", 4, "Eastern Europe", 29, "Macedonia")</Row>
+                    <Row>(0, "Europe", 3, "Eastern Europe", 4, "Eastern Europe", 30, "Moldova")</Row>
+                    <Row>(0, "Europe", 3, "Eastern Europe", 4, "Eastern Europe", 31, "Poland")</Row>
+                    <Row>(0, "Europe", 3, "Eastern Europe", 4, "Eastern Europe", 32, "Romania")</Row>
+                    <Row>(0, "Europe", 3, "Eastern Europe", 4, "Eastern Europe", 33, "Russia")</Row>
+                    <Row>(0, "Europe", 3, "Eastern Europe", 4, "Eastern Europe", 34, "Ukraine")</Row>
+                    <Row>(0, "Europe", 3, "Eastern Europe", 4, "Eastern Europe", 35, "Bosnia &amp; Herzegovina")</Row>
+                    <Row>(0, "Europe", 3, "Eastern Europe", 4, "Eastern Europe", 36, "Serbia")</Row>
+                    <Row>(0, "Europe", 3, "Eastern Europe", 4, "Eastern Europe", 37, "Other Eastern Europe")</Row>
+                    <Row>(0, "Europe", 4, "Europe", 5, "Europe", 38, "Europe, N.E.C.")</Row>
+                    <Row>(1, "Asia", 5, "Eastern Asia", 6, "Eastern Asia", 39, "China, Excluding Hong Kong &amp; Taiwan")</Row>
+                    <Row>(1, "Asia", 5, "Eastern Asia", 6, "Eastern Asia", 40, "Hong Kong")</Row>
+                    <Row>(1, "Asia", 5, "Eastern Asia", 6, "Eastern Asia", 41, "Taiwan")</Row>
+                    <Row>(1, "Asia", 5, "Eastern Asia", 6, "Eastern Asia", 42, "Japan")</Row>
+                    <Row>(1, "Asia", 5, "Eastern Asia", 6, "Eastern Asia", 43, "Korea")</Row>
+                    <Row>(1, "Asia", 5, "Eastern Asia", 6, "Eastern Asia", 44, "Other Eastern Asia")</Row>
+                    <Row>(1, "Asia", 6, "South Central Asia", 7, "South Central Asia", 45, "Afghanistan")</Row>
+                    <Row>(1, "Asia", 6, "South Central Asia", 7, "South Central Asia", 46, "Bangladesh")</Row>
+                    <Row>(1, "Asia", 6, "South Central Asia", 7, "South Central Asia", 47, "India")</Row>
+                    <Row>(1, "Asia", 6, "South Central Asia", 7, "South Central Asia", 48, "Iran")</Row>
+                    <Row>(1, "Asia", 6, "South Central Asia", 7, "South Central Asia", 49, "Kazakhstan")</Row>
+                    <Row>(1, "Asia", 6, "South Central Asia", 7, "South Central Asia", 50, "Nepal")</Row>
+                    <Row>(1, "Asia", 6, "South Central Asia", 7, "South Central Asia", 51, "Pakistan")</Row>
+                    <Row>(1, "Asia", 6, "South Central Asia", 7, "South Central Asia", 52, "Sri Lanka")</Row>
+                    <Row>(1, "Asia", 6, "South Central Asia", 7, "South Central Asia", 53, "Uzbekistan")</Row>
+                    <Row>(1, "Asia", 6, "South Central Asia", 7, "South Central Asia", 54, "Other South Central Asia")</Row>
+                    <Row>(1, "Asia", 7, "South Eastern Asia", 8, "South Eastern Asia", 55, "Cambodia")</Row>
+                    <Row>(1, "Asia", 7, "South Eastern Asia", 8, "South Eastern Asia", 56, "Indonesia")</Row>
+                    <Row>(1, "Asia", 7, "South Eastern Asia", 8, "South Eastern Asia", 57, "Laos")</Row>
+                    <Row>(1, "Asia", 7, "South Eastern Asia", 8, "South Eastern Asia", 58, "Malaysia")</Row>
+                    <Row>(1, "Asia", 7, "South Eastern Asia", 8, "South Eastern Asia", 59, "Burma")</Row>
+                    <Row>(1, "Asia", 7, "South Eastern Asia", 8, "South Eastern Asia", 60, "Philippines")</Row>
+                    <Row>(1, "Asia", 7, "South Eastern Asia", 8, "South Eastern Asia", 61, "Singapore")</Row>
+                    <Row>(1, "Asia", 7, "South Eastern Asia", 8, "South Eastern Asia", 62, "Thailand")</Row>
+                    <Row>(1, "Asia", 7, "South Eastern Asia", 8, "South Eastern Asia", 63, "Vietnam")</Row>
+                    <Row>(1, "Asia", 7, "South Eastern Asia", 8, "South Eastern Asia", 64, "Other South Eastern Asia")</Row>
+                    <Row>(1, "Asia", 8, "Western Asia", 9, "Western Asia", 65, "Iraq")</Row>
+                    <Row>(1, "Asia", 8, "Western Asia", 9, "Western Asia", 66, "Israel")</Row>
+                    <Row>(1, "Asia", 8, "Western Asia", 9, "Western Asia", 67, "Jordan")</Row>
+                    <Row>(1, "Asia", 8, "Western Asia", 9, "Western Asia", 68, "Kuwait")</Row>
+                    <Row>(1, "Asia", 8, "Western Asia", 9, "Western Asia", 69, "Lebanon")</Row>
+                    <Row>(1, "Asia", 8, "Western Asia", 9, "Western Asia", 70, "Saudi Arabia")</Row>
+                    <Row>(1, "Asia", 8, "Western Asia", 9, "Western Asia", 71, "Syria")</Row>
+                    <Row>(1, "Asia", 8, "Western Asia", 9, "Western Asia", 72, "Yemen")</Row>
+                    <Row>(1, "Asia", 8, "Western Asia", 9, "Western Asia", 73, "Turkey")</Row>
+                    <Row>(1, "Asia", 8, "Western Asia", 9, "Western Asia", 74, "Armenia")</Row>
+                    <Row>(1, "Asia", 8, "Western Asia", 9, "Western Asia", 75, "Other Western Asia")</Row>
+                    <Row>(1, "Asia", 9, "Asia", 10, "Asia", 76, "Asia,n.e.c.")</Row>
+                    <Row>(2, "Africa", 10, "Eastern Africa", 11, "Eastern Africa", 77, "Eritrea")</Row>
+                    <Row>(2, "Africa", 10, "Eastern Africa", 11, "Eastern Africa", 78, "Ethiopia")</Row>
+                    <Row>(2, "Africa", 10, "Eastern Africa", 11, "Eastern Africa", 79, "Kenya")</Row>
+                    <Row>(2, "Africa", 10, "Eastern Africa", 11, "Eastern Africa", 80, "Somalia")</Row>
+                    <Row>(2, "Africa", 10, "Eastern Africa", 11, "Eastern Africa", 81, "Other Eastern Africa")</Row>
+                    <Row>(2, "Africa", 11, "Middle Africa", 12, "Middle Africa", 82, "Cameroon")</Row>
+                    <Row>(2, "Africa", 11, "Middle Africa", 12, "Middle Africa", 83, "Other Middle Africa")</Row>
+                    <Row>(2, "Africa", 12, "Northern Africa", 13, "Northern Africa", 84, "Egypt")</Row>
+                    <Row>(2, "Africa", 12, "Northern Africa", 13, "Northern Africa", 85, "Morocco")</Row>
+                    <Row>(2, "Africa", 12, "Northern Africa", 13, "Northern Africa", 86, "Sudan")</Row>
+                    <Row>(2, "Africa", 12, "Northern Africa", 13, "Northern Africa", 87, "Other Northern Africa")</Row>
+                    <Row>(2, "Africa", 13, "Southern Africa", 14, "Southern Africa", 88, "South Africa")</Row>
+                    <Row>(2, "Africa", 13, "Southern Africa", 14, "Southern Africa", 89, "Other Southern Africa")</Row>
+                    <Row>(2, "Africa", 14, "Western Africa", 15, "Western Africa", 90, "Cabo Verde")</Row>
+                    <Row>(2, "Africa", 14, "Western Africa", 15, "Western Africa", 91, "Ghana")</Row>
+                    <Row>(2, "Africa", 14, "Western Africa", 15, "Western Africa", 92, "Liberia")</Row>
+                    <Row>(2, "Africa", 14, "Western Africa", 15, "Western Africa", 93, "Nigeria")</Row>
+                    <Row>(2, "Africa", 14, "Western Africa", 15, "Western Africa", 94, "Sierra Leone")</Row>
+                    <Row>(2, "Africa", 14, "Western Africa", 15, "Western Africa", 95, "Other Western Africa")</Row>
+                    <Row>(2, "Africa", 15, "Africa", 16, "Africa", 96, "Africa, N.E.C.")</Row>
+                    <Row>(3, "Oceania", 16, "Australia &amp; New Zealand Subregion", 17, "Australia &amp; New Zealand Subregion", 97, "Australia")</Row>
+                    <Row>(3, "Oceania", 16, "Australia &amp; New Zealand Subregion", 17, "Australia &amp; New Zealand Subregion", 98, "Other Australian &amp; New Zealand Subregion")</Row>
+                    <Row>(3, "Oceania", 17, "Oceania", 18, "Oceania", 99, "Fiji")</Row>
+                    <Row>(3, "Oceania", 17, "Oceania", 18, "Oceania", 100, "Oceania, N.E.C.")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 19, "Caribbean", 101, "Bahamas")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 19, "Caribbean", 102, "Barbados")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 19, "Caribbean", 103, "Cuba")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 19, "Caribbean", 104, "Dominica")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 19, "Caribbean", 105, "Dominican Republic")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 19, "Caribbean", 106, "Grenada")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 19, "Caribbean", 107, "Haiti")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 19, "Caribbean", 108, "Jamaica")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 19, "Caribbean", 109, "St. Vincent &amp; The Grenadines")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 19, "Caribbean", 110, "Trinidad &amp; Tobago")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 19, "Caribbean", 111, "West Indies")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 19, "Caribbean", 112, "Other Caribbean")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 20, "Central America", 113, "Mexico")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 20, "Central America", 114, "Belize")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 20, "Central America", 115, "Costa Rica")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 20, "Central America", 116, "El Salvador")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 20, "Central America", 117, "Guatemala")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 20, "Central America", 118, "Honduras")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 20, "Central America", 119, "Nicaragua")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 20, "Central America", 120, "Panama")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 20, "Central America", 121, "Other Central America")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 21, "South America", 122, "Argentina")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 21, "South America", 123, "Bolivia")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 21, "South America", 124, "Brazil")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 21, "South America", 125, "Chile")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 21, "South America", 126, "Colombia")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 21, "South America", 127, "Ecuador")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 21, "South America", 128, "Guyana")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 21, "South America", 129, "Peru")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 21, "South America", 130, "Uruguay")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 21, "South America", 131, "Venezuela")</Row>
+                    <Row>(4, "Americas", 18, "Latin America", 21, "South America", 132, "Other South America")</Row>
+                    <Row>(4, "Americas", 19, "Northern America", 22, "Northern America", 133, "Canada")</Row>
+                    <Row>(4, "Americas", 19, "Northern America", 22, "Northern America", 134, "Other Northern America")</Row>
+                </InlineTable>
+                <Level key_column="member_0_code" name="Continent" name_column="member_0" key_type="u8"/>
+                <Level key_column="member_1_code" name="Subcontinent" name_column="member_1" key_type="u8"/>
+                <Level key_column="member_2_code" name="Region" name_column="member_2" key_type="u8"/>
+                <Level key_column="member_3_code" name="Country" name_column="member_3" key_type="u8"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Measure aggregator="sum" key_column="mea" name="Foreign-Born Citizens" visible="true">
+            <Annotation name="aggregation_method">SUM</Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+    
+        <Measure aggregator="moe" name="Foreign-Born Citizens Moe" key_column="moe" visible="true">
+            <Annotation name="error_for_measure">Foreign-Born Citizens</Annotation>
+            <Annotation name="error_type">MOE</Annotation>
+
+            <Aggregation type="moe" critical_value="1.645" />
+        </Measure>
+    </Cube>
+</Schema>

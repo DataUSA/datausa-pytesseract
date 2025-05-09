@@ -1,0 +1,139 @@
+<Schema name="datausa" default_locale="en">
+  <Cube name="acs_ygpsar_poverty_by_gender_age_race_5" subset_table="true">
+    <Annotation name="source_name">Census Bureau</Annotation>
+    <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+    <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
+    <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+    <Annotation name="table_id">B17001,B17001A,B17001B,B17001C,B17001D,B17001E,B17001F,B17001G,B17001H</Annotation>
+    <Annotation name="topic">Housing &amp; Living</Annotation>
+    <Annotation name="subtopic">Income</Annotation>
+    <Table name="acs_ygpsar_poverty_by_gender_age_race_5"/>
+
+    <DimensionUsage foreign_key="geoid" name="Geography" source="Geography"/>
+
+    <Dimension name="Year" foreign_key="year" type="time">
+      <Annotation name="dim_type">TIME</Annotation>
+      <Hierarchy name="Year" primary_key="year">
+        <Level key_column="year" name="Year" key_type="u16"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Dimension foreign_key="dim_0" name="Poverty Status">
+      <Hierarchy name="Poverty Status">
+        <InlineTable name="dim_0_table" format="tuples">
+            <Row>("member_0_code", "member_0")</Row>
+            <Row>(0, "Income In The Past 12 Months Below Poverty Level")</Row>
+            <Row>(1, "Income In The Past 12 Months At or Above Poverty Level")</Row>
+        </InlineTable>
+      <Level key_column="member_0_code" name="Poverty Status" name_column="member_0" key_type="u8"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Dimension foreign_key="dim_1" name="Gender">
+      <Hierarchy name="Gender">
+        <InlineTable name="dim_1_table" format="tuples">
+            <Row>("member_0_code", "member_0")</Row>
+            <Row>(0, "Male")</Row>
+            <Row>(1, "Female")</Row>
+        </InlineTable>
+      <Level key_column="member_0_code" name="Gender" name_column="member_0" key_type="u8"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Dimension foreign_key="dim_2" name="Age">
+      <Annotation name="dim_type">BUCKET</Annotation>
+      <Hierarchy name="Age">
+        <InlineTable name="dim_2_table" format="tuples">
+            <Row>("member_0_code", "member_0")</Row>
+            <Row>(0, "Under 5 Years")</Row>
+            <Row>(1, "5 Years")</Row>
+            <Row>(2, "6 to 11 Years")</Row>
+            <Row>(3, "12 to 14 Years")</Row>
+            <Row>(4, "15 Years")</Row>
+            <Row>(5, "16 &amp; 17 Years")</Row>
+            <Row>(6, "18 to 24 Years")</Row>
+            <Row>(7, "25 to 34 Years")</Row>
+            <Row>(8, "35 to 44 Years")</Row>
+            <Row>(9, "45 to 54 Years")</Row>
+            <Row>(10, "55 to 64 Years")</Row>
+            <Row>(11, "65 to 74 Years")</Row>
+            <Row>(12, "75 Years &amp; Over")</Row>
+        </InlineTable>
+      <Level key_column="member_0_code" name="Age" name_column="member_0" key_type="u8"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Dimension foreign_key="race" name="Race">
+      <Annotation name="is_aggregatable">false</Annotation>
+      <Hierarchy name="Race" default_member="Race.0">
+        <InlineTable name="dm_race" format="tuples">
+          <Row>("race_code", "race")</Row>
+          <Row>(0, "Total")</Row>
+          <Row>(1, "White")</Row>
+          <Row>(2, "Black")</Row>
+          <Row>(3, "Native American")</Row>
+          <Row>(4,"Asian")</Row>
+          <Row>(5, "Pacific Islander")</Row>
+          <Row>(6, "Other")</Row>
+          <Row>(7, "Two Or More")</Row>
+          <Row>(8, "White Non-Hispanic")</Row>
+          <Row>(9, "Hispanic")</Row>
+        </InlineTable>
+        <Level key_column="race_code" name="Race" name_column="race" key_type="u8"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Measure aggregator="sum" key_column="mea" name="Poverty Population" visible="true">
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="hide_in_map">true</Annotation>
+        <Annotation name="ui_default_drilldown">Poverty Status</Annotation>
+    </Measure>
+
+    <Measure aggregator="moe" key_column="moe" name="Poverty Population Moe" visible="true">
+        <Annotation name="error_for_measure">Poverty Population</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Aggregation type="moe" critical_value="1.645"/>
+    </Measure>
+
+    <!--
+    <CalculatedMeasure name="Area sq miles" dimension="Measures" visible="false">
+      <Formula> CASE
+            WHEN [Geography].[Tract].Level is [Geography].[Tract].[Tract] THEN (cast([Geography].[Tract].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Place].Level is [Geography].[Place].[Place] THEN (cast([Geography].[Place].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Zip].Level is [Geography].[Zip].[Zip] THEN (cast([Geography].[Zip].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[County].Level is [Geography].[County].[County] THEN (cast([Geography].[County].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[State].Level is [Geography].[State].[State] THEN (cast([Geography].[State].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Nation].Level is [Geography].[Nation].[Nation] THEN (cast([Geography].[Nation].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Puma].Level is [Geography].[Puma].[Puma] THEN (cast([Geography].[PUMA].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Msa].Level is [Geography].[Msa].[Msa] THEN (cast([Geography].[MSA].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN 1 = 1 THEN 0
+            END
+      </Formula>
+    </CalculatedMeasure>
+
+    <CalculatedMeasure name="Poverty Population Density" dimension="Measures" visible="false">
+      <Formula>
+          [Measures].[Poverty Population].CurrentMember / [Measures].[Area sq miles]
+      </Formula>
+    </CalculatedMeasure>
+
+
+
+
+    <CalculatedMeasure name="Poverty Rate" dimension="Measures">
+    <Annotations>
+        <Annotation name="aggregation_method">NONE</Annotation>
+        <Annotation name="pre_aggregation_method">RATE</Annotation>
+        <Annotation name="units_of_measurement">Rate</Annotation>
+    </Annotations>
+    <Formula> CASE
+        WHEN [Poverty Status].[Poverty Status].Level is [Poverty Status].[Poverty Status].[Poverty Status] THEN 0
+        WHEN 1 = 1 THEN ([Poverty Status].[Poverty Status].&amp;[0], [Measures].[Poverty Population]) / [Measures].[Poverty Population]
+        END
+    </Formula>
+    </CalculatedMeasure>
+    -->
+
+  </Cube>
+</Schema>

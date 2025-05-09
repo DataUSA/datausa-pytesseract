@@ -1,0 +1,97 @@
+<Schema name="datausa" default_locale="en">
+  <Cube name="acs_ygv_veterans_5" subset_table="true">
+    <Annotation name="source_name">Census Bureau</Annotation>
+    <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+    <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
+    <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+    <Annotation name="table_id">B21002</Annotation>
+    <Annotation name="topic">Diversity</Annotation>
+    <Annotation name="subtopic">Military</Annotation>
+    <Table name="acs_ygv_veterans_5" />
+
+    <DimensionUsage foreign_key="geoid" name="Geography" source="Geography" />
+    
+    <Dimension name="Year" foreign_key="year" type="time">  
+        <Annotation name="dim_type">TIME</Annotation>
+        <Hierarchy name="Year" primary_key="year">
+            <Level name="Year" key_column="year" key_type="u16"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreign_key="dim_0" name="Period of Service">
+      <Hierarchy name="Period of Service" >
+        <InlineTable name="dim_0_period_of_service" format="tuples">
+            <Row>("id", "description")</Row>
+            <Row>(0, "Gulf War (2001-)")</Row>
+            <Row>(1, "Gulf War (1990s)")</Row>
+            <Row>(2, "Vietnam")</Row>
+            <Row>(3, "Korea")</Row>
+            <Row>(4, "World War II")</Row>
+            <Row>(5, "Other")</Row>
+        </InlineTable>
+        <Level key_column="id" name="Period of Service" name_column="description" key_type="u8"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Dimension foreign_key="dim_1" name="Period of Service Granular">
+      <Hierarchy name="Period of Service Granular">
+        <InlineTable name="dim_1_period_of_service_granular" format="tuples">
+            <Row>("id", "description")</Row>
+            <Row>(0, "Gulf War (9&#x2F;2001 or Later), No Gulf War (8&#x2F;1990 to 8&#x2F;2001), No Vietnam Era")</Row>
+            <Row>(1, "Gulf War (9&#x2F;2001 or Later) &amp; Gulf War (8&#x2F;1990 to 8&#x2F;2001), No Vietnam Era")</Row>
+            <Row>(2, "Gulf War (9&#x2F;2001 or Later), &amp; Gulf War (8&#x2F;1990 to 8&#x2F;2001), &amp; Vietnam Era")</Row>
+            <Row>(3, "Gulf War (8&#x2F;1990 to 8&#x2F;2001), No Vietnam Era")</Row>
+            <Row>(4, "Gulf War (8&#x2F;1990 to 8&#x2F;2001) &amp; Vietnam Era")</Row>
+            <Row>(5, "Vietnam Era, No Korean War, No World War II")</Row>
+            <Row>(6, "Vietnam Era &amp; Korean War, No World War II")</Row>
+            <Row>(7, "Vietnam Era &amp; Korean War &amp; World War II")</Row>
+            <Row>(8, "Korean War, No Vietnam Era, No World War II")</Row>
+            <Row>(9, "Korean War &amp; World War II, No Vietnam Era")</Row>
+            <Row>(10, "World War II, No Korean War, No Vietnam Era")</Row>
+            <Row>(11, "Between Gulf War &amp; Vietnam Era Only")</Row>
+            <Row>(12, "Between Vietnam Era &amp; Korean War Only")</Row>
+            <Row>(13, "Between Korean War &amp; World War II Only")</Row>
+            <Row>(14, "Pre-World War II Only")</Row>
+        </InlineTable>
+        <Level key_column="id" name="Period of Service Granular" name_column="description" key_type="u8"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Measure aggregator="sum" key_column="mea" name="Veterans" visible="true">
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+    </Measure>
+
+    <Measure aggregator="None" key_column="moe" name="Veterans Moe" visible="true">
+        <Annotation name="error_for_measure">Veterans</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Aggregation type="moe" critical_value="1.645"/>
+    </Measure>
+
+    <!--<CalculatedMember name="Area sq miles" dimension="Measures" visible="false">
+      <Formula> CASE
+            WHEN [Geography].[Tract].Level is [Geography].[Tract].[Tract] THEN (cast([Geography].[Tract].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Place].Level is [Geography].[Place].[Place] THEN (cast([Geography].[Place].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Zip].Level is [Geography].[Zip].[Zip] THEN (cast([Geography].[Zip].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[County].Level is [Geography].[County].[County] THEN (cast([Geography].[County].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[State].Level is [Geography].[State].[State] THEN (cast([Geography].[State].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Nation].Level is [Geography].[Nation].[Nation] THEN (cast([Geography].[Nation].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Puma].Level is [Geography].[Puma].[Puma] THEN (cast([Geography].[PUMA].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Msa].Level is [Geography].[Msa].[Msa] THEN (cast([Geography].[MSA].CurrentMember.Properties("Area") as integer) / 2589988)
+            
+            WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County Subdivision] THEN [Measures].[mea_county_subdivision]
+            
+            WHEN 1 = 1 THEN 0
+            END
+      </Formula>
+    </CalculatedMember>
+
+    <CalculatedMember name="Veterans Density" dimension="Measures" visible="false">
+      <Formula>
+          [Measures].[Veterans].CurrentMember / [Measures].[Area sq miles]
+      </Formula>
+    </CalculatedMember>
+    -->
+
+  </Cube>
+</Schema>

@@ -1,0 +1,109 @@
+<Schema name="datausa" default_locale="en">
+    <SharedDimension name="State Election">
+        <Hierarchy name="State">
+            <Table name="states_shapes2017"/>
+            <Level name="State" key_column="geoid" name_column="name" key_type="str">
+                <Annotation name="dim_type">GEOGRAPHY</Annotation>
+            </Level>
+        </Hierarchy>
+    </SharedDimension>
+
+    <SharedDimension name="State">
+      <Hierarchy name="State">
+        <Table name="dim_shared_state"/>
+        <Level name="State" key_column="state_id" name_column="state" key_type="str"/>
+      </Hierarchy>
+    </SharedDimension>
+
+    <SharedDimension name="Geography">
+      <Hierarchy name="Nation" default_member="Nation.01000US">
+        <Table name="us_nation"/>
+        <Level key_column="geoid" name_column="name" name="Nation" key_type="str"/>
+      </Hierarchy>
+
+      <Hierarchy name="State">
+        <Table name="shapes2017_states"/>
+        <Level key_column="geoid" name_column="name" name="State" key_type="str">
+          <Property name="Area" key_column="aland" />
+        </Level>
+      </Hierarchy>
+
+      <Hierarchy name="County">
+        <Table name="shapes2017_counties"/>
+        <Level key_column="state_id" name_column="state_name" name="State County" key_type="str"/>
+        <Level key_column="geoid" name_column="name" name="County" key_type="str">
+          <Property name="Area" key_column="aland" />
+        </Level>
+      </Hierarchy>
+
+      <Hierarchy name="Tract">
+        <Table name="shapes2017_tracts"/>
+        <Level key_column="state_id" name_column="state_name" name="State Tract" key_type="str"/>
+        <Level key_column="county_id" name_column="county_name" name="County Tract" key_type="str"/>
+        <Level key_column="geoid" name_column="name" name="Tract" key_type="str">
+          <Property name="Area" key_column="aland" />
+        </Level>
+      </Hierarchy>
+
+      <Hierarchy name="Place">
+        <Table name="shapes2017_places"/>
+        <Level key_column="state_id" name_column="state_name" name="State Place" key_type="str"/>
+        <Level key_column="geoid" name_column="name" name="Place" key_type="str">
+          <Property name="Area" key_column="aland" />
+        </Level>
+      </Hierarchy>
+
+      <Hierarchy name="Zip">
+        <Table name="shapes2017_zips"/>
+        <Level key_column="geoid" name_column="zcta5ce10" name="Zip" key_type="str">
+          <Property name="Area" key_column="aland10" />
+        </Level>
+      </Hierarchy>
+
+      <Hierarchy name="Congressional District">
+        <Table name="congressional_district"/>
+        <Level key_column="state_id" name_column="state_name" name="State Congressional District" key_type="str"/>
+        <Level key_column="geoid" name_column="name" name="Congressional District" key_type="str" />
+      </Hierarchy>
+
+      <Hierarchy name="MSA">
+        <Table name="shapes2017_msas"/>
+        <Level key_column="geoid" name_column="name" name="MSA" key_type="str">
+          <Property name="Area" key_column="aland" />
+        </Level>
+      </Hierarchy>
+
+      <Hierarchy name="PUMA">
+        <Table name="shapes2023_pumas"/>
+        <Level key_column="state_id" name_column="state_name" name="State PUMA" key_type="str"/>
+        <Level key_column="geoid" name_column="name" name="PUMA" key_type="str">
+          <Property name="Area" key_column="aland10" />
+        </Level>
+      </Hierarchy>
+
+      <Hierarchy name="County Subdivision">
+        <Table name="shapes2017_county_subdivisions"/>
+        <Level key_column="state_id" name_column="state_name" name="State County Subdivision" key_type="str"/>
+        <Level key_column="county_id" name_column="county_name" name="County County Subdivision" key_type="str"/>
+        <Level key_column="geoid" name_column="name" name="County Subdivision" key_type="str">
+          <Property name="Area" key_column="aland" />
+        </Level>
+      </Hierarchy>
+
+      <Hierarchy name="Place-Tract">
+        <Table name="shapes2017_tracts"/>
+        <Level key_column="place_id" name_column="place_description" name="Place Place-Tract" key_type="str"/>
+        <Level key_column="geoid" name_column="name" name="Place-Tract" key_type="str">
+          <Property name="Area" key_column="aland" />
+        </Level>
+      </Hierarchy>
+
+      <Hierarchy name="MSA-Tract">
+        <Table name="shapes2017_tracts"/>
+        <Level key_column="msa_id" name_column="msa_description" name="MSA MSA-Tract" key_type="str"/>
+        <Level key_column="geoid" name_column="name" name="MSA-Tract" key_type="str">
+          <Property name="Area" key_column="aland" />
+        </Level>
+      </Hierarchy>
+    </SharedDimension>
+</Schema>

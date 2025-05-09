@@ -1,0 +1,75 @@
+<Schema name="datausa" default_locale="en">
+  <Cube name="acs_ygh_occupied_households_lacking_kitchen_5" subset_table="true">
+    <Annotation name="source_name">Census Bureau</Annotation>
+    <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+    <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
+    <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+    <Annotation name="table_id">B25052</Annotation>
+    <Annotation name="topic">Housing &amp; Living</Annotation>
+    <Annotation name="subtopic">Housing</Annotation>
+    <Table name="acs_ygh_occupied_households_lacking_kitchen_5" />
+
+    <DimensionUsage foreign_key="geoid" name="Geography" source="Geography" />
+
+    <Dimension name="Year" foreign_key="year" type="time">
+      <Annotation name="dim_type">TIME</Annotation>
+      <Hierarchy name="Year" primary_key="year">
+        <Level name="Year" key_column="year" key_type="u16" />
+      </Hierarchy>
+    </Dimension>
+
+    <Dimension foreign_key="dim_0" name="Kitchen Facilities">
+      <Hierarchy name="Kitchen Facilities">
+        <InlineTable name="dim_inline_kitchen_facilities" format="tuples">
+          <Row>("id", "description")</Row>
+          <Row>(0, "Complete Kitchen Facilities")</Row>
+          <Row>(1, "Lacking Complete Kitchen Facilities")</Row>
+        </InlineTable>
+        <Level key_column="id" name="Kitchen Facilities" name_column="description" key_type="u8" />
+      </Hierarchy>
+    </Dimension>
+
+    <Measure aggregator="sum" key_column="mea" name="Households by Kitchen Type" visible="true">
+      <Annotation name="aggregation_method">SUM</Annotation>
+      <Annotation name="units_of_measurement">Households</Annotation>
+    </Measure>
+
+    <Measure aggregator="None" key_column="moe" name="Households by Kitchen Type Moe" visible="true">
+      <Annotation name="error_for_measure">Households by Kitchen Type</Annotation>
+      <Annotation name="error_type">MOE</Annotation>
+      <Annotation name="hide_in_map">true</Annotation>
+      <Annotation name="ui_default_drilldown">Kitchen Facilities</Annotation>
+      <Aggregation type="moe" critical_value="1.645" />
+    </Measure>
+
+    <!-- <CalculatedMember name="Area sq miles" dimension="Measures" visible="false">
+      <Formula> CASE
+            WHEN [Geography].[Tract].Level is [Geography].[Tract].[Tract] THEN
+    (cast([Geography].[Tract].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Place].Level is [Geography].[Place].[Place] THEN
+    (cast([Geography].[Place].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Zip].Level is [Geography].[Zip].[Zip] THEN
+    (cast([Geography].[Zip].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[County].Level is [Geography].[County].[County] THEN
+    (cast([Geography].[County].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[State].Level is [Geography].[State].[State] THEN
+    (cast([Geography].[State].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Nation].Level is [Geography].[Nation].[Nation] THEN
+    (cast([Geography].[Nation].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Puma].Level is [Geography].[Puma].[Puma] THEN
+    (cast([Geography].[PUMA].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN [Geography].[Msa].Level is [Geography].[Msa].[Msa] THEN
+    (cast([Geography].[MSA].CurrentMember.Properties("Area") as integer) / 2589988)
+            WHEN 1 = 1 THEN 0
+            END
+      </Formula>
+    </CalculatedMember>
+
+    <CalculatedMember name="Households by Kitchen Type Density" dimension="Measures" visible="false">
+      <Formula>
+          [Measures].[Households by Kitchen Type].CurrentMember / [Measures].[Area sq miles]
+      </Formula>
+    </CalculatedMember> -->
+
+  </Cube>
+</Schema>

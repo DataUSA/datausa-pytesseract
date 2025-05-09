@@ -1,7 +1,19 @@
+.cache/
+.pytest_cache/
+.ruff_cache/
+.venv/
+__pycache__/
 node_modules/
+venv/
 
-*.gcp.json
+.DS_Store
+.python-version
+
+*.db
+*.env
+*.env.*
+*.envrc
 *.gcp.encoded
-
-# environment variables
-.env.*
+*.gcp.json
+*.log
+*.pyc

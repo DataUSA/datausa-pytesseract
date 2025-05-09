@@ -59,7 +59,7 @@ serviceAccount:
 
 configMap:
   TESSERACT_DEBUG: "true"
-  TESSERACT_SCHEMA: "schema"
+  TESSERACT_SCHEMA: "./etc/schema"
 
 # secrets:
 #   TESSERACT_BACKEND: <BASE64_VALUE>
