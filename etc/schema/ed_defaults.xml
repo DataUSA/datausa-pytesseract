@@ -13,8 +13,8 @@
 
         <Dimension name="Year" foreign_key="year" type="time">  
             <Annotation name="dim_type">TIME</Annotation>
-            <Hierarchy name="Year" primary_key="Year">
-                <Level name="Year" key_column="year" key_type="u16" />
+            <Hierarchy name="Year" primary_key="year">
+                <Level name="Year" key_column="year" key_type="u16"/>
             </Hierarchy>
         </Dimension>
 
