@@ -1,0 +1,83 @@
+<Schema name="datausa" default_locale="en">
+
+    <Cube name="acs_yghsa_health_coverage_type_by_gender_by_age_1" subset_table="true">
+        <Annotation name="source_name">Census Bureau</Annotation>
+        <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+        <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
+        <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+        <Annotation name="table_id">B27001,B27002,B27003,B27004,B27005,B27006,B27007,B27008,B27009</Annotation>
+        <Annotation name="topic">Health</Annotation>
+        <Annotation name="subtopic">Healthcare Coverage</Annotation>
+
+        <Table name="acs_yghsa_health_coverage_type_by_gender_by_age_1" />
+
+        <DimensionUsage foreign_key="geoid" name="Geography" source="Geography" />
+
+        <Dimension name="Year" foreign_key="year" type="time">
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="year">
+                <Level name="Year" key_column="year" key_type="u16" />
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="dim_0" name="Gender">
+            <Hierarchy name="Gender">
+                <InlineTable name="dim_inline_gender" format="tuples">
+                    <Row>("id", "description")</Row>
+                    <Row>(0, "Male")</Row>
+                    <Row>(1, "Female")</Row>
+                </InlineTable>
+                <Level key_column="id" name="Gender" name_column="description" key_type="u8"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="dim_1" name="Age">
+            <Hierarchy name="Age">
+                <InlineTable name="dim_inline_age" format="tuples">
+                    <Row>("id", "description")</Row>
+                    <Row>(0, "Under 6 Years")</Row>
+                    <Row>(1, "6 to 17 Years")</Row>
+                    <Row>(2, "18 to 24 Years")</Row>
+                    <Row>(3, "25 to 34 Years")</Row>
+                    <Row>(4, "35 to 44 Years")</Row>
+                    <Row>(5, "45 to 54 Years")</Row>
+                    <Row>(6, "55 to 64 Years")</Row>
+                    <Row>(7, "65 to 74 Years")</Row>
+                    <Row>(8, "75 Years &amp; Over")</Row>
+                </InlineTable>
+                <Level key_column="id" name="Age" name_column="description" key_type="u8"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="health" name="Health Coverage">
+            <Annotation name="is_aggregatable">false</Annotation>
+            <Annotation name="is_required">true</Annotation>
+            <Hierarchy name="Health Coverage" >
+                <InlineTable name="dm_health_coverage" format="tuples">
+                    <Row>("health_code", "health")</Row>
+                    <Row>(0, "Private")</Row>
+                    <Row>(1, "Public")</Row>
+                    <Row>(2, "Employer")</Row>
+                    <Row>(3, "Direct")</Row>
+                    <Row>(4, "Medicare")</Row>
+                    <Row>(5, "Medicaid")</Row>
+                    <Row>(6, "Military")</Row>
+                    <Row>(7, "VA")</Row>
+                </InlineTable>
+                <Level key_column="health_code" name="Health Coverage" name_column="health" key_type="u8"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Measure aggregator="sum" key_column="mea" name="Health Insurance by Gender and Age" visible="true">
+            <Annotation name="aggregation_method">SUM</Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Health Insurance by Gender and Age Moe" key_column="moe" visible="true">
+            <Annotation name="error_for_measure">Health Insurance by Gender and Age</Annotation>
+            <Annotation name="error_type">MOE</Annotation>
+            <Aggregation type="moe" critical_value="1.645" />
+        </Measure>
+    </Cube>
+
+</Schema>

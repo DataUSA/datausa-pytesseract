@@ -52,7 +52,7 @@
         <Annotation name="hide_in_map">true</Annotation>
     </Measure>
 
-    <Measure aggregator="None" key_column="moe" name="Commute Means by Gender Moe" visible="true">
+    <Measure key_column="moe" name="Commute Means by Gender Moe" visible="true">
         <Annotation name="error_for_measure">Commute Means by Gender</Annotation>
         <Annotation name="error_type">MOE</Annotation>
         <Aggregation type="moe" critical_value="1.645"/>

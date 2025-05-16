@@ -66,7 +66,7 @@
         <Annotation name="hide_in_ui">true</Annotation>
     </Measure>
 
-    <Measure aggregator="None" key_column="moe" name="Health Insurance by Gender and Age Moe" visible="true">
+    <Measure key_column="moe" name="Health Insurance by Gender and Age Moe" visible="true">
         <Annotation name="error_for_measure">Health Insurance by Gender and Age</Annotation>
         <Annotation name="error_type">MOE</Annotation>
         <Aggregation type="moe" critical_value="1.645" />
