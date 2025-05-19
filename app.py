@@ -7,6 +7,7 @@ from logiclayer_complexity import EconomicComplexityModule
 from tesseract_olap import OlapServer
 from tesseract_olap.logiclayer import TesseractModule
 
+from datausa.auth import StaticAuthProvider
 from datausa.calculations import CalculationsModule
 
 logger = logging.getLogger(__name__)
@@ -19,23 +20,24 @@ olap_schema = os.environ["TESSERACT_SCHEMA"]
 
 # These parameters are optional
 olap_cache = os.environ.get("TESSERACT_CACHE", "")
-app_debug = os.environ.get("TESSERACT_DEBUG", None)
-commit_hash = os.environ.get("GIT_HASH", "")
+debug_token = os.environ.get("TESSERACT_DEBUG_TOKEN")
+app_debug = os.environ.get("TESSERACT_DEBUG")
 
 app_debug = bool(app_debug)
 
 # ASGI app =====================================================================
 olap = OlapServer(backend=olap_backend, schema=olap_schema, cache=olap_cache)
+auth = StaticAuthProvider(debug_token) if debug_token else None
 
 layer = LogicLayer(debug=app_debug)
 
-mod_tsrc = TesseractModule(olap, debug=app_debug)
+mod_tsrc = TesseractModule(olap, auth=auth, debug=app_debug)
 layer.add_module("/tesseract", mod_tsrc)
 
-mod_cmplx = EconomicComplexityModule(olap, debug=app_debug)
+mod_cmplx = EconomicComplexityModule(olap, auth=auth, debug=app_debug)
 layer.add_module("/complexity", mod_cmplx)
 
-mod_calcs = CalculationsModule(olap, debug=app_debug)
+mod_calcs = CalculationsModule(olap, auth=auth, debug=app_debug)
 layer.add_module("/calcs", mod_calcs)
 
 layer.add_static("/ui", "./etc/static/", html=True)
