@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Annotated
+from typing import Annotated, Optional
 
 import polars as pl
 from fastapi import Depends, Query
@@ -15,7 +15,7 @@ from datausa import __title__, __version__
 
 from .core import PumsParameters, ACSParameters
 from .response import data_response
-
+from .core._common import TopkIntent, parse_topk, FiltersIntent, parse_filters
 
 class CalculationsModule(LogicLayerModule):
     olap: OlapServer
@@ -47,6 +47,8 @@ class CalculationsModule(LogicLayerModule):
         extension: ResponseFormat,
         params: Annotated[PumsParameters, Query()],
         token: AuthToken = Depends(auth_token),
+        filters: Optional[FiltersIntent] = Depends(parse_filters),
+        topk: Optional[TopkIntent] = Depends(parse_topk),
     ) -> Response:
         """PUMS calculation endpoint."""
         roles = self.auth.get_roles(token)
@@ -59,6 +61,16 @@ class CalculationsModule(LogicLayerModule):
             df_total = self.fetch_data(session, request_total)
 
         df_pums = params.calculate(df_key, df_total)
+    
+        if filters:
+            df_pums = filters.apply_filter(df_pums)
+
+        if topk:
+            if topk.order == "desc":
+                df_pums = df_pums.sort(topk.measure, descending=True).group_by(topk.level).head(topk.amount)
+            else:
+                df_pums = df_pums.sort(topk.measure).group_by(topk.level).head(topk.amount)
+
         return data_response(df_pums, extension)
 
     @route("GET", "/acs.{extension}")
