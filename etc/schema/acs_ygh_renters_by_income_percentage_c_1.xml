@@ -1,0 +1,62 @@
+<Schema name="datausa" default_locale="en">
+
+    <Cube name="acs_ygh_renters_by_income_percentage_c_1">
+        <Annotation name="source_name">Census Bureau</Annotation>
+        <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+        <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
+        <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+        <Annotation name="table_id">C25074</Annotation>
+        <Annotation name="topic">Housing &amp; Living</Annotation>
+        <Annotation name="subtopic">Housing</Annotation>
+
+        <Table name="acs_ygh_renters_by_income_percentage_c_1"/>
+
+        <DimensionUsage foreign_key="geoid" name="Geography" source="Geography" />
+
+        <Dimension name="Year" foreign_key="year" type="time">
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="year">
+                <Level name="Year" key_column="year" key_type="u16" />
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="dim_0" name="Household Income">
+            <Hierarchy name="Household Income">
+                <InlineTable name="dim_0_table" format="tuples">
+                    <Row>("member_0_code", "member_0")</Row>
+                    <Row>(0, "Less Than $10,000")</Row>
+                    <Row>(1, "$10,000 to $19,999")</Row>
+                    <Row>(2, "$20,000 to $34,999")</Row>
+                    <Row>(3, "$35,000 to $49,999")</Row>
+                    <Row>(4, "$50,000 to $74,999")</Row>
+                    <Row>(5, "$75,000 or More")</Row>
+                </InlineTable>
+                <Level key_column="member_0_code" name="Household Income" name_column="member_0" key_type="u8"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="dim_1" name="Gross Rent Percent of Income">
+            <Hierarchy name="Gross Rent Percent of Income">
+                <InlineTable name="dim_1_table" format="tuples">
+                    <Row>("member_0_code", "member_0")</Row>
+                    <Row>(0, "Less Than 30.0 Percent")</Row>
+                    <Row>(1, "30.0 Percent or More")</Row>
+                    <Row>(2, "Not Computed")</Row>
+                </InlineTable>
+                <Level key_column="member_0_code" name="Gross Rent Percent of Income" name_column="member_0" key_type="u8"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Measure aggregator="sum" key_column="mea" name="Renters by Income Percentage" visible="true">
+            <Annotation name="aggregation_method">SUM</Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Renters by Income Percentage Moe" key_column="moe" visible="true">
+            <Annotation name="error_for_measure">Workforce by Industry and Gender</Annotation>
+            <Annotation name="error_type">MOE</Annotation>
+            <Aggregation type="moe" critical_value="1.645" />
+        </Measure>
+
+    </Cube>
+</Schema>
