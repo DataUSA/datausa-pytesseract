@@ -8,6 +8,7 @@
         <Annotation name="table_id">C25074</Annotation>
         <Annotation name="topic">Housing &amp; Living</Annotation>
         <Annotation name="subtopic">Housing</Annotation>
+        <Annotation name="hide_in_ui">true</Annotation>
 
         <Table name="acs_ygh_renters_by_income_percentage_c_1"/>
 
