@@ -1,0 +1,76 @@
+<Schema name="datausa" default_locale="en">
+
+    <Cube name="acs_ygsi_gender_by_industry_c_1">
+        <Annotation name="source_name">Census Bureau</Annotation>
+        <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+        <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
+        <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+        <Annotation name="table_id">C24030</Annotation>
+        <Annotation name="topic">Economy</Annotation>
+        <Annotation name="subtopic">Employment</Annotation>
+
+        <Table name="acs_ygsi_gender_by_industry_c_1"/>
+
+        <DimensionUsage foreign_key="geoid" name="Geography" source="Geography" />
+
+        <Dimension name="Year" foreign_key="year" type="time">
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="year">
+                <Level name="Year" key_column="year" key_type="u16" />
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="dim_0" name="Gender">
+            <Hierarchy name="Gender">
+                <InlineTable name="dim_inline_gender" format="tuples">
+                    <Row>("id", "description")</Row>
+                    <Row>(0, "Male")</Row>
+                    <Row>(1, "Female")</Row>
+                </InlineTable>
+                <Level key_column="id" name="Gender" name_column="description" key_type="u8"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="dim_2" name="ACS Industry">
+            <Hierarchy name="ACS Industry">
+                <InlineTable name="dim_2_table" format="tuples">
+                    <Row>("member_0_code", "member_0", "member_1_code", "member_1")</Row>
+                    <Row>(0, "Agriculture, Forestry, Fishing &amp; Hunting, &amp; Mining", 0, "Agriculture, Forestry, Fishing &amp; Hunting")</Row>
+                    <Row>(0, "Agriculture, Forestry, Fishing &amp; Hunting, &amp; Mining", 1, "Mining, Quarrying, &amp; Oil &amp; Gas Extraction")</Row>
+                    <Row>(1, "Construction (Group)", 2, "Construction")</Row>
+                    <Row>(2, "Manufacturing (Group)", 3, "Manufacturing")</Row>
+                    <Row>(3, "Wholesale Trade (Group)", 4, "Wholesale Trade")</Row>
+                    <Row>(4, "Retail Trade (Group)", 5, "Retail Trade")</Row>
+                    <Row>(5, "Transportation &amp; Warehousing, &amp; Utilities", 6, "Transportation &amp; Warehousing")</Row>
+                    <Row>(5, "Transportation &amp; Warehousing, &amp; Utilities", 7, "Utilities")</Row>
+                    <Row>(6, "Information (Group)", 8, "Information")</Row>
+                    <Row>(7, "Finance &amp; Insurance, &amp; Real Estate &amp; Rental &amp; Leasing", 9, "Finance &amp; Insurance")</Row>
+                    <Row>(7, "Finance &amp; Insurance, &amp; Real Estate &amp; Rental &amp; Leasing", 10, "Real Estate &amp; Rental &amp; Leasing")</Row>
+                    <Row>(8, "Professional, Scientific, &amp; Management, &amp; Administrative &amp; Waste Management Services", 11, "Professional, Scientific, &amp; Technical Services")</Row>
+                    <Row>(8, "Professional, Scientific, &amp; Management, &amp; Administrative &amp; Waste Management Services", 12, "Management of Companies &amp; Enterprises")</Row>
+                    <Row>(8, "Professional, Scientific, &amp; Management, &amp; Administrative &amp; Waste Management Services", 13, "Administrative &amp; Support &amp; Waste Management Services")</Row>                    
+                    <Row>(9, "Educational Services, &amp; Health Care &amp; Social Assistance", 14, "Educational Services")</Row>
+                    <Row>(9, "Educational Services, &amp; Health Care &amp; Social Assistance", 15, "Health Care &amp; Social Assistance")</Row>
+                    <Row>(10, "Arts, Entertainment, &amp; Recreation, &amp; Accommodation &amp; Food Services", 16, "Arts, Entertainment, &amp; Recreation")</Row>
+                    <Row>(10, "Arts, Entertainment, &amp; Recreation, &amp; Accommodation &amp; Food Services", 17, "Accommodation &amp; Food Services")</Row>
+                    <Row>(11, "Other Services, Except Public Administration (Group)", 18, "Other Services, Except Public Administration")</Row>
+                    <Row>(12, "Public Administration (Group)", 19, "Public Administration")</Row>
+                </InlineTable>
+                <Level key_column="member_0_code" name="Group" nameColumn="member_0" key_type="u8"/>
+                <Level key_column="member_1_code" name="Industry" nameColumn="member_1" key_type="u8"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Measure aggregator="sum" key_column="mea" name="Workforce by Industry and Gender" visible="true">
+            <Annotation name="aggregation_method">SUM</Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Workforce by Industry and Gender Moe" key_column="moe" visible="true">
+            <Annotation name="error_for_measure">Workforce by Industry and Gender</Annotation>
+            <Annotation name="error_type">MOE</Annotation>
+            <Aggregation type="moe" critical_value="1.645" />
+        </Measure>
+
+    </Cube>
+</Schema>

@@ -53,7 +53,7 @@
       <Annotation name="units_of_measurement">People</Annotation>
     </Measure>
 
-    <Measure aggregator="None" key_column="moe" name="Hispanic Population Moe" visible="true">
+    <Measure key_column="moe" name="Hispanic Population Moe" visible="true">
       <Annotation name="error_for_measure">Hispanic Population</Annotation>
       <Annotation name="error_type">MOE</Annotation>
       <Aggregation type="moe" critical_value="1.645" />

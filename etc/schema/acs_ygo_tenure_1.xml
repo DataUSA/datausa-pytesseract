@@ -38,7 +38,7 @@
       <Annotation name="ui_default_drilldown">Occupied By</Annotation>
     </Measure>
 
-    <Measure aggregator="None" key_column="moe" name="Household Ownership Moe" visible="true">
+    <Measure key_column="moe" name="Household Ownership Moe" visible="true">
       <Annotation name="error_for_measure">Household Ownership</Annotation>
       <Annotation name="error_type">MOE</Annotation>
       <Aggregation type="moe" critical_value="1.645" />
