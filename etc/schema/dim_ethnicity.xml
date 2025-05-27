@@ -3,7 +3,7 @@
         <Hierarchy name="PUMS Ethnicity" primary_key="id">
             <Table name="pums_dims_hisp"/>
 
-            <Level key_column="parent" name="PUMS Ethnicity Parent" />
+            <Level key_column="parent" name="PUMS Ethnicity Parent" key_type="str"/>
             <Level key_column="id" name_column="description" name="PUMS Ethnicity" key_type="u8" />
         </Hierarchy>
     </SharedDimension>
