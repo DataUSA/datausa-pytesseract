@@ -71,7 +71,7 @@ class ACSParameters(BaseModel):
                 "Specifies the time period to filter the data by"
             ),
         ),
-    ] = False
+    ] = None
 
     @property
     def measures_keys(self):

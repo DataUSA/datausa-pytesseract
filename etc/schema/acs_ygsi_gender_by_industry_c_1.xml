@@ -56,8 +56,8 @@
                     <Row>(11, "Other Services, Except Public Administration (Group)", 18, "Other Services, Except Public Administration")</Row>
                     <Row>(12, "Public Administration (Group)", 19, "Public Administration")</Row>
                 </InlineTable>
-                <Level key_column="member_0_code" name="Group" nameColumn="member_0" key_type="u8"/>
-                <Level key_column="member_1_code" name="Industry" nameColumn="member_1" key_type="u8"/>
+                <Level key_column="member_0_code" name="Group" name_column="member_0" key_type="u8"/>
+                <Level key_column="member_1_code" name="Industry" name_column="member_1" key_type="u8"/>
             </Hierarchy>
         </Dimension>
 
