@@ -12,7 +12,7 @@ readme = "README.md"
 dependencies = [
     "asgi-correlation-id>=4.3.4",
     "logiclayer>=0.4.4",
-    "logiclayer-complexity>=0.6.15",
+    "logiclayer-complexity>=0.6.16",
     "tesseract-olap[clickhouse,redis]>=0.19.0",
     "uvicorn>=0.34.2",
 ]
