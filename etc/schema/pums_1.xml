@@ -61,7 +61,7 @@
         <Dimension foreign_key="schl" name="PUMS Degree">
             <Hierarchy name="PUMS Degree" primary_key="schl">
                 <Table name="pums_dims_schl" />
-                <Level key_column="schl_group" name_column="schl_group" name="Group" />
+                <Level key_column="schl_group" name_column="schl_group" name="Group" key_type="str"/>
                 <Level key_column="schl" name_column="schl_name" name="Degree" />
             </Hierarchy>
         </Dimension>
