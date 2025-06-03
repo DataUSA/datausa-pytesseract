@@ -2,7 +2,7 @@
     <Cube name="pums_5">
         <Annotation name="source_name">Census Bureau</Annotation>
         <Annotation name="source_description">The American Community Survey (ACS) Public Use Microdata Sample (PUMS) files are a set of untabulated records about individual people or housing units. The Census Bureau produces the PUMS files so that data users can create custom tables that are not available through pretabulated (or summary) ACS data products.</Annotation>
-        <Annotation name="dataset_name">ACS PUMS 1-Year Estimate</Annotation>
+        <Annotation name="dataset_name">ACS PUMS 5-Year Estimate</Annotation>
         <Annotation name="dataset_link">https://www.census.gov/programs-surveys/acs/microdata.html</Annotation>
         <Annotation name="topic">Diversity</Annotation>
         <Annotation name="subtopic">Demographics</Annotation>
