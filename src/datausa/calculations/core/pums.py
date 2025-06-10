@@ -87,7 +87,7 @@ class PumsParameters(BaseModel):
     def build_request_total(self, roles: set[str]) -> DataRequest:
         """Create the DataRequest for the denominator data, unfiltered by key."""
         params: DataRequestParams = {
-            "drilldowns": self.drilldowns.intersection(["Nation", "State", "PUMA", "Year"]),
+            "drilldowns": self.drilldowns.intersection(["Nation", "State", "PUMA", "Year", "Workforce Status"]),
             "measures": ["Total Population"],
             "cuts_include": {
                 key: value
