@@ -92,7 +92,7 @@ class PumsParameters(BaseModel):
             "cuts_include": {
                 key: value
                 for key, value in self.include.items()
-                if key in ["Nation", "State", "PUMA", "Year"]
+                if key in ["Nation", "State", "PUMA", "Year", "Workforce Status"]
             },
             "locale": self.locale or "",
             # "roles": roles,
