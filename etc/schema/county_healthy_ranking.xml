@@ -49,7 +49,7 @@
         <Measure aggregator="avg" key_column="mea_county_cihigh_Child_mortality" name="mea_county_cihigh Child mortality" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_cihigh_Children_eligible_for_reduced_price_lunch" name="mea_county_cihigh Children eligible for reduced price lunch" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_cihigh_Children_in_poverty" name="mea_county_cihigh Children in poverty" visible="false" />
-        <Measure aggregator="avg" key_column="mea_county_cihigh_Children_in_single_parent_households" name="mea_county_cihigh Children in single-parent households" visible="false" />
+        <Measure aggregator="avg" key_column="mea_county_cihigh_Children_in_single_parent_households" name="mea_county_cihigh Children in single parent households" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_cihigh_Could_not_see_doctor_due_to_cost" name="mea_county_cihigh Could not see doctor due to cost" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_cihigh_Dentists" name="mea_county_cihigh Dentists" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_cihigh_Diabetes_monitoring" name="mea_county_cihigh Diabetes monitoring" visible="false" />
@@ -122,7 +122,7 @@
         <Measure aggregator="avg" key_column="mea_county_cilow_Child_mortality" name="mea_county_cilow Child mortality" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_cilow_Children_eligible_for_reduced_price_lunch" name="mea_county_cilow Children eligible for reduced price lunch" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_cilow_Children_in_poverty" name="mea_county_cilow Children in poverty" visible="false" />
-        <Measure aggregator="avg" key_column="mea_county_cilow_Children_in_single_parent_households" name="mea_county_cilow Children in single-parent households" visible="false" />
+        <Measure aggregator="avg" key_column="mea_county_cilow_Children_in_single_parent_households" name="mea_county_cilow Children in single parent households" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_cilow_Could_not_see_doctor_due_to_cost" name="mea_county_cilow Could not see doctor due to cost" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_cilow_Dentists" name="mea_county_cilow Dentists" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_cilow_Diabetes_monitoring" name="mea_county_cilow Diabetes monitoring" visible="false" />
@@ -195,7 +195,7 @@
         <Measure aggregator="avg" key_column="mea_county_value_Child_mortality" name="mea_county_value Child mortality" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_value_Children_eligible_for_reduced_price_lunch" name="mea_county_value Children eligible for reduced price lunch" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_value_Children_in_poverty" name="mea_county_value Children in poverty" visible="false" />
-        <Measure aggregator="avg" key_column="mea_county_value_Children_in_single_parent_households" name="mea_county_value Children in single-parent households" visible="false" />
+        <Measure aggregator="avg" key_column="mea_county_value_Children_in_single_parent_households" name="mea_county_value Children in single parent households" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_value_Could_not_see_doctor_due_to_cost" name="mea_county_value Could not see doctor due to cost" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_value_Dentists" name="mea_county_value Dentists" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_value_Diabetes_monitoring" name="mea_county_value Diabetes monitoring" visible="false" />
@@ -268,7 +268,7 @@
         <Measure aggregator="avg" key_column="mea_state_cihigh_Child_mortality" name="mea_state_cihigh Child mortality" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_cihigh_Children_eligible_for_reduced_price_lunch" name="mea_state_cihigh Children eligible for reduced price lunch" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_cihigh_Children_in_poverty" name="mea_state_cihigh Children in poverty" visible="false" />
-        <Measure aggregator="avg" key_column="mea_state_cihigh_Children_in_single_parent_households" name="mea_state_cihigh Children in single-parent households" visible="false" />
+        <Measure aggregator="avg" key_column="mea_state_cihigh_Children_in_single_parent_households" name="mea_state_cihigh Children in single parent households" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_cihigh_Could_not_see_doctor_due_to_cost" name="mea_state_cihigh Could not see doctor due to cost" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_cihigh_Dentists" name="mea_state_cihigh Dentists" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_cihigh_Diabetes_monitoring" name="mea_state_cihigh Diabetes monitoring" visible="false" />
@@ -341,7 +341,7 @@
         <Measure aggregator="avg" key_column="mea_state_cilow_Child_mortality" name="mea_state_cilow Child mortality" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_cilow_Children_eligible_for_reduced_price_lunch" name="mea_state_cilow Children eligible for reduced price lunch" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_cilow_Children_in_poverty" name="mea_state_cilow Children in poverty" visible="false" />
-        <Measure aggregator="avg" key_column="mea_state_cilow_Children_in_single_parent_households" name="mea_state_cilow Children in single-parent households" visible="false" />
+        <Measure aggregator="avg" key_column="mea_state_cilow_Children_in_single_parent_households" name="mea_state_cilow Children in single parent households" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_cilow_Could_not_see_doctor_due_to_cost" name="mea_state_cilow Could not see doctor due to cost" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_cilow_Dentists" name="mea_state_cilow Dentists" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_cilow_Diabetes_monitoring" name="mea_state_cilow Diabetes monitoring" visible="false" />
@@ -414,7 +414,7 @@
         <Measure aggregator="avg" key_column="mea_state_value_Child_mortality" name="mea_state_value Child mortality" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_value_Children_eligible_for_reduced_price_lunch" name="mea_state_value Children eligible for reduced price lunch" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_value_Children_in_poverty" name="mea_state_value Children in poverty" visible="false" />
-        <Measure aggregator="avg" key_column="mea_state_value_Children_in_single_parent_households" name="mea_state_value Children in single-parent households" visible="false" />
+        <Measure aggregator="avg" key_column="mea_state_value_Children_in_single_parent_households" name="mea_state_value Children in single parent households" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_value_Could_not_see_doctor_due_to_cost" name="mea_state_value Could not see doctor due to cost" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_value_Dentists" name="mea_state_value Dentists" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_value_Diabetes_monitoring" name="mea_state_value Diabetes monitoring" visible="false" />
@@ -470,7 +470,7 @@
         <Measure aggregator="avg" key_column="mea_state_value_Violent_crime" name="mea_state_value Violent crime" visible="false" />
     
         <Measure aggregator="max" key_column="data_source_Access_to_exercise_opportunities" name="Access To Exercise Opportunities Data Source" visible="true">
-                <Annotation name="source_for_measure">Access to exercise opportunities</Annotation>
+            <Annotation name="source_for_measure">Access to exercise opportunities</Annotation>
         </Measure>
 
         <Measure aggregator="max" key_column="years_of_data_Access_to_exercise_opportunities" name="Access To Exercise Opportunities Data Source Years" visible="true">
@@ -746,7 +746,7 @@
         </Measure>
 
         <Measure aggregator="max" key_column="years_of_data_Mammography_screening" name="Mammography Screening Data Source Years" visible="true"> 
-                <Annotation name="collection_for_measure">Mammography screening</Annotation>
+                        <Annotation name="collection_for_measure">Mammography screening</Annotation>
         </Measure>
 
         <Measure aggregator="max" key_column="data_source_Median_household_income" name="Median Household Income Data Source" visible="true">
@@ -968,9 +968,9 @@
         </CalculatedMeasure>
 
         <CalculatedMeasure name="Adult Obesity" visible="true">
-                <Annotation name="aggregation_method">NONE</Annotation>
-                <Annotation name="units_of_measurement">Rate</Annotation>
-                <Annotation name="details">Percentage of adults that report a BMI of 30 or more</Annotation>
+                        <Annotation name="aggregation_method">NONE</Annotation>
+                        <Annotation name="units_of_measurement">Rate</Annotation>
+                        <Annotation name="details">Percentage of adults that report a BMI of 30 or more</Annotation>
             <Formula>
                 CASE
                     WHEN ISNOTNULL([mea_state_value Adult obesity])
@@ -1041,9 +1041,8 @@
                 END
             </Formula>
         </CalculatedMeasure>
-
-        <!--<CalculatedMeasure name="Air Pollution" visible="true">
-            <Annotation name="aggregation_method">NONE</Annotation>
+<!--
+        <CalculatedMeasure name="Air Pollution" visible="true">
             <Annotation name="units_of_measurement">Micrograms Per Cubic Meter</Annotation>
             <Annotation name="details">Average daily density of fine particulate matter in micrograms per cubic meter (PM2.5)</Annotation>
             <Formula>
@@ -1078,7 +1077,7 @@
                 END
             </Formula>
         </CalculatedMeasure>-->
-
+    
         <CalculatedMeasure name="Alcohol-Impaired Driving Deaths" visible="true">
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Rate</Annotation>
@@ -1106,8 +1105,8 @@
         </CalculatedMeasure>
     
         <CalculatedMeasure name="Alcohol-Impaired Driving Deaths CI High" visible="true">
-                <Annotation name="error_type">UCI</Annotation>
-                <Annotation name="error_for_measure">Alcohol-Impaired Driving Deaths</Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Alcohol-Impaired Driving Deaths</Annotation>
             <Formula>
                 CASE
                     WHEN ISNOTNULL([mea_state_cihigh Alcohol impaired driving deaths])
@@ -1118,7 +1117,6 @@
         </CalculatedMeasure>
 
         <CalculatedMeasure name="Child Mortality" visible="true">
-            <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="details">Number of deaths among children under age 18 per 100,000</Annotation>
             <Annotation name="subtopic">Mortality</Annotation>
@@ -1156,8 +1154,6 @@
         </CalculatedMeasure>
 
         <CalculatedMeasure name="Children Eligible For Reduced Price Lunch" visible="true">
-            <Annotation name="hide_in_ui">true</Annotation>
-            <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percentage of children enrolled in public schools that are eligible for free or reduced price lunch</Annotation>
             <Formula>
@@ -1193,2423 +1189,2101 @@
             </Formula>
         </CalculatedMeasure>
 
-<!--
 
-    <CalculatedMember dimension="Measures" name="Children In Poverty" visible="true">
-        <Annotations>
-
-            <Annotation name="aggregation_method">NONE</Annotation>
+        <CalculatedMeasure name="Children In Poverty" visible="true">
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percentage of children under age 18 in poverty</Annotation>
 
-        </Annotations>
-        <Formula>CASE
-            WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Children in poverty]
-            WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Children in poverty]
-            END
-        </Formula>
-    </CalculatedMember>
+            <Formula>
+                CASE
+                    WHEN ISNOTNULL([mea_state_value Children in poverty]) 
+                    THEN [mea_state_value Children in poverty]
+                    ELSE [mea_county_value Children in poverty]
+                END
+            </Formula>
+        </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Children In Poverty CI Low" visible="true">
-        <Annotations>
-
+        <CalculatedMeasure name="Children In Poverty CI Low" visible="true">
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Children In Poverty</Annotation>
+            
+            <Formula>
+                CASE
+                    WHEN ISNOTNULL([mea_state_cilow Children in poverty])
+                    THEN [mea_state_cilow Children in poverty]
+                    ELSE [mea_county_cilow Children in poverty]
+                END
+            </Formula>
+        </CalculatedMeasure>
 
-        </Annotations>
-        <Formula>CASE
-            WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Children in poverty]
-            WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Children in poverty]
-            END
-        </Formula>
-    </CalculatedMember>
-
-    <CalculatedMember dimension="Measures" name="Children In Poverty CI High" visible="true">
-        <Annotations>
-
+        <CalculatedMeasure name="Children In Poverty CI High" visible="true">
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Children In Poverty</Annotation>
 
-        </Annotations>
-        <Formula>CASE
-            WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Children in poverty]
-            WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Children in poverty]
-            END
-        </Formula>
-    </CalculatedMember>
+            <Formula>
+                CASE
+                    WHEN ISNOTNULL([mea_state_cihigh Children in poverty])
+                    THEN [mea_state_cihigh Children in poverty]
+                    ELSE [mea_county_cihigh Children in poverty]
+                END
+            </Formula>
+        </CalculatedMeasure>
 
-
-
-    <CalculatedMember dimension="Measures" name="Children In Single-Parent Households" visible="true">
-        <Annotations>
-
-            <Annotation name="aggregation_method">NONE</Annotation>
+        <CalculatedMeasure name="Children In Single-Parent Households" visible="true">
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percentage of children that live in a household headed by single parent</Annotation>
 
-        </Annotations>
-        <Formula>CASE
-            WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Children in single-parent households]
-            WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Children in single-parent households]
-            END
-        </Formula>
-    </CalculatedMember>
+            <Formula>
+                CASE
+                    WHEN ISNOTNULL([mea_state_value Children in single parent households])
+                    THEN [mea_state_value Children in single parent households]
+                    ELSE [mea_county_value Children in single parent households]
+                END
+            </Formula>
+        </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Children In Single-Parent Households CI Low" visible="true">
-        <Annotations>
-
+        <CalculatedMeasure name="Children In Single-Parent Households CI Low" visible="true">
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Children In Single-Parent Households</Annotation>
-
-        </Annotations>
-        <Formula>CASE
-            WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Children in single-parent households]
-            WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Children in single-parent households]
-            END
-        </Formula>
-    </CalculatedMember>
-
-    <CalculatedMember dimension="Measures" name="Children In Single-Parent Households CI High" visible="true">
-        <Annotations>
-
+        
+            <Formula>
+                CASE
+                    WHEN ISNOTNULL([mea_state_cilow Children in single parent households])
+                    THEN [mea_state_cilow Children in single parent households]
+                    ELSE [mea_county_cilow Children in single parent households]
+                END
+            </Formula>
+        </CalculatedMeasure>
+    
+        <CalculatedMeasure name="Children In Single-Parent Households CI High" visible="true">
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Children In Single-Parent Households</Annotation>
+        
+            <Formula>
+                CASE
+                    WHEN ISNOTNULL([mea_state_cihigh Children in single parent households])
+                    THEN [mea_state_cihigh Children in single parent households]
+                    ELSE [mea_county_cihigh Children in single parent households]
+                END
+            </Formula>
+        </CalculatedMeasure>
 
-        </Annotations>
-        <Formula>CASE
-            WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Children in single-parent households]
-            WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Children in single-parent households]
-            END
-        </Formula>
-    </CalculatedMember>
-
-
-
-    <CalculatedMember dimension="Measures" name="Could Not See Doctor Due To Cost" visible="true">
-        <Annotations>
-
-            <Annotation name="hide_in_ui">true</Annotation>
-            <Annotation name="aggregation_method">NONE</Annotation>
+        <CalculatedMeasure name="Could Not See Doctor Due To Cost" visible="true">
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percentage of adults who could not see a doctor in the past 12 months because of cost</Annotation>
-
-        </Annotations>
-        <Formula>CASE
-            WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Could not see doctor due to cost]
-            WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Could not see doctor due to cost]
-            END
-        </Formula>
-    </CalculatedMember>
-
-    <CalculatedMember dimension="Measures" name="Could Not See Doctor Due To Cost CI Low" visible="true">
-        <Annotations>
-
+        
+            <Formula>
+                CASE
+                    WHEN ISNOTNULL([mea_state_value Could not see doctor due to cost])
+                    THEN [mea_state_value Could not see doctor due to cost]
+                    ELSE [mea_county_value Could not see doctor due to cost]
+                END
+            </Formula>
+        </CalculatedMeasure>
+    
+        <CalculatedMeasure name="Could Not See Doctor Due To Cost CI Low" visible="true">
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Could Not See Doctor Due To Cost</Annotation>
-
-        </Annotations>
-        <Formula>CASE
-            WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Could not see doctor due to cost]
-            WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Could not see doctor due to cost]
-            END
-        </Formula>
-    </CalculatedMember>
-
-    <CalculatedMember dimension="Measures" name="Could Not See Doctor Due To Cost CI High" visible="true">
-        <Annotations>
-
+            <Formula>
+                CASE
+                    WHEN ISNOTNULL([mea_state_cilow Could not see doctor due to cost])
+                    THEN [mea_state_cilow Could not see doctor due to cost]
+                    ELSE [mea_county_cilow Could not see doctor due to cost]
+                END
+            </Formula>
+        </CalculatedMeasure>
+    
+        <CalculatedMeasure name="Could Not See Doctor Due To Cost CI High" visible="true">
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Could Not See Doctor Due To Cost</Annotation>
 
-        </Annotations>
-        <Formula>CASE
-            WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Could not see doctor due to cost]
-            WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Could not see doctor due to cost]
-            END
-        </Formula>
-    </CalculatedMember>
+            <Formula>
+                CASE
+                    WHEN ISNOTNULL([mea_state_cihigh Could not see doctor due to cost])
+                    THEN [mea_state_cihigh Could not see doctor due to cost]
+                    ELSE [mea_county_cihigh Could not see doctor due to cost]
+                END
+            </Formula>
+        </CalculatedMeasure>
 
-
-
-    <CalculatedMember dimension="Measures" name="Patient to Dentist Ratio" visible="true">
-        <Annotations>
-
-            <Annotation name="aggregation_method">NONE</Annotation>
-            <Annotation name="units_of_measurement">Ratio</Annotation>
+        <CalculatedMeasure name="Patient to Dentist Ratio" visible="true">
             <Annotation name="details">Ratio of Population to Dentists</Annotation>
             <Annotation name="subtopic">Access and Quality</Annotation>
 
-        </Annotations>
-        <Formula>CASE
-            WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Dentists]
-            WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Dentists]
-            END
-        </Formula>
-    </CalculatedMember>
+            <Formula>
+                CASE
+                    WHEN ISNOTNULL([mea_state_value Dentists])
+                    THEN [mea_state_value Dentists]
+                    ELSE [mea_county_value Dentists]
+                END
+            </Formula>
+        </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Patient to Dentist Ratio CI Low" visible="true">
-        <Annotations>
-
+        <CalculatedMeasure name="Patient to Dentist Ratio CI Low" visible="true">
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Patient to Dentist Ratio</Annotation>
 
-        </Annotations>
-        <Formula>CASE
-            WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Dentists]
-            WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Dentists]
-            END
-        </Formula>
-    </CalculatedMember>
+            <Formula>
+                CASE
+                    WHEN ISNOTNULL([mea_state_cilow Dentists])
+                    THEN [mea_state_cilow Dentists]
+                    ELSE [mea_county_cilow Dentists]
+                END
+            </Formula>
+        </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Patient to Dentist Ratio CI High" visible="true">
-        <Annotations>
-
+        <CalculatedMeasure name="Patient to Dentist Ratio CI High" visible="true">
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Patient to Dentist Ratio</Annotation>
 
-        </Annotations>
-        <Formula>CASE
-            WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Dentists]
-            WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Dentists]
-            END
-        </Formula>
-    </CalculatedMember>
+            <Formula>
+                CASE
+                    WHEN ISNOTNULL([mea_state_cihigh Dentists])
+                    THEN [mea_state_cihigh Dentists]
+                    ELSE [mea_county_cihigh Dentists]
+                END
+            </Formula>
+        </CalculatedMeasure>
+<!--
+        <CalculatedMeasure name="Diabetes Monitoring" visible="true">
+           <Annotation name="units_of_measurement">Rate</Annotation>
+           <Annotation name="details">Percentage of diabetic Medicare enrollees ages 65-75 that receive HbA1c monitoring</Annotation>
+
+            <Formula>
+                CASE
+                    WHEN ISNOTNULL([mea_state_value Diabetes monitoring])
+                    THEN [mea_state_value Diabetes monitoring]
+                    ELSE [mea_county_value Diabetes monitoring]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Diabetes Monitoring CI Low" visible="true">
+        
+           <Annotation name="error_type">LCI</Annotation>
+           <Annotation name="error_for_measure">Diabetes Monitoring</Annotation>
+
+            <Formula>CASE
+                WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Diabetes monitoring]
+                WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Diabetes monitoring]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Diabetes Monitoring CI High" visible="true">
+        
+           <Annotation name="error_type">UCI</Annotation>
+           <Annotation name="error_for_measure">Diabetes Monitoring</Annotation>
+
+            <Formula>CASE
+                WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Diabetes monitoring]
+                WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Diabetes monitoring]
+                END
+            </Formula>
+        </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Diabetes Monitoring" visible="true">
-        <Annotations>
+        <CalculatedMeasure name="Diabetes Prevalence" visible="true">
+        
+           <Annotation name="aggregation_method">NONE</Annotation>
+           <Annotation name="units_of_measurement">Rate</Annotation>
+           <Annotation name="details">Percentage of adults aged 20 and above with diagnosed diabetes</Annotation>
+           <Annotation name="subtopic">Health Outcomes</Annotation>
 
-            <Annotation name="aggregation_method">NONE</Annotation>
-            <Annotation name="units_of_measurement">Rate</Annotation>
-            <Annotation name="details">Percentage of diabetic Medicare enrollees ages 65-75 that receive HbA1c monitoring</Annotation>
+            <Formula>CASE
+                WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Diabetes prevalence]
+                WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Diabetes prevalence]
+                END
+            </Formula>
+        </CalculatedMeasure>
 
-        </Annotations>
-        <Formula>CASE
-            WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Diabetes monitoring]
-            WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Diabetes monitoring]
-            END
-        </Formula>
-    </CalculatedMember>
+        <CalculatedMeasure name="Diabetes Prevalence CI Low" visible="true">
+        
+           <Annotation name="error_type">LCI</Annotation>
+           <Annotation name="error_for_measure">Diabetes Prevalence</Annotation>
 
-    <CalculatedMember dimension="Measures" name="Diabetes Monitoring CI Low" visible="true">
-        <Annotations>
+            <Formula>CASE
+                WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Diabetes prevalence]
+                WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Diabetes prevalence]
+                END
+            </Formula>
+        </CalculatedMeasure>
 
-            <Annotation name="error_type">LCI</Annotation>
-            <Annotation name="error_for_measure">Diabetes Monitoring</Annotation>
+        <CalculatedMeasure name="Diabetes Prevalence CI High" visible="true">
+        
+           <Annotation name="error_type">UCI</Annotation>
+           <Annotation name="error_for_measure">Diabetes Prevalence</Annotation>
 
-        </Annotations>
-        <Formula>CASE
-            WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Diabetes monitoring]
-            WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Diabetes monitoring]
-            END
-        </Formula>
-    </CalculatedMember>
-
-    <CalculatedMember dimension="Measures" name="Diabetes Monitoring CI High" visible="true">
-        <Annotations>
-
-            <Annotation name="error_type">UCI</Annotation>
-            <Annotation name="error_for_measure">Diabetes Monitoring</Annotation>
-
-        </Annotations>
-        <Formula>CASE
-            WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Diabetes monitoring]
-            WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Diabetes monitoring]
-            END
-        </Formula>
-    </CalculatedMember>
+            <Formula>CASE
+                WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Diabetes prevalence]
+                WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Diabetes prevalence]
+                END
+            </Formula>
+        </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Diabetes Prevalence" visible="true">
-        <Annotations>
+        <CalculatedMeasure name="Disconnected Youth" visible="true">
+        
+           <Annotation name="aggregation_method">NONE</Annotation>
+           <Annotation name="units_of_measurement">Rate</Annotation>
+           <Annotation name="details">Percentage of teens and young adults ages 16-24 who are neither working nor in school</Annotation>
 
-            <Annotation name="aggregation_method">NONE</Annotation>
-            <Annotation name="units_of_measurement">Rate</Annotation>
-            <Annotation name="details">Percentage of adults aged 20 and above with diagnosed diabetes</Annotation>
-            <Annotation name="subtopic">Health Outcomes</Annotation>
+            <Formula>CASE
+                WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Disconnected youth]
+                WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Disconnected youth]
+                END
+            </Formula>
+        </CalculatedMeasure>
 
-        </Annotations>
-        <Formula>CASE
-            WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Diabetes prevalence]
-            WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Diabetes prevalence]
-            END
-        </Formula>
-    </CalculatedMember>
+        <CalculatedMeasure name="Disconnected Youth CI Low" visible="true">
+        
+           <Annotation name="error_type">LCI</Annotation>
+           <Annotation name="error_for_measure">Disconnected Youth</Annotation>
 
-    <CalculatedMember dimension="Measures" name="Diabetes Prevalence CI Low" visible="true">
-        <Annotations>
+            <Formula>CASE
+                WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Disconnected youth]
+                WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Disconnected youth]
+                END
+            </Formula>
+        </CalculatedMeasure>
 
-            <Annotation name="error_type">LCI</Annotation>
-            <Annotation name="error_for_measure">Diabetes Prevalence</Annotation>
+        <CalculatedMeasure name="Disconnected Youth CI High" visible="true">
+        
+           <Annotation name="error_type">UCI</Annotation>
+           <Annotation name="error_for_measure">Disconnected Youth</Annotation>
 
-        </Annotations>
-        <Formula>CASE
-            WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Diabetes prevalence]
-            WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Diabetes prevalence]
-            END
-        </Formula>
-    </CalculatedMember>
-
-    <CalculatedMember dimension="Measures" name="Diabetes Prevalence CI High" visible="true">
-        <Annotations>
-
-            <Annotation name="error_type">UCI</Annotation>
-            <Annotation name="error_for_measure">Diabetes Prevalence</Annotation>
-
-        </Annotations>
-        <Formula>CASE
-            WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Diabetes prevalence]
-            WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Diabetes prevalence]
-            END
-        </Formula>
-    </CalculatedMember>
+            <Formula>CASE
+                WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Disconnected youth]
+                WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Disconnected youth]
+                END
+            </Formula>
+        </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Disconnected Youth" visible="true">
-        <Annotations>
-
-            <Annotation name="aggregation_method">NONE</Annotation>
-            <Annotation name="units_of_measurement">Rate</Annotation>
-            <Annotation name="details">Percentage of teens and young adults ages 16-24 who are neither working nor in school</Annotation>
-
-        </Annotations>
-        <Formula>CASE
-            WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Disconnected youth]
-            WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Disconnected youth]
-            END
-        </Formula>
-    </CalculatedMember>
-
-    <CalculatedMember dimension="Measures" name="Disconnected Youth CI Low" visible="true">
-        <Annotations>
-
-            <Annotation name="error_type">LCI</Annotation>
-            <Annotation name="error_for_measure">Disconnected Youth</Annotation>
-
-        </Annotations>
-        <Formula>CASE
-            WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Disconnected youth]
-            WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Disconnected youth]
-            END
-        </Formula>
-    </CalculatedMember>
-
-    <CalculatedMember dimension="Measures" name="Disconnected Youth CI High" visible="true">
-        <Annotations>
-
-            <Annotation name="error_type">UCI</Annotation>
-            <Annotation name="error_for_measure">Disconnected Youth</Annotation>
-
-        </Annotations>
-        <Formula>CASE
-            WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Disconnected youth]
-            WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Disconnected youth]
-            END
-        </Formula>
-    </CalculatedMember>
-
-
-
-    <CalculatedMember dimension="Measures" name="Driving Alone To Work" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Driving Alone To Work" visible="true">
+ 
             <Annotation name="hide_in_ui">true</Annotation>
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percentage of the workforce that drives alone to work</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Driving alone to work]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Driving alone to work]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Driving Alone To Work CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Driving Alone To Work CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Driving Alone To Work</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Driving alone to work]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Driving alone to work]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Driving Alone To Work CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Driving Alone To Work CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Driving Alone To Work</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Driving alone to work]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Driving alone to work]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Drug Overdose Deaths" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Drug Overdose Deaths" visible="true">
+ 
             <Annotation name="hide_in_ui">true</Annotation>
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="details">Number of drug poisoning deaths per 100,000 population</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Drug overdose deaths]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Drug overdose deaths]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Drug Overdose Deaths CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Drug Overdose Deaths CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Drug Overdose Deaths</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Drug overdose deaths]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Drug overdose deaths]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Drug Overdose Deaths CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Drug Overdose Deaths CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Drug Overdose Deaths</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Drug overdose deaths]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Drug overdose deaths]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Drug Overdose Deaths Modeled" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Drug Overdose Deaths Modeled" visible="true">
+ 
             <Annotation name="hide_in_ui">true</Annotation>
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="details">Range of drug poisoning deaths per 100,000 population</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Drug overdose deaths modeled]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Drug overdose deaths modeled]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Drug Overdose Deaths Modeled CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Drug Overdose Deaths Modeled CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Drug Overdose Deaths Modeled</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Drug overdose deaths modeled]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Drug overdose deaths modeled]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Drug Overdose Deaths Modeled CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Drug Overdose Deaths Modeled CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Drug Overdose Deaths Modeled</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Drug overdose deaths modeled]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Drug overdose deaths modeled]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Excessive Drinking" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Excessive Drinking" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percentage of adults reporting binge or heavy drinking</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Excessive drinking]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Excessive drinking]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Excessive Drinking CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Excessive Drinking CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Excessive Drinking</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Excessive drinking]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Excessive drinking]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Excessive Drinking CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Excessive Drinking CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Excessive Drinking</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Excessive drinking]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Excessive drinking]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Firearm Fatalities" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Firearm Fatalities" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="details">Number of deaths due to firearms per 100,000 population</Annotation>
             <Annotation name="subtopic">Mortality</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Firearm fatalities]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Firearm fatalities]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Firearm Fatalities CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Firearm Fatalities CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Firearm Fatalities</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Firearm fatalities]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Firearm fatalities]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Firearm Fatalities CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Firearm Fatalities CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Firearm Fatalities</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Firearm fatalities]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Firearm fatalities]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Food Environment Index" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Food Environment Index" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Index</Annotation>
             <Annotation name="details">Index of factors that contribute to a healthy food environment, 0 (worst) to 10 (best)</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Food environment index]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Food environment index]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Food Environment Index CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Food Environment Index CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Food Environment Index</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Food environment index]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Food environment index]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Food Environment Index CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Food Environment Index CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Food Environment Index</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Food environment index]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Food environment index]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Food Insecurity" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Food Insecurity" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percentage of population who lack adequate access to food</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Food insecurity]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Food insecurity]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Food Insecurity CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Food Insecurity CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Food Insecurity</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Food insecurity]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Food insecurity]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Food Insecurity CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Food Insecurity CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Food Insecurity</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Food insecurity]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Food insecurity]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Frequent Mental Distress" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Frequent Mental Distress" visible="true">
+ 
             <Annotation name="hide_in_ui">true</Annotation>
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percentage of adults reporting 14 or more days of poor mental health per month</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Frequent mental distress]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Frequent mental distress]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Frequent Mental Distress CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Frequent Mental Distress CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Frequent Mental Distress</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Frequent mental distress]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Frequent mental distress]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Frequent Mental Distress CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Frequent Mental Distress CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Frequent Mental Distress</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Frequent mental distress]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Frequent mental distress]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Frequent Physical Distress" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Frequent Physical Distress" visible="true">
+ 
             <Annotation name="hide_in_ui">true</Annotation>
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percentage of adults reporting 14 or more days of poor physical health per month</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Frequent physical distress]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Frequent physical distress]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Frequent Physical Distress CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Frequent Physical Distress CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Frequent Physical Distress</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Frequent physical distress]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Frequent physical distress]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Frequent Physical Distress CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Frequent Physical Distress CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Frequent Physical Distress</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Frequent physical distress]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Frequent physical distress]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Hiv Prevalence" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Hiv Prevalence" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="details">Number of persons aged 13 years and older living with a diagnosis of human immunodeficiency virus (HIV) infection per 100,000 population</Annotation>
             <Annotation name="subtopic">Health Outcomes</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::HIV prevalence]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::HIV prevalence]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Hiv Prevalence CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Hiv Prevalence CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Hiv Prevalence</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::HIV prevalence]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::HIV prevalence]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Hiv Prevalence CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Hiv Prevalence CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Hiv Prevalence</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::HIV prevalence]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::HIV prevalence]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Health Care Costs" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Health Care Costs" visible="true">
+ 
             <Annotation name="hide_in_ui">true</Annotation>
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
             <Annotation name="details">Amount of price-adjusted Medicare reimbursements per enrollee</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Health care costs]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Health care costs]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Health Care Costs CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Health Care Costs CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Health Care Costs</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Health care costs]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Health care costs]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Health Care Costs CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Health Care Costs CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Health Care Costs</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Health care costs]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Health care costs]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="High School Graduation" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="High School Graduation" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percentage of ninth-grade cohort that graduates in four years</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::High school graduation]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::High school graduation]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="High School Graduation CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="High School Graduation CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">High School Graduation</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::High school graduation]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::High school graduation]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="High School Graduation CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="High School Graduation CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">High School Graduation</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::High school graduation]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::High school graduation]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Homicides" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Homicides" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="details">Number of deaths due to homicide per 100,000 population</Annotation>
             <Annotation name="subtopic">Mortality</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Homicides]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Homicides]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Homicides CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Homicides CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Homicides</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Homicides]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Homicides]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Homicides CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Homicides CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Homicides</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Homicides]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Homicides]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Inadequate Social Support" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Inadequate Social Support" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percent of adults without social/emotional support</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Inadequate social support]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Inadequate social support]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Inadequate Social Support CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Inadequate Social Support CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Inadequate Social Support</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Inadequate social support]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Inadequate social support]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Inadequate Social Support CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Inadequate Social Support CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Inadequate Social Support</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Inadequate social support]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Inadequate social support]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Income Inequality" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Income Inequality" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Ratio</Annotation>
             <Annotation name="details">Ratio of household income at the 80th percentile to income at the 20th percentile</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Income inequality]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Income inequality]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Income Inequality CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Income Inequality CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Income Inequality</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Income inequality]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Income inequality]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Income Inequality CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Income Inequality CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Income Inequality</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Income inequality]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Income inequality]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Infant Mortality" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Infant Mortality" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="details">Number of all infant deaths (within 1 year), per 1,000 live births</Annotation>
             <Annotation name="subtopic">Mortality</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Infant mortality]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Infant mortality]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Infant Mortality CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Infant Mortality CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Infant Mortality</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Infant mortality]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Infant mortality]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Infant Mortality CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Infant Mortality CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Infant Mortality</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Infant mortality]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Infant mortality]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Injury Deaths" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Injury Deaths" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="details">Number of deaths due to injury per 100,000 population</Annotation>
             <Annotation name="subtopic">Mortality</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Injury deaths]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Injury deaths]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Injury Deaths CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Injury Deaths CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Injury Deaths</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Injury deaths]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Injury deaths]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Injury Deaths CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Injury Deaths CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Injury Deaths</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Injury deaths]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Injury deaths]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Insufficient Sleep" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Insufficient Sleep" visible="true">
+ 
             <Annotation name="hide_in_ui">true</Annotation>
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percentage of adults who report fewer than 7 hours of sleep on average</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Insufficient sleep]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Insufficient sleep]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Insufficient Sleep CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Insufficient Sleep CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Insufficient Sleep</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Insufficient sleep]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Insufficient sleep]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Insufficient Sleep CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Insufficient Sleep CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Insufficient Sleep</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Insufficient sleep]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Insufficient sleep]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Limited Access To Healthy Foods" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Limited Access To Healthy Foods" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percentage of population who are low-income and do not live close to a grocery store</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Limited access to healthy foods]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Limited access to healthy foods]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Limited Access To Healthy Foods CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Limited Access To Healthy Foods CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Limited Access To Healthy Foods</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Limited access to healthy foods]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Limited access to healthy foods]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Limited Access To Healthy Foods CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Limited Access To Healthy Foods CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Limited Access To Healthy Foods</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Limited access to healthy foods]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Limited access to healthy foods]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Long Commute - Driving Alone" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Long Commute - Driving Alone" visible="true">
+ 
             <Annotation name="hide_in_ui">true</Annotation>
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Among workers who commute in their car alone, the percentage that commute more than 30 minutes</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Long commute - driving alone]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Long commute - driving alone]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Long Commute - Driving Alone CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Long Commute - Driving Alone CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Long Commute - Driving Alone</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Long commute - driving alone]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Long commute - driving alone]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Long Commute - Driving Alone CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Long Commute - Driving Alone CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Long Commute - Driving Alone</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Long commute - driving alone]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Long commute - driving alone]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Low Birthweight" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Low Birthweight" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percentage of Live Births with Low Birthweight(&lt; 2500 grams)</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Low birthweight]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Low birthweight]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Low Birthweight CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Low Birthweight CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Low Birthweight</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Low birthweight]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Low birthweight]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Low Birthweight CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Low Birthweight CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Low Birthweight</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Low birthweight]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Low birthweight]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Mammography Screening" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Mammography Screening" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percentage of female Medicare enrollees ages 67-69 that receive mammography screening</Annotation>
             <Annotation name="subtopic">Access and Quality</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Mammography screening]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Mammography screening]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Mammography Screening CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Mammography Screening CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Mammography Screening</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Mammography screening]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Mammography screening]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Mammography Screening CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Mammography Screening CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Mammography Screening</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Mammography screening]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Mammography screening]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Median Household Income" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Median Household Income" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">USD</Annotation>
             <Annotation name="details">Median household income</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Median household income]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Median household income]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Median Household Income CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Median Household Income CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Median Household Income</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Median household income]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Median household income]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Median Household Income CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Median Household Income CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Median Household Income</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Median household income]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Median household income]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Patient to Mental Health Provider Ratio" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Patient to Mental Health Provider Ratio" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Ratio</Annotation>
             <Annotation name="details">Ratio of population to mental health providers</Annotation>
             <Annotation name="subtopic">Access and Quality</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Mental health providers]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Mental health providers]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Patient to Mental Health Provider Ratio CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Patient to Mental Health Provider Ratio CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Patient to Mental Health Provider Ratio</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Mental health providers]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Mental health providers]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Patient to Mental Health Provider Ratio CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Patient to Mental Health Provider Ratio CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Patient to Mental Health Provider Ratio</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Mental health providers]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Mental health providers]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Motor Vehicle Crash Deaths" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Motor Vehicle Crash Deaths" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="details">Number of motor vehicle crash deaths per 100,000 population</Annotation>
             <Annotation name="subtopic">Mortality</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Motor vehicle crash deaths]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Motor vehicle crash deaths]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Motor Vehicle Crash Deaths CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Motor Vehicle Crash Deaths CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Motor Vehicle Crash Deaths</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Motor vehicle crash deaths]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Motor vehicle crash deaths]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Motor Vehicle Crash Deaths CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Motor Vehicle Crash Deaths CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Motor Vehicle Crash Deaths</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Motor vehicle crash deaths]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Motor vehicle crash deaths]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Other Primary Care Providers" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Other Primary Care Providers" visible="true">
+ 
             <Annotation name="hide_in_ui">true</Annotation>
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Ratio</Annotation>
             <Annotation name="details">Ratio of population to primary care providers other than physicians</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Other primary care providers]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Other primary care providers]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Other Primary Care Providers CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Other Primary Care Providers CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Other Primary Care Providers</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Other primary care providers]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Other primary care providers]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Other Primary Care Providers CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Other Primary Care Providers CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Other Primary Care Providers</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Other primary care providers]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Other primary care providers]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Physical Inactivity" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Physical Inactivity" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percentage of adults age 20 and over reporting no leisure-time physical activity</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Physical inactivity]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Physical inactivity]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Physical Inactivity CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Physical Inactivity CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Physical Inactivity</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Physical inactivity]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Physical inactivity]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Physical Inactivity CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Physical Inactivity CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Physical Inactivity</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Physical inactivity]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Physical inactivity]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Poor Mental Health Days" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Poor Mental Health Days" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Days</Annotation>
             <Annotation name="details">Average Number of Mentally Unhealthy Days Reported in Past 30 Days (age-adjusted)</Annotation>
             <Annotation name="subtopic">Health Outcomes</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Poor mental health days]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Poor mental health days]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Poor Mental Health Days CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Poor Mental Health Days CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Poor Mental Health Days</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Poor mental health days]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Poor mental health days]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Poor Mental Health Days CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Poor Mental Health Days CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Poor Mental Health Days</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Poor mental health days]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Poor mental health days]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Poor Or Fair Health" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Poor Or Fair Health" visible="true">
+ 
             <Annotation name="hide_in_ui">true</Annotation>
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percentage of Adults Reporting Fair or Poor Health (age-adjusted)</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Poor or fair health]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Poor or fair health]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Poor Or Fair Health CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Poor Or Fair Health CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Poor Or Fair Health</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Poor or fair health]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Poor or fair health]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Poor Or Fair Health CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Poor Or Fair Health CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Poor Or Fair Health</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Poor or fair health]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Poor or fair health]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Poor Physical Health Days" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Poor Physical Health Days" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Days</Annotation>
             <Annotation name="details">Average Number of Physically Unhealthy Days Reported in Past 30 Days (age-adjusted)</Annotation>
             <Annotation name="subtopic">Health Outcomes</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Poor physical health days]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Poor physical health days]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Poor Physical Health Days CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Poor Physical Health Days CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Poor Physical Health Days</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Poor physical health days]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Poor physical health days]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Poor Physical Health Days CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Poor Physical Health Days CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Poor Physical Health Days</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Poor physical health days]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Poor physical health days]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Premature Age-Adjusted Mortality" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Premature Age-Adjusted Mortality" visible="true">
+ 
             <Annotation name="hide_in_ui">true</Annotation>
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="details">Number of deaths among residents under age 75 per 100,000 population (age-adjusted)</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Premature age-adjusted mortality]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Premature age-adjusted mortality]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Premature Age-Adjusted Mortality CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Premature Age-Adjusted Mortality CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Premature Age-Adjusted Mortality</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Premature age-adjusted mortality]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Premature age-adjusted mortality]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Premature Age-Adjusted Mortality CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Premature Age-Adjusted Mortality CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Premature Age-Adjusted Mortality</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Premature age-adjusted mortality]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Premature age-adjusted mortality]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Premature Death" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Premature Death" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Years</Annotation>
             <Annotation name="details">Years of Potential Life Lost Before Age 75 per 100,000 people (age-adjusted)</Annotation>
             <Annotation name="subtopic">Mortality</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Premature death]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Premature death]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Premature Death CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Premature Death CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Premature Death</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Premature death]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Premature death]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Premature Death CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Premature Death CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Premature Death</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Premature death]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Premature death]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Preventable Hospital Stays" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Preventable Hospital Stays" visible="true">
+ 
             <Annotation name="hide_in_ui">true</Annotation>
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Hospital Stays</Annotation>
             <Annotation name="details">Number of hospital stays for ambulatory-care sensitive conditions per 1,000 Medicare enrollees</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Preventable hospital stays]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Preventable hospital stays]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Preventable Hospital Stays CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Preventable Hospital Stays CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Preventable Hospital Stays</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Preventable hospital stays]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Preventable hospital stays]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Preventable Hospital Stays CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Preventable Hospital Stays CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Preventable Hospital Stays</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Preventable hospital stays]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Preventable hospital stays]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Patient to Primary Care Physician Ratio" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Patient to Primary Care Physician Ratio" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Ratio</Annotation>
             <Annotation name="details">Ratio of population to primary care physicians</Annotation>
             <Annotation name="subtopic">Access and Quality</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Primary care physicians]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Primary care physicians]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Patient to Primary Care Physician Ratio CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Patient to Primary Care Physician Ratio CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Patient to Primary Care Physician Ratio</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Primary care physicians]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Primary care physicians]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Patient to Primary Care Physician Ratio CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Patient to Primary Care Physician Ratio CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Patient to Primary Care Physician Ratio</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Primary care physicians]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Primary care physicians]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Residential Segregation—black/white" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Residential Segregation—black/white" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Index</Annotation>
             <Annotation name="details">Residential Segregation is the index of dissimilarity where higher values indicate greater residential segregation between black and white county residents. The residential segregation index ranges from 0 (complete integration) to 100 (complete segregation)</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Residential segregation—black/white]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Residential segregation—black/white]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Residential Segregation—black/white CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Residential Segregation—black/white CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Residential Segregation—black/white</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Residential segregation—black/white]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Residential segregation—black/white]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Residential Segregation—black/white CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Residential Segregation—black/white CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Residential Segregation—black/white</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Residential segregation—black/white]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Residential segregation—black/white]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Residential Segregation—non-White/white" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Residential Segregation—non-White/white" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Index</Annotation>
             <Annotation name="details">Residential segregation is the index of dissimilarity where higher values indicate greater residential segregation between non-white and white county residents. The residential segregation index ranges from 0 (complete integration) to 100 (complete segregation)</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Residential segregation—non-white/white]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Residential segregation—non-white/white]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Residential Segregation—non-White/white CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Residential Segregation—non-White/white CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Residential Segregation—non-White/white</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Residential segregation—non-white/white]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Residential segregation—non-white/white]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Residential Segregation—non-White/white CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Residential Segregation—non-White/white CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Residential Segregation—non-White/white</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Residential segregation—non-white/white]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Residential segregation—non-white/white]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Severe Housing Problems" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Severe Housing Problems" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percentage of households with at least 1 of 4 housing problems: overcrowding, high housing costs, or lack of kitchen or plumbing facilities</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Severe housing problems]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Severe housing problems]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Severe Housing Problems CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Severe Housing Problems CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Severe Housing Problems</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Severe housing problems]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Severe housing problems]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Severe Housing Problems CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Severe Housing Problems CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Severe Housing Problems</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Severe housing problems]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Severe housing problems]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Sexually Transmitted Infections" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Sexually Transmitted Infections" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Cases</Annotation>
             <Annotation name="details">Number of newly diagnosed chlamydia cases per 100,000 population</Annotation>
             <Annotation name="subtopic">Health Outcomes</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Sexually transmitted infections]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Sexually transmitted infections]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Sexually Transmitted Infections CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Sexually Transmitted Infections CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Sexually Transmitted Infections</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Sexually transmitted infections]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Sexually transmitted infections]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Sexually Transmitted Infections CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Sexually Transmitted Infections CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Sexually Transmitted Infections</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Sexually transmitted infections]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Sexually transmitted infections]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Social Associations" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Social Associations" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Associations</Annotation>
             <Annotation name="details">Number of membership associations per 10,000 population</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Social associations]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Social associations]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Social Associations CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Social Associations CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Social Associations</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Social associations]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Social associations]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Social Associations CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Social Associations CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Social Associations</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Social associations]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Social associations]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Some College" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Some College" visible="true">
+ 
             <Annotation name="hide_in_ui">true</Annotation>
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percentage of adults ages 25-44 with some post-secondary education</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Some college]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Some college]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Some College CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Some College CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Some College</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Some college]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Some college]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Some College CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Some College CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Some College</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Some college]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Some college]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Teen Births" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Teen Births" visible="true">
+ 
             <Annotation name="hide_in_ui">true</Annotation>
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Births</Annotation>
             <Annotation name="details">Number of births per 1,000 female population ages 15-19</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Teen births]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Teen births]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Teen Births CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Teen Births CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Teen Births</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Teen births]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Teen births]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Teen Births CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Teen Births CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Teen Births</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Teen births]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Teen births]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Unemployment" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Unemployment" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percentage of population ages 16 and older unemployed but seeking work</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Unemployment]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Unemployment]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Unemployment CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Unemployment CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Unemployment</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Unemployment]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Unemployment]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Unemployment CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Unemployment CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Unemployment</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Unemployment]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Unemployment]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Uninsured" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Uninsured" visible="true">
+ 
             <Annotation name="hide_in_ui">true</Annotation>
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percentage of population under age 65 without health insurance</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Uninsured]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Uninsured]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Uninsured CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Uninsured CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Uninsured</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Uninsured]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Uninsured]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Uninsured CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Uninsured CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Uninsured</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Uninsured]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Uninsured]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Uninsured Adults" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Uninsured Adults" visible="true">
+ 
             <Annotation name="hide_in_ui">true</Annotation>
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percentage of adults under age 65 without health insurance</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Uninsured adults]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Uninsured adults]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Uninsured Adults CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Uninsured Adults CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Uninsured Adults</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Uninsured adults]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Uninsured adults]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Uninsured Adults CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Uninsured Adults CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Uninsured Adults</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Uninsured adults]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Uninsured adults]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Uninsured Children" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Uninsured Children" visible="true">
+ 
             <Annotation name="hide_in_ui">true</Annotation>
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percentage of children under age 19 without health insurance</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Uninsured children]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Uninsured children]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Uninsured Children CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Uninsured Children CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Uninsured Children</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Uninsured children]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Uninsured children]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Uninsured Children CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Uninsured Children CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Uninsured Children</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Uninsured children]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Uninsured children]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
 
 
-    <CalculatedMember dimension="Measures" name="Violent Crime" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Violent Crime" visible="true">
+ 
             <Annotation name="aggregation_method">NONE</Annotation>
             <Annotation name="units_of_measurement">Crimes</Annotation>
             <Annotation name="details">Number of reported violent crime offenses per 100,000 population</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_value::Violent crime]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_value::Violent crime]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Violent Crime CI Low" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Violent Crime CI Low" visible="true">
+ 
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Violent Crime</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cilow::Violent crime]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cilow::Violent crime]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
 
-    <CalculatedMember dimension="Measures" name="Violent Crime CI High" visible="true">
-        <Annotations>
-
+    <CalculatedMeasure name="Violent Crime CI High" visible="true">
+ 
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Violent Crime</Annotation>
 
-        </Annotations>
         <Formula>CASE
             WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state_cihigh::Violent crime]
             WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county_cihigh::Violent crime]
             END
         </Formula>
-    </CalculatedMember>
+    </CalculatedMeasure>
     -->
 
     </Cube>
