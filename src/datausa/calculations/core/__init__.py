@@ -8,3 +8,4 @@ __all__ = ("PumsParameters", "ACSParameters")
 
 from .pums import PumsParameters
 from .acs import ACSParameters
+from .merge import MergeParameters

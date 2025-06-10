@@ -13,7 +13,7 @@ from tesseract_olap.logiclayer import ResponseFormat
 
 from datausa import __title__, __version__
 
-from .core import PumsParameters, ACSParameters
+from .core import PumsParameters, ACSParameters, MergeParameters
 from .response import data_response
 from .core._common import TopkIntent, parse_topk, FiltersIntent, parse_filters
 
@@ -90,3 +90,35 @@ class CalculationsModule(LogicLayerModule):
 
         df_acs = params.calculate(df)
         return data_response(df_acs, extension)
+    
+    @route("GET", "/merge.{extension}")
+    def route_merge(
+        self,
+        extension: ResponseFormat,
+        params: Annotated[MergeParameters, Query()],
+        token: AuthToken = Depends(auth_token),
+        filters: Optional[FiltersIntent] = Depends(parse_filters),
+        topk: Optional[TopkIntent] = Depends(parse_topk),
+    ) -> Response:
+        """Merge endpoint."""
+        roles = self.auth.get_roles(token)
+
+        request_left = params.build_request_left(roles)
+        request_right = params.build_request_right(roles)
+
+        with self.olap.session() as session:
+            df_left = self.fetch_data(session, request_left)
+            df_right = self.fetch_data(session, request_right)
+
+        df = params.calculate(df_left, df_right)
+    
+        if filters:
+            df = filters.apply_filter(df)
+
+        if topk:
+            if topk.order == "desc":
+                df = df.sort(topk.measure, descending=True).group_by(topk.level).head(topk.amount)
+            else:
+                df = df.sort(topk.measure).group_by(topk.level).head(topk.amount)
+
+        return data_response(df, extension)
