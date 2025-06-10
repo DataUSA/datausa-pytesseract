@@ -58,7 +58,7 @@
         <Measure aggregator="avg" key_column="mea_county_cihigh_Drinking_water_violations" name="mea_county_cihigh Drinking water violations" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_cihigh_Driving_alone_to_work" name="mea_county_cihigh Driving alone to work" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_cihigh_Drug_overdose_deaths" name="mea_county_cihigh Drug overdose deaths" visible="false" />
-        <Measure aggregator="avg" key_column="mea_county_cihigh_Drug_overdose_deaths modeled" name="mea_county_cihigh Drug overdose deaths modeled" visible="false" />
+        <Measure aggregator="avg" key_column="mea_county_cihigh_Drug_overdose_deaths_modeled" name="mea_county_cihigh Drug overdose deaths modeled" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_cihigh_Excessive_drinking" name="mea_county_cihigh Excessive drinking" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_cihigh_Firearm_fatalities" name="mea_county_cihigh Firearm fatalities" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_cihigh_Food_environment_index" name="mea_county_cihigh Food environment index" visible="false" />
@@ -131,7 +131,7 @@
         <Measure aggregator="avg" key_column="mea_county_cilow_Drinking_water_violations" name="mea_county_cilow Drinking water violations" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_cilow_Driving_alone_to_work" name="mea_county_cilow Driving alone to work" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_cilow_Drug_overdose_deaths" name="mea_county_cilow Drug overdose deaths" visible="false" />
-        <Measure aggregator="avg" key_column="mea_county_cilow_Drug_overdose_deaths modeled" name="mea_county_cilow Drug overdose deaths modeled" visible="false" />
+        <Measure aggregator="avg" key_column="mea_county_cilow_Drug_overdose_deaths_modeled" name="mea_county_cilow Drug overdose deaths modeled" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_cilow_Excessive_drinking" name="mea_county_cilow Excessive drinking" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_cilow_Firearm_fatalities" name="mea_county_cilow Firearm fatalities" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_cilow_Food_environment_index" name="mea_county_cilow Food environment index" visible="false" />
@@ -204,7 +204,7 @@
         <Measure aggregator="avg" key_column="mea_county_value_Drinking_water_violations" name="mea_county_value Drinking water violations" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_value_Driving_alone_to_work" name="mea_county_value Driving alone to work" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_value_Drug_overdose_deaths" name="mea_county_value Drug overdose deaths" visible="false" />
-        <Measure aggregator="avg" key_column="mea_county_value_Drug_overdose_deaths modeled" name="mea_county_value Drug overdose deaths modeled" visible="false" />
+        <Measure aggregator="avg" key_column="mea_county_value_Drug_overdose_deaths_modeled" name="mea_county_value Drug overdose deaths modeled" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_value_Excessive_drinking" name="mea_county_value Excessive drinking" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_value_Firearm_fatalities" name="mea_county_value Firearm fatalities" visible="false" />
         <Measure aggregator="avg" key_column="mea_county_value_Food_environment_index" name="mea_county_value Food environment index" visible="false" />
@@ -277,7 +277,7 @@
         <Measure aggregator="avg" key_column="mea_state_cihigh_Drinking_water_violations" name="mea_state_cihigh Drinking water violations" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_cihigh_Driving_alone_to_work" name="mea_state_cihigh Driving alone to work" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_cihigh_Drug_overdose_deaths" name="mea_state_cihigh Drug overdose deaths" visible="false" />
-        <Measure aggregator="avg" key_column="mea_state_cihigh_Drug_overdose_deaths modeled" name="mea_state_cihigh Drug overdose deaths modeled" visible="false" />
+        <Measure aggregator="avg" key_column="mea_state_cihigh_Drug_overdose_deaths_modeled" name="mea_state_cihigh Drug overdose deaths modeled" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_cihigh_Excessive_drinking" name="mea_state_cihigh Excessive drinking" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_cihigh_Firearm_fatalities" name="mea_state_cihigh Firearm fatalities" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_cihigh_Food_environment_index" name="mea_state_cihigh Food environment index" visible="false" />
@@ -350,7 +350,7 @@
         <Measure aggregator="avg" key_column="mea_state_cilow_Drinking_water_violations" name="mea_state_cilow Drinking water violations" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_cilow_Driving_alone_to_work" name="mea_state_cilow Driving alone to work" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_cilow_Drug_overdose_deaths" name="mea_state_cilow Drug overdose deaths" visible="false" />
-        <Measure aggregator="avg" key_column="mea_state_cilow_Drug_overdose_deaths modeled" name="mea_state_cilow Drug overdose deaths modeled" visible="false" />
+        <Measure aggregator="avg" key_column="mea_state_cilow_Drug_overdose_deaths_modeled" name="mea_state_cilow Drug overdose deaths modeled" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_cilow_Excessive_drinking" name="mea_state_cilow Excessive drinking" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_cilow_Firearm_fatalities" name="mea_state_cilow Firearm fatalities" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_cilow_Food_environment_index" name="mea_state_cilow Food environment index" visible="false" />
@@ -423,7 +423,7 @@
         <Measure aggregator="avg" key_column="mea_state_value_Drinking_water_violations" name="mea_state_value Drinking water violations" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_value_Driving_alone_to_work" name="mea_state_value Driving alone to work" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_value_Drug_overdose_deaths" name="mea_state_value Drug overdose deaths" visible="false" />
-        <Measure aggregator="avg" key_column="mea_state_value_Drug_overdose_deaths modeled" name="mea_state_value Drug overdose deaths modeled" visible="false" />
+        <Measure aggregator="avg" key_column="mea_state_value_Drug_overdose_deaths_modeled" name="mea_state_value Drug overdose deaths modeled" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_value_Excessive_drinking" name="mea_state_value Excessive drinking" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_value_Firearm_fatalities" name="mea_state_value Firearm fatalities" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_value_Food_environment_index" name="mea_state_value Food environment index" visible="false" />
@@ -1458,164 +1458,159 @@
             </Formula>
         </CalculatedMeasure>
 
-    <!--<CalculatedMeasure name="Driving Alone To Work" visible="true">
-        <Annotation name="units_of_measurement">Rate</Annotation>
-        <Annotation name="details">Percentage of the workforce that drives alone to work</Annotation>
+        <CalculatedMeasure name="Driving Alone To Work" visible="true">
+            <Annotation name="units_of_measurement">Rate</Annotation>
+            <Annotation name="details">Percentage of the workforce that drives alone to work</Annotation>
 
-        <Formula>
-            CASE
-                WHEN ISNOTNULL([mea_state_value Driving alone to work])
-                THEN [mea_state_value Driving alone to work]
-                ELSE [mea_county_value Driving alone to work]
-            END
-        </Formula>
-    </CalculatedMeasure>
+            <Formula>
+                CASE
+                    WHEN ISNOTNULL([mea_state_value Driving alone to work])
+                    THEN [mea_state_value Driving alone to work]
+                    ELSE [mea_county_value Driving alone to work]
+                END
+            </Formula>
+        </CalculatedMeasure>
 
-    <CalculatedMeasure name="Driving Alone To Work CI Low" visible="true">
- 
+        <CalculatedMeasure name="Driving Alone To Work CI Low" visible="true">
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Driving Alone To Work</Annotation>
 
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cilow Driving alone to work])
-            WHEN [mea_county_cilow Driving alone to work]
-            END
-        </Formula>
-    </CalculatedMeasure>
+            <Formula>
+                CASE
+                    WHEN ISNOTNULL([mea_state_cilow Driving alone to work])
+                    THEN [mea_state_cilow Driving alone to work]
+                    ELSE [mea_county_cilow Driving alone to work]
+                END
+            </Formula>
+        </CalculatedMeasure>
 
-    <CalculatedMeasure name="Driving Alone To Work CI High" visible="true">
- 
+        <CalculatedMeasure name="Driving Alone To Work CI High" visible="true">
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Driving Alone To Work</Annotation>
 
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cihigh Driving alone to work]
-            WHEN [mea_county_cihigh Driving alone to work]
-            END
-        </Formula>
-    </CalculatedMeasure>
+            <Formula>
+                CASE
+                    WHEN ISNOTNULL([mea_state_cihigh Driving alone to work])
+                    THEN [mea_state_cihigh Driving alone to work]
+                    ELSE [mea_county_cihigh Driving alone to work]
+                END
+            </Formula>
+        </CalculatedMeasure>
 
-
-
-    <CalculatedMeasure name="Drug Overdose Deaths" visible="true">
- 
-            <Annotation name="hide_in_ui">true</Annotation>
-            <Annotation name="aggregation_method">NONE</Annotation>
+        <CalculatedMeasure name="Drug Overdose Deaths" visible="true">
             <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="details">Number of drug poisoning deaths per 100,000 population</Annotation>
 
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_value Drug overdose deaths]
-            WHEN [mea_county_value Drug overdose deaths]
-            END
-        </Formula>
-    </CalculatedMeasure>
+            <Formula>
+                CASE
+                    WHEN ISNOTNULL([mea_state_value Drug overdose deaths])
+                    THEN [mea_state_value Drug overdose deaths]
+                    ELSE [mea_county_value Drug overdose deaths]
+                END
+            </Formula>
+        </CalculatedMeasure>
 
-    <CalculatedMeasure name="Drug Overdose Deaths CI Low" visible="true">
- 
+        <CalculatedMeasure name="Drug Overdose Deaths CI Low" visible="true">
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Drug Overdose Deaths</Annotation>
 
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cilow Drug overdose deaths]
-            WHEN [mea_county_cilow Drug overdose deaths]
-            END
-        </Formula>
-    </CalculatedMeasure>
+            <Formula>
+                CASE
+                    WHEN ISNOTNULL([mea_state_cilow Drug overdose deaths])
+                    THEN [mea_state_cilow Drug overdose deaths]
+                    ELSE [mea_county_cilow Drug overdose deaths]
+                END
+            </Formula>
+        </CalculatedMeasure>
 
-    <CalculatedMeasure name="Drug Overdose Deaths CI High" visible="true">
- 
+        <CalculatedMeasure name="Drug Overdose Deaths CI High" visible="true">
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Drug Overdose Deaths</Annotation>
 
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cihigh Drug overdose deaths]
-            WHEN [mea_county_cihigh Drug overdose deaths]
-            END
-        </Formula>
-    </CalculatedMeasure>
+            <Formula>
+                CASE
+                    WHEN ISNOTNULL([mea_state_cihigh Drug overdose deaths])
+                    THEN [mea_state_cihigh Drug overdose deaths]
+                    ELSE [mea_county_cihigh Drug overdose deaths]
+                END
+            </Formula>
+        </CalculatedMeasure>
 
-
-
-    <CalculatedMeasure name="Drug Overdose Deaths Modeled" visible="true">
- 
-            <Annotation name="hide_in_ui">true</Annotation>
-            <Annotation name="aggregation_method">NONE</Annotation>
+        <CalculatedMeasure name="Drug Overdose Deaths Modeled" visible="true">
             <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="details">Range of drug poisoning deaths per 100,000 population</Annotation>
 
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_value Drug overdose deaths modeled]
-            WHEN [mea_county_value Drug overdose deaths modeled]
-            END
-        </Formula>
-    </CalculatedMeasure>
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_value Drug overdose deaths modeled])
+                THEN [mea_state_value Drug overdose deaths modeled]
+                ELSE [mea_county_value Drug overdose deaths modeled]
+                END
+            </Formula>
+        </CalculatedMeasure>
 
-    <CalculatedMeasure name="Drug Overdose Deaths Modeled CI Low" visible="true">
- 
+        <CalculatedMeasure name="Drug Overdose Deaths Modeled CI Low" visible="true">
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Drug Overdose Deaths Modeled</Annotation>
 
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cilow Drug overdose deaths modeled]
-            WHEN [mea_county_cilow Drug overdose deaths modeled]
-            END
-        </Formula>
-    </CalculatedMeasure>
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cilow Drug overdose deaths modeled])
+                THEN [mea_state_cilow Drug overdose deaths modeled]
+                ELSE [mea_county_cilow Drug overdose deaths modeled]
+                END
+            </Formula>
+        </CalculatedMeasure>
 
-    <CalculatedMeasure name="Drug Overdose Deaths Modeled CI High" visible="true">
- 
+        <CalculatedMeasure name="Drug Overdose Deaths Modeled CI High" visible="true">
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Drug Overdose Deaths Modeled</Annotation>
 
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cihigh Drug overdose deaths modeled]
-            WHEN [mea_county_cihigh Drug overdose deaths modeled]
-            END
-        </Formula>
-    </CalculatedMeasure>
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cihigh Drug overdose deaths modeled])
+                THEN [mea_state_cihigh Drug overdose deaths modeled]
+                ELSE [mea_county_cihigh Drug overdose deaths modeled]
+                END
+            </Formula>
+        </CalculatedMeasure>
 
-
-
-    <CalculatedMeasure name="Excessive Drinking" visible="true">
- 
-            <Annotation name="aggregation_method">NONE</Annotation>
+        <CalculatedMeasure name="Excessive Drinking" visible="true">
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percentage of adults reporting binge or heavy drinking</Annotation>
 
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_value Excessive drinking]
-            WHEN [mea_county_value Excessive drinking]
-            END
-        </Formula>
-    </CalculatedMeasure>
+            <Formula>
+                CASE
+                    WHEN ISNOTNULL([mea_state_value Excessive drinking])
+                    THEN [mea_state_value Excessive drinking]
+                    ELSE [mea_county_value Excessive drinking]
+                END
+            </Formula>
+        </CalculatedMeasure>
 
-    <CalculatedMeasure name="Excessive Drinking CI Low" visible="true">
- 
+        <CalculatedMeasure name="Excessive Drinking CI Low" visible="true">
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Excessive Drinking</Annotation>
 
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cilow Excessive drinking]
-            WHEN [mea_county_cilow Excessive drinking]
-            END
-        </Formula>
-    </CalculatedMeasure>
+            <Formula>
+                CASE
+                    WHEN ISNOTNULL([mea_state_cilow Excessive drinking])
+                    THEN [mea_state_cilow Excessive drinking]
+                    ELSE [mea_county_cilow Excessive drinking]
+                END
+            </Formula>
+        </CalculatedMeasure>
 
-    <CalculatedMeasure name="Excessive Drinking CI High" visible="true">
- 
+        <CalculatedMeasure name="Excessive Drinking CI High" visible="true">
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Excessive Drinking</Annotation>
 
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cihigh Excessive drinking]
-            WHEN [mea_county_cihigh Excessive drinking]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-
-
+            <Formula>
+                CASE
+                    WHEN ISNOTNULL([mea_state_cihigh Excessive drinking])
+                    THEN [mea_state_cihigh Excessive drinking]
+                    ELSE [mea_county_cihigh Excessive drinking]
+                END
+            </Formula>
+        </CalculatedMeasure>
+<!--
     <CalculatedMeasure name="Firearm Fatalities" visible="true">
  
             <Annotation name="aggregation_method">NONE</Annotation>
