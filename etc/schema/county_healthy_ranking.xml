@@ -28,6 +28,834 @@
             </Hierarchy>
         </Dimension>
 
+        <Dimension name="Access To Exercise Opportunities Data Source" foreign_key="data_source_Access_to_exercise_opportunities">  
+            <Annotation name="source_for_measure">Access to exercise opportunities</Annotation>
+            <Hierarchy name="Access To Exercise Opportunities Data Source" primary_key="data_source_Access_to_exercise_opportunities">
+                <Level name="Access To Exercise Opportunities Data Source" key_column="data_source_Access_to_exercise_opportunities" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Access To Exercise Opportunities Data Source Years" foreign_key="years_of_data_Access_to_exercise_opportunities">  
+            <Annotation name="source_for_measure">Access to exercise opportunities</Annotation>
+            <Hierarchy name="Access To Exercise Opportunities Data Source Years" primary_key="years_of_data_Access_to_exercise_opportunities">
+                <Level name="Access To Exercise Opportunities Data Source Years" key_column="years_of_data_Access_to_exercise_opportunities" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Adult Obesity Data Source" foreign_key="data_source_Adult_obesity">  
+            <Annotation name="source_for_measure">Adult Obesity</Annotation>
+            <Hierarchy name="Adult Obesity Data Source" primary_key="data_source_Adult_obesity">
+                <Level name="Adult Obesity Data Source" key_column="data_source_Adult_obesity" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Adult Obesity Data Source Years" foreign_key="years_of_data_Adult_obesity">  
+            <Annotation name="source_for_measure">Adult Obesity</Annotation>
+            <Hierarchy name="Adult Obesity Data Source Years" primary_key="years_of_data_Adult_obesity">
+                <Level name="Adult Obesity Data Source Years" key_column="years_of_data_Adult_obesity" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Adult Smoking Data Source" foreign_key="data_source_Adult_smoking">  
+            <Annotation name="source_for_measure">Adult smoking</Annotation>
+            <Hierarchy name="Adult Smoking Data Source" primary_key="data_source_Adult_smoking">
+                <Level name="Adult Smoking Data Source" key_column="data_source_Adult_smoking" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Adult Smoking Data Source Years" foreign_key="years_of_data_Adult_smoking">  
+            <Annotation name="source_for_measure">Adult smoking</Annotation>
+            <Hierarchy name="Adult Smoking Data Source Years" primary_key="years_of_data_Adult_smoking">
+                <Level name="Adult Smoking Data Source Years" key_column="years_of_data_Adult_smoking" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Air Pollution Data Source" foreign_key="data_source_Air_pollution_particulate_matter_1">  
+            <Annotation name="source_for_measure">Air pollution</Annotation>
+            <Hierarchy name="Air Pollution Data Source" primary_key="data_source_Air_pollution_particulate_matter_1">
+                <Level name="Air Pollution Data Source" key_column="data_source_Air_pollution_particulate_matter_1" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Air Pollution Data Source Years" foreign_key="years_of_data_Air_pollution_particulate_matter_1">  
+            <Annotation name="source_for_measure">Air pollution</Annotation>
+            <Hierarchy name="Air Pollution Data Source Years" primary_key="years_of_data_Air_pollution_particulate_matter_1">
+                <Level name="Air Pollution Data Source Years" key_column="years_of_data_Air_pollution_particulate_matter_1" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Alcohol-Impaired Driving Deaths Data Source" foreign_key="data_source_Alcohol_impaired_driving_deaths">  
+            <Annotation name="source_for_measure">Alcohol-impaired driving deaths</Annotation>
+            <Hierarchy name="Alcohol-Impaired Driving Deaths Data Source" primary_key="data_source_Alcohol_impaired_driving_deaths">
+                <Level name="Alcohol-Impaired Driving Deaths Data Source" key_column="data_source_Alcohol_impaired_driving_deaths" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Alcohol-Impaired Driving Deaths Data Source Years" foreign_key="years_of_data_Alcohol_impaired_driving_deaths">  
+            <Annotation name="source_for_measure">Alcohol-impaired driving deaths</Annotation>
+            <Hierarchy name="Alcohol-Impaired Driving Deaths Data Source Years" primary_key="years_of_data_Alcohol_impaired_driving_deaths">
+                <Level name="Alcohol-Impaired Driving Deaths Data Source Years" key_column="years_of_data_Alcohol_impaired_driving_deaths" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Child Mortality Data Source" foreign_key="data_source_Child_mortality">  
+            <Annotation name="source_for_measure">Child mortality</Annotation>
+            <Hierarchy name="Child Mortality Data Source" primary_key="data_source_Child_mortality">
+                <Level name="Child Mortality Data Source" key_column="data_source_Child_mortality" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Child Mortality Data Source Years" foreign_key="years_of_data_Child_mortality">  
+            <Annotation name="source_for_measure">Child mortality</Annotation>
+            <Hierarchy name="Child Mortality Data Source Years" primary_key="years_of_data_Child_mortality">
+                <Level name="Child Mortality Data Source Years" key_column="years_of_data_Child_mortality" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Children Eligible For Reduced Price Lunch Data Source" foreign_key="data_source_Children_eligible_for_reduced_price_lunch">  
+            <Annotation name="source_for_measure">Children eligible for reduced price lunch</Annotation>
+            <Hierarchy name="Children Eligible For Reduced Price Lunch Data Source" primary_key="data_source_Children_eligible_for_reduced_price_lunch">
+                <Level name="Children Eligible For Reduced Price Lunch Data Source" key_column="data_source_Children_eligible_for_reduced_price_lunch" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Children Eligible For Reduced Price Lunch Data Source Years" foreign_key="years_of_data_Children_eligible_for_reduced_price_lunch">  
+            <Annotation name="source_for_measure">Children eligible for reduced price lunch</Annotation>
+            <Hierarchy name="Children Eligible For Reduced Price Lunch Data Source Years" primary_key="years_of_data_Children_eligible_for_reduced_price_lunch">
+                <Level name="Children Eligible For Reduced Price Lunch Data Source Years" key_column="years_of_data_Children_eligible_for_reduced_price_lunch" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Children In Poverty Data Source" foreign_key="data_source_Children_in_poverty">  
+            <Annotation name="source_for_measure">Children in poverty</Annotation>
+            <Hierarchy name="Children In Poverty Data Source" primary_key="data_source_Children_in_poverty">
+                <Level name="Children In Poverty Data Source" key_column="data_source_Children_in_poverty" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Children In Poverty Data Source Years" foreign_key="years_of_data_Children_in_poverty">  
+            <Annotation name="source_for_measure">Children in poverty</Annotation>
+            <Hierarchy name="Children In Poverty Data Source Years" primary_key="years_of_data_Children_in_poverty">
+                <Level name="Children In Poverty Data Source Years" key_column="years_of_data_Children_in_poverty" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Children In Single-Parent Households Data Source" foreign_key="data_source_Children_in_single_parent_households">  
+            <Annotation name="source_for_measure">Children in single-parent households</Annotation>
+            <Hierarchy name="Children In Single-Parent Households Data Source" primary_key="data_source_Children_in_single_parent_households">
+                <Level name="Children In Single-Parent Households Data Source" key_column="data_source_Children_in_single_parent_households" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Children In Single-Parent Households Data Source Years" foreign_key="years_of_data_Children_in_single_parent_households">  
+            <Annotation name="source_for_measure">Children in single-parent households</Annotation>
+            <Hierarchy name="Children In Single-Parent Households Data Source Years" primary_key="years_of_data_Children_in_single_parent_households">
+                <Level name="Children In Single-Parent Households Data Source Years" key_column="years_of_data_Children_in_single_parent_households" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Could Not See Doctor Due To Cost Data Source" foreign_key="data_source_Could_not_see_doctor_due_to_cost">  
+            <Annotation name="source_for_measure">Could not see doctor due to cost</Annotation>
+            <Hierarchy name="Could Not See Doctor Due To Cost Data Source" primary_key="data_source_Could_not_see_doctor_due_to_cost">
+                <Level name="Could Not See Doctor Due To Cost Data Source" key_column="data_source_Could_not_see_doctor_due_to_cost" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Could Not See Doctor Due To Cost Data Source Years" foreign_key="years_of_data_Could_not_see_doctor_due_to_cost">  
+            <Annotation name="source_for_measure">Could not see doctor due to cost</Annotation>
+            <Hierarchy name="Could Not See Doctor Due To Cost Data Source Years" primary_key="years_of_data_Could_not_see_doctor_due_to_cost">
+                <Level name="Could Not See Doctor Due To Cost Data Source Years" key_column="years_of_data_Could_not_see_doctor_due_to_cost" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Patient to Dentist Ratio Data Source" foreign_key="data_source_Dentists">  
+            <Annotation name="source_for_measure">Dentists</Annotation>
+            <Hierarchy name="Patient to Dentist Ratio Data Source" primary_key="data_source_Dentists">
+                <Level name="Patient to Dentist Ratio Data Source" key_column="data_source_Dentists" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Patient to Dentist Ratio Data Source Years" foreign_key="years_of_data_Dentists">  
+            <Annotation name="source_for_measure">Dentists</Annotation>
+            <Hierarchy name="Patient to Dentist Ratio Data Source Years" primary_key="years_of_data_Dentists">
+                <Level name="Patient to Dentist Ratio Data Source Years" key_column="years_of_data_Dentists" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Diabetes Monitoring Data Source" foreign_key="data_source_Diabetes_monitoring">  
+            <Annotation name="source_for_measure">Diabetes monitoring</Annotation>
+            <Hierarchy name="Diabetes Monitoring Data Source" primary_key="data_source_Diabetes_monitoring">
+                <Level name="Diabetes Monitoring Data Source" key_column="data_source_Diabetes_monitoring" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Diabetes Monitoring Data Source Years" foreign_key="years_of_data_Diabetes_monitoring">  
+            <Annotation name="source_for_measure">Diabetes monitoring</Annotation>
+            <Hierarchy name="Diabetes Monitoring Data Source Years" primary_key="years_of_data_Diabetes_monitoring">
+                <Level name="Diabetes Monitoring Data Source Years" key_column="years_of_data_Diabetes_monitoring" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Diabetes Prevalence Data Source" foreign_key="data_source_Diabetes_prevalence">  
+            <Annotation name="source_for_measure">Diabetes prevalence</Annotation>
+            <Hierarchy name="Diabetes Prevalence Data Source" primary_key="data_source_Diabetes_prevalence">
+                <Level name="Diabetes Prevalence Data Source" key_column="data_source_Diabetes_prevalence" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Diabetes Prevalence Data Source Years" foreign_key="years_of_data_Diabetes_prevalence">  
+            <Annotation name="source_for_measure">Diabetes prevalence</Annotation>
+            <Hierarchy name="Diabetes Prevalence Data Source Years" primary_key="years_of_data_Diabetes_prevalence">
+                <Level name="Diabetes Prevalence Data Source Years" key_column="years_of_data_Diabetes_prevalence" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Disconnected Youth Data Source" foreign_key="data_source_Disconnected_youth">  
+            <Annotation name="source_for_measure">Disconnected youth</Annotation>
+            <Hierarchy name="Disconnected Youth Data Source" primary_key="data_source_Disconnected_youth">
+                <Level name="Disconnected Youth Data Source" key_column="data_source_Disconnected_youth" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Disconnected Youth Data Source Years" foreign_key="years_of_data_Disconnected_youth">  
+            <Annotation name="source_for_measure">Disconnected youth</Annotation>
+            <Hierarchy name="Disconnected Youth Data Source Years" primary_key="years_of_data_Disconnected_youth">
+                <Level name="Disconnected Youth Data Source Years" key_column="years_of_data_Disconnected_youth" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Driving Alone To Work Data Source" foreign_key="data_source_Driving_alone_to_work">  
+            <Annotation name="source_for_measure">Driving alone to work</Annotation>
+            <Hierarchy name="Driving Alone To Work Data Source" primary_key="data_source_Driving_alone_to_work">
+                <Level name="Driving Alone To Work Data Source" key_column="data_source_Driving_alone_to_work" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Driving Alone To Work Data Source Years" foreign_key="years_of_data_Driving_alone_to_work">  
+            <Annotation name="source_for_measure">Driving alone to work</Annotation>
+            <Hierarchy name="Driving Alone To Work Data Source Years" primary_key="years_of_data_Driving_alone_to_work">
+                <Level name="Driving Alone To Work Data Source Years" key_column="years_of_data_Driving_alone_to_work" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Drug Overdose Deaths Data Source" foreign_key="data_source_Drug_overdose_deaths">  
+            <Annotation name="source_for_measure">Drug overdose deaths</Annotation>
+            <Hierarchy name="Drug Overdose Deaths Data Source" primary_key="data_source_Drug_overdose_deaths">
+                <Level name="Drug Overdose Deaths Data Source" key_column="data_source_Drug_overdose_deaths" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Drug Overdose Deaths Data Source Years" foreign_key="years_of_data_Drug_overdose_deaths">  
+            <Annotation name="source_for_measure">Drug overdose deaths</Annotation>
+            <Hierarchy name="Drug Overdose Deaths Data Source Years" primary_key="years_of_data_Drug_overdose_deaths">
+                <Level name="Drug Overdose Deaths Data Source Years" key_column="years_of_data_Drug_overdose_deaths" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Drug Overdose Deaths Modeled Data Source" foreign_key="data_source_Drug_overdose_deaths_modeled">  
+            <Annotation name="source_for_measure">Drug overdose deaths modeled</Annotation>
+            <Hierarchy name="Drug Overdose Deaths Modeled Data Source" primary_key="data_source_Drug_overdose_deaths_modeled">
+                <Level name="Drug Overdose Deaths Modeled Data Source" key_column="data_source_Drug_overdose_deaths_modeled" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Drug Overdose Deaths Modeled Data Source Years" foreign_key="years_of_data_Drug_overdose_deaths_modeled">  
+            <Annotation name="source_for_measure">Drug overdose deaths modeled</Annotation>
+            <Hierarchy name="Drug Overdose Deaths Modeled Data Source Years" primary_key="years_of_data_Drug_overdose_deaths_modeled">
+                <Level name="Drug Overdose Deaths Modeled Data Source Years" key_column="years_of_data_Drug_overdose_deaths_modeled" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Excessive Drinking Data Source" foreign_key="data_source_Excessive_drinking">  
+            <Annotation name="source_for_measure">Excessive drinking</Annotation>
+            <Hierarchy name="Excessive Drinking Data Source" primary_key="data_source_Excessive_drinking">
+                <Level name="Excessive Drinking Data Source" key_column="data_source_Excessive_drinking" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Excessive Drinking Data Source Years" foreign_key="years_of_data_Excessive_drinking">  
+            <Annotation name="source_for_measure">Excessive drinking</Annotation>
+            <Hierarchy name="Excessive Drinking Data Source Years" primary_key="years_of_data_Excessive_drinking">
+                <Level name="Excessive Drinking Data Source Years" key_column="years_of_data_Excessive_drinking" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Firearm Fatalities Data Source" foreign_key="data_source_Firearm_fatalities">  
+            <Annotation name="source_for_measure">Firearm fatalities</Annotation>
+            <Hierarchy name="Firearm Fatalities Data Source" primary_key="data_source_Firearm_fatalities">
+                <Level name="Firearm Fatalities Data Source" key_column="data_source_Firearm_fatalities" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Firearm Fatalities Data Source Years" foreign_key="years_of_data_Firearm_fatalities">  
+            <Annotation name="source_for_measure">Firearm fatalities</Annotation>
+            <Hierarchy name="Firearm Fatalities Data Source Years" primary_key="years_of_data_Firearm_fatalities">
+                <Level name="Firearm Fatalities Data Source Years" key_column="years_of_data_Firearm_fatalities" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Food Environment Index Data Source" foreign_key="data_source_Food_environment_index">  
+            <Annotation name="source_for_measure">Food environment index</Annotation>
+            <Hierarchy name="Food Environment Index Data Source" primary_key="data_source_Food_environment_index">
+                <Level name="Food Environment Index Data Source" key_column="data_source_Food_environment_index" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Food Environment Index Data Source Years" foreign_key="years_of_data_Food_environment_index">  
+            <Annotation name="source_for_measure">Food environment index</Annotation>
+            <Hierarchy name="Food Environment Index Data Source Years" primary_key="years_of_data_Food_environment_index">
+                <Level name="Food Environment Index Data Source Years" key_column="years_of_data_Food_environment_index" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Food Insecurity Data Source" foreign_key="data_source_Food_insecurity">  
+            <Annotation name="source_for_measure">Food insecurity</Annotation>
+            <Hierarchy name="Food Insecurity Data Source" primary_key="data_source_Food_insecurity">
+                <Level name="Food Insecurity Data Source" key_column="data_source_Food_insecurity" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Food Insecurity Data Source Years" foreign_key="years_of_data_Food_insecurity">  
+            <Annotation name="source_for_measure">Food insecurity</Annotation>
+            <Hierarchy name="Food Insecurity Data Source Years" primary_key="years_of_data_Food_insecurity">
+                <Level name="Food Insecurity Data Source Years" key_column="years_of_data_Food_insecurity" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Frequent Mental Distress Data Source" foreign_key="data_source_Frequent_mental_distress">  
+            <Annotation name="source_for_measure">Frequent mental distress</Annotation>
+            <Hierarchy name="Frequent Mental Distress Data Source" primary_key="data_source_Frequent_mental_distress">
+                <Level name="Frequent Mental Distress Data Source" key_column="data_source_Frequent_mental_distress" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Frequent Mental Distress Data Source Years" foreign_key="years_of_data_Frequent_mental_distress">  
+            <Annotation name="source_for_measure">Frequent mental distress</Annotation>
+            <Hierarchy name="Frequent Mental Distress Data Source Years" primary_key="years_of_data_Frequent_mental_distress">
+                <Level name="Frequent Mental Distress Data Source Years" key_column="years_of_data_Frequent_mental_distress" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Frequent Physical Distress Data Source" foreign_key="data_source_Frequent_physical_distress">  
+            <Annotation name="source_for_measure">Frequent physical distress</Annotation>
+            <Hierarchy name="Frequent Physical Distress Data Source" primary_key="data_source_Frequent_physical_distress">
+                <Level name="Frequent Physical Distress Data Source" key_column="data_source_Frequent_physical_distress" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Frequent Physical Distress Data Source Years" foreign_key="years_of_data_Frequent_physical_distress">  
+            <Annotation name="source_for_measure">Frequent physical distress</Annotation>
+            <Hierarchy name="Frequent Physical Distress Data Source Years" primary_key="years_of_data_Frequent_physical_distress">
+                <Level name="Frequent Physical Distress Data Source Years" key_column="years_of_data_Frequent_physical_distress" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Health Care Costs Data Source" foreign_key="data_source_Health_care_costs">  
+            <Annotation name="source_for_measure">Health care costs</Annotation>
+            <Hierarchy name="Health Care Costs Data Source" primary_key="data_source_Health_care_costs">
+                <Level name="Health Care Costs Data Source" key_column="data_source_Health_care_costs" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Health Care Costs Data Source Years" foreign_key="years_of_data_Health_care_costs">  
+            <Annotation name="source_for_measure">Health care costs</Annotation>
+            <Hierarchy name="Health Care Costs Data Source Years" primary_key="years_of_data_Health_care_costs">
+                <Level name="Health Care Costs Data Source Years" key_column="years_of_data_Health_care_costs" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="High School Graduation Data Source" foreign_key="data_source_High_school_graduation">  
+            <Annotation name="source_for_measure">High school graduation</Annotation>
+            <Hierarchy name="High School Graduation Data Source" primary_key="data_source_High_school_graduation">
+                <Level name="High School Graduation Data Source" key_column="data_source_High_school_graduation" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="High School Graduation Data Source Years" foreign_key="years_of_data_High_school_graduation">  
+            <Annotation name="source_for_measure">High school graduation</Annotation>
+            <Hierarchy name="High School Graduation Data Source Years" primary_key="years_of_data_High_school_graduation">
+                <Level name="High School Graduation Data Source Years" key_column="years_of_data_High_school_graduation" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Homicides Data Source" foreign_key="data_source_Homicides">  
+            <Annotation name="source_for_measure">Homicides</Annotation>
+            <Hierarchy name="Homicides Data Source" primary_key="data_source_Homicides">
+                <Level name="Homicides Data Source" key_column="data_source_Homicides" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Homicides Data Source Years" foreign_key="years_of_data_Homicides">  
+            <Annotation name="source_for_measure">Homicides</Annotation>
+            <Hierarchy name="Homicides Data Source Years" primary_key="years_of_data_Homicides">
+                <Level name="Homicides Data Source Years" key_column="years_of_data_Homicides" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Inadequate Social Support Data Source" foreign_key="data_source_Inadequate_social_support">  
+            <Annotation name="source_for_measure">Inadequate social support</Annotation>
+            <Hierarchy name="Inadequate Social Support Data Source" primary_key="data_source_Inadequate_social_support">
+                <Level name="Inadequate Social Support Data Source" key_column="data_source_Inadequate_social_support" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Inadequate Social Support Data Source Years" foreign_key="years_of_data_Inadequate_social_support">  
+            <Annotation name="source_for_measure">Inadequate social support</Annotation>
+            <Hierarchy name="Inadequate Social Support Data Source Years" primary_key="years_of_data_Inadequate_social_support">
+                <Level name="Inadequate Social Support Data Source Years" key_column="years_of_data_Inadequate_social_support" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Income Inequality Data Source" foreign_key="data_source_Income_inequality">  
+            <Annotation name="source_for_measure">Income inequality</Annotation>
+            <Hierarchy name="Income Inequality Data Source" primary_key="data_source_Income_inequality">
+                <Level name="Income Inequality Data Source" key_column="data_source_Income_inequality" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Income Inequality Data Source Years" foreign_key="years_of_data_Income_inequality">  
+            <Annotation name="collection_for_measure">Income inequality</Annotation>
+            <Hierarchy name="Income Inequality Data Source Years" primary_key="years_of_data_Income_inequality">
+                <Level name="Income Inequality Data Source Years" key_column="years_of_data_Income_inequality" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Infant Mortality Data Source" foreign_key="data_source_Infant_mortality">  
+            <Annotation name="source_for_measure">Infant mortality</Annotation>
+            <Hierarchy name="Infant Mortality Data Source" primary_key="data_source_Infant_mortality">
+                <Level name="Infant Mortality Data Source" key_column="data_source_Infant_mortality" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Infant Mortality Data Source Years" foreign_key="years_of_data_Infant_mortality">  
+            <Annotation name="collection_for_measure">Infant mortality</Annotation>
+            <Hierarchy name="Infant Mortality Data Source Years" primary_key="years_of_data_Infant_mortality">
+                <Level name="Infant Mortality Data Source Years" key_column="years_of_data_Infant_mortality" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Injury Deaths Data Source" foreign_key="data_source_Injury_deaths">  
+            <Annotation name="source_for_measure">Injury deaths</Annotation>
+            <Hierarchy name="Injury Deaths Data Source" primary_key="data_source_Injury_deaths">
+                <Level name="Injury Deaths Data Source" key_column="data_source_Injury_deaths" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Injury Deaths Data Source Years" foreign_key="years_of_data_Injury_deaths">  
+            <Annotation name="collection_for_measure">Injury deaths</Annotation>
+            <Hierarchy name="Injury Deaths Data Source Years" primary_key="years_of_data_Injury_deaths">
+                <Level name="Injury Deaths Data Source Years" key_column="years_of_data_Injury_deaths" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Insufficient Sleep Data Source" foreign_key="data_source_Insufficient_sleep">  
+            <Annotation name="source_for_measure">Insufficient sleep</Annotation>
+            <Hierarchy name="Insufficient Sleep Data Source" primary_key="data_source_Insufficient_sleep">
+                <Level name="Insufficient Sleep Data Source" key_column="data_source_Insufficient_sleep" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Insufficient Sleep Data Source Years" foreign_key="years_of_data_Insufficient_sleep">  
+            <Annotation name="collection_for_measure">Insufficient sleep</Annotation>
+            <Hierarchy name="Insufficient Sleep Data Source Years" primary_key="years_of_data_Insufficient_sleep">
+                <Level name="Insufficient Sleep Data Source Years" key_column="years_of_data_Insufficient_sleep" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Limited Access To Healthy Foods Data Source" foreign_key="data_source_Limited_access_to_healthy_foods">  
+            <Annotation name="source_for_measure">Limited access to healthy foods</Annotation>
+            <Hierarchy name="Limited Access To Healthy Foods Data Source" primary_key="data_source_Limited_access_to_healthy_foods">
+                <Level name="Limited Access To Healthy Foods Data Source" key_column="data_source_Limited_access_to_healthy_foods" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Limited Access To Healthy Foods Data Source Years" foreign_key="years_of_data_Limited_access_to_healthy_foods">  
+            <Annotation name="collection_for_measure">Limited access to healthy foods</Annotation>
+            <Hierarchy name="Limited Access To Healthy Foods Data Source Years" primary_key="years_of_data_Limited_access_to_healthy_foods">
+                <Level name="Limited Access To Healthy Foods Data Source Years" key_column="years_of_data_Limited_access_to_healthy_foods" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Long Commute - Driving Alone Data Source" foreign_key="data_source_Long_commute_driving_alone">  
+            <Annotation name="source_for_measure">Long commute - driving alone</Annotation>
+            <Hierarchy name="Long Commute - Driving Alone Data Source" primary_key="data_source_Long_commute_driving_alone">
+                <Level name="Long Commute - Driving Alone Data Source" key_column="data_source_Long_commute_driving_alone" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Long Commute - Driving Alone Data Source Years" foreign_key="years_of_data_Long_commute_driving_alone">  
+            <Annotation name="collection_for_measure">Long commute - driving alone</Annotation>
+            <Hierarchy name="Long Commute - Driving Alone Data Source Years" primary_key="years_of_data_Long_commute_driving_alone">
+                <Level name="Long Commute - Driving Alone Data Source Years" key_column="years_of_data_Long_commute_driving_alone" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Low Birthweight Data Source" foreign_key="data_source_Low_birthweight">  
+            <Annotation name="source_for_measure">Low birthweight</Annotation>
+            <Hierarchy name="Low Birthweight Data Source" primary_key="data_source_Low_birthweight">
+                <Level name="Low Birthweight Data Source" key_column="data_source_Low_birthweight" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Low Birthweight Data Source Years" foreign_key="years_of_data_Low_birthweight">  
+            <Annotation name="collection_for_measure">Low birthweight</Annotation>
+            <Hierarchy name="Low Birthweight Data Source Years" primary_key="years_of_data_Low_birthweight">
+                <Level name="Low Birthweight Data Source Years" key_column="years_of_data_Low_birthweight" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Mammography Screening Data Source" foreign_key="data_source_Mammography_screening">
+            <Annotation name="source_for_measure">Mammography screening</Annotation>
+            <Hierarchy name="Mammography Screening Data Source" primary_key="data_source_Mammography_screening">
+                <Level name="Mammography Screening Data Source" key_column="data_source_Mammography_screening" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Mammography Screening Data Source Years" foreign_key="years_of_data_Mammography_screening">
+            <Annotation name="collection_for_measure">Mammography screening</Annotation>
+            <Hierarchy name="Mammography Screening Data Source Years" primary_key="years_of_data_Mammography_screening">
+                <Level name="Mammography Screening Data Source Years" key_column="years_of_data_Mammography_screening" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Median Household Income Data Source" foreign_key="data_source_Median_household_income">
+            <Annotation name="source_for_measure">Median household income</Annotation>
+            <Hierarchy name="Median Household Income Data Source" primary_key="data_source_Median_household_income">
+                <Level name="Median Household Income Data Source" key_column="data_source_Median_household_income" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Median Household Income Data Source Years" foreign_key="years_of_data_Median_household_income">
+            <Annotation name="collection_for_measure">Median household income</Annotation>
+            <Hierarchy name="Median Household Income Data Source Years" primary_key="years_of_data_Median_household_income">
+                <Level name="Median Household Income Data Source Years" key_column="years_of_data_Median_household_income" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Patient to Mental Health Provider Ratio Data Source" foreign_key="data_source_Mental_health_providers">
+            <Annotation name="source_for_measure">Patient to Mental Health Provider Ratio</Annotation>
+            <Hierarchy name="Patient to Mental Health Provider Ratio Data Source" primary_key="data_source_Mental_health_providers">
+                <Level name="Patient to Mental Health Provider Ratio Data Source" key_column="data_source_Mental_health_providers" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Patient to Mental Health Provider Ratio Data Source Years" foreign_key="years_of_data_Mental_health_providers">
+            <Annotation name="collection_for_measure">Patient to Mental Health Provider</Annotation>
+            <Hierarchy name="Patient to Mental Health Provider Ratio Data Source Years" primary_key="years_of_data_Mental_health_providers">
+                <Level name="Patient to Mental Health Provider Ratio Data Source Years" key_column="years_of_data_Mental_health_providers" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Motor Vehicle Crash Deaths Data Source" foreign_key="data_source_Motor_vehicle_crash_deaths">
+            <Annotation name="source_for_measure">Motor vehicle crash deaths</Annotation>
+            <Hierarchy name="Motor Vehicle Crash Deaths Data Source" primary_key="data_source_Motor_vehicle_crash_deaths">
+                <Level name="Motor Vehicle Crash Deaths Data Source" key_column="data_source_Motor_vehicle_crash_deaths" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Motor Vehicle Crash Deaths Data Source Years" foreign_key="years_of_data_Motor_vehicle_crash_deaths">
+            <Annotation name="collection_for_measure">Motor vehicle crash deaths</Annotation>
+            <Hierarchy name="Motor Vehicle Crash Deaths Data Source Years" primary_key="years_of_data_Motor_vehicle_crash_deaths">
+                <Level name="Motor Vehicle Crash Deaths Data Source Years" key_column="years_of_data_Motor_vehicle_crash_deaths" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Other Primary Care Providers Data Source" foreign_key="data_source_Other_primary_care_providers">
+            <Annotation name="source_for_measure">Other primary care providers</Annotation>
+            <Hierarchy name="Other Primary Care Providers Data Source" primary_key="data_source_Other_primary_care_providers">
+                <Level name="Other Primary Care Providers Data Source" key_column="data_source_Other_primary_care_providers" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Other Primary Care Providers Data Source Years" foreign_key="years_of_data_Other_primary_care_providers">
+            <Annotation name="collection_for_measure">Other primary care providers</Annotation>
+            <Hierarchy name="Other Primary Care Providers Data Source Years" primary_key="years_of_data_Other_primary_care_providers">
+                <Level name="Other Primary Care Providers Data Source Years" key_column="years_of_data_Other_primary_care_providers" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Physical Inactivity Data Source" foreign_key="data_source_Physical_inactivity">
+            <Annotation name="source_for_measure">Physical inactivity</Annotation>
+            <Hierarchy name="Physical Inactivity Data Source" primary_key="data_source_Physical_inactivity">
+                <Level name="Physical Inactivity Data Source" key_column="data_source_Physical_inactivity" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Physical Inactivity Data Source Years" foreign_key="years_of_data_Physical_inactivity">
+            <Annotation name="collection_for_measure">Physical inactivity</Annotation>
+            <Hierarchy name="Physical Inactivity Data Source Years" primary_key="years_of_data_Physical_inactivity">
+                <Level name="Physical Inactivity Data Source Years" key_column="years_of_data_Physical_inactivity" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Poor Mental Health Days Data Source" foreign_key="data_source_Poor_mental_health_days">
+            <Annotation name="source_for_measure">Poor mental health days</Annotation>
+            <Hierarchy name="Poor Mental Health Days Data Source" primary_key="data_source_Poor_mental_health_days">
+                <Level name="Poor Mental Health Days Data Source" key_column="data_source_Poor_mental_health_days" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Poor Mental Health Days Data Source Years" foreign_key="years_of_data_Poor_mental_health_days">
+            <Annotation name="collection_for_measure">Poor mental health days</Annotation>
+            <Hierarchy name="Poor Mental Health Days Data Source Years" primary_key="years_of_data_Poor_mental_health_days">
+                <Level name="Poor Mental Health Days Data Source Years" key_column="years_of_data_Poor_mental_health_days" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Poor Or Fair Health Data Source" foreign_key="data_source_Poor_or_fair_health">
+            <Annotation name="source_for_measure">Poor or fair health</Annotation>
+            <Hierarchy name="Poor Or Fair Health Data Source" primary_key="data_source_Poor_or_fair_health">
+                <Level name="Poor Or Fair Health Data Source" key_column="data_source_Poor_or_fair_health" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Poor Or Fair Health Data Source Years" foreign_key="years_of_data_Poor_or_fair_health">
+            <Annotation name="collection_for_measure">Poor or fair health</Annotation>
+            <Hierarchy name="Poor Or Fair Health Data Source Years" primary_key="years_of_data_Poor_or_fair_health">
+                <Level name="Poor Or Fair Health Data Source Years" key_column="years_of_data_Poor_or_fair_health" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Poor Physical Health Days Data Source" foreign_key="data_source_Poor_physical_health_days">
+            <Annotation name="source_for_measure">Poor physical health days</Annotation>
+            <Hierarchy name="Poor Physical Health Days Data Source" primary_key="data_source_Poor_physical_health_days">
+                <Level name="Poor Physical Health Days Data Source" key_column="data_source_Poor_physical_health_days" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Poor Physical Health Days Data Source Years" foreign_key="years_of_data_Poor_physical_health_days">
+            <Annotation name="collection_for_measure">Poor physical health days</Annotation>
+            <Hierarchy name="Poor Physical Health Days Data Source Years" primary_key="years_of_data_Poor_physical_health_days">
+                <Level name="Poor Physical Health Days Data Source Years" key_column="years_of_data_Poor_physical_health_days" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Premature Age-Adjusted Mortality Data Source" foreign_key="data_source_Premature_age_adjusted_mortality">
+            <Annotation name="source_for_measure">Premature age-adjusted mortality</Annotation>
+            <Hierarchy name="Premature Age-Adjusted Mortality Data Source" primary_key="data_source_Premature_age_adjusted_mortality">
+                <Level name="Premature Age-Adjusted Mortality Data Source" key_column="data_source_Premature_age_adjusted_mortality" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Premature Age-Adjusted Mortality Data Source Years" foreign_key="years_of_data_Premature_age_adjusted_mortality">
+            <Annotation name="collection_for_measure">Premature age-adjusted mortality</Annotation>
+            <Hierarchy name="Premature Age-Adjusted Mortality Data Source Years" primary_key="years_of_data_Premature_age_adjusted_mortality">
+                <Level name="Premature Age-Adjusted Mortality Data Source Years" key_column="years_of_data_Premature_age_adjusted_mortality" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Premature Death Data Source" foreign_key="data_source_Premature_death">
+            <Annotation name="source_for_measure">Premature death</Annotation>
+            <Hierarchy name="Premature Death Data Source" primary_key="data_source_Premature_death">
+                <Level name="Premature Death Data Source" key_column="data_source_Premature_death" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Premature Death Data Source Years" foreign_key="years_of_data_Premature_death">
+            <Annotation name="collection_for_measure">Premature death</Annotation>
+            <Hierarchy name="Premature Death Data Source Years" primary_key="years_of_data_Premature_death">
+                <Level name="Premature Death Data Source Years" key_column="years_of_data_Premature_death" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Preventable Hospital Stays Data Source" foreign_key="data_source_Preventable_hospital_stays">
+            <Annotation name="source_for_measure">Preventable hospital stays</Annotation>
+            <Hierarchy name="Preventable Hospital Stays Data Source" primary_key="data_source_Preventable_hospital_stays">
+                <Level name="Preventable Hospital Stays Data Source" key_column="data_source_Preventable_hospital_stays" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Preventable Hospital Stays Data Source Years" foreign_key="years_of_data_Preventable_hospital_stays">
+            <Annotation name="collection_for_measure">Preventable hospital stays</Annotation>
+            <Hierarchy name="Preventable Hospital Stays Data Source Years" primary_key="years_of_data_Preventable_hospital_stays">
+                <Level name="Preventable Hospital Stays Data Source Years" key_column="years_of_data_Preventable_hospital_stays" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Patient to Primary Care Physician Ratio Data Source" foreign_key="data_source_Primary_care_physicians">
+            <Annotation name="source_for_measure">Patient to Primary Care Physician Ratio</Annotation>
+            <Hierarchy name="Patient to Primary Care Physician Ratio Data Source" primary_key="data_source_Primary_care_physicians">
+                <Level name="Patient to Primary Care Physician Ratio Data Source" key_column="data_source_Primary_care_physicians" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Patient to Primary Care Physician Ratio Data Source Years" foreign_key="years_of_data_Primary_care_physicians">  
+            <Annotation name="source_for_measure">Patient to Primary Care Physician Ratio</Annotation>
+            <Hierarchy name="Patient to Primary Care Physician Ratio Data Source Years" primary_key="years_of_data_Primary_care_physicians">
+                <Level name="Patient to Primary Care Physician Ratio Data Source Years" key_column="years_of_data_Primary_care_physicians" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Residential Segregation black white Data Source" foreign_key="data_source_Residential_segregation_blackwhite">  
+            <Annotation name="source_for_measure">Residential segregation black white</Annotation>
+            <Hierarchy name="Residential Segregation black white Data Source" primary_key="data_source_Residential_segregation_blackwhite">
+                <Level name="Residential Segregation black white Data Source" key_column="data_source_Residential_segregation_blackwhite" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Residential Segregation black white Data Source Years" foreign_key="years_of_data_Residential_segregation_blackwhite">  
+            <Annotation name="collection_for_measure">Residential segregatio black white</Annotation>
+            <Hierarchy name="Residential Segregation black white Data Source Years" primary_key="years_of_data_Residential_segregation_blackwhite">
+                <Level name="Residential Segregation black white Data Source Years" key_column="years_of_data_Residential_segregation_blackwhite" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Residential Segregation non White white Data Source" foreign_key="data_source_Residential_segregation_non_whitewhite">  
+            <Annotation name="source_for_measure">Residential segregation non white white</Annotation>
+            <Hierarchy name="Residential Segregation non White white Data Source" primary_key="data_source_Residential_segregation_non_whitewhite">
+                <Level name="Residential Segregation non White white Data Source" key_column="data_source_Residential_segregation_non_whitewhite" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Residential Segregation non White white Data Source Years" foreign_key="years_of_data_Residential_segregation_non_whitewhite">  
+            <Annotation name="collection_for_measure">Residential segregation non white white</Annotation>
+            <Hierarchy name="Residential Segregation non White white Data Source Years" primary_key="years_of_data_Residential_segregation_non_whitewhite">
+                <Level name="Residential Segregation non White white Data Source Years" key_column="years_of_data_Residential_segregation_non_whitewhite" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Severe Housing Problems Data Source" foreign_key="data_source_Severe_housing_problems">  
+            <Annotation name="source_for_measure">Severe housing problems</Annotation>
+            <Hierarchy name="Severe Housing Problems Data Source" primary_key="data_source_Severe_housing_problems">
+                <Level name="Severe Housing Problems Data Source" key_column="data_source_Severe_housing_problems" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Severe Housing Problems Data Source Years" foreign_key="years_of_data_Severe_housing_problems">  
+            <Annotation name="collection_for_measure">Severe housing problems</Annotation>
+            <Hierarchy name="Severe Housing Problems Data Source Years" primary_key="years_of_data_Severe_housing_problems">
+                <Level name="Severe Housing Problems Data Source Years" key_column="years_of_data_Severe_housing_problems" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Sexually Transmitted Infections Data Source" foreign_key="data_source_Sexually_transmitted_infections">  
+            <Annotation name="source_for_measure">Sexually transmitted infections</Annotation>
+            <Hierarchy name="Sexually Transmitted Infections Data Source" primary_key="data_source_Sexually_transmitted_infections">
+                <Level name="Sexually Transmitted Infections Data Source" key_column="data_source_Sexually_transmitted_infections" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Sexually Transmitted Infections Data Source Years" foreign_key="years_of_data_Sexually_transmitted_infections">  
+            <Annotation name="collection_for_measure">Sexually transmitted infections</Annotation>
+            <Hierarchy name="Sexually Transmitted Infections Data Source Years" primary_key="years_of_data_Sexually_transmitted_infections">
+                <Level name="Sexually Transmitted Infections Data Source Years" key_column="years_of_data_Sexually_transmitted_infections" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Social Associations Data Source" foreign_key="data_source_Social_associations">  
+            <Annotation name="source_for_measure">Social associations</Annotation>
+            <Hierarchy name="Social Associations Data Source" primary_key="data_source_Social_associations">
+                <Level name="Social Associations Data Source" key_column="data_source_Social_associations" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Social Associations Data Source Years" foreign_key="years_of_data_Social_associations">  
+            <Annotation name="collection_for_measure">Social associations</Annotation>
+            <Hierarchy name="Social Associations Data Source Years" primary_key="years_of_data_Social_associations">
+                <Level name="Social Associations Data Source Years" key_column="years_of_data_Social_associations" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Some College Data Source" foreign_key="data_source_Some_college">  
+            <Annotation name="source_for_measure">Some college</Annotation>
+            <Hierarchy name="Some College Data Source" primary_key="data_source_Some_college">
+                <Level name="Some College Data Source" key_column="data_source_Some_college" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Some College Data Source Years" foreign_key="years_of_data_Some_college">  
+            <Annotation name="collection_for_measure">Some college</Annotation>
+            <Hierarchy name="Some College Data Source Years" primary_key="years_of_data_Some_college">
+                <Level name="Some College Data Source Years" key_column="years_of_data_Some_college" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Teen Births Data Source" foreign_key="data_source_Teen_births">  
+            <Annotation name="source_for_measure">Teen births</Annotation>
+            <Hierarchy name="Teen Births Data Source" primary_key="data_source_Teen_births">
+                <Level name="Teen Births Data Source" key_column="data_source_Teen_births" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Teen Births Data Source Years" foreign_key="years_of_data_Teen_births">  
+            <Annotation name="collection_for_measure">Teen births</Annotation>
+            <Hierarchy name="Teen Births Data Source Years" primary_key="years_of_data_Teen_births">
+                <Level name="Teen Births Data Source Years" key_column="years_of_data_Teen_births" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Unemployment Data Source" foreign_key="data_source_Unemployment">  
+            <Annotation name="source_for_measure">Unemployment</Annotation>
+            <Hierarchy name="Unemployment Data Source" primary_key="data_source_Unemployment">
+                <Level name="Unemployment Data Source" key_column="data_source_Unemployment" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Unemployment Data Source Years" foreign_key="years_of_data_Unemployment">  
+            <Annotation name="collection_for_measure">Unemployment</Annotation>
+            <Hierarchy name="Unemployment Data Source Years" primary_key="years_of_data_Unemployment">
+                <Level name="Unemployment Data Source Years" key_column="years_of_data_Unemployment" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Uninsured Data Source" foreign_key="data_source_Uninsured">  
+            <Annotation name="source_for_measure">Uninsured</Annotation>
+            <Hierarchy name="Uninsured Data Source" primary_key="data_source_Uninsured">
+                <Level name="Uninsured Data Source" key_column="data_source_Uninsured" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Uninsured Data Source Years" foreign_key="years_of_data_Uninsured">  
+            <Annotation name="collection_for_measure">Uninsured</Annotation>
+            <Hierarchy name="Uninsured Data Source Years" primary_key="years_of_data_Uninsured">
+                <Level name="Uninsured Data Source Years" key_column="years_of_data_Uninsured" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+
+        <Dimension name="Uninsured Adults Data Source" foreign_key="data_source_Uninsured_adults">  
+            <Annotation name="source_for_measure">Uninsured adults</Annotation>
+            <Hierarchy name="Uninsured Adults Data Source" primary_key="data_source_Uninsured_adults">
+                <Level name="Uninsured Adults Data Source" key_column="data_source_Uninsured_adults" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Uninsured Adults Data Source Years" foreign_key="years_of_data_Uninsured_adults">  
+            <Annotation name="collection_for_measure">Uninsured adults</Annotation>
+            <Hierarchy name="Uninsured Adults Data Source Years" primary_key="years_of_data_Uninsured_adults">
+                <Level name="Uninsured Adults Data Source Years" key_column="years_of_data_Uninsured_adults" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Uninsured Children Data Source" foreign_key="data_source_Uninsured_children">  
+            <Annotation name="source_for_measure">Uninsured children</Annotation>
+            <Hierarchy name="Uninsured Children Data Source" primary_key="data_source_Uninsured_children">
+                <Level name="Uninsured Children Data Source" key_column="data_source_Uninsured_children" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Uninsured Children Data Source Years" foreign_key="years_of_data_Uninsured_children">  
+            <Annotation name="collection_for_measure">Uninsured children</Annotation>
+            <Hierarchy name="Uninsured Children Data Source Years" primary_key="years_of_data_Uninsured_children">
+                <Level name="Uninsured Children Data Source Years" key_column="years_of_data_Uninsured_children" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Violent Crime Data Source" foreign_key="data_source_Violent_crime">  
+            <Annotation name="source_for_measure">Violent crime</Annotation>
+            <Hierarchy name="Violent Crime Data Source" primary_key="data_source_Violent_crime">
+                <Level name="Violent Crime Data Source" key_column="data_source_Violent_crime" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Dimension name="Violent Crime Data Source Years" foreign_key="years_of_data_Violent_crime">  
+            <Annotation name="collection_for_measure">Violent crime</Annotation>
+            <Hierarchy name="Violent Crime Data Source Years" primary_key="years_of_data_Violent_crime">
+                <Level name="Violent Crime Data Source Years" key_column="years_of_data_Violent_crime" key_type="str"/>
+            </Hierarchy>
+        </Dimension>
+        
+
         <!-- There's no rollup, so aggregator doesn't matter-->
         
         <Measure aggregator="avg" key_column="mea_county_cihigh_65_and_older" name="mea_county_cihigh % 65 and older" visible="false" />        
@@ -468,478 +1296,6 @@
         <Measure aggregator="avg" key_column="mea_state_value_Uninsured_adults" name="mea_state_value Uninsured adults" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_value_Uninsured_children" name="mea_state_value Uninsured children" visible="false" />
         <Measure aggregator="avg" key_column="mea_state_value_Violent_crime" name="mea_state_value Violent crime" visible="false" />
-    
-        <Measure aggregator="max" key_column="data_source_Access_to_exercise_opportunities" name="Access To Exercise Opportunities Data Source" visible="true">
-            <Annotation name="source_for_measure">Access to exercise opportunities</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Access_to_exercise_opportunities" name="Access To Exercise Opportunities Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Access to exercise opportunities</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Adult_obesity" name="Adult Obesity Data Source" visible="true">
-            <Annotation name="source_for_measure">Adult obesity</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Adult_obesity" name="Adult Obesity Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Adult obesity</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Adult_smoking" name="Adult Smoking Data Source" visible="true">
-            <Annotation name="source_for_measure">Adult smoking</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Adult_smoking" name="Adult Smoking Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Adult smoking</Annotation>
-        </Measure>  
-
-        <Measure aggregator="max" key_column="data_source_Air_pollution_particulate_matter_1" name="Air Pollution Data Source" visible="true">
-            <Annotation name="source_for_measure">Air pollution</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Air_pollution_particulate_matter_1" name="Air Pollution Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Air pollution</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Alcohol_impaired_driving_deaths" name="Alcohol-Impaired Driving Deaths Data Source" visible="true">
-            <Annotation name="source_for_measure">Alcohol-impaired driving deaths</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Alcohol_impaired_driving_deaths" name="Alcohol-Impaired Driving Deaths Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Alcohol-impaired driving deaths</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Child_mortality" name="Child Mortality Data Source" visible="true">
-            <Annotation name="source_for_measure">Child mortality</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Child_mortality" name="Child Mortality Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Child mortality</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Children_eligible_for_reduced_price_lunch" name="Children Eligible For Reduced Price Lunch Data Source" visible="true">
-            <Annotation name="source_for_measure">Children eligible for reduced price lunch</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Children_eligible_for_reduced_price_lunch" name="Children Eligible For Reduced Price Lunch Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Children eligible for reduced price lunch</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Children_in_poverty" name="Children In Poverty Data Source" visible="true">
-            <Annotation name="source_for_measure">Children in poverty</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Children_in_poverty" name="Children In Poverty Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Children in poverty</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Children_in_single_parent_households" name="Children In Single-Parent Households Data Source" visible="true">
-            <Annotation name="source_for_measure">Children in single-parent households</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Children_in_single_parent_households" name="Children In Single-Parent Households Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Children in single-parent households</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Could_not_see_doctor_due_to_cost" name="Could Not See Doctor Due To Cost Data Source" visible="true">
-            <Annotation name="source_for_measure">Could not see doctor due to cost</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Could_not_see_doctor_due_to_cost" name="Could Not See Doctor Due To Cost Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Could not see doctor due to cost</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Dentists" name="Patient to Dentist Ratio Data Source" visible="true">
-            <Annotation name="source_for_measure">Dentists</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Dentists" name="Patient to Dentist Ratio Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Dentists</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Diabetes_monitoring" name="Diabetes Monitoring Data Source" visible="true">
-            <Annotation name="source_for_measure">Diabetes monitoring</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Diabetes_monitoring" name="Diabetes Monitoring Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Diabetes monitoring</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Diabetes_prevalence" name="Diabetes Prevalence Data Source" visible="true">
-            <Annotation name="source_for_measure">Diabetes prevalence</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Diabetes_prevalence" name="Diabetes Prevalence Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Diabetes prevalence</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Disconnected_youth" name="Disconnected Youth Data Source" visible="true">
-            <Annotation name="source_for_measure">Disconnected youth</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Disconnected_youth" name="Disconnected Youth Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Disconnected youth</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Driving_alone_to_work" name="Driving Alone To Work Data Source" visible="true">
-            <Annotation name="source_for_measure">Driving alone to work</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Driving_alone_to_work" name="Driving Alone To Work Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Driving alone to work</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Drug_overdose_deaths" name="Drug Overdose Deaths Data Source" visible="true">
-            <Annotation name="source_for_measure">Drug overdose deaths</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Drug_overdose_deaths" name="Drug Overdose Deaths Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Drug overdose deaths</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Drug_overdose_deaths modeled" name="Drug Overdose Deaths Modeled Data Source" visible="true">
-            <Annotation name="source_for_measure">Drug overdose deaths modeled</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Drug_overdose_deaths modeled" name="Drug Overdose Deaths Modeled Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Drug overdose deaths modeled</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Excessive_drinking" name="Excessive Drinking Data Source" visible="true">
-            <Annotation name="source_for_measure">Excessive drinking</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Excessive_drinking" name="Excessive Drinking Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Excessive drinking</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Firearm_fatalities" name="Firearm Fatalities Data Source" visible="true">
-            <Annotation name="source_for_measure">Firearm fatalities</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Firearm_fatalities" name="Firearm Fatalities Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Firearm fatalities</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Food_environment_index" name="Food Environment Index Data Source" visible="true">
-            <Annotation name="source_for_measure">Food environment index</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Food_environment_index" name="Food Environment Index Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Food environment index</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Food_insecurity" name="Food Insecurity Data Source" visible="true">
-            <Annotation name="source_for_measure">Food insecurity</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Food_insecurity" name="Food Insecurity Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Food insecurity</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Frequent_mental_distress" name="Frequent Mental Distress Data Source" visible="true">
-            <Annotation name="source_for_measure">Frequent mental distress</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Frequent_mental_distress" name="Frequent Mental Distress Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Frequent mental distress</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Frequent_physical_distress" name="Frequent Physical Distress Data Source" visible="true">
-            <Annotation name="source_for_measure">Frequent physical distress</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Frequent_physical_distress" name="Frequent Physical Distress Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Frequent physical distress</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Health_care_costs" name="Health Care Costs Data Source" visible="true">
-            <Annotation name="source_for_measure">Health care costs</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Health_care_costs" name="Health Care Costs Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Health care costs</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_High_school_graduation" name="High School Graduation Data Source" visible="true">
-            <Annotation name="source_for_measure">High school graduation</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_High_school_graduation" name="High School Graduation Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">High school graduation</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Homicides" name="Homicides Data Source" visible="true">
-            <Annotation name="source_for_measure">Homicides</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Homicides" name="Homicides Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Homicides</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Inadequate_social_support" name="Inadequate Social Support Data Source" visible="true">
-            <Annotation name="source_for_measure">Inadequate social support</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Inadequate_social_support" name="Inadequate Social Support Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Inadequate social support</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Income_inequality" name="Income Inequality Data Source" visible="true">
-            <Annotation name="source_for_measure">Income inequality</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Income_inequality" name="Income Inequality Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Income inequality</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Infant_mortality" name="Infant Mortality Data Source" visible="true">
-            <Annotation name="source_for_measure">Infant mortality</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Infant_mortality" name="Infant Mortality Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Infant mortality</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Injury_deaths" name="Injury Deaths Data Source" visible="true">
-            <Annotation name="source_for_measure">Injury deaths</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Injury_deaths" name="Injury Deaths Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Injury deaths</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Insufficient_sleep" name="Insufficient Sleep Data Source" visible="true">
-            <Annotation name="source_for_measure">Insufficient sleep</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Insufficient_sleep" name="Insufficient Sleep Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Insufficient sleep</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Limited_access_to_healthy_foods" name="Limited Access To Healthy Foods Data Source" visible="true">
-            <Annotation name="source_for_measure">Limited access to healthy foods</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Limited_access_to_healthy_foods" name="Limited Access To Healthy Foods Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Limited access to healthy foods</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Long_commute_driving_alone" name="Long Commute - Driving Alone Data Source" visible="true">
-            <Annotation name="source_for_measure">Long commute - driving alone</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Long_commute_driving_alone" name="Long Commute - Driving Alone Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Long commute - driving alone</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Low_birthweight" name="Low Birthweight Data Source" visible="true">
-            <Annotation name="source_for_measure">Low birthweight</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Low_birthweight" name="Low Birthweight Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Low birthweight</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Mammography_screening" name="Mammography Screening Data Source" visible="true">
-            <Annotation name="source_for_measure">Mammography screening</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Mammography_screening" name="Mammography Screening Data Source Years" visible="true"> 
-                        <Annotation name="collection_for_measure">Mammography screening</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Median_household_income" name="Median Household Income Data Source" visible="true">
-            <Annotation name="source_for_measure">Median household income</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Median_household_income" name="Median Household Income Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Median household income</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Mental_health_providers" name="Patient to Mental Health Provider Ratio Data Source" visible="true">
-            <Annotation name="source_for_measure">Patient to Mental Health Provider Ratio</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Mental_health_providers" name="Patient to Mental Health Provider Ratio Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Patient to Mental Health Provider</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Motor_vehicle_crash_deaths" name="Motor Vehicle Crash Deaths Data Source" visible="true">
-            <Annotation name="source_for_measure">Motor vehicle crash deaths</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Motor_vehicle_crash_deaths" name="Motor Vehicle Crash Deaths Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Motor vehicle crash deaths</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Other_primary_care_providers" name="Other Primary Care Providers Data Source" visible="true">
-            <Annotation name="source_for_measure">Other primary care providers</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Other_primary_care_providers" name="Other Primary Care Providers Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Other primary care providers</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Physical_inactivity" name="Physical Inactivity Data Source" visible="true">
-            <Annotation name="source_for_measure">Physical inactivity</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Physical_inactivity" name="Physical Inactivity Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Physical inactivity</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Poor_mental_health_days" name="Poor Mental Health Days Data Source" visible="true">
-            <Annotation name="source_for_measure">Poor mental health days</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Poor_mental_health_days" name="Poor Mental Health Days Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Poor mental health days</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Poor_or_fair_health" name="Poor Or Fair Health Data Source" visible="true">
-            <Annotation name="source_for_measure">Poor or fair health</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Poor_or_fair_health" name="Poor Or Fair Health Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Poor or fair health</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Poor_physical_health_days" name="Poor Physical Health Days Data Source" visible="true">
-            <Annotation name="source_for_measure">Poor physical health days</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Poor_physical_health_days" name="Poor Physical Health Days Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Poor physical health days</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Premature_age_adjusted_mortality" name="Premature Age-Adjusted Mortality Data Source" visible="true">
-            <Annotation name="source_for_measure">Premature age-adjusted mortality</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Premature_age_adjusted_mortality" name="Premature Age-Adjusted Mortality Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Premature age-adjusted mortality</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Premature_death" name="Premature Death Data Source" visible="true">
-            <Annotation name="source_for_measure">Premature death</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Premature_death" name="Premature Death Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Premature death</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Preventable_hospital_stays" name="Preventable Hospital Stays Data Source" visible="true">
-            <Annotation name="source_for_measure">Preventable hospital stays</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Preventable_hospital_stays" name="Preventable Hospital Stays Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Preventable hospital stays</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Primary_care_physicians" name="Patient to Primary Care Physician Ratio Data Source" visible="true">
-            <Annotation name="source_for_measure">Patient to Primary Care Physician Ratio</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Primary_care_physicians" name="Patient to Primary Care Physician Ratio Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Patient to Primary Care Physician Ratio</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Residential_segregation_blackwhite" name="Residential Segregation—black/white Data Source" visible="true">
-            <Annotation name="source_for_measure">Residential segregation—black/white</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Residential_segregation_blackwhite" name="Residential Segregation—black/white Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Residential segregation—black/white</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Residential_segregation_non_whitewhite" name="Residential Segregation—non-White/white Data Source" visible="true">
-            <Annotation name="source_for_measure">Residential segregation—non-white/white</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Residential_segregation_non_whitewhite" name="Residential Segregation—non-White/white Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Residential segregation—non-white/white</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Severe_housing_problems" name="Severe Housing Problems Data Source" visible="true">
-            <Annotation name="source_for_measure">Severe housing problems</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Severe_housing_problems" name="Severe Housing Problems Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Severe housing problems</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Sexually_transmitted_infections" name="Sexually Transmitted Infections Data Source" visible="true">
-            <Annotation name="source_for_measure">Sexually transmitted infections</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Sexually_transmitted_infections" name="Sexually Transmitted Infections Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Sexually transmitted infections</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Social_associations" name="Social Associations Data Source" visible="true">
-            <Annotation name="source_for_measure">Social associations</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Social_associations" name="Social Associations Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Social associations</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Some_college" name="Some College Data Source" visible="true">
-            <Annotation name="source_for_measure">Some college</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Some_college" name="Some College Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Some college</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Teen_births" name="Teen Births Data Source" visible="true">
-            <Annotation name="source_for_measure">Teen births</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Teen_births" name="Teen Births Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Teen births</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Unemployment" name="Unemployment Data Source" visible="true">
-            <Annotation name="source_for_measure">Unemployment</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Unemployment" name="Unemployment Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Unemployment</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Uninsured" name="Uninsured Data Source" visible="true">
-            <Annotation name="source_for_measure">Uninsured</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Uninsured" name="Uninsured Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Uninsured</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Uninsured adults" name="Uninsured Adults Data Source" visible="true">
-            <Annotation name="source_for_measure">Uninsured adults</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Uninsured adults" name="Uninsured Adults Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Uninsured adults</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Uninsured children" name="Uninsured Children Data Source" visible="true">
-            <Annotation name="source_for_measure">Uninsured children</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Uninsured children" name="Uninsured Children Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Uninsured children</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="data_source_Violent_crime" name="Violent Crime Data Source" visible="true">
-            <Annotation name="source_for_measure">Violent crime</Annotation>
-        </Measure>
-
-        <Measure aggregator="max" key_column="years_of_data_Violent_crime" name="Violent Crime Data Source Years" visible="true">
-            <Annotation name="collection_for_measure">Violent crime</Annotation>
-        </Measure>
 
         <CalculatedMeasure name="Access To Exercise Opportunities" visible="true">
             
