@@ -1761,7 +1761,7 @@
                 END
             </Formula>
         </CalculatedMeasure>
-<!--
+
         <CalculatedMeasure name="Frequent Physical Distress" visible="true">
 
             <Annotation name="units_of_measurement">Rate</Annotation>
@@ -1807,8 +1807,9 @@
             <Annotation name="subtopic">Health Outcomes</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_value HIV prevalence]
-                WHEN [mea_county_value HIV prevalence]
+                WHEN ISNOTNULL([mea_state_value HIV prevalence])
+                THEN [mea_state_value HIV prevalence]
+                ELSE [mea_county_value HIV prevalence]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -1819,8 +1820,9 @@
             <Annotation name="error_for_measure">Hiv Prevalence</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cilow HIV prevalence]
-                WHEN [mea_county_cilow HIV prevalence]
+                WHEN ISNOTNULL([mea_state_cilow HIV prevalence])
+                THEN [mea_state_cilow HIV prevalence]
+                ELSE [mea_county_cilow HIV prevalence]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -1831,13 +1833,12 @@
             <Annotation name="error_for_measure">Hiv Prevalence</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cihigh HIV prevalence]
-                WHEN [mea_county_cihigh HIV prevalence]
+                WHEN ISNOTNULL([mea_state_cihigh HIV prevalence])
+                THEN [mea_state_cihigh HIV prevalence]
+                ELSE [mea_county_cihigh HIV prevalence]
                 END
             </Formula>
         </CalculatedMeasure>
-
-
 
         <CalculatedMeasure name="Health Care Costs" visible="true">
 
@@ -1845,8 +1846,9 @@
             <Annotation name="details">Amount of price-adjusted Medicare reimbursements per enrollee</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_value Health care costs]
-                WHEN [mea_county_value Health care costs]
+                WHEN ISNOTNULL([mea_state_value Health care costs])
+                THEN [mea_state_value Health care costs]
+                ELSE [mea_county_value Health care costs]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -1857,8 +1859,9 @@
             <Annotation name="error_for_measure">Health Care Costs</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cilow Health care costs]
-                WHEN [mea_county_cilow Health care costs]
+                WHEN ISNOTNULL([mea_state_cilow Health care costs])
+                THEN [mea_state_cilow Health care costs]
+                ELSE [mea_county_cilow Health care costs]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -1869,21 +1872,21 @@
             <Annotation name="error_for_measure">Health Care Costs</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cihigh Health care costs]
-                WHEN [mea_county_cihigh Health care costs]
+                WHEN ISNOTNULL([mea_state_cihigh Health care costs])
+                THEN [mea_state_cihigh Health care costs]
+                ELSE [mea_county_cihigh Health care costs]
                 END
             </Formula>
         </CalculatedMeasure>
-
-
 
         <CalculatedMeasure name="High School Graduation" visible="true">
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percentage of ninth-grade cohort that graduates in four years</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_value High school graduation]
-                WHEN [mea_county_value High school graduation]
+                WHEN ISNOTNULL([mea_state_value High school graduation])
+                THEN [mea_state_value High school graduation]
+                ELSE [mea_county_value High school graduation]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -1894,8 +1897,9 @@
             <Annotation name="error_for_measure">High School Graduation</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cilow High school graduation]
-                WHEN [mea_county_cilow High school graduation]
+                WHEN ISNOTNULL([mea_state_cilow High school graduation])
+                THEN [mea_state_cilow High school graduation]
+                ELSE [mea_county_cilow High school graduation]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -1906,13 +1910,12 @@
             <Annotation name="error_for_measure">High School Graduation</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cihigh High school graduation]
-                WHEN [mea_county_cihigh High school graduation]
+                WHEN ISNOTNULL([mea_state_cihigh High school graduation])
+                THEN [mea_state_cihigh High school graduation]
+                ELSE [mea_county_cihigh High school graduation]
                 END
             </Formula>
         </CalculatedMeasure>
-
-
 
         <CalculatedMeasure name="Homicides" visible="true">
             <Annotation name="units_of_measurement">People</Annotation>
@@ -1920,8 +1923,9 @@
             <Annotation name="subtopic">Mortality</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_value Homicides]
-                WHEN [mea_county_value Homicides]
+                WHEN ISNOTNULL([mea_state_value Homicides])
+                THEN [mea_state_value Homicides]
+                ELSE [mea_county_value Homicides]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -1932,8 +1936,9 @@
             <Annotation name="error_for_measure">Homicides</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cilow Homicides]
-                WHEN [mea_county_cilow Homicides]
+                WHEN ISNOTNULL([mea_state_cilow Homicides])
+                THEN [mea_state_cilow Homicides]
+                ELSE [mea_county_cilow Homicides]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -1944,21 +1949,21 @@
             <Annotation name="error_for_measure">Homicides</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cihigh Homicides]
-                WHEN [mea_county_cihigh Homicides]
+                WHEN ISNOTNULL([mea_state_cihigh Homicides])
+                THEN [mea_state_cihigh Homicides]
+                ELSE [mea_county_cihigh Homicides]
                 END
             </Formula>
         </CalculatedMeasure>
-
-
 
         <CalculatedMeasure name="Inadequate Social Support" visible="true">
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percent of adults without social/emotional support</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_value Inadequate social support]
-                WHEN [mea_county_value Inadequate social support]
+                WHEN ISNOTNULL([mea_state_value Inadequate social support])
+                THEN [mea_state_value Inadequate social support]
+                ELSE [mea_county_value Inadequate social support]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -1969,8 +1974,9 @@
             <Annotation name="error_for_measure">Inadequate Social Support</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cilow Inadequate social support]
-                WHEN [mea_county_cilow Inadequate social support]
+                WHEN ISNOTNULL([mea_state_cilow Inadequate social support])
+                THEN [mea_state_cilow Inadequate social support]
+                ELSE [mea_county_cilow Inadequate social support]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -1981,21 +1987,21 @@
             <Annotation name="error_for_measure">Inadequate Social Support</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cihigh Inadequate social support]
-                WHEN [mea_county_cihigh Inadequate social support]
+                WHEN ISNOTNULL([mea_state_cihigh Inadequate social support])
+                THEN [mea_state_cihigh Inadequate social support]
+                ELSE [mea_county_cihigh Inadequate social support]
                 END
             </Formula>
         </CalculatedMeasure>
-
-
 
         <CalculatedMeasure name="Income Inequality" visible="true">
             <Annotation name="units_of_measurement">Ratio</Annotation>
             <Annotation name="details">Ratio of household income at the 80th percentile to income at the 20th percentile</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_value Income inequality]
-                WHEN [mea_county_value Income inequality]
+                WHEN ISNOTNULL([mea_state_value Income inequality])
+                THEN [mea_state_value Income inequality]
+                ELSE [mea_county_value Income inequality]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -2006,8 +2012,9 @@
             <Annotation name="error_for_measure">Income Inequality</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cilow Income inequality]
-                WHEN [mea_county_cilow Income inequality]
+                WHEN ISNOTNULL([mea_state_cilow Income inequality])
+                THEN [mea_state_cilow Income inequality]
+                ELSE [mea_county_cilow Income inequality]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -2018,13 +2025,12 @@
             <Annotation name="error_for_measure">Income Inequality</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cihigh Income inequality]
-                WHEN [mea_county_cihigh Income inequality]
+                WHEN ISNOTNULL([mea_state_cihigh Income inequality])
+                THEN [mea_state_cihigh Income inequality]
+                ELSE [mea_county_cihigh Income inequality]
                 END
             </Formula>
         </CalculatedMeasure>
-
-
 
         <CalculatedMeasure name="Infant Mortality" visible="true">
             <Annotation name="units_of_measurement">People</Annotation>
@@ -2032,8 +2038,9 @@
             <Annotation name="subtopic">Mortality</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_value Infant mortality]
-                WHEN [mea_county_value Infant mortality]
+                WHEN ISNOTNULL([mea_state_value Infant mortality])
+                THEN [mea_state_value Infant mortality]
+                ELSE [mea_county_value Infant mortality]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -2044,8 +2051,9 @@
             <Annotation name="error_for_measure">Infant Mortality</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cilow Infant mortality]
-                WHEN [mea_county_cilow Infant mortality]
+                WHEN ISNOTNULL([mea_state_cilow Infant mortality])
+                THEN [mea_state_cilow Infant mortality]
+                ELSE [mea_county_cilow Infant mortality]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -2056,13 +2064,12 @@
             <Annotation name="error_for_measure">Infant Mortality</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cihigh Infant mortality]
-                WHEN [mea_county_cihigh Infant mortality]
+                WHEN ISNOTNULL([mea_state_cihigh Infant mortality])
+                THEN [mea_state_cihigh Infant mortality]
+                ELSE [mea_county_cihigh Infant mortality]
                 END
             </Formula>
         </CalculatedMeasure>
-
-
 
         <CalculatedMeasure name="Injury Deaths" visible="true">
             <Annotation name="units_of_measurement">People</Annotation>
@@ -2070,8 +2077,9 @@
             <Annotation name="subtopic">Mortality</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_value Injury deaths]
-                WHEN [mea_county_value Injury deaths]
+                WHEN ISNOTNULL([mea_state_value Injury deaths])
+                THEN [mea_state_value Injury deaths]
+                ELSE [mea_county_value Injury deaths]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -2082,8 +2090,9 @@
             <Annotation name="error_for_measure">Injury Deaths</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cilow Injury deaths]
-                WHEN [mea_county_cilow Injury deaths]
+                WHEN ISNOTNULL([mea_state_cilow Injury deaths])
+                THEN [mea_state_cilow Injury deaths]
+                ELSE [mea_county_cilow Injury deaths]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -2094,13 +2103,12 @@
             <Annotation name="error_for_measure">Injury Deaths</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cihigh Injury deaths]
-                WHEN [mea_county_cihigh Injury deaths]
+                WHEN ISNOTNULL([mea_state_cihigh Injury deaths])
+                THEN [mea_state_cihigh Injury deaths]
+                ELSE [mea_county_cihigh Injury deaths]
                 END
             </Formula>
         </CalculatedMeasure>
-
-
 
         <CalculatedMeasure name="Insufficient Sleep" visible="true">
 
@@ -2108,8 +2116,9 @@
             <Annotation name="details">Percentage of adults who report fewer than 7 hours of sleep on average</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_value Insufficient sleep]
-                WHEN [mea_county_value Insufficient sleep]
+                WHEN ISNOTNULL([mea_state_value Insufficient sleep])
+                THEN [mea_state_value Insufficient sleep]
+                ELSE [mea_county_value Insufficient sleep]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -2120,8 +2129,9 @@
             <Annotation name="error_for_measure">Insufficient Sleep</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cilow Insufficient sleep]
-                WHEN [mea_county_cilow Insufficient sleep]
+                WHEN ISNOTNULL([mea_state_cilow Insufficient sleep])
+                THEN [mea_state_cilow Insufficient sleep]
+                ELSE [mea_county_cilow Insufficient sleep]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -2132,21 +2142,21 @@
             <Annotation name="error_for_measure">Insufficient Sleep</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cihigh Insufficient sleep]
-                WHEN [mea_county_cihigh Insufficient sleep]
+                WHEN ISNOTNULL([mea_state_cihigh Insufficient sleep])
+                THEN [mea_state_cihigh Insufficient sleep]
+                ELSE [mea_county_cihigh Insufficient sleep]
                 END
             </Formula>
         </CalculatedMeasure>
-
-
 
         <CalculatedMeasure name="Limited Access To Healthy Foods" visible="true">
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percentage of population who are low-income and do not live close to a grocery store</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_value Limited access to healthy foods]
-                WHEN [mea_county_value Limited access to healthy foods]
+                WHEN ISNOTNULL([mea_state_value Limited access to healthy foods])
+                THEN [mea_state_value Limited access to healthy foods]
+                ELSE [mea_county_value Limited access to healthy foods]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -2157,8 +2167,9 @@
             <Annotation name="error_for_measure">Limited Access To Healthy Foods</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cilow Limited access to healthy foods]
-                WHEN [mea_county_cilow Limited access to healthy foods]
+                WHEN ISNOTNULL([mea_state_cilow Limited access to healthy foods])
+                THEN [mea_state_cilow Limited access to healthy foods]
+                ELSE [mea_county_cilow Limited access to healthy foods]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -2169,13 +2180,12 @@
             <Annotation name="error_for_measure">Limited Access To Healthy Foods</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cihigh Limited access to healthy foods]
-                WHEN [mea_county_cihigh Limited access to healthy foods]
+                WHEN ISNOTNULL([mea_state_cihigh Limited access to healthy foods])
+                THEN [mea_state_cihigh Limited access to healthy foods]
+                ELSE [mea_county_cihigh Limited access to healthy foods]
                 END
             </Formula>
         </CalculatedMeasure>
-
-
 
         <CalculatedMeasure name="Long Commute - Driving Alone" visible="true">
 
@@ -2183,8 +2193,9 @@
             <Annotation name="details">Among workers who commute in their car alone, the percentage that commute more than 30 minutes</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_value Long commute - driving alone]
-                WHEN [mea_county_value Long commute - driving alone]
+                WHEN ISNOTNULL([mea_state_value Long commute driving alone])
+                THEN [mea_state_value Long commute driving alone]
+                ELSE [mea_county_value Long commute driving alone]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -2195,8 +2206,9 @@
             <Annotation name="error_for_measure">Long Commute - Driving Alone</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cilow Long commute - driving alone]
-                WHEN [mea_county_cilow Long commute - driving alone]
+                WHEN ISNOTNULL([mea_state_cilow Long commute driving alone])
+                THEN [mea_state_cilow Long commute driving alone]
+                ELSE [mea_county_cilow Long commute driving alone]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -2207,14 +2219,13 @@
             <Annotation name="error_for_measure">Long Commute - Driving Alone</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cihigh Long commute - driving alone]
-                WHEN [mea_county_cihigh Long commute - driving alone]
+                WHEN ISNOTNULL([mea_state_cihigh Long commute driving alone])
+                THEN [mea_state_cihigh Long commute driving alone]
+                ELSE [mea_county_cihigh Long commute driving alone]
                 END
             </Formula>
         </CalculatedMeasure>
-
-
-
+<!--
         <CalculatedMeasure name="Low Birthweight" visible="true">
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percentage of Live Births with Low Birthweight(&lt; 2500 grams)</Annotation>
