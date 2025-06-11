@@ -2225,14 +2225,15 @@
                 END
             </Formula>
         </CalculatedMeasure>
-<!--
+
         <CalculatedMeasure name="Low Birthweight" visible="true">
             <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="details">Percentage of Live Births with Low Birthweight(&lt; 2500 grams)</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_value Low birthweight]
-                WHEN [mea_county_value Low birthweight]
+                WHEN ISNOTNULL([mea_state_value Low birthweight])
+                THEN [mea_state_value Low birthweight]
+                ELSE [mea_county_value Low birthweight]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -2243,8 +2244,9 @@
             <Annotation name="error_for_measure">Low Birthweight</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cilow Low birthweight]
-                WHEN [mea_county_cilow Low birthweight]
+                WHEN ISNOTNULL([mea_state_cilow Low birthweight])
+                THEN [mea_state_cilow Low birthweight]
+                ELSE [mea_county_cilow Low birthweight]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -2255,13 +2257,12 @@
             <Annotation name="error_for_measure">Low Birthweight</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cihigh Low birthweight]
-                WHEN [mea_county_cihigh Low birthweight]
+                WHEN ISNOTNULL([mea_state_cihigh Low birthweight])
+                THEN [mea_state_cihigh Low birthweight]
+                ELSE [mea_county_cihigh Low birthweight]
                 END
             </Formula>
         </CalculatedMeasure>
-
-
 
         <CalculatedMeasure name="Mammography Screening" visible="true">
             <Annotation name="units_of_measurement">Rate</Annotation>
@@ -2269,8 +2270,9 @@
             <Annotation name="subtopic">Access and Quality</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_value Mammography screening]
-                WHEN [mea_county_value Mammography screening]
+                WHEN ISNOTNULL([mea_state_value Mammography screening])
+                THEN [mea_state_value Mammography screening]
+                ELSE [mea_county_value Mammography screening]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -2281,8 +2283,9 @@
             <Annotation name="error_for_measure">Mammography Screening</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cilow Mammography screening]
-                WHEN [mea_county_cilow Mammography screening]
+                WHEN ISNOTNULL([mea_state_cilow Mammography screening])
+                THEN [mea_state_cilow Mammography screening]
+                ELSE [mea_county_cilow Mammography screening]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -2293,21 +2296,21 @@
             <Annotation name="error_for_measure">Mammography Screening</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cihigh Mammography screening]
-                WHEN [mea_county_cihigh Mammography screening]
+                WHEN ISNOTNULL([mea_state_cihigh Mammography screening])
+                THEN [mea_state_cihigh Mammography screening]
+                ELSE [mea_county_cihigh Mammography screening]
                 END
             </Formula>
         </CalculatedMeasure>
-
-
 
         <CalculatedMeasure name="Median Household Income" visible="true">
             <Annotation name="units_of_measurement">USD</Annotation>
             <Annotation name="details">Median household income</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_value Median household income]
-                WHEN [mea_county_value Median household income]
+                WHEN ISNOTNULL([mea_state_value Median household income])
+                THEN [mea_state_value Median household income]
+                ELSE [mea_county_value Median household income]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -2318,8 +2321,9 @@
             <Annotation name="error_for_measure">Median Household Income</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cilow Median household income]
-                WHEN [mea_county_cilow Median household income]
+                WHEN ISNOTNULL([mea_state_cilow Median household income])
+                THEN [mea_state_cilow Median household income]
+                ELSE [mea_county_cilow Median household income]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -2330,13 +2334,12 @@
             <Annotation name="error_for_measure">Median Household Income</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cihigh Median household income]
-                WHEN [mea_county_cihigh Median household income]
+                WHEN ISNOTNULL([mea_state_cihigh Median household income])
+                THEN [mea_state_cihigh Median household income]
+                ELSE [mea_county_cihigh Median household income]
                 END
             </Formula>
         </CalculatedMeasure>
-
-
 
         <CalculatedMeasure name="Patient to Mental Health Provider Ratio" visible="true">
             <Annotation name="units_of_measurement">Ratio</Annotation>
@@ -2344,8 +2347,9 @@
             <Annotation name="subtopic">Access and Quality</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_value Mental health providers]
-                WHEN [mea_county_value Mental health providers]
+                WHEN ISNOTNULL([mea_state_value Mental health providers])
+                THEN [mea_state_value Mental health providers]
+                ELSE [mea_county_value Mental health providers]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -2356,8 +2360,9 @@
             <Annotation name="error_for_measure">Patient to Mental Health Provider Ratio</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cilow Mental health providers]
-                WHEN [mea_county_cilow Mental health providers]
+                WHEN ISNOTNULL([mea_state_cilow Mental health providers])
+                THEN [mea_state_cilow Mental health providers]
+                ELSE [mea_county_cilow Mental health providers]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -2368,13 +2373,12 @@
             <Annotation name="error_for_measure">Patient to Mental Health Provider Ratio</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cihigh Mental health providers]
-                WHEN [mea_county_cihigh Mental health providers]
+                WHEN ISNOTNULL([mea_state_cihigh Mental health providers])
+                THEN [mea_state_cihigh Mental health providers]
+                ELSE [mea_county_cihigh Mental health providers]
                 END
             </Formula>
         </CalculatedMeasure>
-
-
 
         <CalculatedMeasure name="Motor Vehicle Crash Deaths" visible="true">
             <Annotation name="units_of_measurement">People</Annotation>
@@ -2382,8 +2386,9 @@
             <Annotation name="subtopic">Mortality</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_value Motor vehicle crash deaths]
-                WHEN [mea_county_value Motor vehicle crash deaths]
+                WHEN ISNOTNULL([mea_state_value Motor vehicle crash deaths])
+                THEN [mea_state_value Motor vehicle crash deaths]
+                ELSE [mea_county_value Motor vehicle crash deaths]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -2394,8 +2399,9 @@
             <Annotation name="error_for_measure">Motor Vehicle Crash Deaths</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cilow Motor vehicle crash deaths]
-                WHEN [mea_county_cilow Motor vehicle crash deaths]
+                WHEN ISNOTNULL([mea_state_cilow Motor vehicle crash deaths])
+                THEN [mea_state_cilow Motor vehicle crash deaths]
+                ELSE [mea_county_cilow Motor vehicle crash deaths]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -2406,13 +2412,12 @@
             <Annotation name="error_for_measure">Motor Vehicle Crash Deaths</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cihigh Motor vehicle crash deaths]
-                WHEN [mea_county_cihigh Motor vehicle crash deaths]
+                WHEN ISNOTNULL([mea_state_cihigh Motor vehicle crash deaths])
+                THEN [mea_state_cihigh Motor vehicle crash deaths]
+                ELSE [mea_county_cihigh Motor vehicle crash deaths]
                 END
             </Formula>
         </CalculatedMeasure>
-
-
 
         <CalculatedMeasure name="Other Primary Care Providers" visible="true">
 
@@ -2420,8 +2425,9 @@
             <Annotation name="details">Ratio of population to primary care providers other than physicians</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_value Other primary care providers]
-                WHEN [mea_county_value Other primary care providers]
+                WHEN ISNOTNULL([mea_state_value Other primary care providers])
+                THEN [mea_state_value Other primary care providers]
+                ELSE [mea_county_value Other primary care providers]
                 END
             </Formula>
         </CalculatedMeasure>
@@ -2432,801 +2438,807 @@
             <Annotation name="error_for_measure">Other Primary Care Providers</Annotation>
 
             <Formula>CASE
-                WHEN ISNOTNULL([mea_state_cilow Other primary care providers]
-                WHEN [mea_county_cilow Other primary care providers]
+                WHEN ISNOTNULL([mea_state_cilow Other primary care providers])
+                THEN [mea_state_cilow Other primary care providers]
+                ELSE [mea_county_cilow Other primary care providers]
                 END
             </Formula>
         </CalculatedMeasure>
 
-    <CalculatedMeasure name="Other Primary Care Providers CI High" visible="true">
- 
-        <Annotation name="error_type">UCI</Annotation>
-        <Annotation name="error_for_measure">Other Primary Care Providers</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cihigh Other primary care providers]
-            WHEN [mea_county_cihigh Other primary care providers]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-
-
-    <CalculatedMeasure name="Physical Inactivity" visible="true">
- 
-        <Annotation name="aggregation_method">NONE</Annotation>
-        <Annotation name="units_of_measurement">Rate</Annotation>
-        <Annotation name="details">Percentage of adults age 20 and over reporting no leisure-time physical activity</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_value Physical inactivity]
-            WHEN [mea_county_value Physical inactivity]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Physical Inactivity CI Low" visible="true">
- 
-        <Annotation name="error_type">LCI</Annotation>
-        <Annotation name="error_for_measure">Physical Inactivity</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cilow Physical inactivity]
-            WHEN [mea_county_cilow Physical inactivity]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Physical Inactivity CI High" visible="true">
- 
-        <Annotation name="error_type">UCI</Annotation>
-        <Annotation name="error_for_measure">Physical Inactivity</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cihigh Physical inactivity]
-            WHEN [mea_county_cihigh Physical inactivity]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-
-
-    <CalculatedMeasure name="Poor Mental Health Days" visible="true">
- 
-        <Annotation name="aggregation_method">NONE</Annotation>
-        <Annotation name="units_of_measurement">Days</Annotation>
-        <Annotation name="details">Average Number of Mentally Unhealthy Days Reported in Past 30 Days (age-adjusted)</Annotation>
-        <Annotation name="subtopic">Health Outcomes</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_value Poor mental health days]
-            WHEN [mea_county_value Poor mental health days]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Poor Mental Health Days CI Low" visible="true">
- 
-        <Annotation name="error_type">LCI</Annotation>
-        <Annotation name="error_for_measure">Poor Mental Health Days</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cilow Poor mental health days]
-            WHEN [mea_county_cilow Poor mental health days]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Poor Mental Health Days CI High" visible="true">
- 
-        <Annotation name="error_type">UCI</Annotation>
-        <Annotation name="error_for_measure">Poor Mental Health Days</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cihigh Poor mental health days]
-            WHEN [mea_county_cihigh Poor mental health days]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-
-
-    <CalculatedMeasure name="Poor Or Fair Health" visible="true">
-
-        <Annotation name="units_of_measurement">Rate</Annotation>
-        <Annotation name="details">Percentage of Adults Reporting Fair or Poor Health (age-adjusted)</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_value Poor or fair health]
-            WHEN [mea_county_value Poor or fair health]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Poor Or Fair Health CI Low" visible="true">
- 
-        <Annotation name="error_type">LCI</Annotation>
-        <Annotation name="error_for_measure">Poor Or Fair Health</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cilow Poor or fair health]
-            WHEN [mea_county_cilow Poor or fair health]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Poor Or Fair Health CI High" visible="true">
- 
-        <Annotation name="error_type">UCI</Annotation>
-        <Annotation name="error_for_measure">Poor Or Fair Health</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cihigh Poor or fair health]
-            WHEN [mea_county_cihigh Poor or fair health]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-
-
-    <CalculatedMeasure name="Poor Physical Health Days" visible="true">
- 
-        <Annotation name="aggregation_method">NONE</Annotation>
-        <Annotation name="units_of_measurement">Days</Annotation>
-        <Annotation name="details">Average Number of Physically Unhealthy Days Reported in Past 30 Days (age-adjusted)</Annotation>
-        <Annotation name="subtopic">Health Outcomes</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_value Poor physical health days]
-            WHEN [mea_county_value Poor physical health days]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Poor Physical Health Days CI Low" visible="true">
- 
-        <Annotation name="error_type">LCI</Annotation>
-        <Annotation name="error_for_measure">Poor Physical Health Days</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cilow Poor physical health days]
-            WHEN [mea_county_cilow Poor physical health days]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Poor Physical Health Days CI High" visible="true">
- 
-        <Annotation name="error_type">UCI</Annotation>
-        <Annotation name="error_for_measure">Poor Physical Health Days</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cihigh Poor physical health days]
-            WHEN [mea_county_cihigh Poor physical health days]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-
-
-    <CalculatedMeasure name="Premature Age-Adjusted Mortality" visible="true">
-
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="details">Number of deaths among residents under age 75 per 100,000 population (age-adjusted)</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_value Premature age-adjusted mortality]
-            WHEN [mea_county_value Premature age-adjusted mortality]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Premature Age-Adjusted Mortality CI Low" visible="true">
- 
-        <Annotation name="error_type">LCI</Annotation>
-        <Annotation name="error_for_measure">Premature Age-Adjusted Mortality</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cilow Premature age-adjusted mortality]
-            WHEN [mea_county_cilow Premature age-adjusted mortality]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Premature Age-Adjusted Mortality CI High" visible="true">
- 
-        <Annotation name="error_type">UCI</Annotation>
-        <Annotation name="error_for_measure">Premature Age-Adjusted Mortality</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cihigh Premature age-adjusted mortality]
-            WHEN [mea_county_cihigh Premature age-adjusted mortality]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-
-
-    <CalculatedMeasure name="Premature Death" visible="true">
- 
-        <Annotation name="aggregation_method">NONE</Annotation>
-        <Annotation name="units_of_measurement">Years</Annotation>
-        <Annotation name="details">Years of Potential Life Lost Before Age 75 per 100,000 people (age-adjusted)</Annotation>
-        <Annotation name="subtopic">Mortality</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_value Premature death]
-            WHEN [mea_county_value Premature death]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Premature Death CI Low" visible="true">
- 
-        <Annotation name="error_type">LCI</Annotation>
-        <Annotation name="error_for_measure">Premature Death</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cilow Premature death]
-            WHEN [mea_county_cilow Premature death]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Premature Death CI High" visible="true">
- 
-        <Annotation name="error_type">UCI</Annotation>
-        <Annotation name="error_for_measure">Premature Death</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cihigh Premature death]
-            WHEN [mea_county_cihigh Premature death]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-
-
-    <CalculatedMeasure name="Preventable Hospital Stays" visible="true">
-
-        <Annotation name="units_of_measurement">Hospital Stays</Annotation>
-        <Annotation name="details">Number of hospital stays for ambulatory-care sensitive conditions per 1,000 Medicare enrollees</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_value Preventable hospital stays]
-            WHEN [mea_county_value Preventable hospital stays]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Preventable Hospital Stays CI Low" visible="true">
- 
-        <Annotation name="error_type">LCI</Annotation>
-        <Annotation name="error_for_measure">Preventable Hospital Stays</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cilow Preventable hospital stays]
-            WHEN [mea_county_cilow Preventable hospital stays]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Preventable Hospital Stays CI High" visible="true">
- 
-        <Annotation name="error_type">UCI</Annotation>
-        <Annotation name="error_for_measure">Preventable Hospital Stays</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cihigh Preventable hospital stays]
-            WHEN [mea_county_cihigh Preventable hospital stays]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-
-
-    <CalculatedMeasure name="Patient to Primary Care Physician Ratio" visible="true">
- 
-        <Annotation name="aggregation_method">NONE</Annotation>
-        <Annotation name="units_of_measurement">Ratio</Annotation>
-        <Annotation name="details">Ratio of population to primary care physicians</Annotation>
-        <Annotation name="subtopic">Access and Quality</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_value Primary care physicians]
-            WHEN [mea_county_value Primary care physicians]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Patient to Primary Care Physician Ratio CI Low" visible="true">
- 
-        <Annotation name="error_type">LCI</Annotation>
-        <Annotation name="error_for_measure">Patient to Primary Care Physician Ratio</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cilow Primary care physicians]
-            WHEN [mea_county_cilow Primary care physicians]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Patient to Primary Care Physician Ratio CI High" visible="true">
- 
-        <Annotation name="error_type">UCI</Annotation>
-        <Annotation name="error_for_measure">Patient to Primary Care Physician Ratio</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cihigh Primary care physicians]
-            WHEN [mea_county_cihigh Primary care physicians]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-
-
-    <CalculatedMeasure name="Residential Segregation—black/white" visible="true">
- 
-        <Annotation name="aggregation_method">NONE</Annotation>
-        <Annotation name="units_of_measurement">Index</Annotation>
-        <Annotation name="details">Residential Segregation is the index of dissimilarity where higher values indicate greater residential segregation between black and white county residents. The residential segregation index ranges from 0 (complete integration) to 100 (complete segregation)</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_value Residential segregation—black/white]
-            WHEN [mea_county_value Residential segregation—black/white]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Residential Segregation—black/white CI Low" visible="true">
- 
-        <Annotation name="error_type">LCI</Annotation>
-        <Annotation name="error_for_measure">Residential Segregation—black/white</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cilow Residential segregation—black/white]
-            WHEN [mea_county_cilow Residential segregation—black/white]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Residential Segregation—black/white CI High" visible="true">
- 
-        <Annotation name="error_type">UCI</Annotation>
-        <Annotation name="error_for_measure">Residential Segregation—black/white</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cihigh Residential segregation—black/white]
-            WHEN [mea_county_cihigh Residential segregation—black/white]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-
-
-    <CalculatedMeasure name="Residential Segregation—non-White/white" visible="true">
- 
-        <Annotation name="aggregation_method">NONE</Annotation>
-        <Annotation name="units_of_measurement">Index</Annotation>
-        <Annotation name="details">Residential segregation is the index of dissimilarity where higher values indicate greater residential segregation between non-white and white county residents. The residential segregation index ranges from 0 (complete integration) to 100 (complete segregation)</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_value Residential segregation—non-white/white]
-            WHEN [mea_county_value Residential segregation—non-white/white]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Residential Segregation—non-White/white CI Low" visible="true">
- 
-        <Annotation name="error_type">LCI</Annotation>
-        <Annotation name="error_for_measure">Residential Segregation—non-White/white</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cilow Residential segregation—non-white/white]
-            WHEN [mea_county_cilow Residential segregation—non-white/white]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Residential Segregation—non-White/white CI High" visible="true">
- 
-        <Annotation name="error_type">UCI</Annotation>
-        <Annotation name="error_for_measure">Residential Segregation—non-White/white</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cihigh Residential segregation—non-white/white]
-            WHEN [mea_county_cihigh Residential segregation—non-white/white]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-
-
-    <CalculatedMeasure name="Severe Housing Problems" visible="true">
- 
-        <Annotation name="aggregation_method">NONE</Annotation>
-        <Annotation name="units_of_measurement">Rate</Annotation>
-        <Annotation name="details">Percentage of households with at least 1 of 4 housing problems: overcrowding, high housing costs, or lack of kitchen or plumbing facilities</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_value Severe housing problems]
-            WHEN [mea_county_value Severe housing problems]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Severe Housing Problems CI Low" visible="true">
- 
-        <Annotation name="error_type">LCI</Annotation>
-        <Annotation name="error_for_measure">Severe Housing Problems</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cilow Severe housing problems]
-            WHEN [mea_county_cilow Severe housing problems]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Severe Housing Problems CI High" visible="true">
- 
-        <Annotation name="error_type">UCI</Annotation>
-        <Annotation name="error_for_measure">Severe Housing Problems</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cihigh Severe housing problems]
-            WHEN [mea_county_cihigh Severe housing problems]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-
-
-    <CalculatedMeasure name="Sexually Transmitted Infections" visible="true">
- 
-        <Annotation name="aggregation_method">NONE</Annotation>
-        <Annotation name="units_of_measurement">Cases</Annotation>
-        <Annotation name="details">Number of newly diagnosed chlamydia cases per 100,000 population</Annotation>
-        <Annotation name="subtopic">Health Outcomes</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_value Sexually transmitted infections]
-            WHEN [mea_county_value Sexually transmitted infections]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Sexually Transmitted Infections CI Low" visible="true">
- 
-        <Annotation name="error_type">LCI</Annotation>
-        <Annotation name="error_for_measure">Sexually Transmitted Infections</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cilow Sexually transmitted infections]
-            WHEN [mea_county_cilow Sexually transmitted infections]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Sexually Transmitted Infections CI High" visible="true">
- 
-        <Annotation name="error_type">UCI</Annotation>
-        <Annotation name="error_for_measure">Sexually Transmitted Infections</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cihigh Sexually transmitted infections]
-            WHEN [mea_county_cihigh Sexually transmitted infections]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-
-
-    <CalculatedMeasure name="Social Associations" visible="true">
- 
-        <Annotation name="aggregation_method">NONE</Annotation>
-        <Annotation name="units_of_measurement">Associations</Annotation>
-        <Annotation name="details">Number of membership associations per 10,000 population</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_value Social associations]
-            WHEN [mea_county_value Social associations]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Social Associations CI Low" visible="true">
- 
-        <Annotation name="error_type">LCI</Annotation>
-        <Annotation name="error_for_measure">Social Associations</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cilow Social associations]
-            WHEN [mea_county_cilow Social associations]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Social Associations CI High" visible="true">
- 
-        <Annotation name="error_type">UCI</Annotation>
-        <Annotation name="error_for_measure">Social Associations</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cihigh Social associations]
-            WHEN [mea_county_cihigh Social associations]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-
-
-    <CalculatedMeasure name="Some College" visible="true">
-
-        <Annotation name="units_of_measurement">Rate</Annotation>
-        <Annotation name="details">Percentage of adults ages 25-44 with some post-secondary education</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_value Some college]
-            WHEN [mea_county_value Some college]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Some College CI Low" visible="true">
- 
-        <Annotation name="error_type">LCI</Annotation>
-        <Annotation name="error_for_measure">Some College</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cilow Some college]
-            WHEN [mea_county_cilow Some college]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Some College CI High" visible="true">
- 
-        <Annotation name="error_type">UCI</Annotation>
-        <Annotation name="error_for_measure">Some College</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cihigh Some college]
-            WHEN [mea_county_cihigh Some college]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-
-
-    <CalculatedMeasure name="Teen Births" visible="true">
-
-        <Annotation name="units_of_measurement">Births</Annotation>
-        <Annotation name="details">Number of births per 1,000 female population ages 15-19</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_value Teen births]
-            WHEN [mea_county_value Teen births]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Teen Births CI Low" visible="true">
- 
-        <Annotation name="error_type">LCI</Annotation>
-        <Annotation name="error_for_measure">Teen Births</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cilow Teen births]
-            WHEN [mea_county_cilow Teen births]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Teen Births CI High" visible="true">
- 
-        <Annotation name="error_type">UCI</Annotation>
-        <Annotation name="error_for_measure">Teen Births</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cihigh Teen births]
-            WHEN [mea_county_cihigh Teen births]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-
-
-    <CalculatedMeasure name="Unemployment" visible="true">
- 
-        <Annotation name="aggregation_method">NONE</Annotation>
-        <Annotation name="units_of_measurement">Rate</Annotation>
-        <Annotation name="details">Percentage of population ages 16 and older unemployed but seeking work</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_value Unemployment]
-            WHEN [mea_county_value Unemployment]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Unemployment CI Low" visible="true">
- 
-        <Annotation name="error_type">LCI</Annotation>
-        <Annotation name="error_for_measure">Unemployment</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cilow Unemployment]
-            WHEN [mea_county_cilow Unemployment]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Unemployment CI High" visible="true">
- 
-        <Annotation name="error_type">UCI</Annotation>
-        <Annotation name="error_for_measure">Unemployment</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cihigh Unemployment]
-            WHEN [mea_county_cihigh Unemployment]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-
-
-    <CalculatedMeasure name="Uninsured" visible="true">
-
-        <Annotation name="units_of_measurement">Rate</Annotation>
-        <Annotation name="details">Percentage of population under age 65 without health insurance</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_value Uninsured]
-            WHEN [mea_county_value Uninsured]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Uninsured CI Low" visible="true">
- 
-        <Annotation name="error_type">LCI</Annotation>
-        <Annotation name="error_for_measure">Uninsured</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cilow Uninsured]
-            WHEN [mea_county_cilow Uninsured]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Uninsured CI High" visible="true">
- 
-        <Annotation name="error_type">UCI</Annotation>
-        <Annotation name="error_for_measure">Uninsured</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cihigh Uninsured]
-            WHEN [mea_county_cihigh Uninsured]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-
-
-    <CalculatedMeasure name="Uninsured Adults" visible="true">
-
-        <Annotation name="units_of_measurement">Rate</Annotation>
-        <Annotation name="details">Percentage of adults under age 65 without health insurance</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_value Uninsured adults]
-            WHEN [mea_county_value Uninsured adults]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Uninsured Adults CI Low" visible="true">
- 
-        <Annotation name="error_type">LCI</Annotation>
-        <Annotation name="error_for_measure">Uninsured Adults</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cilow Uninsured adults]
-            WHEN [mea_county_cilow Uninsured adults]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Uninsured Adults CI High" visible="true">
- 
-        <Annotation name="error_type">UCI</Annotation>
-        <Annotation name="error_for_measure">Uninsured Adults</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cihigh Uninsured adults]
-            WHEN [mea_county_cihigh Uninsured adults]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-
-
-    <CalculatedMeasure name="Uninsured Children" visible="true">
-
-        <Annotation name="units_of_measurement">Rate</Annotation>
-        <Annotation name="details">Percentage of children under age 19 without health insurance</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_value Uninsured children]
-            WHEN [mea_county_value Uninsured children]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Uninsured Children CI Low" visible="true">
- 
-        <Annotation name="error_type">LCI</Annotation>
-        <Annotation name="error_for_measure">Uninsured Children</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cilow Uninsured children]
-            WHEN [mea_county_cilow Uninsured children]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Uninsured Children CI High" visible="true">
- 
-        <Annotation name="error_type">UCI</Annotation>
-        <Annotation name="error_for_measure">Uninsured Children</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cihigh Uninsured children]
-            WHEN [mea_county_cihigh Uninsured children]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-
-
-    <CalculatedMeasure name="Violent Crime" visible="true">
- 
-        <Annotation name="aggregation_method">NONE</Annotation>
-        <Annotation name="units_of_measurement">Crimes</Annotation>
-        <Annotation name="details">Number of reported violent crime offenses per 100,000 population</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_value Violent crime]
-            WHEN [mea_county_value Violent crime]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Violent Crime CI Low" visible="true">
- 
-        <Annotation name="error_type">LCI</Annotation>
-        <Annotation name="error_for_measure">Violent Crime</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cilow Violent crime]
-            WHEN [mea_county_cilow Violent crime]
-            END
-        </Formula>
-    </CalculatedMeasure>
-
-    <CalculatedMeasure name="Violent Crime CI High" visible="true">
- 
-        <Annotation name="error_type">UCI</Annotation>
-        <Annotation name="error_for_measure">Violent Crime</Annotation>
-
-        <Formula>CASE
-            WHEN ISNOTNULL([mea_state_cihigh Violent crime]
-            WHEN [mea_county_cihigh Violent crime]
-            END
-        </Formula>
-    </CalculatedMeasure>
-    -->
+        <CalculatedMeasure name="Other Primary Care Providers CI High" visible="true">
+        
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Other Primary Care Providers</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cihigh Other primary care providers])
+                THEN [mea_state_cihigh Other primary care providers]
+                ELSE [mea_county_cihigh Other primary care providers]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Physical Inactivity" visible="true">
+        
+            <Annotation name="aggregation_method">NONE</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
+            <Annotation name="details">Percentage of adults age 20 and over reporting no leisure-time physical activity</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_value Physical inactivity])
+                THEN [mea_state_value Physical inactivity]
+                ELSE [mea_county_value Physical inactivity]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Physical Inactivity CI Low" visible="true">
+        
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Physical Inactivity</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cilow Physical inactivity])
+                THEN [mea_state_cilow Physical inactivity]
+                ELSE [mea_county_cilow Physical inactivity]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Physical Inactivity CI High" visible="true">
+        
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Physical Inactivity</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cihigh Physical inactivity])
+                THEN [mea_state_cihigh Physical inactivity]
+                ELSE [mea_county_cihigh Physical inactivity]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Poor Mental Health Days" visible="true">
+        
+            <Annotation name="aggregation_method">NONE</Annotation>
+            <Annotation name="units_of_measurement">Days</Annotation>
+            <Annotation name="details">Average Number of Mentally Unhealthy Days Reported in Past 30 Days (age-adjusted)</Annotation>
+            <Annotation name="subtopic">Health Outcomes</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_value Poor mental health days])
+                THEN [mea_state_value Poor mental health days]
+                ELSE [mea_county_value Poor mental health days]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Poor Mental Health Days CI Low" visible="true">
+        
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Poor Mental Health Days</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cilow Poor mental health days])
+                THEN [mea_state_cilow Poor mental health days]
+                ELSE [mea_county_cilow Poor mental health days]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Poor Mental Health Days CI High" visible="true">
+        
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Poor Mental Health Days</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cihigh Poor mental health days])
+                THEN [mea_state_cihigh Poor mental health days]
+                ELSE [mea_county_cihigh Poor mental health days]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Poor Or Fair Health" visible="true">
+
+            <Annotation name="units_of_measurement">Rate</Annotation>
+            <Annotation name="details">Percentage of Adults Reporting Fair or Poor Health (age-adjusted)</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_value Poor or fair health])
+                THEN [mea_state_value Poor or fair health]
+                ELSE [mea_county_value Poor or fair health]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Poor Or Fair Health CI Low" visible="true">
+        
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Poor Or Fair Health</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cilow Poor or fair health])
+                THEN [mea_state_cilow Poor or fair health]
+                ELSE [mea_county_cilow Poor or fair health]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Poor Or Fair Health CI High" visible="true">
+        
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Poor Or Fair Health</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cihigh Poor or fair health])
+                THEN [mea_state_cihigh Poor or fair health]
+                ELSE [mea_county_cihigh Poor or fair health]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Poor Physical Health Days" visible="true">
+        
+            <Annotation name="aggregation_method">NONE</Annotation>
+            <Annotation name="units_of_measurement">Days</Annotation>
+            <Annotation name="details">Average Number of Physically Unhealthy Days Reported in Past 30 Days (age-adjusted)</Annotation>
+            <Annotation name="subtopic">Health Outcomes</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_value Poor physical health days])
+                THEN [mea_state_value Poor physical health days]
+                ELSE [mea_county_value Poor physical health days]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Poor Physical Health Days CI Low" visible="true">
+        
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Poor Physical Health Days</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cilow Poor physical health days])
+                THEN [mea_state_cilow Poor physical health days]
+                ELSE [mea_county_cilow Poor physical health days]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Poor Physical Health Days CI High" visible="true">
+        
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Poor Physical Health Days</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cihigh Poor physical health days])
+                THEN [mea_state_cihigh Poor physical health days]
+                ELSE [mea_county_cihigh Poor physical health days]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+<!--
+
+        <CalculatedMeasure name="Premature Age-Adjusted Mortality" visible="true">
+
+            <Annotation name="units_of_measurement">People</Annotation>
+            <Annotation name="details">Number of deaths among residents under age 75 per 100,000 population (age-adjusted)</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_value Premature age-adjusted mortality]
+                WHEN [mea_county_value Premature age-adjusted mortality]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Premature Age-Adjusted Mortality CI Low" visible="true">
+        
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Premature Age-Adjusted Mortality</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cilow Premature age-adjusted mortality]
+                WHEN [mea_county_cilow Premature age-adjusted mortality]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Premature Age-Adjusted Mortality CI High" visible="true">
+        
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Premature Age-Adjusted Mortality</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cihigh Premature age-adjusted mortality]
+                WHEN [mea_county_cihigh Premature age-adjusted mortality]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+
+
+        <CalculatedMeasure name="Premature Death" visible="true">
+        
+            <Annotation name="aggregation_method">NONE</Annotation>
+            <Annotation name="units_of_measurement">Years</Annotation>
+            <Annotation name="details">Years of Potential Life Lost Before Age 75 per 100,000 people (age-adjusted)</Annotation>
+            <Annotation name="subtopic">Mortality</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_value Premature death]
+                WHEN [mea_county_value Premature death]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Premature Death CI Low" visible="true">
+        
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Premature Death</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cilow Premature death]
+                WHEN [mea_county_cilow Premature death]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Premature Death CI High" visible="true">
+        
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Premature Death</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cihigh Premature death]
+                WHEN [mea_county_cihigh Premature death]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+
+
+        <CalculatedMeasure name="Preventable Hospital Stays" visible="true">
+
+            <Annotation name="units_of_measurement">Hospital Stays</Annotation>
+            <Annotation name="details">Number of hospital stays for ambulatory-care sensitive conditions per 1,000 Medicare enrollees</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_value Preventable hospital stays]
+                WHEN [mea_county_value Preventable hospital stays]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Preventable Hospital Stays CI Low" visible="true">
+        
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Preventable Hospital Stays</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cilow Preventable hospital stays]
+                WHEN [mea_county_cilow Preventable hospital stays]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Preventable Hospital Stays CI High" visible="true">
+        
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Preventable Hospital Stays</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cihigh Preventable hospital stays]
+                WHEN [mea_county_cihigh Preventable hospital stays]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+
+
+        <CalculatedMeasure name="Patient to Primary Care Physician Ratio" visible="true">
+        
+            <Annotation name="aggregation_method">NONE</Annotation>
+            <Annotation name="units_of_measurement">Ratio</Annotation>
+            <Annotation name="details">Ratio of population to primary care physicians</Annotation>
+            <Annotation name="subtopic">Access and Quality</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_value Primary care physicians]
+                WHEN [mea_county_value Primary care physicians]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Patient to Primary Care Physician Ratio CI Low" visible="true">
+        
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Patient to Primary Care Physician Ratio</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cilow Primary care physicians]
+                WHEN [mea_county_cilow Primary care physicians]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Patient to Primary Care Physician Ratio CI High" visible="true">
+        
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Patient to Primary Care Physician Ratio</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cihigh Primary care physicians]
+                WHEN [mea_county_cihigh Primary care physicians]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+
+
+        <CalculatedMeasure name="Residential Segregation—black/white" visible="true">
+        
+            <Annotation name="aggregation_method">NONE</Annotation>
+            <Annotation name="units_of_measurement">Index</Annotation>
+            <Annotation name="details">Residential Segregation is the index of dissimilarity where higher values indicate greater residential segregation between black and white county residents. The residential segregation index ranges from 0 (complete integration) to 100 (complete segregation)</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_value Residential segregation—black/white]
+                WHEN [mea_county_value Residential segregation—black/white]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Residential Segregation—black/white CI Low" visible="true">
+        
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Residential Segregation—black/white</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cilow Residential segregation—black/white]
+                WHEN [mea_county_cilow Residential segregation—black/white]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Residential Segregation—black/white CI High" visible="true">
+        
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Residential Segregation—black/white</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cihigh Residential segregation—black/white]
+                WHEN [mea_county_cihigh Residential segregation—black/white]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+
+
+        <CalculatedMeasure name="Residential Segregation—non-White/white" visible="true">
+        
+            <Annotation name="aggregation_method">NONE</Annotation>
+            <Annotation name="units_of_measurement">Index</Annotation>
+            <Annotation name="details">Residential segregation is the index of dissimilarity where higher values indicate greater residential segregation between non-white and white county residents. The residential segregation index ranges from 0 (complete integration) to 100 (complete segregation)</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_value Residential segregation—non-white/white]
+                WHEN [mea_county_value Residential segregation—non-white/white]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Residential Segregation—non-White/white CI Low" visible="true">
+        
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Residential Segregation—non-White/white</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cilow Residential segregation—non-white/white]
+                WHEN [mea_county_cilow Residential segregation—non-white/white]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Residential Segregation—non-White/white CI High" visible="true">
+        
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Residential Segregation—non-White/white</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cihigh Residential segregation—non-white/white]
+                WHEN [mea_county_cihigh Residential segregation—non-white/white]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+
+
+        <CalculatedMeasure name="Severe Housing Problems" visible="true">
+        
+            <Annotation name="aggregation_method">NONE</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
+            <Annotation name="details">Percentage of households with at least 1 of 4 housing problems: overcrowding, high housing costs, or lack of kitchen or plumbing facilities</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_value Severe housing problems]
+                WHEN [mea_county_value Severe housing problems]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Severe Housing Problems CI Low" visible="true">
+        
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Severe Housing Problems</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cilow Severe housing problems]
+                WHEN [mea_county_cilow Severe housing problems]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Severe Housing Problems CI High" visible="true">
+        
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Severe Housing Problems</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cihigh Severe housing problems]
+                WHEN [mea_county_cihigh Severe housing problems]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+
+
+        <CalculatedMeasure name="Sexually Transmitted Infections" visible="true">
+        
+            <Annotation name="aggregation_method">NONE</Annotation>
+            <Annotation name="units_of_measurement">Cases</Annotation>
+            <Annotation name="details">Number of newly diagnosed chlamydia cases per 100,000 population</Annotation>
+            <Annotation name="subtopic">Health Outcomes</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_value Sexually transmitted infections]
+                WHEN [mea_county_value Sexually transmitted infections]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Sexually Transmitted Infections CI Low" visible="true">
+        
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Sexually Transmitted Infections</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cilow Sexually transmitted infections]
+                WHEN [mea_county_cilow Sexually transmitted infections]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Sexually Transmitted Infections CI High" visible="true">
+        
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Sexually Transmitted Infections</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cihigh Sexually transmitted infections]
+                WHEN [mea_county_cihigh Sexually transmitted infections]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+
+
+        <CalculatedMeasure name="Social Associations" visible="true">
+        
+            <Annotation name="aggregation_method">NONE</Annotation>
+            <Annotation name="units_of_measurement">Associations</Annotation>
+            <Annotation name="details">Number of membership associations per 10,000 population</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_value Social associations]
+                WHEN [mea_county_value Social associations]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Social Associations CI Low" visible="true">
+        
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Social Associations</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cilow Social associations]
+                WHEN [mea_county_cilow Social associations]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Social Associations CI High" visible="true">
+        
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Social Associations</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cihigh Social associations]
+                WHEN [mea_county_cihigh Social associations]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+
+
+        <CalculatedMeasure name="Some College" visible="true">
+
+            <Annotation name="units_of_measurement">Rate</Annotation>
+            <Annotation name="details">Percentage of adults ages 25-44 with some post-secondary education</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_value Some college]
+                WHEN [mea_county_value Some college]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Some College CI Low" visible="true">
+        
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Some College</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cilow Some college]
+                WHEN [mea_county_cilow Some college]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Some College CI High" visible="true">
+        
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Some College</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cihigh Some college]
+                WHEN [mea_county_cihigh Some college]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+
+
+        <CalculatedMeasure name="Teen Births" visible="true">
+
+            <Annotation name="units_of_measurement">Births</Annotation>
+            <Annotation name="details">Number of births per 1,000 female population ages 15-19</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_value Teen births]
+                WHEN [mea_county_value Teen births]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Teen Births CI Low" visible="true">
+        
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Teen Births</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cilow Teen births]
+                WHEN [mea_county_cilow Teen births]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Teen Births CI High" visible="true">
+        
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Teen Births</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cihigh Teen births]
+                WHEN [mea_county_cihigh Teen births]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+
+
+        <CalculatedMeasure name="Unemployment" visible="true">
+        
+            <Annotation name="aggregation_method">NONE</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
+            <Annotation name="details">Percentage of population ages 16 and older unemployed but seeking work</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_value Unemployment]
+                WHEN [mea_county_value Unemployment]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Unemployment CI Low" visible="true">
+        
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Unemployment</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cilow Unemployment]
+                WHEN [mea_county_cilow Unemployment]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Unemployment CI High" visible="true">
+        
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Unemployment</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cihigh Unemployment]
+                WHEN [mea_county_cihigh Unemployment]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+
+
+        <CalculatedMeasure name="Uninsured" visible="true">
+
+            <Annotation name="units_of_measurement">Rate</Annotation>
+            <Annotation name="details">Percentage of population under age 65 without health insurance</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_value Uninsured]
+                WHEN [mea_county_value Uninsured]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Uninsured CI Low" visible="true">
+        
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Uninsured</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cilow Uninsured]
+                WHEN [mea_county_cilow Uninsured]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Uninsured CI High" visible="true">
+        
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Uninsured</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cihigh Uninsured]
+                WHEN [mea_county_cihigh Uninsured]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+
+
+        <CalculatedMeasure name="Uninsured Adults" visible="true">
+
+            <Annotation name="units_of_measurement">Rate</Annotation>
+            <Annotation name="details">Percentage of adults under age 65 without health insurance</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_value Uninsured adults]
+                WHEN [mea_county_value Uninsured adults]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Uninsured Adults CI Low" visible="true">
+        
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Uninsured Adults</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cilow Uninsured adults]
+                WHEN [mea_county_cilow Uninsured adults]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Uninsured Adults CI High" visible="true">
+        
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Uninsured Adults</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cihigh Uninsured adults]
+                WHEN [mea_county_cihigh Uninsured adults]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+
+
+        <CalculatedMeasure name="Uninsured Children" visible="true">
+
+            <Annotation name="units_of_measurement">Rate</Annotation>
+            <Annotation name="details">Percentage of children under age 19 without health insurance</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_value Uninsured children]
+                WHEN [mea_county_value Uninsured children]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Uninsured Children CI Low" visible="true">
+        
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Uninsured Children</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cilow Uninsured children]
+                WHEN [mea_county_cilow Uninsured children]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Uninsured Children CI High" visible="true">
+        
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Uninsured Children</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cihigh Uninsured children]
+                WHEN [mea_county_cihigh Uninsured children]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+
+
+        <CalculatedMeasure name="Violent Crime" visible="true">
+        
+            <Annotation name="aggregation_method">NONE</Annotation>
+            <Annotation name="units_of_measurement">Crimes</Annotation>
+            <Annotation name="details">Number of reported violent crime offenses per 100,000 population</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_value Violent crime]
+                WHEN [mea_county_value Violent crime]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Violent Crime CI Low" visible="true">
+        
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Violent Crime</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cilow Violent crime]
+                WHEN [mea_county_cilow Violent crime]
+                END
+            </Formula>
+        </CalculatedMeasure>
+
+        <CalculatedMeasure name="Violent Crime CI High" visible="true">
+        
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Violent Crime</Annotation>
+
+            <Formula>CASE
+                WHEN ISNOTNULL([mea_state_cihigh Violent crime]
+                WHEN [mea_county_cihigh Violent crime]
+                END
+            </Formula>
+        </CalculatedMeasure>
+        -->
 
     </Cube>
 </Schema>
