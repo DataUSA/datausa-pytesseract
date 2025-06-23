@@ -1,5 +1,4 @@
 <Schema name="datausa" default_locale="en">
-
     <Cube name="acs_ygsi_gender_by_industry_1">
         <Annotation name="source_name">Census Bureau</Annotation>
         <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
