@@ -349,7 +349,7 @@ dev = [
 requires-dist = [
     { name = "asgi-correlation-id", specifier = ">=4.3.4" },
     { name = "logiclayer", specifier = ">=0.4.4" },
-    { name = "logiclayer-complexity", specifier = ">=0.6.16" },
+    { name = "logiclayer-complexity", specifier = ">=0.7.0" },
     { name = "tesseract-olap", extras = ["clickhouse", "redis"], specifier = ">=0.19.1" },
     { name = "uvicorn", specifier = ">=0.34.2" },
 ]
@@ -569,7 +569,7 @@ wheels = [
 
 [[package]]
 name = "logiclayer-complexity"
-version = "0.6.16"
+version = "0.7.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "economic-complexity" },
@@ -581,9 +581,9 @@ dependencies = [
     { name = "pyarrow" },
     { name = "tesseract-olap" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/25/d7/7f5ee035fa3a9f62841f4c24f9a8ca827f94ff51759cb612218b9841f2d9/logiclayer_complexity-0.6.16.tar.gz", hash = "sha256:30eb84ea64919b8d890d41dfc42798e9d096b282e3d46c8edcaa5d62e95a5147", size = 20953 }
+sdist = { url = "https://files.pythonhosted.org/packages/23/90/5bae4802eaa4d5a61c4934c6d03c870c812158763b8a53f52372f6381d28/logiclayer_complexity-0.7.0.tar.gz", hash = "sha256:6088c06199239ed23d1e51a3016df41c73991787cdfbede81b3176a155509696", size = 21355 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/04/9b/acd03191918b275f8f8462297344b7d56bdb3f666e6c9f1192f9e13d4dd9/logiclayer_complexity-0.6.16-py3-none-any.whl", hash = "sha256:7c80909108a60b33eb99e81c241a3c1a1ff19e7a13d6736a655568bd75960847", size = 30597 },
+    { url = "https://files.pythonhosted.org/packages/81/b0/7d4050e502953977704aacd2ef52ac0dcef2477ae4d32e53acb1aebb6f2b/logiclayer_complexity-0.7.0-py3-none-any.whl", hash = "sha256:be55ee53226b0fc3ead2a716ab5e06f07461af4a32bbd4aae405c616399a3d51", size = 30910 },
 ]
 
 [[package]]
