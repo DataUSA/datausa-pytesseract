@@ -1,8 +1,8 @@
 <Schema name="datausa" default_locale="en">
-    <Cube name="pums_5">
+    <Cube name="pums_5" subset_table="true">
         <Annotation name="source_name">Census Bureau</Annotation>
         <Annotation name="source_description">The American Community Survey (ACS) Public Use Microdata Sample (PUMS) files are a set of untabulated records about individual people or housing units. The Census Bureau produces the PUMS files so that data users can create custom tables that are not available through pretabulated (or summary) ACS data products.</Annotation>
-        <Annotation name="dataset_name">ACS PUMS 1-Year Estimate</Annotation>
+        <Annotation name="dataset_name">ACS PUMS 5-Year Estimate</Annotation>
         <Annotation name="dataset_link">https://www.census.gov/programs-surveys/acs/microdata.html</Annotation>
         <Annotation name="topic">Diversity</Annotation>
         <Annotation name="subtopic">Demographics</Annotation>
@@ -61,7 +61,7 @@
         <Dimension foreign_key="schl" name="PUMS Degree">
             <Hierarchy name="PUMS Degree" primary_key="schl">
                 <Table name="pums_dims_schl" />
-                <Level key_column="schl_group" name_column="schl_group" name="Group" />
+                <Level key_column="schl_group" name_column="schl_group" name="Group" key_type="str"/>
                 <Level key_column="schl" name_column="schl_name" name="Degree" />
             </Hierarchy>
         </Dimension>

@@ -1,0 +1,149 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="acs_ygsi_gender_by_industry_1">
+        <Annotation name="source_name">Census Bureau</Annotation>
+        <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+        <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
+        <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+        <Annotation name="table_id">B24030</Annotation>
+        <Annotation name="topic">Economy</Annotation>
+        <Annotation name="subtopic">Employment</Annotation>
+        <Annotation name="hide_in_ui">true</Annotation>
+
+        <Table name="acs_ygsi_gender_by_industry_1"/>
+
+        <DimensionUsage foreign_key="geoid" name="Geography" source="Geography" />
+
+        <Dimension name="Year" foreign_key="year" type="time">
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="year">
+                <Level name="Year" key_column="year" key_type="u16" />
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="dim_0" name="Gender">
+            <Hierarchy name="Gender">
+                <InlineTable name="dim_inline_gender" format="tuples">
+                    <Row>("id", "description")</Row>
+                    <Row>(0, "Male")</Row>
+                    <Row>(1, "Female")</Row>
+                </InlineTable>
+                <Level key_column="id" name="Gender" name_column="description" key_type="u8"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="dim_3" name="ACS Industry">
+            <Hierarchy name="ACS Industry">
+                <InlineTable name="dim_3_table" format="tuples">
+                    <Row>("member_0_code", "member_0", "member_1_code", "member_1", "member_2_code", "member_2")</Row>
+                    <Row>(0, "Agriculture, Forestry, Fishing &amp; Hunting, &amp; Mining", 0, "Agriculture, Forestry, Fishing &amp; Hunting, &amp; Mining", 0, "Agriculture, Forestry, Fishing &amp; Hunting")</Row>
+                    <Row>(0, "Agriculture, Forestry, Fishing &amp; Hunting, &amp; Mining", 0, "Agriculture, Forestry, Fishing &amp; Hunting, &amp; Mining", 1, "Mining, Quarrying, &amp; Oil &amp; Gas Extraction")</Row>
+                    <Row>(1, "Construction", 1, "Construction (Subgroup)", 2, "Construction")</Row>
+                    <Row>(2, "Manufacturing", 2, "Manufacturing", 3, "Food")</Row>
+                    <Row>(2, "Manufacturing", 2, "Manufacturing", 4, "Beverage &amp; Tobacco Products")</Row>
+                    <Row>(2, "Manufacturing", 2, "Manufacturing", 5, "Textile Mills &amp; Textile Products")</Row>
+                    <Row>(2, "Manufacturing", 2, "Manufacturing", 6, "Apparel")</Row>
+                    <Row>(2, "Manufacturing", 2, "Manufacturing", 7, "Leather &amp; Allied Products")</Row>
+                    <Row>(2, "Manufacturing", 2, "Manufacturing", 8, "Wood Products")</Row>
+                    <Row>(2, "Manufacturing", 2, "Manufacturing", 9, "Paper")</Row>
+                    <Row>(2, "Manufacturing", 2, "Manufacturing", 10, "Printing &amp; Related Support Activities")</Row>
+                    <Row>(2, "Manufacturing", 2, "Manufacturing", 11, "Petroleum &amp; Coal Products")</Row>
+                    <Row>(2, "Manufacturing", 2, "Manufacturing", 12, "Chemicals")</Row>
+                    <Row>(2, "Manufacturing", 2, "Manufacturing", 13, "Plastics &amp; Rubber Products")</Row>
+                    <Row>(2, "Manufacturing", 2, "Manufacturing", 14, "Nonmetallic Mineral Products")</Row>
+                    <Row>(2, "Manufacturing", 2, "Manufacturing", 15, "Metal &amp; Metal Products")</Row>
+                    <Row>(2, "Manufacturing", 2, "Manufacturing", 16, "Machinery")</Row>
+                    <Row>(2, "Manufacturing", 2, "Manufacturing", 17, "Computer &amp; Electronic Products")</Row>
+                    <Row>(2, "Manufacturing", 2, "Manufacturing", 18, "Electrical Equipment, Appliances, &amp; Components")</Row>
+                    <Row>(2, "Manufacturing", 2, "Manufacturing", 19, "Transportation Equipment")</Row>
+                    <Row>(2, "Manufacturing", 2, "Manufacturing", 20, "Furniture &amp; Related Product Manufacturing")</Row>
+                    <Row>(2, "Manufacturing", 2, "Manufacturing", 21, "Miscellaneous Manufacturing")</Row>
+                    <Row>(3, "Wholesale Trade", 3, "Wholesale Trade", 22, "Motor Vehicle &amp; Motor Vehicle Parts &amp; Supplies Merchant Wholesalers")</Row>
+                    <Row>(3, "Wholesale Trade", 3, "Wholesale Trade", 23, "Furniture &amp; Home Furnishing Merchant Wholesalers")</Row>
+                    <Row>(3, "Wholesale Trade", 3, "Wholesale Trade", 24, "Lumber &amp; Other Construction Materials Merchant Wholesalers")</Row>
+                    <Row>(3, "Wholesale Trade", 3, "Wholesale Trade", 25, "Professional &amp; Commercial Equipment &amp; Supplies Merchant Wholesalers")</Row>
+                    <Row>(3, "Wholesale Trade", 3, "Wholesale Trade", 26, "Metals &amp; Minerals, Except Petroleum, Merchant Wholesalers")</Row>
+                    <Row>(3, "Wholesale Trade", 3, "Wholesale Trade", 27, "Household Appliances &amp; Electrical &amp; Electronic Goods Merchant Wholesalers")</Row>
+                    <Row>(3, "Wholesale Trade", 3, "Wholesale Trade", 28, "Hardware, &amp; Plumbing &amp; Heating Equipment, &amp; Supplies Merchant Wholesalers")</Row>
+                    <Row>(3, "Wholesale Trade", 3, "Wholesale Trade", 29, "Machinery, Equipment, &amp; Supplies Merchant Wholesalers")</Row>
+                    <Row>(3, "Wholesale Trade", 3, "Wholesale Trade", 30, "Recyclable Material Merchant Wholesalers")</Row>
+                    <Row>(3, "Wholesale Trade", 3, "Wholesale Trade", 31, "Miscellaneous Durable Goods Merchant Wholesalers")</Row>
+                    <Row>(3, "Wholesale Trade", 3, "Wholesale Trade", 32, "Paper &amp; Paper Products Merchant Wholesalers")</Row>
+                    <Row>(3, "Wholesale Trade", 3, "Wholesale Trade", 33, "Drugs, Sundries, &amp; Chemical &amp; Allied Products Merchant Wholesalers")</Row>
+                    <Row>(3, "Wholesale Trade", 3, "Wholesale Trade", 34, "Apparel, Piece Goods, &amp; Notions Merchant Wholesalers")</Row>
+                    <Row>(3, "Wholesale Trade", 3, "Wholesale Trade", 35, "Grocery &amp; Related Product Merchant Wholesalers")</Row>
+                    <Row>(3, "Wholesale Trade", 3, "Wholesale Trade", 36, "Farm Product Raw Material Merchant Wholesalers")</Row>
+                    <Row>(3, "Wholesale Trade", 3, "Wholesale Trade", 37, "Petroleum &amp; Petroleum Products Merchant Wholesalers")</Row>
+                    <Row>(3, "Wholesale Trade", 3, "Wholesale Trade", 38, "Alcoholic Beverages Merchant Wholesalers")</Row>
+                    <Row>(3, "Wholesale Trade", 3, "Wholesale Trade", 39, "Farm Supplies Merchant Wholesalers")</Row>
+                    <Row>(3, "Wholesale Trade", 3, "Wholesale Trade", 40, "Miscellaneous Nondurable Goods Merchant Wholesalers")</Row>
+                    <Row>(3, "Wholesale Trade", 3, "Wholesale Trade", 41, "Wholesale Electronic Markets &amp; Agents &amp; Brokers")</Row>
+                    <Row>(4, "Retail Trade", 4, "Retail Trade", 42, "Motor Vehicle &amp; Parts Dealers")</Row>
+                    <Row>(4, "Retail Trade", 4, "Retail Trade", 43, "Furniture &amp; Home Furnishings, &amp; Household Appliance Stores")</Row>
+                    <Row>(4, "Retail Trade", 4, "Retail Trade", 44, "Electronics Stores")</Row>
+                    <Row>(4, "Retail Trade", 4, "Retail Trade", 45, "Building Material &amp; Garden Equipment &amp; Supplies Dealers")</Row>
+                    <Row>(4, "Retail Trade", 4, "Retail Trade", 46, "Food &amp; Beverage Stores")</Row>
+                    <Row>(4, "Retail Trade", 4, "Retail Trade", 47, "Pharmacies &amp; Drug Stores")</Row>
+                    <Row>(4, "Retail Trade", 4, "Retail Trade", 48, "Health &amp; Personal Care, Except Drug, Stores")</Row>
+                    <Row>(4, "Retail Trade", 4, "Retail Trade", 49, "Gasoline Stations")</Row>
+                    <Row>(4, "Retail Trade", 4, "Retail Trade", 50, "Clothing &amp; Accessories, Including Shoe, Stores")</Row>
+                    <Row>(4, "Retail Trade", 4, "Retail Trade", 51, "Jewelry, Luggage, &amp; Leather Goods Stores")</Row>
+                    <Row>(4, "Retail Trade", 4, "Retail Trade", 52, "Sporting Goods, &amp; Hobby &amp; Toy Stores")</Row>
+                    <Row>(4, "Retail Trade", 4, "Retail Trade", 53, "Sewing, Needlework, &amp; Piece Goods Stores")</Row>
+                    <Row>(4, "Retail Trade", 4, "Retail Trade", 54, "Musical Instrument &amp; Supplies Stores")</Row>
+                    <Row>(4, "Retail Trade", 4, "Retail Trade", 55, "Book Stores &amp; News Dealers")</Row>
+                    <Row>(4, "Retail Trade", 4, "Retail Trade", 56, "Department &amp; Other General Merchandise Stores")</Row>
+                    <Row>(4, "Retail Trade", 4, "Retail Trade", 57, "Florists")</Row>
+                    <Row>(4, "Retail Trade", 4, "Retail Trade", 58, "Office Supplies &amp; Stationery Stores")</Row>
+                    <Row>(4, "Retail Trade", 4, "Retail Trade", 59, "Used Merchandise, Gift, Novelty, &amp; Souvenir, &amp; Other Miscellaneous Stores")</Row>
+                    <Row>(4, "Retail Trade", 4, "Retail Trade", 60, "Electronic Shopping &amp; Mail-Order Houses")</Row>
+                    <Row>(4, "Retail Trade", 4, "Retail Trade", 61, "Vending Machine Operators")</Row>
+                    <Row>(4, "Retail Trade", 4, "Retail Trade", 62, "Fuel Dealers")</Row>
+                    <Row>(4, "Retail Trade", 4, "Retail Trade", 63, "Other Direct Selling Establishments")</Row>
+                    <Row>(5, "Transportation &amp; Warehousing, &amp; Utilities", 5, "Transportation &amp; Warehousing", 64, "Air Transportation")</Row>
+                    <Row>(5, "Transportation &amp; Warehousing, &amp; Utilities", 5, "Transportation &amp; Warehousing", 65, "Rail Transportation")</Row>
+                    <Row>(5, "Transportation &amp; Warehousing, &amp; Utilities", 5, "Transportation &amp; Warehousing", 66, "Water Transportation")</Row>
+                    <Row>(5, "Transportation &amp; Warehousing, &amp; Utilities", 5, "Transportation &amp; Warehousing", 67, "Truck Transportation")</Row>
+                    <Row>(5, "Transportation &amp; Warehousing, &amp; Utilities", 5, "Transportation &amp; Warehousing", 68, "Postal Service")</Row>
+                    <Row>(5, "Transportation &amp; Warehousing, &amp; Utilities", 5, "Transportation &amp; Warehousing", 69, "Other Transportation, &amp; Support Activities, &amp; Couriers")</Row>
+                    <Row>(5, "Transportation &amp; Warehousing, &amp; Utilities", 5, "Transportation &amp; Warehousing", 70, "Warehousing &amp; Storage")</Row>
+                    <Row>(5, "Transportation &amp; Warehousing, &amp; Utilities", 6, "Transportation &amp; Warehousing, &amp; Utilities", 71, "Utilities")</Row>
+                    <Row>(6, "Information", 7, "Information", 72, "Publishing, &amp; Motion Picture &amp; Sound Recording Industries")</Row>
+                    <Row>(6, "Information", 7, "Information", 73, "Broadcasting, Internet Publishing, &amp; Telecommunications Services")</Row>
+                    <Row>(6, "Information", 7, "Information", 74, "Data Processing, Libraries, &amp; Other Information Services")</Row>
+                    <Row>(7, "Finance &amp; Insurance, &amp; Real Estate &amp; Rental &amp; Leasing", 8, "Finance &amp; Insurance, &amp; Real Estate &amp; Rental &amp; Leasing", 75, "Finance &amp; Insurance")</Row>
+                    <Row>(7, "Finance &amp; Insurance, &amp; Real Estate &amp; Rental &amp; Leasing", 8, "Finance &amp; Insurance, &amp; Real Estate &amp; Rental &amp; Leasing", 76, "Real Estate &amp; Rental &amp; Leasing")</Row>
+                    <Row>(8, "Professional, Scientific, &amp; Management, &amp; Administrative &amp; Waste Management Services", 9, "Professional, Scientific, &amp; Management, &amp; Administrative &amp; Waste Management Services", 77, "Professional, Scientific, &amp; Technical Services")</Row>
+                    <Row>(8, "Professional, Scientific, &amp; Management, &amp; Administrative &amp; Waste Management Services", 9, "Professional, Scientific, &amp; Management, &amp; Administrative &amp; Waste Management Services", 78, "Management of Companies &amp; Enterprises")</Row>
+                    <Row>(8, "Professional, Scientific, &amp; Management, &amp; Administrative &amp; Waste Management Services", 9, "Professional, Scientific, &amp; Management, &amp; Administrative &amp; Waste Management Services", 79, "Administrative &amp; Support &amp; Waste Management Services")</Row>
+                    <Row>(9, "Educational Services, &amp; Health Care &amp; Social Assistance", 10, "Educational Services, &amp; Health Care &amp; Social Assistance", 80, "Educational Services")</Row>
+                    <Row>(9, "Educational Services, &amp; Health Care &amp; Social Assistance", 11, "Health Care &amp; Social Assistance", 81, "Health Care")</Row>
+                    <Row>(9, "Educational Services, &amp; Health Care &amp; Social Assistance", 11, "Health Care &amp; Social Assistance", 82, "Social Assistance")</Row>
+                    <Row>(10, "Arts, Entertainment, &amp; Recreation, &amp; Accommodation &amp; Food Services", 12, "Arts, Entertainment, &amp; Recreation, &amp; Accommodation &amp; Food Services", 83, "Arts, Entertainment, &amp; Recreation")</Row>
+                    <Row>(10, "Arts, Entertainment, &amp; Recreation, &amp; Accommodation &amp; Food Services", 12, "Arts, Entertainment, &amp; Recreation, &amp; Accommodation &amp; Food Services", 84, "Accommodation &amp; Food Services")</Row>
+                    <Row>(11, "Other Services, Except Public Administration", 13, "Other Services, Except Public Administration", 85, "Repair &amp; Maintenance")</Row>
+                    <Row>(11, "Other Services, Except Public Administration", 13, "Other Services, Except Public Administration", 86, "Personal &amp; Laundry Services")</Row>
+                    <Row>(11, "Other Services, Except Public Administration", 13, "Other Services, Except Public Administration", 87, "Religious, Grantmaking, Civic, Professional, &amp; Similar Organizations")</Row>
+                    <Row>(11, "Other Services, Except Public Administration", 13, "Other Services, Except Public Administration", 88, "Private Households")</Row>
+                    <Row>(12, "Public Administration", 14, "Public Administration (Subgroup)", 89, "Public Administration")</Row>
+                </InlineTable>
+                <Level key_column="member_0_code" name="Group" name_column="member_0" key_type="u8"/>
+                <Level key_column="member_1_code" name="Subgroup" name_column="member_1" key_type="u8">
+                    <Annotation name="hide_in_ui">true</Annotation>
+                </Level>
+                <Level key_column="member_2_code" name="Industry" name_column="member_2" key_type="u8"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Measure aggregator="sum" key_column="mea" name="Workforce by Industry and Gender" visible="true">
+            <Annotation name="aggregation_method">SUM</Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Measure>
+
+        <Measure name="Workforce by Industry and Gender Moe" key_column="moe" visible="true">
+            <Annotation name="error_for_measure">Workforce by Industry and Gender</Annotation>
+            <Annotation name="error_type">MOE</Annotation>
+            <Aggregation type="moe" critical_value="1.645" />
+        </Measure>
+
+    </Cube>
+</Schema>

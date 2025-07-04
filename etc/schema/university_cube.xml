@@ -1,0 +1,31 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="university_cube">
+        <Table name="ipeds_dim_university" />
+
+        <Dimension name="University" foreign_key="id">
+            <Hierarchy name="University">
+            
+                <Level key_column="carnegie_parent" name_column="carnegie_parent_name" name="Carnegie Parent" key_type="str" />
+                <Level key_column="carnegie_id" name_column="carnegie_name" name="Carnegie" key_type="i8"/>
+                <Level key_column="id" name_column="name" name="University" key_type="i64" />
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="OPEID6" foreign_key="id">
+            <Hierarchy name="OPEID6">
+            
+                <Level key_column="opeid6" name="OPEID6" key_type="str"/> 
+                <Level key_column="id" name_column="name" name="University OPEID6" key_type="i64" visible="false"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="URL" foreign_key="id">
+            <Hierarchy name="URL">
+                <Level key_column="url" name="URL" key_type="str"/>
+                <Level key_column="id" name_column="name" name="University URL" key_type="i64" visible="false"/>
+            </Hierarchy>
+        </Dimension>
+       
+        <Measure name="Count" key_column="id" aggregator="distinct_count"/>
+    </Cube>
+</Schema>

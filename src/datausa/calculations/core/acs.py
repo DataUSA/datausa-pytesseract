@@ -63,6 +63,15 @@ class ACSParameters(BaseModel):
             ),
         ),
     ] = False
+    time: Annotated[
+        str | None,
+        Field(
+            title="Filter by time",
+            description=(
+                "Specifies the time period to filter the data by"
+            ),
+        ),
+    ] = None
 
     @property
     def measures_keys(self):
@@ -82,9 +91,12 @@ class ACSParameters(BaseModel):
             "cuts_include": self.include,
             "cuts_exclude": self.exclude,
             "parents": self.parents,
-            "locale": self.locale or "",
+            "locale": self.locale or ""
             # "roles": roles,
         }
+ 
+        if self.time:
+            params["time"] = self.time
 
         return DataRequest.new(self.cube, params)
 

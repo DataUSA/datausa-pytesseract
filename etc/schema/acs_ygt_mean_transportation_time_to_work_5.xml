@@ -1,0 +1,35 @@
+<Schema name="datausa" default_locale="en">
+
+    <Cube name="acs_ygt_mean_transportation_time_to_work_5">
+        <Annotation name="source_name">Census Bureau</Annotation>
+        <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+        <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
+        <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+        <Annotation name="table_id">B08006,B08013</Annotation>
+        <Annotation name="topic">Housing &amp; Living</Annotation>
+        <Annotation name="subtopic">Transportation</Annotation>
+
+        <Table name="acs_ygt_mean_transportation_time_to_work_5"/>
+
+        <DimensionUsage foreign_key="geoid" name="Geography" source="Geography" />
+
+        <Dimension name="Year" foreign_key="year" type="time">
+            <Annotation name="dim_type">TIME</Annotation>
+            <Hierarchy name="Year" primary_key="year">
+                <Level name="Year" key_column="year" key_type="u16" />
+            </Hierarchy>
+        </Dimension>
+
+        <Measure aggregator="sum" key_column="mea" name="Average Commute Time" visible="true">
+            <Annotation name="aggregation_method">SUM</Annotation>
+            <Annotation name="units_of_measurement">Minutes</Annotation>
+        </Measure>
+
+        <Measure name="Average Commute Time Moe" key_column="moe" visible="true">
+            <Annotation name="error_for_measure">Average Commute Time</Annotation>
+            <Annotation name="error_type">MOE</Annotation>
+            <Aggregation type="moe" critical_value="1.645" />
+        </Measure>
+
+    </Cube>
+</Schema>
