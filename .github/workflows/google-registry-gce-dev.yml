@@ -115,7 +115,7 @@ jobs:
           # SSH into VM and execute deployment
           ssh -p ${{ vars.SSH_PORT }} -i $SSH_DIR/id_rsa ${{ secrets.GCP_VM_USER }}@${{ vars.GCP_VM_IP }} 'bash -s' << 'ENDSSH'
 
-          cd "/home/${{ secrets.GCP_VM_USER }}/${{ env.GCP_ARTIFACT_REGISTRY_NAME }}"
+          cd "/home/${{ secrets.GCP_VM_USER }}/${{ env.GCP_PROJECT_ID }}/${{ env.GCP_ARTIFACT_REGISTRY_NAME }}"
 
           # Reset and create .env.gcp file
           echo "Creating .env.gcp file"
