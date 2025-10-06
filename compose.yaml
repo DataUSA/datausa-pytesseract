@@ -26,7 +26,7 @@ services:
     image: ${GCP_ARTIFACT_REGISTRY_LOCATION}-docker.pkg.dev/${GCP_PROJECT_ID}/${GCP_ARTIFACT_REGISTRY_NAME}/caddy:latest
     restart: always
     ports:
-      - 8888:80
+      - 9998:80
       - 9999:443
       - 2019:2019
     networks:
