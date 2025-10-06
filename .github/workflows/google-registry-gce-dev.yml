@@ -100,7 +100,7 @@ jobs:
           mkdir -p $SSH_DIR
           echo "${{ secrets.GCP_SSH_PRIVATE_KEY }}" > $SSH_DIR/id_rsa
           chmod 600 $SSH_DIR/id_rsa
-          ssh-keyscan -H ${{ vars.GCP_VM_IP }} -p ${{ vars.SSH_PORT }} >> $SSH_DIR/known_hosts
+          ssh-keyscan -p ${{ vars.SSH_PORT }} -H ${{ vars.GCP_VM_IP }} >> $SSH_DIR/known_hosts
 
           # Define remote path
           REMOTE_PATH="/home/${{ secrets.GCP_VM_USER }}/${{ env.GCP_PROJECT_ID }}/${{ env.GCP_ARTIFACT_REGISTRY_NAME }}"
