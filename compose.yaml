@@ -27,8 +27,8 @@ services:
     restart: always
     ports:
       - 9998:80
-      - 9999:443
-      - 2019:2019
+      - 9997:443
+      - 9996:2019
     networks:
       - pytesseract
 

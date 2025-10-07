@@ -14,7 +14,7 @@ esac
 docker compose --env-file .env.gcp exec pytesseract-caddy curl \
     -H "Content-Type: application/json" \
     -d "$upstreams" \
-    -X PATCH http://localhost:2019/config/apps/http/servers/srv0/routes/0/handle/0/routes/0/handle/0/upstreams
+    -X PATCH http://localhost:9996/config/apps/http/servers/srv0/routes/0/handle/0/routes/0/handle/0/upstreams
 }
 
 up() {
