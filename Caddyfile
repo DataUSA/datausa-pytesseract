@@ -1,8 +1,0 @@
-localhost:80
-
-reverse_proxy pytesseract-blue:7777 {
-    transport http {
-        dial_timeout 10s
-        keepalive 3s
-    }
-}

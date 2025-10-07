@@ -1,6 +1,6 @@
 services:
-  datausa-pytesseract-blue: &app
-    container_name: datausa-pytesseract-blue
+  pytesseract-blue: &app
+    container_name: datausa-pytesseract
     image: ${GCP_ARTIFACT_REGISTRY_LOCATION}-docker.pkg.dev/${GCP_PROJECT_ID}/${GCP_ARTIFACT_REGISTRY_NAME}/${GCP_IMAGE_NAME}:${GCP_IMAGE_TAG}
     restart: always
     stop_signal: SIGTERM
@@ -9,28 +9,10 @@ services:
       - .env.gcp
     networks:
       - pytesseract
-    volumes:
-      - /tmp:/tmp
     extra_hosts:
       - "host.docker.internal:host-gateway"
-
-  datausa-pytesseract-green:
-    <<: *app
-    container_name: datausa-pytesseract-green
-    restart: unless-stopped
-    env_file:
-      - .env.gcp
-
-  datausa-pytesseract-caddy:
-    container_name: datausa-pytesseract-caddy
-    image: ${GCP_ARTIFACT_REGISTRY_LOCATION}-docker.pkg.dev/${GCP_PROJECT_ID}/${GCP_ARTIFACT_REGISTRY_NAME}/caddy:latest
-    restart: always
     ports:
-      - 9998:80
-      - 9997:443
-      - 9996:2019
-    networks:
-      - pytesseract
+      - "9998:7777"
 
 networks:
   pytesseract:

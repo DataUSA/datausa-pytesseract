@@ -61,22 +61,6 @@ jobs:
             ${{ env.GCP_ARTIFACT_REGISTRY_LOCATION }}-docker.pkg.dev/${{ env.GCP_PROJECT_ID }}/${{ env.GCP_ARTIFACT_REGISTRY_NAME }}/${{ env.GCP_IMAGE_NAME }}:${{ github.sha }} \
             ${{ env.GCP_ARTIFACT_REGISTRY_LOCATION }}-docker.pkg.dev/${{ env.GCP_PROJECT_ID }}/${{ env.GCP_ARTIFACT_REGISTRY_NAME }}/${{ env.GCP_IMAGE_NAME }}:latest
 
-      - name: Build Caddy Image
-        run: |-
-          gcloud builds submit \
-            --quiet \
-            --timeout=10m \
-            --substitutions=_GCP_PROJECT_ID=${{ env.GCP_PROJECT_ID }},_GCP_ARTIFACT_REGISTRY_NAME=${{ env.GCP_ARTIFACT_REGISTRY_NAME }},_GCP_ARTIFACT_REGISTRY_LOCATION=${{ env.GCP_ARTIFACT_REGISTRY_LOCATION }},_GCP_IMAGE_NAME=caddy,_GITHUB_SHA=${{ github.sha }} \
-            --config=cloudbuild-caddy.yml \
-            --suppress-logs
-        # Uncomment for adding the latest tag to the latest image created
-      - name: Add 'Latest' Tag to Caddy Image
-        run: |-
-          gcloud beta artifacts docker tags add \
-            --quiet \
-            ${{ env.GCP_ARTIFACT_REGISTRY_LOCATION }}-docker.pkg.dev/${{ env.GCP_PROJECT_ID }}/${{ env.GCP_ARTIFACT_REGISTRY_NAME }}/caddy:${{ github.sha }} \
-            ${{ env.GCP_ARTIFACT_REGISTRY_LOCATION }}-docker.pkg.dev/${{ env.GCP_PROJECT_ID }}/${{ env.GCP_ARTIFACT_REGISTRY_NAME }}/caddy:latest
-            
 
   deploy:
     needs: build
