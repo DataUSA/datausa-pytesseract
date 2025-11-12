@@ -119,7 +119,7 @@ jobs:
           TESSERACT_CHUNK_LIMIT=${{ env.TESSERACT_CHUNK_LIMIT }}
           TESSERACT_QUERY_LIMIT=${{ env.TESSERACT_QUERY_LIMIT }}
           EOF
-
+          
           bash ./deploy_to_vm.sh
 
           ENDSSH
