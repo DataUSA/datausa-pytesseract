@@ -12,6 +12,7 @@ env:
   GCP_SSH_PRIVATE_KEY: ${{ secrets.GCP_SSH_PRIVATE_KEY }}
   GCP_VM_IP: ${{ vars.GCP_VM_IP }}
   GCP_VM_USER: ${{ secrets.GCP_VM_USER }}
+  SSH_PORT: ${{ vars.SSH_PORT }}
   TESSERACT_BACKEND: ${{ secrets.TESSERACT_BACKEND }}
   TESSERACT_SCHEMA: ${{ vars.TESSERACT_SCHEMA }}
   TESSERACT_DEBUG: ${{ vars.TESSERACT_DEBUG }}
@@ -60,22 +61,6 @@ jobs:
             ${{ env.GCP_ARTIFACT_REGISTRY_LOCATION }}-docker.pkg.dev/${{ env.GCP_PROJECT_ID }}/${{ env.GCP_ARTIFACT_REGISTRY_NAME }}/${{ env.GCP_IMAGE_NAME }}:${{ github.sha }} \
             ${{ env.GCP_ARTIFACT_REGISTRY_LOCATION }}-docker.pkg.dev/${{ env.GCP_PROJECT_ID }}/${{ env.GCP_ARTIFACT_REGISTRY_NAME }}/${{ env.GCP_IMAGE_NAME }}:latest
 
-      - name: Build Caddy Image
-        run: |-
-          gcloud builds submit \
-            --quiet \
-            --timeout=10m \
-            --substitutions=_GCP_PROJECT_ID=${{ env.GCP_PROJECT_ID }},_GCP_ARTIFACT_REGISTRY_NAME=${{ env.GCP_ARTIFACT_REGISTRY_NAME }},_GCP_ARTIFACT_REGISTRY_LOCATION=${{ env.GCP_ARTIFACT_REGISTRY_LOCATION }},_GCP_IMAGE_NAME=caddy,_GITHUB_SHA=${{ github.sha }} \
-            --config=cloudbuild-caddy.yml \
-            --suppress-logs
-        # Uncomment for adding the latest tag to the latest image created
-      - name: Add 'Latest' Tag to Caddy Image
-        run: |-
-          gcloud beta artifacts docker tags add \
-            --quiet \
-            ${{ env.GCP_ARTIFACT_REGISTRY_LOCATION }}-docker.pkg.dev/${{ env.GCP_PROJECT_ID }}/${{ env.GCP_ARTIFACT_REGISTRY_NAME }}/caddy:${{ github.sha }} \
-            ${{ env.GCP_ARTIFACT_REGISTRY_LOCATION }}-docker.pkg.dev/${{ env.GCP_PROJECT_ID }}/${{ env.GCP_ARTIFACT_REGISTRY_NAME }}/caddy:latest
-            
 
   deploy:
     needs: build
@@ -99,22 +84,22 @@ jobs:
           mkdir -p $SSH_DIR
           echo "${{ secrets.GCP_SSH_PRIVATE_KEY }}" > $SSH_DIR/id_rsa
           chmod 600 $SSH_DIR/id_rsa
-          ssh-keyscan -H ${{ vars.GCP_VM_IP }} >> $SSH_DIR/known_hosts
+          ssh-keyscan -p ${{ vars.SSH_PORT }} -H ${{ vars.GCP_VM_IP }} >> $SSH_DIR/known_hosts
 
           # Define remote path
-          REMOTE_PATH="/home/${{ secrets.GCP_VM_USER }}/${{ env.GCP_ARTIFACT_REGISTRY_NAME }}"
+          REMOTE_PATH="/home/${{ secrets.GCP_VM_USER }}/${{ env.GCP_PROJECT_ID }}/${{ env.GCP_ARTIFACT_REGISTRY_NAME }}"
 
           # Create remote directory and transfer files in one SSH session
           echo "Creating remote path"
-          ssh -i $SSH_DIR/id_rsa ${{ secrets.GCP_VM_USER }}@${{ vars.GCP_VM_IP }} "mkdir -p $REMOTE_PATH"
+          ssh -p ${{ vars.SSH_PORT }} -i $SSH_DIR/id_rsa ${{ secrets.GCP_VM_USER }}@${{ vars.GCP_VM_IP }} "mkdir -p $REMOTE_PATH"
           echo "Sending files"
-          scp -i $SSH_DIR/id_rsa compose.yaml deploy_to_vm.sh ${{ secrets.GCP_VM_USER }}@${{ vars.GCP_VM_IP }}:$REMOTE_PATH
+          scp -P ${{ vars.SSH_PORT }} -i $SSH_DIR/id_rsa compose.yaml deploy_to_vm.sh ${{ secrets.GCP_VM_USER }}@${{ vars.GCP_VM_IP }}:"$REMOTE_PATH/"
 
           echo "Deploy"
           # SSH into VM and execute deployment
-          ssh -i $SSH_DIR/id_rsa ${{ secrets.GCP_VM_USER }}@${{ vars.GCP_VM_IP }} 'bash -s' << 'ENDSSH'
+          ssh -p ${{ vars.SSH_PORT }} -i $SSH_DIR/id_rsa ${{ secrets.GCP_VM_USER }}@${{ vars.GCP_VM_IP }} 'bash -s' << 'ENDSSH'
 
-          cd "/home/${{ secrets.GCP_VM_USER }}/${{ env.GCP_ARTIFACT_REGISTRY_NAME }}"
+          cd "/home/${{ secrets.GCP_VM_USER }}/${{ env.GCP_PROJECT_ID }}/${{ env.GCP_ARTIFACT_REGISTRY_NAME }}"
 
           # Reset and create .env.gcp file
           echo "Creating .env.gcp file"
