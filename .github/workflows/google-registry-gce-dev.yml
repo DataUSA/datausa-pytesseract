@@ -1,9 +1,12 @@
 name: "[DEV] Deploy to GCE"
 
 on:
+  workflow_dispatch:
+
   push:
-    branches: [ "develop" ]
-          
+    branches:
+      - develop
+
 env:
   GCP_PROJECT_ID: ${{ vars.GCP_PROJECT_ID }}
   GCP_ARTIFACT_REGISTRY_NAME: ${{ vars.GCP_ARTIFACT_REGISTRY_NAME }}
