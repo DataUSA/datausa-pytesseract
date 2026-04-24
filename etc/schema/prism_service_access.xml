@@ -1,0 +1,31 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="prism_service_access" subset_table="true">
+        <!--<Annotation name="source_name">Census Bureau</Annotation>
+        <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+        <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
+        <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>-->
+        <Annotation name="topic">PRISM</Annotation>
+        <Annotation name="subtopic">Healthcare Access</Annotation>
+        
+        <Table name="prism_service_access" />
+
+        <DimensionUsage foreign_key="geoid" name="Geography" source="Geography PRISM" />
+
+        <Dimension foreign_key="type" name="Type of Health Provider">
+            <Hierarchy name="Type of Health Provider">
+                <InlineTable name="dim_0_table" format="tuples">
+                    <Row>("member_0_code", "member_0")</Row>
+                    <Row>(0, "Total")</Row>
+                    <Row>(1, "Maternal Health Services")</Row>
+                    <Row>(2, "Mental Health Services")</Row>
+                    <Row>(3, "Emergency Care Services")</Row>
+                    <Row>(4, "Child Healthcare Services")</Row>
+                </InlineTable>
+                <Level key_column="member_0_code" name="Health Provider" name_column="member_0" key_type="u8"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Measure aggregator="avg" key_column="avg_drive_time_min" name="Household-weighted avg estimated drive time (minutes)" visible="true" />
+        <Measure aggregator="sum" key_column="household_count" name="Household Count" visible="true" />
+    </Cube>
+</Schema>
