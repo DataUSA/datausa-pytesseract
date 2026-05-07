@@ -11,7 +11,7 @@
 
         <Dimension name="Geography" foreign_key="fips_code">
             <Hierarchy name="County" primary_key="geoid">
-                <Table name="shapes2017_counties"/>
+                <Table name="shapes2025_counties"/>
                 <Level name="State County" key_column="state_id" name_column="state_name" key_type="str"/>
                 <Level name="County" key_column="geoid" name_column="name" key_type="str" />
             </Hierarchy>

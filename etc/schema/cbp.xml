@@ -45,7 +45,7 @@
             </Hierarchy>
 
             <Hierarchy name="County" primary_key="geoid">
-                <Table name="shapes2017_counties" />
+                <Table name="shapes2025_counties" />
                 <Level key_column="state_id" name="County State" name_column="state_name" key_type="str"/>
                 <Level key_column="geoid" name="County" name_column="name" key_type="str" />
             </Hierarchy>
