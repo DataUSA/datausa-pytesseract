@@ -16,4 +16,14 @@
         </Level>
       </Hierarchy>
     </SharedDimension>
+
+    <SharedDimension name="Geography County PRISM">
+      <Hierarchy name="County">
+        <Table name="shapes2025_counties"/>
+        <Level key_column="state_id" name_column="state_name" name="State" key_type="str"/>
+        <Level key_column="geoid" name_column="name" name="County" key_type="str">
+          <Property name="Area" key_column="aland" />
+        </Level>
+      </Hierarchy>
+    </SharedDimension>
 </Schema>
