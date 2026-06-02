@@ -7,7 +7,7 @@
         <Annotation name="topic">PRISM</Annotation>
         <Annotation name="subtopic">Healthcare Access</Annotation>
         
-        <Table name="prism_service_access" />
+        <Table name="prism_service_access_new" />
 
         <DimensionUsage foreign_key="geoid" name="Geography" source="Geography PRISM" />
 
@@ -15,7 +15,7 @@
             <Hierarchy name="Type of Health Provider">
                 <InlineTable name="dim_0_table" format="tuples">
                     <Row>("member_0_code", "member_0")</Row>
-                    <Row>(0, "Total")</Row>
+                    <!--<Row>(0, "Total")</Row>-->
                     <Row>(1, "Maternal Health Services")</Row>
                     <Row>(2, "Mental Health Services")</Row>
                     <Row>(3, "Emergency Care Services")</Row>
@@ -24,8 +24,23 @@
                 <Level key_column="member_0_code" name="Health Provider" name_column="member_0" key_type="u8"/>
             </Hierarchy>
         </Dimension>
+
+        <Dimension foreign_key="distance_id" name="Average Distance Range">
+            <Hierarchy name="Average Distance Range">
+                <InlineTable name="dim_1_table" format="tuples">
+                    <Row>("member_0_code", "member_0")</Row>
+                    <Row>(1, "0-5 miles")</Row>
+                    <Row>(2, "5-10 miles")</Row>
+                    <Row>(3, "10-20 miles")</Row>
+                    <Row>(4, "20-30 miles")</Row>
+                    <Row>(5, "More than 30 miles")</Row>
+                </InlineTable>
+                <Level key_column="member_0_code" name="Average Distance Range" name_column="member_0" key_type="u8"/>
+            </Hierarchy>
+        </Dimension>
         
-        <Measure aggregator="avg" key_column="avg_drive_time_min" name="Household-weighted avg estimated drive time (minutes)" visible="true" />
+        <Measure aggregator="avg" key_column="avg_distance" name="Average estimated driving distance (miles)" visible="true" />
+        <Measure aggregator="median" key_column="median_distance" name="Median estimated driving distance (miles)" visible="true" />
         <Measure aggregator="sum" key_column="household_count" name="Household Count" visible="true" />
     </Cube>
 </Schema>

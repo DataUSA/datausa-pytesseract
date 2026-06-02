@@ -3,7 +3,7 @@
         <Annotation name="topic">PRISM</Annotation>
         <Annotation name="subtopic">Healthcare Access</Annotation>
         
-        <Table name="prism_facilities_by_households_served" />
+        <Table name="prism_facilities_by_households_served_new" />
 
         <DimensionUsage foreign_key="geoid" name="Geography Household" source="Geography County PRISM" >
             <HierarchyUsage source="County" name="County Household">
@@ -29,23 +29,11 @@
             </Hierarchy>
         </Dimension>
 
-        <Dimension name="Taxonomy Classification" foreign_key="taxonomy_classification">  
-            <Hierarchy name="Taxonomy Classification" primary_key="taxonomy_classification">
-                <Level name="Taxonomy Classification" key_column="taxonomy_classification" key_type="str"/>
-            </Hierarchy>
-        </Dimension>
-
-        <Dimension name="Taxonomy Specialization" foreign_key="taxonomy_specialization">  
-            <Hierarchy name="Taxonomy Specialization" primary_key="taxonomy_specialization">
-                <Level name="Taxonomy Specialization" key_column="taxonomy_specialization" key_type="str"/>
-            </Hierarchy>
-        </Dimension>
-
-        <Dimension name="Facility" foreign_key="npi">  
+        <Dimension name="Facility" foreign_key="poi_id">  
             <Hierarchy name="Facility">
-                <Table name="prism_dim_facilities"/>
+                <Table name="prism_dim_facilities_new"/>
 
-                <Level name="Facility" key_column="npi" name_column="facility_name" key_type="u64">
+                <Level name="Facility" key_column="poi_id" name_column="facility_name" key_type="u64">
                     <Property name="Address" key_column="facility_address" />
                     <Property name="City" key_column="facility_city" />
                     <Property name="Zip Code" key_column="facility_postal_code" />
@@ -68,7 +56,8 @@
             </Hierarchy>
         </Dimension>
         
-        <Measure aggregator="avg" key_column="estimated_drive_time_min" name="Avg estimated drive time (min)" visible="true" />
+        <Measure aggregator="avg" key_column="avg_distance_mi" name="Average estimated driving distance (miles)" visible="true" />
+        <Measure aggregator="median" key_column="median_distance_mi" name="Median estimated driving distance (miles)" visible="true" />
 
     </Cube>
 </Schema>
