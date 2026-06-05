@@ -1,0 +1,63 @@
+<Schema name="datausa" default_locale="en">
+    <Cube name="prism_facilities_by_households_served">
+        <Annotation name="topic">PRISM</Annotation>
+        <Annotation name="subtopic">Healthcare Access</Annotation>
+        
+        <Table name="prism_facilities_by_households_served_new" />
+
+        <DimensionUsage foreign_key="geoid" name="Geography Household" source="Geography County PRISM" >
+            <HierarchyUsage source="County" name="County Household">
+                <LevelUsage source="State" name="State Household" />
+                <LevelUsage source="County" name="County Household">
+                    <PropertyUsage source="Area" name="County Household Area" />
+                </LevelUsage>
+            </HierarchyUsage>
+        </DimensionUsage>
+
+        <DimensionUsage foreign_key="geoid_facility" name="Geography Facility" source="Geography County PRISM" >
+            <HierarchyUsage source="County" name="County Facility">
+                <LevelUsage source="State" name="State Facility" />
+                <LevelUsage source="County" name="County Facility">
+                    <PropertyUsage source="Area" name="County Facility Area" />
+                </LevelUsage>
+            </HierarchyUsage>
+        </DimensionUsage>
+
+        <Dimension name="Rank Facility" foreign_key="rank">  
+            <Hierarchy name="Rank Facility" primary_key="rank">
+                <Level name="Rank Facility" key_column="rank" key_type="u8"/>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Facility" foreign_key="poi_id">  
+            <Hierarchy name="Facility">
+                <Table name="prism_dim_facilities_new"/>
+
+                <Level name="Facility" key_column="poi_id" name_column="facility_name" key_type="u64">
+                    <Property name="Address" key_column="facility_address" />
+                    <Property name="City" key_column="facility_city" />
+                    <Property name="Zip Code" key_column="facility_postal_code" />
+                    <Property name="Latitude" key_column="facility_latitude" />
+                    <Property name="Longitude" key_column="facility_longitude" />
+                </Level>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension foreign_key="service_category" name="Type of Health Provider">
+            <Hierarchy name="Type of Health Provider">
+                <InlineTable name="dim_0_table" format="tuples">
+                    <Row>("member_0_code", "member_0")</Row>
+                    <Row>(1, "Maternal Health Services")</Row>
+                    <Row>(2, "Mental Health Services")</Row>
+                    <Row>(3, "Emergency Care Services")</Row>
+                    <Row>(4, "Child Healthcare Services")</Row>
+                </InlineTable>
+                <Level key_column="member_0_code" name="Health Provider" name_column="member_0" key_type="u8"/>
+            </Hierarchy>
+        </Dimension>
+        
+        <Measure aggregator="avg" key_column="avg_distance_mi" name="Average estimated driving distance (miles)" visible="true" />
+        <Measure aggregator="median" key_column="median_distance_mi" name="Median estimated driving distance (miles)" visible="true" />
+
+    </Cube>
+</Schema>
