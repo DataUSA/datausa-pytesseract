@@ -3,7 +3,7 @@
         <Annotation name="topic">PRISM</Annotation>
         <Annotation name="subtopic">Healthcare Access</Annotation>
         
-        <Table name="prism_facilities_by_households_served_new" />
+        <Table name="prism_facilities_by_households_served" />
 
         <DimensionUsage foreign_key="geoid" name="Geography Household" source="Geography County PRISM" >
             <HierarchyUsage source="County" name="County Household">
@@ -31,7 +31,7 @@
 
         <Dimension name="Facility" foreign_key="poi_id">  
             <Hierarchy name="Facility">
-                <Table name="prism_dim_facilities_new"/>
+                <Table name="prism_dim_facilities"/>
 
                 <Level name="Facility" key_column="poi_id" name_column="facility_name" key_type="u64">
                     <Property name="Address" key_column="facility_address" />

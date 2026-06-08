@@ -7,7 +7,7 @@
         <Annotation name="topic">PRISM</Annotation>
         <Annotation name="subtopic">Healthcare Access</Annotation>
         
-        <Table name="prism_service_access_new" />
+        <Table name="prism_service_access" />
 
         <DimensionUsage foreign_key="geoid" name="Geography" source="Geography PRISM" />
 
