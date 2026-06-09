@@ -33,7 +33,7 @@
             <Hierarchy name="Facility">
                 <Table name="prism_dim_facilities"/>
 
-                <Level name="Facility" key_column="poi_id" name_column="facility_name" key_type="u64">
+                <Level name="Facility" key_column="poi_id" name_column="facility_name" key_type="str">
                     <Property name="Address" key_column="facility_address" />
                     <Property name="City" key_column="facility_city" />
                     <Property name="Zip Code" key_column="facility_postal_code" />
