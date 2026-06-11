@@ -1,9 +1,7 @@
 <Schema name="datausa" default_locale="en">
     <Cube name="prism_service_access" subset_table="true">
-        <!--<Annotation name="source_name">Census Bureau</Annotation>
-        <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
-        <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
-        <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>-->
+        <Annotation name="source_name">Deloitte's PeoplePrism</Annotation>
+        <Annotation name="source_link">https://peopleprism.ai/</Annotation>
         <Annotation name="topic">PRISM</Annotation>
         <Annotation name="subtopic">Healthcare Access</Annotation>
         
