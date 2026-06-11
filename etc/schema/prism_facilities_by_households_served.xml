@@ -2,6 +2,8 @@
     <Cube name="prism_facilities_by_households_served">
         <Annotation name="topic">PRISM</Annotation>
         <Annotation name="subtopic">Healthcare Access</Annotation>
+        <Annotation name="source_name">Deloitte's PeoplePrism</Annotation>
+        <Annotation name="source_link">https://peopleprism.ai/</Annotation>
         
         <Table name="prism_facilities_by_households_served" />
 
