@@ -28,9 +28,9 @@
                 <InlineTable name="dim_1_table" format="tuples">
                     <Row>("member_0_code", "member_0")</Row>
                     <Row>(1, "0-5 miles")</Row>
-                    <Row>(2, "5-10 miles")</Row>
-                    <Row>(3, "10-20 miles")</Row>
-                    <Row>(4, "20-30 miles")</Row>
+                    <Row>(2, "6-10 miles")</Row>
+                    <Row>(3, "11-20 miles")</Row>
+                    <Row>(4, "21-30 miles")</Row>
                     <Row>(5, "More than 30 miles")</Row>
                 </InlineTable>
                 <Level key_column="member_0_code" name="Average Distance Range" name_column="member_0" key_type="u8"/>
