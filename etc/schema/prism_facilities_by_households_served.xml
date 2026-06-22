@@ -16,20 +16,13 @@
             </HierarchyUsage>
         </DimensionUsage>
 
-        <DimensionUsage foreign_key="geoid_facility" name="Geography Facility" source="Geography County PRISM" >
-            <HierarchyUsage source="County" name="County Facility">
+        <DimensionUsage foreign_key="geoid_facility" name="Geography Facility" source="Geography Tract PRISM" >
+            <HierarchyUsage source="Tract" name="Tract Facility">
                 <LevelUsage source="State" name="State Facility" />
-                <LevelUsage source="County" name="County Facility">
-                    <PropertyUsage source="Area" name="County Facility Area" />
-                </LevelUsage>
+                <LevelUsage source="County" name="County Facility" />
+                <LevelUsage source="Tract" name="Tract Facility" />
             </HierarchyUsage>
         </DimensionUsage>
-
-        <Dimension name="Rank Facility" foreign_key="rank">  
-            <Hierarchy name="Rank Facility" primary_key="rank">
-                <Level name="Rank Facility" key_column="rank" key_type="u8"/>
-            </Hierarchy>
-        </Dimension>
 
         <Dimension name="Facility" foreign_key="poi_id">  
             <Hierarchy name="Facility">
@@ -42,6 +35,19 @@
                     <Property name="Latitude" key_column="facility_latitude" />
                     <Property name="Longitude" key_column="facility_longitude" />
                 </Level>
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Facility Top" foreign_key="hidden_name">  
+            <Hierarchy name="Facility Top">
+
+                <Level name="Facility Top" key_column="hidden_name" key_type="str" />
+            </Hierarchy>
+        </Dimension>
+
+        <Dimension name="Rank Facility" foreign_key="rank">  
+            <Hierarchy name="Rank Facility" primary_key="rank">
+                <Level name="Rank Facility" key_column="rank" key_type="u8"/>
             </Hierarchy>
         </Dimension>
 
@@ -60,6 +66,7 @@
         
         <Measure aggregator="avg" key_column="avg_distance_mi" name="Average estimated driving distance (miles)" visible="true" />
         <Measure aggregator="median" key_column="median_distance_mi" name="Median estimated driving distance (miles)" visible="true" />
+        <Measure aggregator="sum" key_column="rank" name="Rank" visible="true" />
 
     </Cube>
 </Schema>

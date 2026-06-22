@@ -13,7 +13,6 @@
             <Hierarchy name="Type of Health Provider">
                 <InlineTable name="dim_0_table" format="tuples">
                     <Row>("member_0_code", "member_0")</Row>
-                    <!--<Row>(0, "Total")</Row>-->
                     <Row>(1, "Maternal Health Services")</Row>
                     <Row>(2, "Mental Health Services")</Row>
                     <Row>(3, "Emergency Care Services")</Row>
@@ -24,6 +23,13 @@
         </Dimension>
 
         <Dimension foreign_key="distance_id" name="Average Distance Range">
+            <Hierarchy name="Total" default_member="Total.0">
+                <InlineTable name="dim_1_table" format="tuples">
+                    <Row>("member_total_code", "member_total")</Row>
+                    <Row>(0, "Total")</Row>
+                </InlineTable>
+                <Level key_column="member_total_code" name="Total" name_column="member_total" key_type="u8"/>
+            </Hierarchy>
             <Hierarchy name="Average Distance Range">
                 <InlineTable name="dim_1_table" format="tuples">
                     <Row>("member_0_code", "member_0")</Row>

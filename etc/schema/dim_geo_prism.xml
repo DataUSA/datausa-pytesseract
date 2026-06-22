@@ -26,4 +26,13 @@
         </Level>
       </Hierarchy>
     </SharedDimension>
+
+    <SharedDimension name="Geography Tract PRISM">
+      <Hierarchy name="Tract">
+        <Table name="shapes2017_tracts"/>
+        <Level key_column="state_id" name_column="state_name" name="State" key_type="str"/>
+        <Level key_column="county_id" name_column="county_name" name="County" key_type="str" />
+        <Level key_column="geoid" name_column="name" name="Tract" key_type="str" />
+      </Hierarchy>
+    </SharedDimension>
 </Schema>
