@@ -38,10 +38,10 @@
             </Hierarchy>
         </Dimension>
 
-        <Dimension name="Facility Top" foreign_key="hidden_name">  
+        <Dimension name="Facility Top" foreign_key="poi_id">  
             <Hierarchy name="Facility Top">
 
-                <Level name="Facility Top" key_column="hidden_name" key_type="str" />
+                <Level name="Facility Top" key_column="poi_id" name_column="hidden_name" key_type="str" />
             </Hierarchy>
         </Dimension>
 
