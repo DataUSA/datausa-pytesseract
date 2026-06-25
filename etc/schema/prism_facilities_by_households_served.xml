@@ -26,22 +26,14 @@
 
         <Dimension name="Facility" foreign_key="poi_id">  
             <Hierarchy name="Facility">
-                <Table name="prism_dim_facilities"/>
-
-                <Level name="Facility" key_column="poi_id" key_type="str">
+            
+                <Level name="Facility" key_column="poi_id" name_column="hidden_name" key_type="str">
                     <Property name="Address" key_column="facility_address" />
                     <Property name="City" key_column="facility_city" />
                     <Property name="Zip Code" key_column="facility_postal_code" />
                     <Property name="Latitude" key_column="facility_latitude" />
                     <Property name="Longitude" key_column="facility_longitude" />
                 </Level>
-            </Hierarchy>
-        </Dimension>
-
-        <Dimension name="Facility Top" foreign_key="hidden_name">  
-            <Hierarchy name="Facility Top">
-
-                <Level name="Facility Top" key_column="hidden_name" key_type="str" />
             </Hierarchy>
         </Dimension>
 
