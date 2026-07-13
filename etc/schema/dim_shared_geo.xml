@@ -37,7 +37,7 @@
       </Hierarchy>
 
       <Hierarchy name="Tract">
-        <Table name="shapes2017_tracts"/>
+        <Table name="shapes2025_tracts"/>
         <Level key_column="state_id" name_column="state_name" name="State Tract" key_type="str"/>
         <Level key_column="county_id" name_column="county_name" name="County Tract" key_type="str"/>
         <Level key_column="geoid" name_column="name" name="Tract" key_type="str">
@@ -91,7 +91,7 @@
       </Hierarchy>
 
       <Hierarchy name="Place-Tract">
-        <Table name="shapes2017_tracts"/>
+        <Table name="shapes2025_tracts"/>
         <Level key_column="place_id" name_column="place_description" name="Place Place-Tract" key_type="str"/>
         <Level key_column="geoid" name_column="name" name="Place-Tract" key_type="str">
           <Property name="Area" key_column="aland" />
@@ -99,7 +99,7 @@
       </Hierarchy>
 
       <Hierarchy name="MSA-Tract">
-        <Table name="shapes2017_tracts"/>
+        <Table name="shapes2025_tracts"/>
         <Level key_column="msa_id" name_column="msa_description" name="MSA MSA-Tract" key_type="str"/>
         <Level key_column="geoid" name_column="name" name="MSA-Tract" key_type="str">
           <Property name="Area" key_column="aland" />
