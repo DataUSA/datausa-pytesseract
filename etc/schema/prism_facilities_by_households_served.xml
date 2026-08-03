@@ -58,7 +58,7 @@
         
         <Measure aggregator="avg" key_column="avg_distance_mi" name="Average estimated driving distance (miles)" visible="true" />
         <Measure aggregator="median" key_column="median_distance_mi" name="Median estimated driving distance (miles)" visible="true" />
-        <Measure aggregator="sum" key_column="median_distance_mi" name="Addresses Served" visible="true" />
+        <Measure aggregator="sum" key_column="addresses_served" name="Addresses Served" visible="true" />
 
     </Cube>
 </Schema>
