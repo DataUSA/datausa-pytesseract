@@ -4,6 +4,7 @@
         <Annotation name="subtopic">Healthcare Access</Annotation>
         <Annotation name="source_name">Deloitte's PeoplePrism</Annotation>
         <Annotation name="source_link">https://peopleprism.ai/</Annotation>
+        <Annotation name="source_description">Deloitte's PeoplePrism™ harnesses predictive and geospatial analytics and one of the largest population insights datasets to provide actionable information on the environmental and social factors that influence health and quality of life for people and communities.</Annotation>
         
         <Table name="prism_facilities_by_households_served" />
 
