@@ -2,8 +2,11 @@
 
 export $(cat .env.gcp | xargs)
 
-echo "Docker Login"
-cat ./serviceAccountKey.json | base64 -d -w 0 | docker login -u _json_key --password-stdin https://${GCP_ARTIFACT_REGISTRY_LOCATION}-docker.pkg.dev
+#echo "Docker Login"
+#cat ./serviceAccountKey.json | base64 -d -w 0 | docker login -u _json_key --password-stdin https://${GCP_ARTIFACT_REGISTRY_LOCATION}-docker.pkg.dev
+
+echo "Gcloud login"
+gcloud auth activate-service-account --key-file=<(cat ./serviceAccountKey.json | base64 -d)
 
 echo "Compose pull"
 docker compose --env-file .env.gcp pull
