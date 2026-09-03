@@ -104,6 +104,13 @@ jobs:
 
           cd "/home/${{ secrets.GCP_VM_USER }}/${{ env.GCP_PROJECT_ID }}/${{ env.GCP_ARTIFACT_REGISTRY_NAME }}"
 
+          # Create service account key file for Docker authentication
+          echo "Creating service account key file for Artifact Registry authentication"
+          cat << EOF > ./serviceAccountKey.json
+          ${{ secrets.GCP_SA_KEY }}
+          EOF
+          chmod 600 ./serviceAccountKey.json
+
           # Reset and create .env.gcp file
           echo "Creating .env.gcp file"
           cat << EOF > .env.gcp

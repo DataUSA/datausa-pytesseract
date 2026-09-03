@@ -1,5 +1,6 @@
 <Schema name="datausa" default_locale="en">
     <Cube name="university_cube">
+        <Annotation name="hide_in_ui">true</Annotation>
         <Table name="ipeds_dim_university" />
 
         <Dimension name="University" foreign_key="id">
