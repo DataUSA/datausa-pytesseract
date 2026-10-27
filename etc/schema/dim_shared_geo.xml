@@ -90,6 +90,14 @@
         </Level>
       </Hierarchy>
 
+      <Hierarchy name="School District">
+        <Table name="shapes2024_school_districts"/>
+        <Level key_column="state_id" name_column="state_name" name="State School District" key_type="str"/>
+        <Level key_column="geoid" name_column="name" name="School District" key_type="str">
+          <Property name="Type" key_column="sd_type" />
+        </Level>
+      </Hierarchy>
+
       <Hierarchy name="Place-Tract">
         <Table name="shapes2025_tracts"/>
         <Level key_column="place_id" name_column="place_description" name="Place Place-Tract" key_type="str"/>

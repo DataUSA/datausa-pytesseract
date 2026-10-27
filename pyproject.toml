@@ -13,7 +13,7 @@ dependencies = [
     "asgi-correlation-id>=4.3.4",
     "logiclayer>=0.4.4",
     "logiclayer-complexity>=0.7.0",
-    "tesseract-olap[clickhouse,redis]>=0.19.1",
+    "tesseract-olap[clickhouse,redis]>=0.23.3",
     "uvicorn>=0.34.2",
 ]
 
