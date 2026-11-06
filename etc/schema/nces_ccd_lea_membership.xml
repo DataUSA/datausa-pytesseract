@@ -1,0 +1,88 @@
+<Schema name="datausa" default_locale="en">
+  <Cube name="nces_ccd_lea_membership">
+    <Annotation name="source_name">National Center for Education Statistics (NCES)</Annotation>
+    <Annotation name="source_link">https://nces.ed.gov/ccd/</Annotation>
+    <Annotation name="source_description">The Common Core of Data (CCD) is the Department of Education's primary database on public elementary and secondary education in the United States. It is collected annually from state education agencies by the National Center for Education Statistics (NCES).</Annotation>
+    <Annotation name="dataset_name">CCD Local Education Agency Membership</Annotation>
+    <Annotation name="dataset_link">https://nces.ed.gov/ccd/files.asp</Annotation>
+    <Annotation name="topic">Education</Annotation>
+    <Annotation name="subtopic">Enrollment</Annotation>
+    <Table name="nces_ccd_lea_membership"/>
+
+    <!-- Only school district rows are loaded: expose only the School District level -->
+    <DimensionUsage foreign_key="geoid" name="Geography" source="Geography">
+      <HierarchyUsage source="School District" name="School District">
+        <LevelUsage source="School District" name="School District"/>
+      </HierarchyUsage>
+    </DimensionUsage>
+
+    <Dimension name="Year" foreign_key="year" type="time">
+      <Annotation name="dim_type">TIME</Annotation>
+      <Hierarchy name="Year" primary_key="year">
+        <Level key_column="year" name="Year" key_type="u16"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Dimension foreign_key="grade_id" name="Grade">
+      <Hierarchy name="Grade">
+        <InlineTable name="grade_id_table" format="tuples">
+          <Row>("grade_id", "grade")</Row>
+          <Row>(1, "Pre-Kindergarten")</Row>
+          <Row>(2, "Kindergarten")</Row>
+          <Row>(3, "Grade 1")</Row>
+          <Row>(4, "Grade 2")</Row>
+          <Row>(5, "Grade 3")</Row>
+          <Row>(6, "Grade 4")</Row>
+          <Row>(7, "Grade 5")</Row>
+          <Row>(8, "Grade 6")</Row>
+          <Row>(9, "Grade 7")</Row>
+          <Row>(10, "Grade 8")</Row>
+          <Row>(11, "Grade 9")</Row>
+          <Row>(12, "Grade 10")</Row>
+          <Row>(13, "Grade 11")</Row>
+          <Row>(14, "Grade 12")</Row>
+          <Row>(15, "Grade 13")</Row>
+          <Row>(16, "Ungraded")</Row>
+          <Row>(17, "Adult Education")</Row>
+          <Row>(18, "Not Specified")</Row>
+        </InlineTable>
+        <Level key_column="grade_id" name="Grade" name_column="grade" key_type="u8"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Dimension foreign_key="race_id" name="Race and Ethnicity">
+      <Hierarchy name="Race and Ethnicity">
+        <InlineTable name="race_id_table" format="tuples">
+          <Row>("race_id", "race")</Row>
+          <Row>(1, "American Indian or Alaska Native")</Row>
+          <Row>(2, "Asian")</Row>
+          <Row>(3, "Black or African American")</Row>
+          <Row>(4, "Hispanic or Latino")</Row>
+          <Row>(5, "Native Hawaiian or Other Pacific Islander")</Row>
+          <Row>(6, "Two or More Races")</Row>
+          <Row>(7, "White")</Row>
+          <Row>(8, "Not Specified")</Row>
+        </InlineTable>
+        <Level key_column="race_id" name="Race and Ethnicity" name_column="race" key_type="u8"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Dimension foreign_key="sex_id" name="Sex">
+      <Hierarchy name="Sex">
+        <InlineTable name="sex_id_table" format="tuples">
+          <Row>("sex_id", "sex")</Row>
+          <Row>(1, "Male")</Row>
+          <Row>(2, "Female")</Row>
+          <Row>(3, "Not Specified")</Row>
+        </InlineTable>
+        <Level key_column="sex_id" name="Sex" name_column="sex" key_type="u8"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Measure aggregator="sum" key_column="students" name="Students" visible="true">
+      <Annotation name="aggregation_method">SUM</Annotation>
+      <Annotation name="units_of_measurement">People</Annotation>
+      <Annotation name="ui_default_drilldown">Grade</Annotation>
+    </Measure>
+  </Cube>
+</Schema>

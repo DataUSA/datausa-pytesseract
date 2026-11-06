@@ -1,0 +1,94 @@
+<Schema name="datausa" default_locale="en">
+  <Cube name="nces_f33_lea_revenue">
+    <Annotation name="source_name">National Center for Education Statistics (NCES) and U.S. Census Bureau</Annotation>
+    <Annotation name="source_link">https://nces.ed.gov/ccd/f33agency.asp</Annotation>
+    <Annotation name="source_description">The School District Finance Survey (F-33) collects revenue, expenditure, debt and assets data for every public school district in the United States. It is collected by the U.S. Census Bureau and published by the National Center for Education Statistics (NCES) as part of the Common Core of Data (CCD).</Annotation>
+    <Annotation name="dataset_name">School District Finance Survey (F-33): Revenue</Annotation>
+    <Annotation name="dataset_link">https://nces.ed.gov/ccd/files.asp</Annotation>
+    <Annotation name="topic">Education</Annotation>
+    <Annotation name="subtopic">Finance</Annotation>
+    <Annotation name="details">Year is the fiscal year: 2024 = FY2024 (school year 2023-24). Amounts in current dollars.</Annotation>
+    <Table name="nces_f33_lea_revenue"/>
+
+    <!-- Only school district rows are loaded: expose only the School District level -->
+    <DimensionUsage foreign_key="geoid" name="Geography" source="Geography">
+      <HierarchyUsage source="School District" name="School District">
+        <LevelUsage source="School District" name="School District"/>
+      </HierarchyUsage>
+    </DimensionUsage>
+
+    <Dimension name="Year" foreign_key="year" type="time">
+      <Annotation name="dim_type">TIME</Annotation>
+      <Hierarchy name="Year" primary_key="year">
+        <Level key_column="year" name="Year" key_type="u16"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Dimension foreign_key="revenue_id" name="Revenue Source">
+      <Hierarchy name="Revenue Source">
+        <InlineTable name="revenue_id_table" format="tuples">
+          <Row>("revenue_group_id", "revenue_group", "revenue_id", "revenue")</Row>
+          <Row>(1, "Federal", 1, "Title I")</Row>
+          <Row>(1, "Federal", 2, "Individuals with Disabilities Education Act (IDEA)")</Row>
+          <Row>(1, "Federal", 3, "Career and Technical Education")</Row>
+          <Row>(1, "Federal", 4, "Supporting Effective Instruction")</Row>
+          <Row>(1, "Federal", 5, "Student Support and Academic Enrichment")</Row>
+          <Row>(1, "Federal", 6, "21st Century Learning Centers")</Row>
+          <Row>(1, "Federal", 7, "Rural and Low-Income School Program")</Row>
+          <Row>(1, "Federal", 8, "Bilingual Education")</Row>
+          <Row>(1, "Federal", 9, "Other Federal Programs Through the State")</Row>
+          <Row>(1, "Federal", 10, "Federal School Meal Programs")</Row>
+          <Row>(1, "Federal", 11, "Nonspecified Federal Revenue")</Row>
+          <Row>(1, "Federal", 12, "Impact Aid")</Row>
+          <Row>(1, "Federal", 13, "Indian Education")</Row>
+          <Row>(1, "Federal", 14, "Small, Rural School Achievement Program")</Row>
+          <Row>(1, "Federal", 15, "Other Direct Federal Revenue")</Row>
+          <Row>(2, "State", 16, "General Formula Assistance")</Row>
+          <Row>(2, "State", 17, "Staff Improvement Programs")</Row>
+          <Row>(2, "State", 18, "Special Education Programs")</Row>
+          <Row>(2, "State", 19, "Compensatory and Basic Skills Programs")</Row>
+          <Row>(2, "State", 20, "Bilingual Education Programs")</Row>
+          <Row>(2, "State", 21, "Gifted and Talented Programs")</Row>
+          <Row>(2, "State", 22, "Career and Technical Education Programs")</Row>
+          <Row>(2, "State", 23, "State School Meal Programs")</Row>
+          <Row>(2, "State", 24, "Capital Outlay and Debt Services Programs")</Row>
+          <Row>(2, "State", 25, "Transportation Programs")</Row>
+          <Row>(2, "State", 26, "Other State Programs")</Row>
+          <Row>(2, "State", 27, "Nonspecified State Revenue")</Row>
+          <Row>(2, "State", 28, "State Payments on Behalf - Employee Benefits")</Row>
+          <Row>(2, "State", 29, "State Payments on Behalf - Other")</Row>
+          <Row>(3, "Local", 30, "Parent Government Contributions")</Row>
+          <Row>(3, "Local", 31, "Property Taxes")</Row>
+          <Row>(3, "Local", 32, "General Sales Taxes")</Row>
+          <Row>(3, "Local", 33, "Public Utility Taxes")</Row>
+          <Row>(3, "Local", 34, "Individual and Corporate Income Taxes")</Row>
+          <Row>(3, "Local", 35, "All Other Taxes")</Row>
+          <Row>(3, "Local", 36, "From Other School Systems")</Row>
+          <Row>(3, "Local", 37, "From Cities and Counties")</Row>
+          <Row>(3, "Local", 38, "Tuition Fees")</Row>
+          <Row>(3, "Local", 39, "Transportation Fees")</Row>
+          <Row>(3, "Local", 40, "School Meals")</Row>
+          <Row>(3, "Local", 41, "Textbook Sales and Rentals")</Row>
+          <Row>(3, "Local", 42, "District Activity Receipts")</Row>
+          <Row>(3, "Local", 43, "Student Fees, Nonspecified")</Row>
+          <Row>(3, "Local", 44, "Other Sales and Services")</Row>
+          <Row>(3, "Local", 45, "Rents and Royalties")</Row>
+          <Row>(3, "Local", 46, "Sale of Property")</Row>
+          <Row>(3, "Local", 47, "Interest Earnings")</Row>
+          <Row>(3, "Local", 48, "Fines and Forfeits")</Row>
+          <Row>(3, "Local", 49, "Private Contributions")</Row>
+          <Row>(3, "Local", 50, "Miscellaneous")</Row>
+          <Row>(3, "Local", 51, "Census State Revenue Reported as Local by NCES")</Row>
+        </InlineTable>
+        <Level key_column="revenue_group_id" name="Revenue Group" name_column="revenue_group" key_type="u8"/>
+        <Level key_column="revenue_id" name="Revenue Source" name_column="revenue" key_type="u8"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Measure aggregator="sum" key_column="amount" name="Revenue" visible="true">
+      <Annotation name="aggregation_method">SUM</Annotation>
+      <Annotation name="units_of_measurement">USD</Annotation>
+      <Annotation name="ui_default_drilldown">Revenue Group</Annotation>
+    </Measure>
+  </Cube>
+</Schema>

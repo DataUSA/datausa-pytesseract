@@ -1,0 +1,94 @@
+<Schema name="datausa" default_locale="en">
+  <Cube name="nces_ccd_lea_directory">
+    <Annotation name="source_name">National Center for Education Statistics (NCES)</Annotation>
+    <Annotation name="source_link">https://nces.ed.gov/ccd/</Annotation>
+    <Annotation name="source_description">The Common Core of Data (CCD) is the Department of Education's primary database on public elementary and secondary education in the United States. It is collected annually from state education agencies by the National Center for Education Statistics (NCES).</Annotation>
+    <Annotation name="dataset_name">CCD Local Education Agency Directory</Annotation>
+    <Annotation name="dataset_link">https://nces.ed.gov/ccd/files.asp</Annotation>
+    <Annotation name="topic">Education</Annotation>
+    <Annotation name="subtopic">Schools</Annotation>
+    <Table name="nces_ccd_lea_directory"/>
+
+    <!-- Only school district rows are loaded: expose only the School District level -->
+    <DimensionUsage foreign_key="geoid" name="Geography" source="Geography">
+      <HierarchyUsage source="School District" name="School District">
+        <LevelUsage source="School District" name="School District"/>
+      </HierarchyUsage>
+    </DimensionUsage>
+
+    <Dimension name="Year" foreign_key="year" type="time">
+      <Annotation name="dim_type">TIME</Annotation>
+      <Hierarchy name="Year" primary_key="year">
+        <Level key_column="year" name="Year" key_type="u16"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Dimension foreign_key="geoid" name="LEA">
+      <Hierarchy name="LEA">
+        <Level key_column="geoid" name="LEA" name_column="lea_name" key_type="str">
+          <Property name="NCES LEA ID" key_column="leaid"/>
+          <Property name="City" key_column="city"/>
+          <Property name="ZIP Code" key_column="zip"/>
+          <Property name="State LEA ID" key_column="st_leaid" visible="false"/>
+          <Property name="LEA State" key_column="state" visible="false"/>
+          <Property name="Phone" key_column="phone" visible="false"/>
+          <Property name="Website" key_column="website" visible="false"/>
+          <Property name="Updated Status" key_column="updated_status" visible="false"/>
+        </Level>
+      </Hierarchy>
+    </Dimension>
+
+    <Dimension foreign_key="lea_type_id" name="LEA Type">
+      <Hierarchy name="LEA Type">
+        <InlineTable name="lea_type_id_table" format="tuples">
+          <Row>("lea_type_id", "lea_type")</Row>
+          <Row>(1, "Regular Public School District, Not a Component of a Supervisory Union")</Row>
+          <Row>(2, "Regular Public School District, Component of a Supervisory Union")</Row>
+          <Row>(3, "Supervisory Union")</Row>
+          <Row>(4, "Service Agency")</Row>
+          <Row>(5, "State Operated Agency")</Row>
+          <Row>(6, "Federal Operated Agency")</Row>
+          <Row>(7, "Independent Charter District")</Row>
+          <Row>(8, "Other Local Education Agency")</Row>
+          <Row>(9, "Specialized Public School District")</Row>
+        </InlineTable>
+        <Level key_column="lea_type_id" name="LEA Type" name_column="lea_type" key_type="u8"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Dimension foreign_key="charter_lea" name="Charter Status">
+      <Hierarchy name="Charter Status">
+        <Level key_column="charter_lea" name="Charter Status" key_type="str"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Dimension foreign_key="sy_status" name="School Year Status">
+      <Hierarchy name="School Year Status">
+        <Level key_column="sy_status" name="School Year Status" key_type="str"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Dimension foreign_key="level" name="School Level">
+      <Hierarchy name="School Level">
+        <Level key_column="level" name="School Level" key_type="str"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Dimension foreign_key="lowest_grade" name="Lowest Grade">
+      <Hierarchy name="Lowest Grade">
+        <Level key_column="lowest_grade" name="Lowest Grade" key_type="str"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Dimension foreign_key="highest_grade" name="Highest Grade">
+      <Hierarchy name="Highest Grade">
+        <Level key_column="highest_grade" name="Highest Grade" key_type="str"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Measure aggregator="sum" key_column="operational_schools" name="Operational Schools" visible="true">
+      <Annotation name="aggregation_method">SUM</Annotation>
+      <Annotation name="units_of_measurement">Count</Annotation>
+    </Measure>
+  </Cube>
+</Schema>
