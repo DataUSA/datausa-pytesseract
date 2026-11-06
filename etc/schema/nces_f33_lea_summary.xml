@@ -1,0 +1,93 @@
+<Schema name="datausa" default_locale="en">
+  <Cube name="nces_f33_lea_summary">
+    <Annotation name="source_name">National Center for Education Statistics (NCES) and U.S. Census Bureau</Annotation>
+    <Annotation name="source_link">https://nces.ed.gov/ccd/f33agency.asp</Annotation>
+    <Annotation name="source_description">The School District Finance Survey (F-33) collects revenue, expenditure, debt and assets data for every public school district in the United States. It is collected by the U.S. Census Bureau and published by the National Center for Education Statistics (NCES) as part of the Common Core of Data (CCD).</Annotation>
+    <Annotation name="dataset_name">School District Finance Survey (F-33): District Totals</Annotation>
+    <Annotation name="dataset_link">https://nces.ed.gov/ccd/files.asp</Annotation>
+    <Annotation name="topic">Education</Annotation>
+    <Annotation name="subtopic">Finance</Annotation>
+    <Annotation name="details">Year is the fiscal year: 2024 = FY2024 (school year 2023-24). Amounts in current dollars.</Annotation>
+    <Table name="nces_f33_lea_summary"/>
+
+    <!-- Only school district rows are loaded: expose only the School District level -->
+    <DimensionUsage foreign_key="geoid" name="Geography" source="Geography">
+      <HierarchyUsage source="School District" name="School District">
+        <LevelUsage source="School District" name="School District"/>
+      </HierarchyUsage>
+    </DimensionUsage>
+
+    <Dimension name="Year" foreign_key="year" type="time">
+      <Annotation name="dim_type">TIME</Annotation>
+      <Hierarchy name="Year" primary_key="year">
+        <Level key_column="year" name="Year" key_type="u16"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Measure aggregator="sum" key_column="students" name="Students" visible="true">
+      <Annotation name="aggregation_method">SUM</Annotation>
+      <Annotation name="units_of_measurement">People</Annotation>
+    </Measure>
+    <Measure aggregator="sum" key_column="total_revenue" name="Total Revenue" visible="true">
+      <Annotation name="aggregation_method">SUM</Annotation>
+      <Annotation name="units_of_measurement">USD</Annotation>
+    </Measure>
+    <Measure aggregator="sum" key_column="total_expenditure" name="Total Expenditure" visible="true">
+      <Annotation name="aggregation_method">SUM</Annotation>
+      <Annotation name="units_of_measurement">USD</Annotation>
+    </Measure>
+    <Measure aggregator="sum" key_column="current_expenditure" name="Current Expenditure" visible="true">
+      <Annotation name="aggregation_method">SUM</Annotation>
+      <Annotation name="units_of_measurement">USD</Annotation>
+    </Measure>
+    <Measure aggregator="sum" key_column="instruction_expenditure" name="Instruction Expenditure" visible="true">
+      <Annotation name="aggregation_method">SUM</Annotation>
+      <Annotation name="units_of_measurement">USD</Annotation>
+    </Measure>
+    <Measure aggregator="sum" key_column="support_services_expenditure" name="Support Services Expenditure" visible="true">
+      <Annotation name="aggregation_method">SUM</Annotation>
+      <Annotation name="units_of_measurement">USD</Annotation>
+    </Measure>
+    <Measure aggregator="sum" key_column="capital_outlay" name="Capital Outlay" visible="true">
+      <Annotation name="aggregation_method">SUM</Annotation>
+      <Annotation name="units_of_measurement">USD</Annotation>
+    </Measure>
+    <Measure aggregator="sum" key_column="total_salaries" name="Total Salaries" visible="true">
+      <Annotation name="aggregation_method">SUM</Annotation>
+      <Annotation name="units_of_measurement">USD</Annotation>
+    </Measure>
+    <Measure aggregator="sum" key_column="instruction_salaries" name="Instruction Salaries" visible="true">
+      <Annotation name="aggregation_method">SUM</Annotation>
+      <Annotation name="units_of_measurement">USD</Annotation>
+    </Measure>
+    <Measure aggregator="sum" key_column="teacher_salaries" name="Teacher Salaries" visible="true">
+      <Annotation name="aggregation_method">SUM</Annotation>
+      <Annotation name="units_of_measurement">USD</Annotation>
+    </Measure>
+    <Measure aggregator="sum" key_column="total_benefits" name="Total Employee Benefits" visible="true">
+      <Annotation name="aggregation_method">SUM</Annotation>
+      <Annotation name="units_of_measurement">USD</Annotation>
+    </Measure>
+    <Measure aggregator="sum" key_column="special_education_expenditure" name="Special Education Expenditure" visible="true">
+      <Annotation name="aggregation_method">SUM</Annotation>
+      <Annotation name="units_of_measurement">USD</Annotation>
+    </Measure>
+    <Measure aggregator="sum" key_column="long_term_debt" name="Long-Term Debt" visible="true">
+      <Annotation name="aggregation_method">SUM</Annotation>
+      <Annotation name="units_of_measurement">USD</Annotation>
+    </Measure>
+
+    <CalculatedMeasure name="Current Expenditure per Pupil" formula="[Current Expenditure] / [Students]">
+      <Annotation name="units_of_measurement">USD</Annotation>
+      <Annotation name="details">Current expenditure for elementary/secondary education divided by fall membership (NCES standard per-pupil spending).</Annotation>
+    </CalculatedMeasure>
+    <CalculatedMeasure name="Instruction Expenditure per Pupil" formula="[Instruction Expenditure] / [Students]">
+      <Annotation name="units_of_measurement">USD</Annotation>
+      <Annotation name="details">Current instruction expenditure divided by fall membership.</Annotation>
+    </CalculatedMeasure>
+    <CalculatedMeasure name="Total Revenue per Pupil" formula="[Total Revenue] / [Students]">
+      <Annotation name="units_of_measurement">USD</Annotation>
+      <Annotation name="details">Total revenue divided by fall membership.</Annotation>
+    </CalculatedMeasure>
+  </Cube>
+</Schema>

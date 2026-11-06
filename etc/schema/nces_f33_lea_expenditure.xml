@@ -1,0 +1,69 @@
+<Schema name="datausa" default_locale="en">
+  <Cube name="nces_f33_lea_expenditure">
+    <Annotation name="source_name">National Center for Education Statistics (NCES) and U.S. Census Bureau</Annotation>
+    <Annotation name="source_link">https://nces.ed.gov/ccd/f33agency.asp</Annotation>
+    <Annotation name="source_description">The School District Finance Survey (F-33) collects revenue, expenditure, debt and assets data for every public school district in the United States. It is collected by the U.S. Census Bureau and published by the National Center for Education Statistics (NCES) as part of the Common Core of Data (CCD).</Annotation>
+    <Annotation name="dataset_name">School District Finance Survey (F-33): Expenditure</Annotation>
+    <Annotation name="dataset_link">https://nces.ed.gov/ccd/files.asp</Annotation>
+    <Annotation name="topic">Education</Annotation>
+    <Annotation name="subtopic">Finance</Annotation>
+    <Annotation name="details">Year is the fiscal year: 2024 = FY2024 (school year 2023-24). Amounts in current dollars.</Annotation>
+    <Table name="nces_f33_lea_expenditure"/>
+
+    <!-- Only school district rows are loaded: expose only the School District level -->
+    <DimensionUsage foreign_key="geoid" name="Geography" source="Geography">
+      <HierarchyUsage source="School District" name="School District">
+        <LevelUsage source="School District" name="School District"/>
+      </HierarchyUsage>
+    </DimensionUsage>
+
+    <Dimension name="Year" foreign_key="year" type="time">
+      <Annotation name="dim_type">TIME</Annotation>
+      <Hierarchy name="Year" primary_key="year">
+        <Level key_column="year" name="Year" key_type="u16"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Dimension foreign_key="expenditure_id" name="Expenditure Function">
+      <Hierarchy name="Expenditure Function">
+        <InlineTable name="expenditure_id_table" format="tuples">
+          <Row>("expenditure_group_id", "expenditure_group", "expenditure_id", "expenditure")</Row>
+          <Row>(1, "Instruction", 1, "Instruction")</Row>
+          <Row>(2, "Support Services", 2, "Student Support")</Row>
+          <Row>(2, "Support Services", 3, "Instructional Staff Support")</Row>
+          <Row>(2, "Support Services", 4, "General Administration")</Row>
+          <Row>(2, "Support Services", 5, "School Administration")</Row>
+          <Row>(2, "Support Services", 6, "Operation and Maintenance of Plant")</Row>
+          <Row>(2, "Support Services", 7, "Student Transportation")</Row>
+          <Row>(2, "Support Services", 8, "Business, Central and Other Support")</Row>
+          <Row>(2, "Support Services", 9, "Nonspecified Support Services")</Row>
+          <Row>(3, "Other Current Expenditures", 10, "Food Services")</Row>
+          <Row>(3, "Other Current Expenditures", 11, "Enterprise Operations")</Row>
+          <Row>(3, "Other Current Expenditures", 12, "Other Elementary/Secondary")</Row>
+          <Row>(4, "Non-Elementary/Secondary Programs", 13, "Community Services")</Row>
+          <Row>(4, "Non-Elementary/Secondary Programs", 14, "Adult Education")</Row>
+          <Row>(4, "Non-Elementary/Secondary Programs", 15, "Other Non-Elementary/Secondary")</Row>
+          <Row>(5, "Capital Outlay", 16, "Construction")</Row>
+          <Row>(5, "Capital Outlay", 17, "Land and Existing Structures")</Row>
+          <Row>(5, "Capital Outlay", 18, "Instructional Equipment")</Row>
+          <Row>(5, "Capital Outlay", 19, "Other Equipment")</Row>
+          <Row>(5, "Capital Outlay", 20, "Nonspecified Equipment")</Row>
+          <Row>(6, "Payments to Other Governments and Schools", 21, "Payments to State Governments")</Row>
+          <Row>(6, "Payments to Other Governments and Schools", 22, "Payments to Local Governments")</Row>
+          <Row>(6, "Payments to Other Governments and Schools", 23, "Payments to Other School Systems")</Row>
+          <Row>(6, "Payments to Other Governments and Schools", 24, "Payments to Private Schools")</Row>
+          <Row>(6, "Payments to Other Governments and Schools", 25, "Payments to Charter Schools")</Row>
+          <Row>(7, "Interest on Debt", 26, "Interest on Debt")</Row>
+        </InlineTable>
+        <Level key_column="expenditure_group_id" name="Expenditure Group" name_column="expenditure_group" key_type="u8"/>
+        <Level key_column="expenditure_id" name="Expenditure Function" name_column="expenditure" key_type="u8"/>
+      </Hierarchy>
+    </Dimension>
+
+    <Measure aggregator="sum" key_column="amount" name="Expenditure" visible="true">
+      <Annotation name="aggregation_method">SUM</Annotation>
+      <Annotation name="units_of_measurement">USD</Annotation>
+      <Annotation name="ui_default_drilldown">Expenditure Group</Annotation>
+    </Measure>
+  </Cube>
+</Schema>
